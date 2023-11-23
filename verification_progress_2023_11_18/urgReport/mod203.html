@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.REC_SATURATION_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.REC_SATURATION_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.REC_SATURATION_FTEST')">CTU_CAN_FD_TB.REC_SATURATION_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod203.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/rec_saturation_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/rec_saturation_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.REC_SATURATION_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod203.html" >CTU_CAN_FD_TB.REC_SATURATION_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>22</td><td>22</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>120</td><td>22</td><td>22</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+119                             ------------------------------------------------------------------------
+120        1/1                  info_m(&quot;Step 1&quot;);
+121                             
+122        1/1                  mode_1.test := true;
+123        1/1                  mode_1.flexible_data_rate := false;
+124        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+125                     
+126        1/1                  err_counters.rx_counter := 510;
+127        1/1                  set_error_counters(err_counters, DUT_NODE, chn);
+128                             
+129        1/1                  err_counters.rx_counter := 0;
+130        1/1                  read_error_counters(err_counters, DUT_NODE, chn);
+131                             
+132        1/1                  check_m(err_counters.rx_counter = 510, &quot;REC set properly!&quot;);
+133                     
+134                             ------------------------------------------------------------------------
+135                             -- @2. Send CAN FD frame by Test node few times. Wait until CAN frame is
+136                             --     sent and check that REC in DUT is 511 after first frame (was
+137                             --     incremented by 1) and also after each next attempt to transmitt a
+138                             --     frame.
+139                             ------------------------------------------------------------------------
+140        1/1                  info_m(&quot;Step 2&quot;);
+141                             
+142                             -- Set to one shot mode
+143        1/1                  CAN_enable_retr_limit(true, 0, DUT_NODE, chn);
+144                     
+145        1/1                  CAN_generate_frame(CAN_frame);
+146        1/1                  CAN_frame.frame_format := FD_CAN;
+147                     
+148        1/1                  for i in 0 to 3 loop
+149        1/1                      CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+150        1/1                      CAN_wait_frame_sent(TEST_NODE, chn);
+151                                 
+152        1/1                      CAN_wait_bus_idle(DUT_NODE, chn);
+153        1/1                      CAN_wait_bus_idle(TEST_NODE, chn);
+154                     
+155        1/1                      read_error_counters(err_counters, DUT_NODE, chn);
+156                                 
+157        1/1                      if (i = 0) then
+158        1/1                          check_m(err_counters.rx_counter = 511, &quot;REC incremented to 511!&quot;);
+159                                 else
+160        1/1                          check_m(err_counters.rx_counter = 511, &quot;REC remains saturated at 511!&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.REC_SATURATION_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

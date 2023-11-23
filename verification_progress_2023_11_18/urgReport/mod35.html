@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.MODE_BUS_MONITORING_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.MODE_BUS_MONITORING_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.MODE_BUS_MONITORING_FTEST')">CTU_CAN_FD_TB.MODE_BUS_MONITORING_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod35.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_bus_monitoring_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_bus_monitoring_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.MODE_BUS_MONITORING_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod35.html" >CTU_CAN_FD_TB.MODE_BUS_MONITORING_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>56</td><td>56</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>139</td><td>56</td><td>56</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+138                             ------------------------------------------------------------------------
+139        1/1                  info_m(&quot;Step 1: Configuring BMM in DUT, STM in Test node!&quot;);
+140                             
+141        1/1                  mode_1.bus_monitoring := true;
+142        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+143        1/1                  mode_2.self_test := true;
+144        1/1                  set_core_mode(mode_2, TEST_NODE, chn);
+145                             
+146                             ------------------------------------------------------------------------
+147                             -- @2. Insert frame for transmission to DUT. Check for sufficiently 
+148                             --     long that it will NOT be transmitted (TXT Buffer remains Ready).
+149                             ------------------------------------------------------------------------
+150        1/1                  info_m(&quot;Step 2: Checking frame is not transmitted in Bus monitoring mode!&quot;);
+151                             
+152        1/1                  CAN_generate_frame(CAN_TX_frame);
+153        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+154                             
+155        1/1                  wait for 20 ns;
+156                             
+157        1/1                  for i in 0 to 100 loop
+158        1/1                      get_tx_buf_state(1, txt_buf_state, DUT_NODE, chn);
+159        1/1                      check_m(txt_buf_state = buf_failed, &quot;TXT buffer went to failed&quot;);
+160        1/1                      get_controller_status(status, DUT_NODE, chn);
+161        1/1                      check_false_m(status.transmitter, &quot;Node does not transmitt in BMM!&quot;);
+162        1/1                      check_false_m(status.receiver, &quot;Node turned receiver in BMM -&gt; WTF?&quot;);
+163        1/1                      check_m(status.bus_status, &quot;Node remains idle&quot;);
+164        1/1                      wait for 50 ns; -- To make checks more sparse
+165                             end loop;
+166                             
+167                             ------------------------------------------------------------------------
+168                             -- @3. Send CAN frame by Test node. Wait till ACK field of DUT.
+169                             ------------------------------------------------------------------------
+170        1/1                  info_m(&quot;Step 3: Send frame by Test node, Wait till ACK&quot;);
+171                             
+172        1/1                  CAN_generate_frame(CAN_TX_frame);
+173        1/1                  CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+174        1/1                  CAN_wait_pc_state(pc_deb_ack, DUT_NODE, chn);
+175                             
+176                             ------------------------------------------------------------------------
+177                             -- @4. Monitor bus during whole ACK field, check that it is recessive.
+178                             --     Wait till bus is idle.
+179                             ------------------------------------------------------------------------       
+180        1/1                  info_m(&quot;Step 4: Checking ACK field is recessive&quot;);
+181                             
+182        1/1                  CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+183        1/1                  while (pc_dbg = pc_deb_ack) loop
+184        1/1                      check_bus_level(RECESSIVE, &quot;Dominant ACK transmitted!&quot;, chn);
+185        1/1                      CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+186                     
+187        1/1                      get_controller_status(status, DUT_NODE, chn);
+188        1/1                      check_m(status.receiver, &quot;DUT receiver!&quot;);
+189                     
+190                             end loop;
+191        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+192        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+193                             
+194                             ------------------------------------------------------------------------
+195                             -- @5. Check that frame was received by DUT.
+196                             ------------------------------------------------------------------------
+197        1/1                  info_m(&quot;Step 5: Checking frame received OK&quot;);
+198                             
+199        1/1                  get_rx_buf_state(rx_buf_state, DUT_NODE, chn);
+200        1/1                  check_m(rx_buf_state.rx_frame_count = 1, &quot;Frame received in BMM&quot;);
+201                             
+202        1/1                  CAN_read_frame(CAN_RX_frame, DUT_NODE, chn);
+203        1/1                  CAN_compare_frames(CAN_RX_frame, CAN_TX_frame, false, frames_equal);
+204        1/1                  check_m(frames_equal, &quot;TX vs. RX frame matching!&quot;);
+205                             
+206                             ------------------------------------------------------------------------
+207                             -- @6. Set DUT to NON-ISO FD. Send CAN FD frame by Test node.
+208                             ------------------------------------------------------------------------
+209        1/1                  info_m(&quot;Step 6: Set NISOFD for DUT. Send frame by Test node&quot;);
+210                             
+211        1/1                  mode_1.iso_fd_support := false;
+212        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+213                             
+214        1/1                  CAN_generate_frame(CAN_TX_frame);
+215        1/1                  CAN_TX_frame.frame_format := FD_CAN;
+216        1/1                  CAN_TX_frame.rtr := NO_RTR_FRAME;
+217                             
+218        1/1                  CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+219                     
+220                             ------------------------------------------------------------------------
+221                             -- @7. Wait till error frame transmitted by DUT (should come as CRC is
+222                             --     now different).
+223                             ------------------------------------------------------------------------
+224        1/1                  info_m(&quot;Step 7: Waiting till error frame&quot;);
+225                             
+226        1/1                  CAN_wait_error_frame(DUT_NODE, chn);
+227                     
+228                             ------------------------------------------------------------------------
+229                             -- @8. Monitor during whole Error frame transmitted by DUT, that
+230                             --     recessive value is sent on the bus by DUT! Wait until bus is
+231                             --     idle. Check afterwards that frame was sent OK by Test node.
+232                             ------------------------------------------------------------------------
+233        1/1                  info_m(&quot;Step 8: Monitor that error flag sent by DUT is recessive&quot;);
+234                             
+235        1/1                  get_controller_status(status, DUT_NODE, chn);
+236        1/1                  check_m(status.error_transmission, &quot;Error frame transmitted!&quot;);
+237                             
+238        1/1                  mem_bus_agent_disable_transaction_reporting(chn);
+239        1/1                  while (status.error_transmission) loop
+240        1/1                      check_can_tx(RECESSIVE, DUT_NODE, &quot;Dominant Error flag transmitted!&quot;, chn);
+241        1/1                      get_controller_status(status, DUT_NODE, chn);
+242                             end loop;
+243        1/1                  mem_bus_agent_enable_transaction_reporting(chn);
+244                             
+245        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+246        1/1                  get_tx_buf_state(1, txt_buf_state, TEST_NODE, chn);
+247        1/1                  check_m(txt_buf_state = buf_done, &quot;Frame transmitted OK&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.MODE_BUS_MONITORING_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

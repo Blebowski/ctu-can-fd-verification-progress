@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.MODE_RESTR_OP_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.MODE_RESTR_OP_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.MODE_RESTR_OP_FTEST')">CTU_CAN_FD_TB.MODE_RESTR_OP_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod63.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_restr_op_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_restr_op_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.MODE_RESTR_OP_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod63.html" >CTU_CAN_FD_TB.MODE_RESTR_OP_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>55</td><td>55</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>148</td><td>55</td><td>55</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+147                             ------------------------------------------------------------------------
+148        1/1                  info_m(&quot;Step 1: Configure ROM mode in DUT. Try to send frame in ROM!&quot;);
+149                             
+150        1/1                  mode_1.restricted_operation := true;
+151        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+152                             
+153        1/1                  CAN_generate_frame(CAN_TX_frame);
+154                             -- To make sure we have only one ACK bit
+155        1/1                  CAN_TX_frame.frame_format := NORMAL_CAN;
+156        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+157        1/1                  wait for 20 ns;
+158                             
+159        1/1                  for i in 0 to 20 loop
+160        1/1                      get_controller_status(status, DUT_NODE, chn);
+161        1/1                      check_false_m(status.transmitter, &quot;Node does not transmitt in ROM!&quot;);
+162        1/1                      check_false_m(status.receiver, &quot;Node turned receiver in ROM -&gt; WTF?&quot;);
+163        1/1                      check_m(status.bus_status, &quot;Node remains idle&quot;);
+164                                 
+165        1/1                      get_tx_buf_state(1, txt_buf_state, DUT_NODE, chn);
+166        1/1                      check_m(txt_buf_state = buf_failed, &quot;TXT buffer went to failed in ROM!&quot;);
+167                                 
+168        1/1                      wait for 100 ns;
+169                             end loop;
+170                     
+171                             -----------------------------------------------------------------------
+172                             -- @2. Send frame by Test node with stuff bit. Force this stuff bit to
+173                             --     opposite value on CAN RX of DUT. Check that DUT goes to
+174                             --     integrating. Check that REC/TEC of DUT are not changed.
+175                             --
+176                             --     Note: By default for feature tests, device is in One shot mode,
+177                             --           so two frames are issued to invoke transmission back-to
+178                             --           back by Test node.
+179                             -----------------------------------------------------------------------
+180        1/1                  info_m(&quot;Step 2: Send frame by Test node!&quot;);
+181                             
+182        1/1                  CAN_TX_frame.identifier := 0;
+183        1/1                  CAN_TX_frame.ident_type := BASE;
+184        1/1                  CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+185        1/1                  CAN_send_frame(CAN_TX_frame, 2, TEST_NODE, chn, frame_sent);
+186                             
+187                             -- Following wait ends just after sample point of SOF!
+188        1/1                  CAN_wait_tx_rx_start(false, true, DUT_NODE, chn);
+189                             
+190                             -- 5th bit of Base ID should be recessive stuff bit.
+191        1/1                  for i in 0 to 3 loop
+192        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+193                             end loop;
+194                             
+195        1/1                  force_bus_level(DOMINANT, chn);
+196        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+197        1/1                  wait for 20 ns;
+198                     
+199        1/1                  CAN_wait_sample_point(DUT_NODE, chn);      
+200        1/1                  wait for 10 ns;
+201        1/1                  release_bus_level(chn);
+202                     
+203        1/1                  get_controller_status(status, DUT_NODE, chn);
+204        1/1                  check_m(status.bus_status, &quot;Node became idle after Error in ROM mod!&quot;);
+205                             
+206        1/1                  read_error_counters(err_counters, DUT_NODE, chn);
+207        1/1                  check_m(err_counters.rx_counter = 0, &quot;REC not incremented in ROM!&quot;);
+208        1/1                  check_m(err_counters.tx_counter = 0, &quot;TEC not incremented in ROM!&quot;);
+209                     
+210                             -----------------------------------------------------------------------
+211                             -- @3. Test node will retransmitt frame from previous step. Wait until
+212                             --     ACK field in DUT. Check that DUT is transmitting dominant
+213                             --     bit.
+214                             -----------------------------------------------------------------------
+215        1/1                  info_m(&quot;Step 3: Wait till ACK of retrasnmitted frame.&quot;);
+216                             
+217        1/1                  CAN_wait_pc_state(pc_deb_ack, DUT_NODE, chn);
+218                             
+219        1/1                  CAN_wait_sync_seg(DUT_NODE, chn);
+220        1/1                  wait for 10 ns;
+221        1/1                  check_can_tx(DOMINANT, DUT_NODE, &quot;Send Dominant ACK after Error in ROM!&quot;, chn);
+222                             
+223        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+224                     
+225                             -----------------------------------------------------------------------
+226                             -- @4. Wait until EOF field of DUT. Wait randomly for 7,8,9 bits to
+227                             --     offset to last bit of EOF or first/second bit of Intermission.
+228                             --     Force CAN bus to dominant. Check that DUT will end in
+229                             --     integration state (and not in overload state).
+230                             -----------------------------------------------------------------------
+231        1/1                  info_m(&quot;Step 4: Overload condition reaction by CTU CAN FD!&quot;);
+232                             
+233                             -- 0 - 2
+234        1/1                  rand_int_v(2, bit_waits);
+235        1/1                  bit_waits := bit_waits + 7;
+236                             
+237                             -- This should offset to last bit of EOF, first or second bit of interm.
+238        1/1                  for i in 0 to bit_waits - 1 loop
+239        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+240                             end loop;
+241                             
+242        1/1                  CAN_wait_sync_seg(DUT_NODE, chn);
+243                             
+244        1/1                  force_bus_level(DOMINANT, chn);
+245        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+246        1/1                  wait for 40 ns;
+247        1/1                  release_bus_level(chn);
+248                             
+249        1/1                  get_controller_status(status, DUT_NODE, chn);
+250        1/1                  check_m(status.bus_status, &quot;Node became idle after Error in ROM mod!&quot;);
+251                             
+252        1/1                  read_error_counters(err_counters, DUT_NODE, chn);
+253        1/1                  check_m(err_counters.rx_counter = 0, &quot;REC not incremented in ROM!&quot;);
+254        1/1                  check_m(err_counters.tx_counter = 0, &quot;TEC not incremented in ROM!&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.MODE_RESTR_OP_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.FRAME_FILTERS_MASK_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.FRAME_FILTERS_MASK_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.FRAME_FILTERS_MASK_FTEST')">CTU_CAN_FD_TB.FRAME_FILTERS_MASK_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod132.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/frame_filters_mask_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/frame_filters_mask_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.FRAME_FILTERS_MASK_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod132.html" >CTU_CAN_FD_TB.FRAME_FILTERS_MASK_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>63</td><td>63</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>159</td><td>63</td><td>63</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+158                             -------------------------------------------------------------------------------------------
+159        1/1                  info_m(&quot;Step 1&quot;);
+160                     
+161                             -- Filters Need to be globally enabled, otherwise they are ignored.
+162        1/1                  mode_1.acceptance_filter := true;
+163        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+164                     
+165                             -- Disable Range filter here
+166        1/1                  range_cfg.acc_CAN_2_0 := false;
+167        1/1                  range_cfg.acc_CAN_2_0 := false;
+168        1/1                  range_cfg.ident_type := BASE;
+169        1/1                  CAN_set_range_filter(range_cfg, DUT_NODE, chn);
+170                     
+171        1/1                  for filter in SW_CAN_mask_filter_type'left to SW_CAN_mask_filter_type'right loop
+172        1/1                      for ident_type in BASE to EXTENDED loop
+173        1/1                          for can_2_0_en in boolean'left to boolean'right loop
+174        1/1                              for can_fd_en in boolean'left to boolean'right loop
+175        1/1                                  for frame_index in 1 to 5 loop
+176                     
+177                                                 -- Disable all filters
+178        1/1                                      filt_cfg.acc_CAN_2_0 := false;
+179        1/1                                      filt_cfg.acc_CAN_FD := false;
+180        1/1                                      filt_cfg.ident_type := BASE;
+181        1/1                                      filt_cfg.ID_value := 0;
+182        1/1                                      filt_cfg.ID_mask := 0;
+183        1/1                                      CAN_set_mask_filter(filter_A, filt_cfg, DUT_NODE, chn);
+184        1/1                                      CAN_set_mask_filter(filter_B, filt_cfg, DUT_NODE, chn);
+185        1/1                                      CAN_set_mask_filter(filter_C, filt_cfg, DUT_NODE, chn);
+186                     
+187                                                 -- Only enable the target filter
+188        1/1                                      if (ident_type = BASE) then
+189        1/1                                          rand_int_v(2 ** 11 - 1, filt_cfg.ID_value);
+190                                                     -- Make mask sparse enough so that we actually match something
+191        1/1                                          rand_logic_vect_v(tmp_base, 0.1);
+192        1/1                                          filt_cfg.ID_mask := to_integer(unsigned(tmp_base));
+193                                                 else
+194        1/1                                          rand_int_v(2 ** 29 - 1, filt_cfg.ID_value);
+195                                                     -- Make mask sparse enough so that we actually match something
+196        1/1                                          rand_logic_vect_v(tmp_ext, 0.1);
+197        1/1                                          filt_cfg.ID_mask := to_integer(unsigned(tmp_ext));
+198                                                 end if;
+199                     
+200        1/1                                      filt_cfg.ident_type := ident_type;
+201        1/1                                      filt_cfg.acc_CAN_2_0 := can_2_0_en;
+202        1/1                                      filt_cfg.acc_CAN_FD := can_fd_en;
+203        1/1                                      CAN_set_mask_filter(filter, filt_cfg, DUT_NODE, chn);
+204                     
+205                                                 -------------------------------------------------------------------------------
+206                                                 -- @1.1 Generate Random frame and send it by Test node. Wait until the
+207                                                 --      frame is received by DUT Node.
+208                                                 -------------------------------------------------------------------------------
+209        1/1                                      info_m(&quot;Step 1.1&quot;);
+210                     
+211        1/1                                      CAN_generate_frame(CAN_TX_frame);
+212        1/1                                      CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+213        1/1                                      CAN_wait_frame_sent(DUT_NODE, chn);
+214        1/1                                      CAN_wait_bus_idle(DUT_NODE, chn);
+215                     
+216                                                 -------------------------------------------------------------------------------
+217                                                 -- @1.2 Pre-compute the expected result of filtering.
+218                                                 -------------------------------------------------------------------------------
+219        1/1                                      info_m(&quot;Step 1.2&quot;);
+220                     
+221        1/1                                      should_pass := true;
+222                     
+223        1/1                                      if (CAN_TX_frame.frame_format = NORMAL_CAN and filt_cfg.acc_CAN_2_0 = false) then
+224        1/1                                          should_pass := false;
+225                                                 end if;
+226                     
+227        1/1                                      if (CAN_TX_frame.frame_format = FD_CAN and filt_cfg.acc_CAN_FD = false) then
+228        1/1                                          should_pass := false;
+229                                                 end if;
+230                     
+231        1/1                                      if (CAN_TX_frame.ident_type /= filt_cfg.ident_type) then
+232        1/1                                          should_pass := false;
+233                                                 end if;
+234                     
+235        1/1                                      if (ident_type = BASE) then
+236        1/1                                          exp_base_mask := std_logic_vector(to_unsigned(filt_cfg.ID_mask, 11));
+237        1/1                                          exp_base_val  := std_logic_vector(to_unsigned(filt_cfg.ID_value, 11));
+238        1/1                                          exp_base_id   := std_logic_vector(to_unsigned(CAN_TX_frame.identifier, 11));
+239        1/1                                          if ((exp_base_val and exp_base_mask) /= (exp_base_id and exp_base_mask)) then
+240        1/1                                              should_pass := false;
+241                                                     end if;
+242                                                 else
+243        1/1                                          exp_ext_mask := std_logic_vector(to_unsigned(filt_cfg.ID_mask, 29));
+244        1/1                                          exp_ext_val  := std_logic_vector(to_unsigned(filt_cfg.ID_value, 29));
+245        1/1                                          exp_ext_id   := std_logic_vector(to_unsigned(CAN_TX_frame.identifier, 29));
+246        1/1                                          if ((exp_ext_val and exp_ext_mask) /= (exp_ext_id and exp_ext_mask)) then
+247        1/1                                              should_pass := false;
+248                                                     end if;
+249                                                 end if;
+250                     
+251                                                 -------------------------------------------------------------------------------
+252                                                 -- @1.3 Check that if filter should match the frame, the frame is stored
+253                                                 --      in RX Buffer of DUT Node. Read the frame from RX Buffer.
+254                                                 -------------------------------------------------------------------------------
+255        1/1                                      info_m(&quot;Step 1.3&quot;);
+256                     
+257        1/1                                      get_rx_buf_state(rx_buf_state, DUT_NODE, chn);
+258        1/1                                      if (should_pass) then
+259        1/1                                          check_m(rx_buf_state.rx_frame_count = 1, &quot;Frame received when expected!&quot;);
+260        1/1                                          CAN_read_frame(CAN_RX_frame, DUT_NODE, chn);
+261        1/1                                          CAN_compare_frames(CAN_RX_frame, CAN_TX_frame, false, frames_equal);
+262        1/1                                          check_m(frames_equal, &quot;Frames are equal&quot;);
+263                                                 else
+264        1/1                                          check_m(rx_buf_state.rx_frame_count = 0, &quot;Frame NOT received when NOT expected!&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.FRAME_FILTERS_MASK_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

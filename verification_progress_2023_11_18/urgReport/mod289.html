@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.RETR_LIMIT_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.RETR_LIMIT_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.RETR_LIMIT_FTEST')">CTU_CAN_FD_TB.RETR_LIMIT_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod289.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/retr_limit_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/retr_limit_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.RETR_LIMIT_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod289.html" >CTU_CAN_FD_TB.RETR_LIMIT_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>84</td><td>84</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>167</td><td>84</td><td>84</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+166                             ------------------------------------------------------------------------
+167        1/1                  rand_int_v(3, tmp_int);
+168        1/1                  txt_buf_nr := (tmp_int mod 4) + 1;
+169                     
+170                             ------------------------------------------------------------------------
+171                             -- @1. Set retransmitt limit to 0 in DUT. Enable retransmitt 
+172                             --     limitations. Set Acknowledge forbidden mode in Test node (to
+173                             --     produce ACK errors). Turn on Test mode in DUT (to manipulate 
+174                             --     error counters).
+175                             ------------------------------------------------------------------------
+176        1/1                  info_m(&quot;Step 1: Configuring retransmitt limit to 1 (DUT), ACF (Test node)&quot;);
+177                     
+178        1/1                  CAN_enable_retr_limit(true, 1, DUT_NODE, chn);
+179                             
+180        1/1                  mode_2.acknowledge_forbidden := true;
+181        1/1                  set_core_mode(mode_2, TEST_NODE, chn);
+182                             
+183        1/1                  mode_1.test := true;
+184        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+185                             
+186                             ------------------------------------------------------------------------
+187                             -- @2. Generate frame and start sending the frame by DUT. Wait until
+188                             --     error frame occurs and transmission is over two times.
+189                             ------------------------------------------------------------------------
+190        1/1                  info_m(&quot;Step 2: Sending frame by DUT&quot;);
+191                     
+192        1/1                  CAN_generate_frame(CAN_frame);
+193        1/1                  CAN_send_frame(CAN_frame, txt_buf_nr, DUT_NODE, chn, frame_sent);
+194        1/1                  for i in 0 to 1 loop
+195        1/1                      CAN_wait_error_frame(DUT_NODE, chn);
+196        1/1                      CAN_wait_pc_state(pc_deb_intermission, DUT_NODE, chn);
+197                             end loop;
+198                     
+199                             ------------------------------------------------------------------------
+200                             -- @3. Check transmission failed and transmitting TXT Buffer is
+201                             --     &quot;TX Error&quot;.
+202                             ------------------------------------------------------------------------
+203        1/1                  info_m(&quot;Step 3: Checking transmission failed.&quot;);
+204                     
+205        1/1                  get_tx_buf_state(txt_buf_nr, buf_state, DUT_NODE, chn);
+206        1/1                  check_m(buf_state = buf_failed, &quot;TXT Buffer failed!&quot;);
+207                             
+208                             ------------------------------------------------------------------------
+209                             -- @4. Disable retransmitt limitions in DUT. Start sending a frame by
+210                             --     DUT. Wait until error frame and check that transmitting TXT
+211                             --     Buffer is &quot;Ready&quot; again (hitting current retransmitt limit did not
+212                             --     cause stopping retransmissions when retransmitt limit is disabled).
+213                             ------------------------------------------------------------------------
+214        1/1                  info_m(&quot;Step 4: Testing disabled retransmitt limitation&quot;);
+215                     
+216        1/1                  CAN_enable_retr_limit(false, 1, DUT_NODE, chn);
+217                     
+218        1/1                  CAN_send_frame(CAN_frame, txt_buf_nr, DUT_NODE, chn, frame_sent);
+219        1/1                  CAN_wait_error_frame(DUT_NODE, chn);
+220                     
+221        1/1                  CAN_wait_pc_state(pc_deb_intermission, DUT_NODE, chn);
+222        1/1                  CAN_wait_error_frame(DUT_NODE, chn);
+223                     
+224        1/1                  get_tx_buf_state(txt_buf_nr, buf_state, DUT_NODE, chn);
+225        1/1                  check_m(buf_state = buf_ready, &quot;TXT Buffer ready!&quot;);
+226                             
+227                             ------------------------------------------------------------------------
+228                             -- @5. Abort transmission by DUT. Wait until transmission was aborted.
+229                             ------------------------------------------------------------------------
+230        1/1                  info_m(&quot;Step 5: Aborting transmission&quot;);
+231                     
+232        1/1                  send_TXT_buf_cmd(buf_set_abort, txt_buf_nr, DUT_NODE, chn);
+233        1/1                  get_tx_buf_state(txt_buf_nr, buf_state, DUT_NODE, chn);
+234        1/1                  while (buf_state /= buf_aborted) loop
+235        1/1                      get_tx_buf_state(txt_buf_nr, buf_state, DUT_NODE, chn);
+236                             end loop;
+237        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+238                     
+239                             ------------------------------------------------------------------------
+240                             -- @6. Generate random retransmitt limit (between 1 and 14). Enable 
+241                             --     retransmitt limitation in DUT. Erase TX Error counter.
+242                             ------------------------------------------------------------------------
+243        1/1                  info_m(&quot;Step 6: Setting random retransmitt limit!&quot;);
+244                     
+245        1/1                  rand_int_v(13, retr_th);
+246        1/1                  retr_th := retr_th + 1;
+247        1/1                  info_m(&quot;Retransmitt threshold: &quot; &amp; Integer'image(retr_th));
+248        1/1                  CAN_enable_retr_limit(true, retr_th, DUT_NODE, chn);
+249        1/1                  err_counters.tx_counter := 0;
+250        1/1                  set_error_counters(err_counters, DUT_NODE, chn);
+251                             
+252                             ------------------------------------------------------------------------
+253                             -- @7. Send frame by DUT. Monitor that after initial transmission and
+254                             --     after each next re-transmission sending TXT Buffer in DUT is
+255                             --     &quot;Ready&quot;.
+256                             ------------------------------------------------------------------------
+257        1/1                  info_m(&quot;Step 7: Checking number of re-transmissions: &quot; &amp;
+258                                     integer'image(retr_th));
+259                     
+260        1/1                  CAN_send_frame(CAN_frame, txt_buf_nr, DUT_NODE, chn, frame_sent);
+261        1/1                  for i in 0 to retr_th loop
+262        1/1                      info_m(&quot;Loop: &quot; &amp; integer'image(i));
+263        1/1                      CAN_wait_frame_sent(DUT_NODE, chn);
+264        1/1                      get_tx_buf_state(txt_buf_nr, buf_state, DUT_NODE, chn);
+265        1/1                      if (i /= retr_th) then
+266        1/1                          check_m(buf_state = buf_ready, &quot;TXT Buffer ready&quot;);
+267                                 else
+268        1/1                          check_m(buf_state = buf_failed, &quot;TXT Buffer failed&quot;);
+269                                 end if;
+270                             end loop;
+271        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+272                     
+273                             ------------------------------------------------------------------------
+274                             -- @8. Check that value of TX Error counter in DUT is equal to:
+275                             --     (retr_lim + 1) * 8.
+276                             ------------------------------------------------------------------------
+277        1/1                  info_m(&quot;Step 8: Checking value of TX Error counter&quot;);
+278                     
+279        1/1                  read_error_counters(err_counters, DUT_NODE, chn);
+280        1/1                  check_m(err_counters.tx_counter = 8 * (retr_th + 1),
+281                                 &quot;Counters exp: &quot; &amp; Integer'Image(err_counters.tx_counter) &amp;
+282                                 &quot; counters real: &quot; &amp; Integer'image(8 * (retr_th + 1)));
+283                             
+284                             ------------------------------------------------------------------------
+285                             -- @9. Set retransmitt limit to 15 and Enable Re-transmissions in DUT.
+286                             --     Start Sending frame by DUT. Erase error counters so that
+287                             --     we don't go to bus off (just to be sure).
+288                             ------------------------------------------------------------------------
+289        1/1                  info_m(&quot;Step 9: Set maximal retransmitt limit (15)&quot;);
+290                     
+291        1/1                  CAN_enable_retr_limit(true, 15, DUT_NODE, chn);
+292        1/1                  CAN_send_frame(CAN_frame, txt_buf_nr, DUT_NODE, chn, frame_sent);
+293                     
+294        1/1                  err_counters.tx_counter := 0;
+295        1/1                  set_error_counters(err_counters, DUT_NODE, chn);
+296                             
+297                             ------------------------------------------------------------------------
+298                             -- @10. Monitor that after initial transmission and after each next
+299                             --      re-transmission sending TXT Buffer in DUT is &quot;Ready&quot;. After
+300                             --      'retransmitt limit' retransmissions check that sending TXT
+301                             --      Buffer in DUT is in state &quot;TX Error&quot;.
+302                             ------------------------------------------------------------------------
+303        1/1                  info_m(&quot;Step 10: Checking number of re-transmissions&quot;);
+304                     
+305        1/1                  for i in 0 to 15 loop
+306        1/1                      CAN_wait_frame_sent(DUT_NODE, chn);
+307        1/1                      get_tx_buf_state(txt_buf_nr, buf_state, DUT_NODE, chn);
+308        1/1                      if (i /= 15) then
+309        1/1                          check_m(buf_state = buf_ready, &quot;TXT Buffer ready&quot;);
+310                                 else
+311        1/1                          check_m(buf_state = buf_failed, &quot;TXT Buffer failed&quot;);
+312                                 end if;
+313                             end loop;
+314                             
+315                             -- Error counters must be erased because unit is already Error Passive!
+316        1/1                  err_counters.tx_counter := 0;
+317        1/1                  set_error_counters(err_counters, DUT_NODE, chn);
+318        1/1                  wait for 100 ns;
+319                     
+320                             ------------------------------------------------------------------------
+321                             -- @11. Set retransmitt limit to 1 in DUT. Insert frames for 
+322                             --      transmission to DUT and Test node simultaneously to invoke
+323                             --      arbitration. ID of frame in DUT is higher than the one in
+324                             --      Test node (to loose arbitration). Wait until node 1 is in Control
+325                             --      field of a frame. Check that DUT is receiver (arbitration was
+326                             --      really lost) and TXT Buffer in DUT ended up in &quot;TX Error&quot;
+327                             --      state.
+328                             ------------------------------------------------------------------------
+329        1/1                  info_m(&quot;Step 11: Testing re-transmitt limit due to arbitration loss!&quot;);
+330                     
+331        1/1                  CAN_enable_retr_limit(true, 1, DUT_NODE, chn);
+332        1/1                  CAN_frame.ident_type := BASE;
+333        1/1                  CAN_frame.identifier := 10;
+334        1/1                  CAN_insert_TX_frame(CAN_frame, 1, DUT_NODE, chn);
+335        1/1                  CAN_frame.identifier := 9;
+336        1/1                  CAN_insert_TX_frame(CAN_frame, 1, TEST_NODE, chn);
+337        1/1                  CAN_insert_TX_frame(CAN_frame, 2, TEST_NODE, chn);
+338                             
+339        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, DUT_NODE, chn);
+340                             
+341                             -- Note: There are two frames in Test node. First one will be transmitted,
+342                             --       because we have one re-transmission, thus Test node needs to
+343                             --       send next frame after first one to invoke next arbitration!
+344        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+345        1/1                  send_TXT_buf_cmd(buf_set_ready, 2, TEST_NODE, chn);
+346                             
+347        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+348                             
+349        1/1                  CAN_wait_pc_state(pc_deb_control, DUT_NODE, chn);
+350        1/1                  get_controller_status(status, DUT_NODE, chn);
+351        1/1                  check_m(status.receiver, &quot;DUT lost arbitration&quot;);
+352        1/1                  get_tx_buf_state(txt_buf_nr, buf_state, DUT_NODE, chn);
+353        1/1                  check_m(buf_state = buf_failed, &quot;TXT Buffer failed&quot;);
+354        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.RETR_LIMIT_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

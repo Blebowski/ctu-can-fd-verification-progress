@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.INT_TX_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.INT_TX_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.INT_TX_FTEST')">CTU_CAN_FD_TB.INT_TX_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod44.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_tx_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_tx_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.INT_TX_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod44.html" >CTU_CAN_FD_TB.INT_TX_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>118</td><td>118</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>154</td><td>118</td><td>118</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+153                             -----------------------------------------------------------------------
+154        1/1                  info_m(&quot;Step 1: Setting TX Interrupt&quot;);
+155                     
+156        1/1                  int_mask.transmitt_int := false;
+157        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+158                     
+159        1/1                  int_ena.transmitt_int := true;
+160        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+161                             
+162                             -----------------------------------------------------------------------
+163                             --  @2. Set Retransmitt limit to 0 on DUT (One shot-mode). Enable 
+164                             --      Retransmitt limitations on DUT. Send frame by DUT.
+165                             -----------------------------------------------------------------------
+166        1/1                  info_m(&quot;Step 2: Sending frame&quot;);
+167                     
+168        1/1                  CAN_enable_retr_limit(true, 0, DUT_NODE, chn);
+169        1/1                  CAN_generate_frame(CAN_frame);
+170        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+171                             
+172                             -----------------------------------------------------------------------
+173                             --  @3. Monitor DUT frame, check that in the beginning of EOF, 
+174                             --      Interrupt is Not set, after EOF it is set.
+175                             -----------------------------------------------------------------------  
+176        1/1                  info_m(&quot;Step 3: Check TX Interrupt is set in EOF!&quot;);
+177                             
+178        1/1                  CAN_wait_pc_state(pc_deb_eof, DUT_NODE, chn);
+179        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+180        1/1                  check_false_m(int_stat.transmitt_int,
+181                                 &quot;TX Interrupt not set in beginning of EOF&quot;);
+182                             
+183        1/1                  CAN_wait_not_pc_state(pc_deb_eof, DUT_NODE, chn);
+184        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+185        1/1                  check_m(int_stat.transmitt_int, &quot;TX Interrupt set at the end of EOF&quot;);
+186                             
+187                             -- Wait till bus is idle, read-out received frame so that there is
+188                             -- nothing in RX Buffer of Test node.
+189        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+190        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+191        1/1                  CAN_read_frame(CAN_frame_rx, TEST_NODE, chn);
+192                             
+193        1/1                  CAN_compare_frames(CAN_frame, CAN_frame_rx, false, frames_equal);
+194        1/1                  check_m(frames_equal, &quot;TX, RX frames should be equal!&quot;);
+195                             
+196                             -----------------------------------------------------------------------
+197                             --  @4. Check that INT pin is high. Disable TX Interrupt and check that
+198                             --      INT pin goes low. Enable Interrupt and check it goes high again.
+199                             -----------------------------------------------------------------------
+200        1/1                  info_m(&quot;Step 4: Check INT pin toggles&quot;);
+201                     
+202        1/1                  interrupt_agent_check_asserted(chn);
+203        1/1                  int_ena.transmitt_int := false;
+204        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+205        1/1                  wait for 10 ns;
+206                             
+207        1/1                  interrupt_agent_check_not_asserted(chn);
+208                             
+209        1/1                  int_ena.transmitt_int := true;
+210        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+211        1/1                  wait for 10 ns;
+212                             
+213        1/1                  interrupt_agent_check_asserted(chn);
+214                     
+215                             -----------------------------------------------------------------------
+216                             --  @5. Clear TX Interrupt, check it is cleared and INT pin goes low.
+217                             -----------------------------------------------------------------------
+218        1/1                  info_m(&quot;Step 4: Clear TX Interrupt, Check INT pin toggles&quot;);
+219                     
+220        1/1                  int_stat.transmitt_int := true;
+221        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+222        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+223                             
+224        1/1                  check_false_m(int_mask.transmitt_int, &quot;TX Interrupt status should be 0!&quot;);
+225        1/1                  interrupt_agent_check_not_asserted(chn);
+226                             
+227                             -----------------------------------------------------------------------
+228                             --  @6. Send Frame by DUT. Force bus level during ACK to recessive, 
+229                             --      check that error frame is transmitted by both nodes. Wait till
+230                             --      bus is idle, check.
+231                             -----------------------------------------------------------------------
+232        1/1                  info_m(&quot;Step 6: Check TX Interrupt is not set upon Error Frame!&quot;);
+233                     
+234        1/1                  CAN_generate_frame(CAN_frame);
+235                             -- CAN 2.0 frame is needed! In FD frame, ACK can be prolonged so it
+236                             -- is not enough to force it recessive for one bit!!!
+237        1/1                  CAN_frame.frame_format := NORMAL_CAN; 
+238        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+239        1/1                  CAN_wait_pc_state(pc_deb_ack, DUT_NODE, chn);
+240                             
+241        1/1                  force_bus_level(RECESSIVE, chn);
+242        1/1                  CAN_wait_not_pc_state(pc_deb_ack, DUT_NODE, chn);
+243        1/1                  CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+244        1/1                  release_bus_level(chn);
+245                             
+246        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+247        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+248                     
+249        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+250                             
+251        1/1                  check_false_m(int_stat.transmitt_int, &quot;TX Interrupt status should be 0!&quot;);
+252        1/1                  interrupt_agent_check_not_asserted(chn);
+253                     
+254                             -----------------------------------------------------------------------
+255                             --  @7. Mask TX Interrupt. Send frame by DUT. Check that after frame
+256                             --     TX Interrupt was not set. Check that INT pin is low.
+257                             -----------------------------------------------------------------------
+258        1/1                  info_m(&quot;Step 7: Check Masked TX Interrupt is not captured&quot;);
+259                     
+260        1/1                  int_mask.transmitt_int := true;
+261        1/1                  int_ena.transmitt_int := true;
+262        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+263                     
+264        1/1                  CAN_generate_frame(CAN_frame);
+265        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+266        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+267                     
+268        1/1                  CAN_read_frame(CAN_frame_rx, TEST_NODE, chn);
+269        1/1                  CAN_compare_frames(CAN_frame, CAN_frame_rx, false, frames_equal);
+270        1/1                  check_m(frames_equal, &quot;TX, RX frames should be equal!&quot;);
+271                     
+272        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+273        1/1                  check_false_m(int_stat.transmitt_int, &quot;TX Interrupt status should be 0!&quot;);
+274        1/1                  interrupt_agent_check_not_asserted(chn);
+275                     
+276                             -----------------------------------------------------------------------
+277                             --  @8. Unmask TX Interrupt. Send frame by DUT. Check that after 
+278                             --     frame TX Interrupt was set. Check INT pin is high.
+279                             -----------------------------------------------------------------------
+280        1/1                  info_m(&quot;Step 8: Check Un-Masked TX Interrupt is captured&quot;);
+281                     
+282        1/1                  int_mask.transmitt_int := false;
+283        1/1                  int_ena.transmitt_int := true;
+284        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+285                     
+286        1/1                  CAN_generate_frame(CAN_frame);
+287        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+288        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+289                     
+290        1/1                  CAN_read_frame(CAN_frame_rx, TEST_NODE, chn);
+291        1/1                  CAN_compare_frames(CAN_frame, CAN_frame_rx, false, frames_equal);
+292        1/1                  check_m(frames_equal, &quot;TX, RX frames should be equal!&quot;);
+293                     
+294        1/1                  read_int_status(int_stat, DUT_NODE, chn);        
+295        1/1                  check_m(int_stat.transmitt_int, &quot;TX Interrupt status should be 1!&quot;);
+296        1/1                  interrupt_agent_check_asserted(chn);
+297                             
+298                             -----------------------------------------------------------------------
+299                             --  @9. Disable TX Interrupt, check that TX interrupt was disabled.
+300                             -----------------------------------------------------------------------
+301        1/1                  info_m(&quot;Step 9: Check TX Interrupt Enable Set&quot;);
+302                     
+303        1/1                  int_ena.transmitt_int := false;
+304        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+305        1/1                  int_ena.transmitt_int := true;
+306                     
+307        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+308        1/1                  check_false_m(int_ena.transmitt_int, &quot;TX Interrupt should be disabled!&quot;);
+309                             
+310                             -----------------------------------------------------------------------
+311                             -- @10. Enable TX Interrupt, check that TX interrupt was enabled.
+312                             -----------------------------------------------------------------------
+313        1/1                  info_m(&quot;Step 10: Check TX Interrupt Enable Clear&quot;);
+314                     
+315        1/1                  int_ena.transmitt_int := true;
+316        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+317        1/1                  int_ena.transmitt_int := false;
+318        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+319                             
+320        1/1                  check_m(int_ena.transmitt_int, &quot;TX Interrupt should be enabled!&quot;);        
+321                             
+322                             -----------------------------------------------------------------------
+323                             -- @11. Mask TX Interrupt, check TX Interrupt is Masked.
+324                             -----------------------------------------------------------------------
+325        1/1                  info_m(&quot;Step 11: Check TX Interrupt Mask Set&quot;);
+326                     
+327        1/1                  int_mask.transmitt_int := true;
+328        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+329        1/1                  int_mask.transmitt_int := false;
+330        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+331                             
+332        1/1                  check_m(int_ena.transmitt_int, &quot;TX Interrupt should be masked!&quot;);        
+333                             
+334                             -----------------------------------------------------------------------
+335                             -- @12. Un-Mask TX Interrupt, check TX Interrupt is Un-masked.
+336                             -----------------------------------------------------------------------
+337        1/1                  info_m(&quot;Step 12: Check TX Interrupt Mask Clear&quot;);
+338                     
+339        1/1                  int_mask.transmitt_int := false;
+340        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+341        1/1                  int_mask.transmitt_int := true;
+342        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+343                             
+344        1/1                  check_false_m(int_mask.transmitt_int, &quot;TX Interrupt should be unmasked!&quot;);
+345                             
+346                             -----------------------------------------------------------------------
+347                             -- @13. Send frame by Test node. Check that after frame TX Interrupt is 
+348                             --      not set and Interrupt pin remains low.
+349                             -----------------------------------------------------------------------
+350        1/1                  info_m(&quot;Step 13: Check RX does not cause TX Interrupt to be captured!&quot;);
+351        1/1                  int_stat.transmitt_int := true;
+352        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+353                             
+354        1/1                  int_mask.transmitt_int := false;
+355        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+356                             
+357        1/1                  int_ena.transmitt_int := true;
+358        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+359                             
+360        1/1                  CAN_generate_frame(CAN_frame);
+361        1/1                  CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+362        1/1                  CAN_wait_frame_sent(TEST_NODE, chn);
+363                             
+364        1/1                  CAN_read_frame(CAN_frame_rx, DUT_NODE, chn);
+365        1/1                  CAN_compare_frames(CAN_frame, CAN_frame_rx, false, frames_equal);
+366                             
+367        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+368        1/1                  check_m(frames_equal, &quot;TX, RX frames should be equal!&quot;);
+369        1/1                  check_false_m(int_stat.transmitt_int, &quot;TX Interrupt should not be set after RX!&quot;);
+370        1/1                  interrupt_agent_check_not_asserted(chn);
+371                             
+372        1/1                  info_m(&quot;Finished TX interrupt test&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.INT_TX_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

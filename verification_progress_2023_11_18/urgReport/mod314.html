@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.ALC_ID_EXTENSION_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.ALC_ID_EXTENSION_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.ALC_ID_EXTENSION_FTEST')">CTU_CAN_FD_TB.ALC_ID_EXTENSION_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod314.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/alc_id_extension_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/alc_id_extension_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.ALC_ID_EXTENSION_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod314.html" >CTU_CAN_FD_TB.ALC_ID_EXTENSION_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>73</td><td>73</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>152</td><td>73</td><td>73</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+151                             ------------------------------------------------------------------------
+152        1/1                  info_m(&quot;Step 1: Configure one -shot mode&quot;);
+153        1/1                  CAN_enable_retr_limit(true, 0, TEST_NODE, chn);
+154        1/1                  CAN_enable_retr_limit(true, 0, DUT_NODE, chn);
+155                     
+156                             ------------------------------------------------------------------------
+157                             --  @2. Loop by N between 1 and 18: 
+158                             ------------------------------------------------------------------------
+159        1/1                  info_m(&quot;Step 2: Loop over each bit of ID Extension!&quot;);
+160        1/1                  for N in 1 to 18 loop
+161        1/1                      info_m(&quot;-----------------------------------------------------------&quot;);
+162        1/1                      info_m(&quot;Step 2: Bit &quot; &amp; integer'image(N));
+163        1/1                      info_m(&quot;-----------------------------------------------------------&quot;);
+164                                 
+165                                 --------------------------------------------------------------------
+166                                 -- @2.1 Generate two CAN frames. Both with Extended ID. Both IDs have
+167                                 --     Base ID the same. N-th bit of ID Extension differs. On N-th
+168                                 --     bit Test Node will have Dominant, DUT Recessive.
+169                                 --------------------------------------------------------------------
+170        1/1                      info_m(&quot;Step 2.1: Generate frames!&quot;);
+171        1/1                      CAN_generate_frame(frame_1);
+172        1/1                      CAN_generate_frame(frame_2);
+173        1/1                      frame_1.ident_type := EXTENDED;        
+174        1/1                      frame_2.ident_type := EXTENDED;
+175                                 
+176        1/1                      frame_1.rtr := NO_RTR_FRAME;
+177        1/1                      frame_2.rtr := NO_RTR_FRAME;
+178                                 
+179                                 -- Use short data length to avoid long test times!
+180        1/1                      frame_1.data_length := 1;
+181                                 
+182                                 -- Test Node - Should win -&gt; N-th bit Dominant.
+183        1/1                      id_var := id_template;
+184        1/1                      id_var(18 - N) := DOMINANT;
+185        1/1                      frame_1.identifier := to_integer(unsigned(id_var));
+186                     
+187                                 -- DUT - Should loose -&gt; N-th bit Recessive.
+188        1/1                      id_var := id_template;
+189        1/1                      id_var(18 - N) := RECESSIVE;
+190        1/1                      frame_2.identifier := to_integer(unsigned(id_var));
+191                                 
+192        1/1                      CAN_insert_TX_frame(frame_1, 1, TEST_NODE, chn);
+193        1/1                      CAN_insert_TX_frame(frame_2, 1, DUT_NODE, chn);
+194                     
+195                                 --------------------------------------------------------------------
+196                                 -- @2.2 Wait till sample point on DUT. Send frame 1 by Test Node and
+197                                 --     frame 2 by DUT right one after another.
+198                                 --------------------------------------------------------------------
+199        1/1                      info_m(&quot;Step 2.2: Send frames!&quot;);
+200        1/1                      CAN_wait_sample_point(TEST_NODE, chn);
+201        1/1                      send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+202        1/1                      send_TXT_buf_cmd(buf_set_ready, 1, DUT_NODE, chn);
+203                                 
+204                                 --------------------------------------------------------------------
+205                                 -- @2.3 Wait till Arbitration field in DUT. This is right after
+206                                 --     sample point of DUT in SOF or Intermission (if there is no
+207                                 --     SOF). Check that DUT is Transmitter.
+208                                 --------------------------------------------------------------------
+209        1/1                      info_m(&quot;Step 2.3: Wait till arbitration!&quot;);
+210        1/1                      CAN_wait_pc_state(pc_deb_arbitration, DUT_NODE, chn);
+211        1/1                      get_controller_status(stat_2, DUT_NODE, chn);
+212        1/1                      check_m(stat_2.transmitter, &quot;DUT transmitting!&quot;);
+213                         
+214                                 -------------------------------------------------------------------
+215                                 -- @2.4 Wait 11+1+1 (Base ID, RTR/SRR, IDE) times until sample 
+216                                 --     point in Test node.
+217                                 -------------------------------------------------------------------
+218        1/1                      info_m(&quot;Step 2.4: Wait till Identifier Extension!&quot;);
+219        1/1                      for i in 1 to 13 loop
+220        1/1                          CAN_wait_sample_point(DUT_NODE, chn); 
+221                                 end loop;
+222                         
+223                                 -------------------------------------------------------------------
+224                                 -- @2.5 Wait N-times till sample point in DUT. After every wait 
+225                                 --     before N is reached, check DUTis still transmitter.
+226                                 --     After N waits we are right after Sample point where DUT
+227                                 --     should have lost arbitration. Check DUT is receiver.
+228                                 --     Read content of ALC, check arbitration was lost at correct
+229                                 --     position.
+230                                 -------------------------------------------------------------------
+231        1/1                      info_m(&quot;Step 2.5: Wait till N-th bit!&quot;);
+232        1/1                      for K in 1 to N loop
+233        1/1                          info_m(&quot;Loop: &quot; &amp; integer'image(K));
+234        1/1                          CAN_wait_sample_point(DUT_NODE, chn);
+235        1/1                          wait for 20 ns; -- Wait until RX trigger is processed!
+236                                     
+237                                     -- Arbitration should have been lost!
+238        1/1                          if (K = N) then
+239        1/1                              get_controller_status(stat_2, DUT_NODE, chn);
+240        1/1                              check_m(stat_2.receiver, &quot;DUT node receiver!&quot;);
+241        1/1                              check_false_m(stat_2.transmitter, &quot;Test node not transmitter!&quot;);
+242                     
+243        1/1                              read_alc(alc, DUT_NODE, chn);
+244        1/1                              check_m(alc = N + 13, &quot;Arbitration lost at correct bit by DUT!&quot;);
+245                                         
+246        1/1                              read_alc(alc, TEST_NODE, chn);
+247        1/1                              check_m(alc = 0, &quot;Arbitration not lost by Test node!&quot;);
+248                             
+249        1/1                              check_can_tx(RECESSIVE, DUT_NODE, &quot;Recessive transmitted!&quot;, chn);
+250                             
+251                                     -- Arbitration should not have been lost yet!
+252                                     else
+253        1/1                              get_controller_status(stat_2, DUT_NODE, chn);
+254        1/1                              check_m(stat_2.transmitter, &quot;DUT transmitter!&quot;);
+255        1/1                              check_false_m(stat_2.receiver, &quot;DUT not receiver!&quot;);
+256                                         
+257        1/1                              if (K mod 2 = 0) then
+258        1/1                                  check_can_tx(RECESSIVE, DUT_NODE, &quot;Recessive transmitted!&quot;, chn);
+259                                         else
+260        1/1                                  check_can_tx(DOMINANT, DUT_NODE, &quot;Dominant transmitted!&quot;, chn);
+261                                         end if;
+262                                     end if;
+263                     
+264                                 end loop;
+265                                 
+266                             -----------------------------------------------------------------------
+267                             -- @2.6 Wait till the CRC delimiter in DUT, and monitor that DUT
+268                             --     is transmitting recessive value.
+269                             -----------------------------------------------------------------------
+270        1/1                  info_m(&quot;Step 2.5: Wait till end of frame!&quot;);
+271        1/1                  CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+272        1/1                  mem_bus_agent_disable_transaction_reporting(chn);
+273        1/1                  while (pc_dbg /= pc_deb_crc_delim) loop
+274        1/1                      CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+275        1/1                      check_can_tx(RECESSIVE, DUT_NODE, &quot;Recessive transmitted!&quot;, chn);
+276                                 -- To make checks more sparse not to consume simulation time!
+277        1/1                      wait for 100 ns;
+278                             end loop;
+279        1/1                  mem_bus_agent_enable_transaction_reporting(chn);
+280                             
+281                             -----------------------------------------------------------------------
+282                             -- @2.7 Wait till bus is idle! Check frame was sucessfully transmitted
+283                             --     in Test Node. Check it was succesfully received in DUT!
+284                             -----------------------------------------------------------------------
+285        1/1                  info_m(&quot;Step 2.7: Wait till bus is idle!&quot;);
+286        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+287        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+288                     
+289        1/1                  get_tx_buf_state(1, txt_buf_state, TEST_NODE, chn);
+290        1/1                  check_m(txt_buf_state = buf_done, &quot;Frame transmitted OK!&quot;);
+291                             
+292        1/1                  get_rx_buf_state(rx_buf_info, DUT_NODE, chn);
+293        1/1                  check_m(rx_buf_info.rx_frame_count = 1, &quot;Frame received OK!&quot;);
+294                             
+295        1/1                  CAN_read_frame(frame_rx, DUT_NODE, chn);
+296        1/1                  CAN_compare_frames(frame_rx, frame_1, false, frames_equal);
+297        1/1                  check_m(frames_equal, &quot;TX vs. RX frames match!&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.ALC_ID_EXTENSION_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

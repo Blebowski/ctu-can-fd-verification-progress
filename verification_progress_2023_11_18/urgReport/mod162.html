@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.ERR_CAPT_CRC_ERR_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_CRC_ERR_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.ERR_CAPT_CRC_ERR_FTEST')">CTU_CAN_FD_TB.ERR_CAPT_CRC_ERR_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod162.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_crc_err_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_crc_err_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_CRC_ERR_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod162.html" >CTU_CAN_FD_TB.ERR_CAPT_CRC_ERR_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>42</td><td>42</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>134</td><td>42</td><td>42</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+133                             -----------------------------------------------------------------------
+134        1/1                  info_m(&quot;Step 1&quot;);
+135                     
+136        1/1                  CAN_read_error_code_capture(err_capt, TEST_NODE, chn);
+137        1/1                  check_m(err_capt.err_pos = err_pos_other, &quot;Reset of ERR_CAPT!&quot;);
+138                     
+139                             -----------------------------------------------------------------------
+140                             -- @2. Generate CAN frame and send it by Test Node. Wait until CRC field
+141                             --     in DUT and wait for random number of bits. Force CAN_RX of
+142                             --     DUT for duration of 1 bit to opposite value (to mess up
+143                             --     received CRC of Test node). Wait until ACK bit in Test Node. Force
+144                             --     bus low (as if other node is ACKing the frame) and wait until sample
+145                             --     point. Wait until ACK delimiter of DUT. Wait until DUT is
+146                             --     NOT in ACK delimiter and check that it transmitts Error frame.
+147                             --     Check that ERR_CAPT contains CRC Error.
+148                             -----------------------------------------------------------------------
+149        1/1                  info_m(&quot;Step 2&quot;);
+150                     
+151        1/1                  CAN_generate_frame(frame_1);
+152        1/1                  frame_1.frame_format := NORMAL_CAN; --Use CAN 2.0 to have single bit ACK
+153        1/1                  frame_1.identifier := 67;
+154        1/1                  frame_1.dlc := &quot;0001&quot;;
+155        1/1                  frame_1.data_length := 1;
+156        1/1                  frame_1.data(0) :=  x&quot;55&quot;;
+157        1/1                  frame_1.rtr := NO_RTR_FRAME;
+158        1/1                  CAN_send_frame(frame_1, 1, TEST_NODE, chn, frame_sent);
+159                     
+160        1/1                  CAN_wait_pc_state(pc_deb_crc, DUT_NODE, chn);
+161        1/1                  rand_int_v(13, wait_time);
+162                     
+163        1/1                  info_m(&quot;waiting for:&quot; &amp; integer'image(wait_time) &amp; &quot; bits!&quot;);
+164        1/1                  wait_time := wait_time + 1;
+165        1/1                  for i in 1 to wait_time loop
+166        1/1                      CAN_wait_sync_seg(DUT_NODE, chn);
+167                             end loop;
+168        1/1                  wait for 100 ns; -- To be sure we are ssuficiently far in the bit!
+169                     
+170                             -- Force can_rx of Test node to oposite value!
+171                             -- TODO: There is a drawback here that test might fail when we flip
+172                             --       stuff bit! If we do so, then error frame will come sooner!
+173        1/1                  get_can_rx(DUT_NODE, can_rx_val, chn);
+174        1/1                  force_can_rx(not can_rx_val, DUT_NODE, chn);
+175        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+176        1/1                  wait for 20 ns;
+177        1/1                  release_can_rx(chn);
+178                     
+179                             -- Generate ACK for Test node. We have to wait till both Nodes are in ACK so
+180                             -- that we don't accidentaly generate it for Test node while it is still in
+181                             -- in CRC Delimiter, that would be form error!
+182        1/1                  CAN_wait_pc_state(pc_deb_ack, TEST_NODE, chn);
+183        1/1                  CAN_wait_pc_state(pc_deb_ack, DUT_NODE, chn);
+184        1/1                  force_bus_level(DOMINANT, chn);
+185        1/1                  check_can_tx(RECESSIVE, DUT_NODE, &quot;Send Recessive ACK upon CRC error [1]!&quot;, chn);
+186        1/1                  CAN_wait_sample_point(TEST_NODE, chn);
+187        1/1                  check_can_tx(RECESSIVE, DUT_NODE, &quot;Send Recessive ACK upon CRC error [2]!&quot;, chn);
+188        1/1                  wait for 20 ns;
+189        1/1                  release_bus_level(chn);
+190                     
+191                             -- Wait till End of ACK delimiter of Test node. Now DUT should have
+192                             -- received ACK from TB, therefore it should not be transmitting
+193                             -- error frame from ACK delimiter! But Test node should not have sent ACK
+194                             -- and should have mismatching CRC, therefore after ACK delimiter,
+195                             -- it should send Error frame!
+196        1/1                  CAN_wait_pc_state(pc_deb_ack_delim, DUT_NODE, chn);
+197        1/1                  CAN_wait_not_pc_state(pc_deb_ack_delim, DUT_NODE, chn);
+198        1/1                  wait for 20 ns;
+199                     
+200                             -- Now state has changed, we should be in Error frame because ACK was
+201                             -- recessive
+202        1/1                  get_controller_status(stat_2, DUT_NODE, chn);
+203        1/1                  check_m(stat_2.error_transmission, &quot;Error frame transmitted by Test node!&quot;);
+204                     
+205        1/1                  CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+206        1/1                  check_m(err_capt.err_type = can_err_crc, &quot;CRC error detected!&quot;);
+207        1/1                  check_m(err_capt.err_pos = err_pos_ack,
+208                                 &quot;Error detected in CRC Delim/ACK/ACK Delim field!&quot;);
+209                     
+210        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+211        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.ERR_CAPT_CRC_ERR_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

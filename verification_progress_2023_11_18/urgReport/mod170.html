@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.RX_SETTINGS_RTSOP_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.RX_SETTINGS_RTSOP_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.RX_SETTINGS_RTSOP_FTEST')">CTU_CAN_FD_TB.RX_SETTINGS_RTSOP_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 94.00</td>
+<td class="s9 cl rt"><a href="mod170.html#Line" > 94.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/rx_settings_rtsop_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/rx_settings_rtsop_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.RX_SETTINGS_RTSOP_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod170.html" >CTU_CAN_FD_TB.RX_SETTINGS_RTSOP_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>50</td><td>47</td><td>94.00</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>145</td><td>50</td><td>47</td><td>94.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+144                             -----------------------------------------------------------------------
+145        1/1                  info_m(&quot;Step 1&quot;);
+146                     
+147                             -- Force random timestamp so that we are sure that both words of the
+148                             -- timestamp are clocked properly!
+149        1/1                  rand_logic_vect_v(rand_ts, 0.5);
+150                             -- Keep highest bit 0 to avoid complete overflow during the test!
+151        1/1                  rand_ts(63) := '0';
+152                             
+153                             -- Timestamp is realized as two 32 bit naturals! Due to this, we can't
+154                             -- have 1 in MSB to avoid overflow.
+155        1/1                  rand_ts(31) := '0';
+156                     
+157        1/1                  ftr_tb_set_timestamp(rand_ts, chn);
+158        1/1                  info_m(&quot;Forcing start timestamp in DUT to: &quot; &amp; to_hstring(rand_ts));
+159                     
+160        1/1                  rx_options.rx_time_stamp_options := true;
+161        1/1                  set_rx_buf_options(rx_options, DUT_NODE, chn);
+162                     
+163        1/1                  mode_1.internal_loopback := true;
+164        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+165                     
+166        1/1                  CAN_generate_frame(CAN_TX_frame);
+167        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+168                     
+169        1/1                  CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+170                     
+171                             -- Now we are in SOF, so we must wait till sample point and capture
+172                             -- the timestamp then. HW should do the same!
+173        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+174        1/1                  timestamp_agent_get_timestamp(chn, capt_ts);
+175                     
+176        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+177        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+178                     
+179        1/1                  CAN_read_frame(CAN_RX_frame, DUT_NODE, chn);
+180                     
+181                             -- Calculate difference. Two separate cases are needed to avoid
+182                             -- underflow
+183        1/1                  if (CAN_RX_frame.timestamp &gt; capt_ts) then
+184        <font color = "red">0/1     ==>              diff := unsigned(CAN_RX_frame.timestamp) - unsigned(capt_ts);</font>
+185                             else
+186        1/1                      diff := unsigned(capt_ts) - unsigned(CAN_RX_frame.timestamp);
+187                             end if;
+188                     
+189                             -- Have some margin on check, as we are polling status which takes
+190                             -- non-zero time!
+191        1/1                  check_m(diff &lt;= 3, &quot;Timestamp at SOF. &quot; &amp;
+192                                              &quot; Expected: &quot; &amp; to_hstring(capt_ts) &amp; 
+193                                              &quot; Measured: &quot; &amp; to_hstring(CAN_RX_frame.timestamp) &amp;
+194                                              &quot; Difference: &quot; &amp; to_hstring(diff));
+195                     
+196                             -----------------------------------------------------------------------
+197                             -- @2. Generate CAN frame for transmission and send it by Test node. Poll
+198                             --     until DUT becomes receiver (this should be right after sample
+199                             --     point of Dominant bit in Idle which is interpreted as SOF) and
+200                             --     capture timestamp. Wait until CAN frame is sent and check that RX
+201                             --     frame timestamp is equal to captured timestamp.
+202                             -----------------------------------------------------------------------
+203        1/1                  info_m(&quot;Step 2&quot;);
+204                     
+205        1/1                  CAN_generate_frame(CAN_TX_frame);
+206        1/1                  CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+207                     
+208        1/1                  CAN_wait_tx_rx_start(false, true, DUT_NODE, chn);
+209                     
+210                             -- Now we should go directly to Arbitration because we sample dominant
+211                             -- bit in Idle, therefore this should be the moment of SOF sample point.
+212        1/1                  timestamp_agent_get_timestamp(chn, capt_ts);
+213                     
+214        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+215        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+216                     
+217        1/1                  CAN_read_frame(CAN_RX_frame, DUT_NODE, chn);
+218                     
+219                             -- Calculate difference. Two separate cases are needed to avoid
+220                             -- underflow
+221        1/1                  if (CAN_RX_frame.timestamp &gt; capt_ts) then
+222        <font color = "red">0/1     ==>              diff := unsigned(CAN_RX_frame.timestamp) - unsigned(capt_ts);</font>
+223                             else
+224        1/1                      diff := unsigned(capt_ts) - unsigned(CAN_RX_frame.timestamp);
+225                             end if;
+226                     
+227                             -- Have some margin on check, as we are polling status which takes
+228                             -- non-zero time!
+229        1/1                  check_m(diff &lt;= 3, &quot;Timestamp at SOF. &quot; &amp;
+230                                              &quot; Expected: &quot; &amp; to_hstring(capt_ts) &amp; 
+231                                              &quot; Measured: &quot; &amp; to_hstring(CAN_RX_frame.timestamp) &amp;
+232                                              &quot; Difference: &quot; &amp; to_hstring(diff));
+233                     
+234                             -----------------------------------------------------------------------
+235                             -- @3. Configure timestamp to be captured at EOF. Generate CAN frame
+236                             --    and send it by Test node. Wait until EOF and then until EOF ends. At
+237                             --    EOF end, capture timestamp and wait till bus is idle! Compare
+238                             --    captured timestamp with RX frame timestamp.
+239                             -----------------------------------------------------------------------
+240        1/1                  info_m(&quot;Step 3&quot;);
+241                             
+242        1/1                  rx_options.rx_time_stamp_options := false;
+243        1/1                  set_rx_buf_options(rx_options, DUT_NODE, chn);
+244                     
+245        1/1                  CAN_generate_frame(CAN_TX_frame);
+246        1/1                  CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+247                             
+248        1/1                  CAN_wait_pc_state(pc_deb_eof, DUT_NODE, chn);
+249                     
+250                             -- Wait until one bit before the end of EOF. This is when RX frame
+251                             -- is validated according to CAN standard. 
+252        1/1                  for i in 0 to 5 loop
+253        1/1                      CAN_wait_sample_point(DUT_NODE, chn, false);
+254                             end loop;
+255                             
+256                             -- Now we should be right in sample point of EOF. Get timestamp
+257        1/1                  timestamp_agent_get_timestamp(chn, capt_ts);
+258                     
+259        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+260        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+261                     
+262        1/1                  CAN_read_frame(CAN_RX_frame, DUT_NODE, chn);
+263                             
+264                             -- Calculate difference. Two separate cases are needed to avoid
+265                             -- underflow
+266        1/1                  if (CAN_RX_frame.timestamp &gt; capt_ts) then
+267        1/1                      diff := unsigned(CAN_RX_frame.timestamp) - unsigned(capt_ts);
+268                             else
+269        <font color = "red">0/1     ==>              diff := unsigned(capt_ts) - unsigned(CAN_RX_frame.timestamp);</font>
+270                             end if;
+271                     
+272                             -- Have some margin on check, as we are polling status which takes
+273                             -- non-zero time!
+274        1/1                  check_m(diff &lt;= 3, &quot;Timestamp at SOF. &quot; &amp;
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.RX_SETTINGS_RTSOP_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

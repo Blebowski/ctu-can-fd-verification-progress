@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TXT_BUFFER_HAZARD_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TXT_BUFFER_HAZARD_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TXT_BUFFER_HAZARD_FTEST')">CTU_CAN_FD_TB.TXT_BUFFER_HAZARD_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 90.48</td>
+<td class="s9 cl rt"><a href="mod125.html#Line" > 90.48</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/txt_buffer_hazard_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/txt_buffer_hazard_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TXT_BUFFER_HAZARD_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod125.html" >CTU_CAN_FD_TB.TXT_BUFFER_HAZARD_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>21</td><td>19</td><td>90.48</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>126</td><td>21</td><td>19</td><td>90.48</td></tr>
+</table>
+<pre class="code"><br clear=all>
+125                             -- Generate CAN frame
+126        1/1                  CAN_generate_frame(CAN_frame);
+127                         
+128                             -- Insert the frame for transmittion
+129        1/1                  CAN_insert_TX_frame(CAN_frame, 1, DUT_NODE, chn);
+130                         
+131                             -- Repeat test several times
+132        1/1                  for i in 1 to 150 loop
+133                         
+134                                 -- Give &quot;Set ready&quot; command to the buffer
+135        1/1                      send_TXT_buf_cmd(buf_set_ready, 1, DUT_NODE, chn);
+136                         
+137                                 -- Wait for some clock cycles before sending abort command.
+138        1/1                      for j in 0 to i loop
+139        1/1                          clk_agent_wait_cycle(chn);
+140                                 end loop;
+141                         
+142                                 -- Give &quot;Set abort&quot; command to the buffer
+143        1/1                      send_TXT_buf_cmd(buf_set_abort, 1, DUT_NODE, chn);
+144                         
+145                                 -- Wait for some clock cycles before reading buffer and controller state
+146        1/1                      for j in 0 to 20 loop
+147        1/1                          clk_agent_wait_cycle(chn);
+148                                 end loop;
+149                         
+150                                 -- Read &quot;TXT Buffer state&quot;
+151        1/1                      get_tx_buf_state(1, txt_buf_state, DUT_NODE, chn);
+152                         
+153                                 -- Read status of CTU CAN FD controller.
+154        1/1                      get_controller_status(status, DUT_NODE, chn);
+155                         
+156                                 -- Is controller transmitting?
+157        1/1                      if (status.transmitter) then
+158                                     -- Is also TXT buffer in transmitting state? Or if set_abort command
+159                                     -- comes just at the time when the core LOCKs the buffer, it goes to 
+160                                     -- &quot;Abort in Progress&quot;.
+161        1/1                          if (txt_buf_state = buf_tx_progress) or 
+162                                         (txt_buf_state = buf_ab_progress) then
+163                                         -- Everything is ok
+164        1/1                              info_m(&quot;Transmitting: Both TXT buffer and controller &quot; &amp; 
+165                                              &quot;in consistence state.&quot; &amp; &quot; [&quot; &amp; to_string(i) &amp; &quot;]&quot;);
+166                                  
+167                                         -- Wait until bus is idle 
+168        1/1                              CAN_wait_bus_idle(DUT_NODE, chn);
+169                         
+170                                         -- Is the unit now in idle since it is after transmittion already?
+171        1/1                              get_controller_status(status, DUT_NODE, chn);
+172        1/1                              check_m(status.bus_status, &quot;Unit is not Idle!&quot;);
+173                                     else
+174                                         -- Inconsistency happened
+175        <font color = "red">0/1     ==>                      error_m(&quot;Inconsistence: CAN controller transmitter=TRUE, TXT &quot; &amp;</font>
+176                                                 &quot;buffer=&quot; &amp; to_string(txt_buf_state) &amp;
+177                                                 &quot; [&quot; &amp; to_string(i) &amp; &quot;]&quot;);
+178                                     end if;
+179                                 else 
+180                                     -- Is also TXT buffer in aborted state?
+181        1/1                          if (txt_buf_state = buf_aborted) then
+182                                         -- Everything is ok
+183        1/1                              info_m(&quot;Both TXT buffer and controller in aborted state&quot; &amp;
+184                                              &quot; [&quot; &amp; to_string(i) &amp; &quot;]&quot;);		 
+185                                     else
+186                                         -- Inconsistency happened
+187        <font color = "red">0/1     ==>                     error_m(&quot;Inconsistence: CAN controller transmitter=FALSE, TXT &quot; &amp;</font>
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TXT_BUFFER_HAZARD_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

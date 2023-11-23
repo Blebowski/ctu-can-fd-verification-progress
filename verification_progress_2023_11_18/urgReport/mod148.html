@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.MODE_TXBBM_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.MODE_TXBBM_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.MODE_TXBBM_FTEST')">CTU_CAN_FD_TB.MODE_TXBBM_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod148.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_txbbm_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_txbbm_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.MODE_TXBBM_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod148.html" >CTU_CAN_FD_TB.MODE_TXBBM_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>41</td><td>41</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>146</td><td>41</td><td>41</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+145                             -----------------------------------------------------------------------
+146        1/1                  info_m(&quot;Step 1&quot;);
+147                     
+148        1/1                  mode_1.tx_buf_backup := true;
+149        1/1                  mode_1.parity_check := true;
+150        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+151                     
+152        1/1                  get_tx_buf_count(txt_buf_count, DUT_NODE, chn);
+153                     
+154                             -----------------------------------------------------------------------
+155                             --  @2. Loop for each TXT Buffer
+156                             -----------------------------------------------------------------------
+157        1/1                  get_tx_buf_count(num_buffers, DUT_NODE, chn);
+158                     
+159        1/1                  for iteration in 1 to num_buffers loop
+160        1/1                      info_m(&quot;Step 2, iteration&quot; &amp; integer'image(iteration));
+161                     
+162                                 -------------------------------------------------------------------
+163                                 -- @2.1 Generate random priorities of TXT Buffers and apply them
+164                                 --      in DUT. Generate random index of TXT Buffer which is for
+165                                 --      sure &quot;original&quot; TXT Buffer and insert random frame to it.
+166                                 --      Configure random priorities.
+167                                 -------------------------------------------------------------------
+168        1/1                      info_m(&quot;Step 2.1&quot;);
+169                     
+170        1/1                      for i in 1 to txt_buf_count loop
+171        1/1                          rand_int_v(7, tmp_int);
+172        1/1                          CAN_configure_tx_priority(i, tmp_int, DUT_NODE, chn);
+173                                 end loop;
+174                     
+175        1/1                      txt_buf_index := iteration;
+176        1/1                      if (txt_buf_index mod 2 = 0) then
+177        1/1                          txt_buf_index := txt_buf_index - 1;
+178                                 end if;
+179                     
+180        1/1                      CAN_generate_frame(CAN_TX_frame);
+181        1/1                      CAN_insert_TX_frame(CAN_TX_frame, txt_buf_index, DUT_NODE, chn);
+182        1/1                      CAN_insert_TX_frame(CAN_TX_frame, txt_buf_index + 1, DUT_NODE, chn);
+183                     
+184                                 -----------------------------------------------------------------------
+185                                 -- @2.2 Send set ready command to selected original TXT Buffer. Wait
+186                                 --      until DUT starts transmission, and check that &quot;original&quot; TXT
+187                                 --      Buffer is in TX in Progress and &quot;backup&quot; TXT Buffer is in
+188                                 --      &quot;ready&quot; state.
+189                                 -----------------------------------------------------------------------
+190        1/1                      info_m(&quot;Step 2.2&quot;);
+191                     
+192        1/1                      txt_buf_vector := x&quot;00&quot;;
+193        1/1                      txt_buf_vector(txt_buf_index - 1) := '1';
+194                     
+195        1/1                      send_TXT_buf_cmd(buf_set_ready, txt_buf_vector, DUT_NODE, chn);
+196                     
+197        1/1                      CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+198                     
+199        1/1                      get_tx_buf_state(txt_buf_index, txt_buf_state, DUT_NODE, chn);
+200        1/1                      check_m(txt_buf_state = buf_tx_progress, &quot;'Original' TXT Buffer is in 'TX in Progress'&quot;);
+201        1/1                      get_tx_buf_state(txt_buf_index + 1, txt_buf_state, DUT_NODE, chn);
+202        1/1                      check_m(txt_buf_state = buf_ready, &quot;'Backup' TXT Buffer is in 'TX Ready'&quot;);
+203                     
+204                                 -----------------------------------------------------------------------
+205                                 -- @2.3 Wait until transmission ends and bus is idle. Check that
+206                                 --      &quot;original&quot; TXT Buffer is in &quot;TX OK&quot; state and &quot;backup&quot; TXT
+207                                 --      buffer ended in &quot;Aborted&quot; state.
+208                                 -----------------------------------------------------------------------
+209        1/1                      info_m(&quot;Step 2.3&quot;);
+210                     
+211        1/1                      CAN_wait_frame_sent(DUT_NODE, chn);
+212        1/1                      CAN_wait_bus_idle(TEST_NODE, chn);
+213        1/1                      CAN_wait_bus_idle(DUT_NODE, chn);
+214                     
+215        1/1                      get_tx_buf_state(txt_buf_index, txt_buf_state, DUT_NODE, chn);
+216        1/1                      check_m(txt_buf_state = buf_done, &quot;'Original' TXT Buffer is in 'TX OK'&quot;);
+217        1/1                      get_tx_buf_state(txt_buf_index + 1, txt_buf_state, DUT_NODE, chn);
+218        1/1                      check_m(txt_buf_state = buf_aborted, &quot;'Backup' TXT Buffer is in 'Aborted'&quot;);
+219                     
+220        1/1                      CAN_read_frame(CAN_RX_frame, TEST_NODE, chn);
+221        1/1                      CAN_compare_frames(CAN_RX_frame, CAN_TX_frame, false, frames_equal);
+222        1/1                      check_m(frames_equal, &quot;TX/RX frames match&quot;);
+223                     
+224        1/1                      get_controller_status(status_1, DUT_NODE, chn);
+225        1/1                      check_false_m(status_1.tx_parity_error, &quot;Parity error not set!&quot;);
+226        1/1                      check_false_m(status_1.tx_double_parity_error, &quot;Double parity error not set!&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.MODE_TXBBM_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.ERR_CAPT_CTRL_FORM_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_CTRL_FORM_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.ERR_CAPT_CTRL_FORM_FTEST')">CTU_CAN_FD_TB.ERR_CAPT_CTRL_FORM_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod53.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_ctrl_form_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_ctrl_form_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_CTRL_FORM_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod53.html" >CTU_CAN_FD_TB.ERR_CAPT_CTRL_FORM_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>59</td><td>59</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>140</td><td>59</td><td>59</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+139                             -----------------------------------------------------------------------
+140        1/1                  info_m(&quot;Step 1&quot;);
+141                             
+142        1/1                  CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+143        1/1                  check_m(err_capt.err_pos = err_pos_other, &quot;Reset of ERR_CAPT!&quot;);
+144                     
+145                             -- Protocol exception should be disabled, otherwise, we dont get error
+146                             -- frame upon form error in control field.
+147        1/1                  get_core_mode(mode_2, DUT_NODE, chn);
+148        1/1                  mode_2.pex_support := false;
+149        1/1                  set_core_mode(mode_2, DUT_NODE, chn);
+150                     
+151                             -----------------------------------------------------------------------
+152                             -- @2. Generate CAN frame (CAN 2.0 Base only, CAN FD Base only, CAN 2.0
+153                             --    Extended, CAN FD extended), send it by Test Node. Wait until
+154                             --    Arbitration field of the other node and wait for 13 (Base ID, RTR,
+155                             --    IDE) or 14 (Base ID, RTR, IDE, EDL) or 34 bits (Base ID, SRR, IDE,
+156                             ---   Ext ID, RTR) or 35 bits  (Base ID, SRR, IDE, Ext ID, RTR, EDL)
+157                             --    bits based on frame type. Force bus Recessive
+158                             --    (reserved bits are dominant) and wait until sample point. Check
+159                             --    that Node is transmitting error frame. Check that ERR_CAPT signals
+160                             --    Form Error in Control field. Reset the node, Wait until integration
+161                             --    is over and check that ERR_CAPT is at its reset value (this is to
+162                             ---   check that next loops will truly set ERR_CAPT). Repeat with each
+163                             --    frame type!
+164                             -----------------------------------------------------------------------
+165        1/1                  for i in 1 to 4 loop
+166        1/1                      info_m(&quot;Inner Loop: &quot; &amp; integer'image(i));
+167        1/1                      CAN_generate_frame(frame_1);
+168                     
+169                                 -- ID is not important in this TC. Avoid overflows of high generated
+170                                 -- IDs on Base IDs!
+171        1/1                      frame_1.identifier := 10;
+172                                 -- This is to avoid failing assertions on simultaneous RTR and EDL
+173                                 -- flag (if r0 is corrupted by TC to be recessive!). RTR flag is
+174                                 -- not important in this TC, therefore we can afford to fixate it!
+175        1/1                      frame_1.RTR := NO_RTR_FRAME;
+176                                 
+177        1/1                      case i is
+178                                 when 1 =&gt;
+179        1/1                          frame_1.frame_format := NORMAL_CAN;
+180        1/1                          frame_1.ident_type := BASE;
+181        1/1                          wait_time := 13; -- Till r0
+182                                     
+183                                     -- This is to get Form error on r0 RECESSIVE
+184        1/1                          get_core_mode(mode_1, DUT_NODE, chn);
+185        1/1                          mode_1.flexible_data_rate := false;
+186        1/1                          set_core_mode(mode_1, DUT_NODE, chn);
+187                     
+188                                 when 2 =&gt;
+189        1/1                          frame_1.frame_format := FD_CAN;
+190        1/1                          frame_1.ident_type := BASE;
+191        1/1                          wait_time := 14; -- Till r0
+192                                     
+193                                     -- This is to get Form error on r0 (after EDL) RECESSIVE
+194        1/1                          get_core_mode(mode_1, DUT_NODE, chn);
+195        1/1                          mode_1.flexible_data_rate := true;
+196        1/1                          set_core_mode(mode_1, DUT_NODE, chn);
+197                                     
+198                                 when 3 =&gt;
+199        1/1                          frame_1.frame_format := NORMAL_CAN;
+200        1/1                          frame_1.ident_type := EXTENDED;
+201        1/1                          wait_time := 32; -- Till r1
+202                                     
+203                                     -- This is to get Form error on r1
+204        1/1                          get_core_mode(mode_1, DUT_NODE, chn);
+205        1/1                          mode_1.flexible_data_rate := false;
+206        1/1                          set_core_mode(mode_1, DUT_NODE, chn);
+207                                     
+208                                 when 4 =&gt;
+209        1/1                          frame_1.frame_format := FD_CAN;
+210        1/1                          frame_1.ident_type := EXTENDED;
+211        1/1                          wait_time := 33; -- Till r0
+212                                     
+213                                     -- This is to get Form error on r0 (after EDL) RECESSIVE
+214        1/1                          get_core_mode(mode_1, DUT_NODE, chn);
+215        1/1                          mode_1.flexible_data_rate := true;
+216        1/1                          set_core_mode(mode_1, DUT_NODE, chn);
+217                                     
+218                                 end case;
+219                                 
+220        1/1                      CAN_send_frame(frame_1, 1, TEST_NODE, chn, frame_sent);
+221                     
+222        1/1                      CAN_wait_pc_state(pc_deb_arbitration, DUT_NODE, chn);
+223                                 
+224        1/1                      info_m(&quot;Waiting for: &quot; &amp; integer'image(wait_time) &amp; &quot; bits!&quot;);
+225        1/1                      for j in 1 to wait_time loop
+226        1/1                          CAN_wait_sample_point(DUT_NODE, chn);
+227                                 end loop;
+228                                 
+229                                 -- Force bus for one bit time
+230        1/1                      force_bus_level(RECESSIVE, chn);
+231        1/1                      CAN_wait_sample_point(DUT_NODE, chn, skip_stuff_bits =&gt; false);
+232        1/1                      wait for 20 ns; -- To be sure that opposite bit is sampled!
+233        1/1                      release_bus_level(chn);
+234                                 
+235                                 -- Check errors
+236        1/1                      get_controller_status(stat_2, DUT_NODE, chn);
+237        1/1                      check_m(stat_2.error_transmission,
+238                                         &quot;Error frame is being transmitted!&quot;);
+239                             
+240        1/1                      CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+241        1/1                      check_m(err_capt.err_type = can_err_form, &quot;Form error detected!&quot;);
+242        1/1                      check_m(err_capt.err_pos = err_pos_ctrl,
+243                                         &quot;Error detected in Control field!&quot;);
+244        1/1                      wait for 100 ns; -- For debug only to see waves properly!
+245                     
+246                                 -- Reset both nodes
+247        1/1                      exec_SW_reset(TEST_NODE, chn);
+248        1/1                      exec_SW_reset(DUT_NODE, chn);
+249        1/1                      CAN_turn_controller(true, TEST_NODE, chn);
+250        1/1                      CAN_turn_controller(true, DUT_NODE, chn);
+251        1/1                      CAN_wait_bus_on(TEST_NODE, chn);
+252        1/1                      CAN_wait_bus_on(DUT_NODE, chn);
+253                     
+254        1/1                      CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+255        1/1                      check_m(err_capt.err_pos = err_pos_other, &quot;Reset value other&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.ERR_CAPT_CTRL_FORM_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

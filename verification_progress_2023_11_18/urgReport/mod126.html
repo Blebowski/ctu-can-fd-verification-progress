@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.COMMAND_CDO_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.COMMAND_CDO_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.COMMAND_CDO_FTEST')">CTU_CAN_FD_TB.COMMAND_CDO_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod126.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/command_cdo_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/command_cdo_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.COMMAND_CDO_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod126.html" >CTU_CAN_FD_TB.COMMAND_CDO_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>48</td><td>48</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>136</td><td>48</td><td>48</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+135                             -----------------------------------------------------------------------
+136        1/1                  info_m(&quot;Step 1&quot;);
+137                     
+138        1/1                  get_rx_buf_state(rx_buf_info, DUT_NODE, chn);
+139        1/1                  check_false_m(rx_buf_info.rx_full, &quot;RX full not set!&quot;);
+140                             
+141        1/1                  get_controller_status(stat_1, DUT_NODE, chn);
+142        1/1                  check_false_m(stat_1.data_overrun, &quot;DOR flag not set!&quot;);
+143                             
+144        1/1                  CAN_generate_frame(frame_1);
+145        1/1                  frame_1.rtr := RTR_FRAME;
+146        1/1                  frame_1.frame_format := NORMAL_CAN;
+147        1/1                  CAN_insert_TX_frame(frame_1, 1, TEST_NODE, chn);
+148        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+149                             
+150        1/1                  info_m(&quot;DUT RX Buffer size: &quot; &amp; integer'image(rx_buf_info.rx_buff_size));
+151        1/1                  info_m(&quot;Sending &quot; &amp; integer'image(rx_buf_info.rx_buff_size / 4) &amp;
+152                                  &quot; RTR frames&quot;);
+153                     
+154        1/1                  for i in 0 to (rx_buf_info.rx_buff_size / 4) - 1 loop
+155        1/1                      info_m(&quot;Sending frame nr: &quot; &amp; integer'image(i));
+156        1/1                      send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+157        1/1                      CAN_wait_frame_sent(TEST_NODE, chn);
+158                             end loop;
+159                     
+160        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+161        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+162                     
+163                             -----------------------------------------------------------------------
+164                             -- @2. Read status of RX Buffer in DUT. Check that RX Buffer full is
+165                             --     active. Check that DOR flag is not set yet.
+166                             -----------------------------------------------------------------------
+167        1/1                  info_m(&quot;Step 2&quot;);
+168                     
+169        1/1                  get_rx_buf_state(rx_buf_info, DUT_NODE, chn);
+170        1/1                  check_m(rx_buf_info.rx_full, &quot;RX full set&quot;);
+171                     
+172        1/1                  get_controller_status(stat_1, DUT_NODE, chn);
+173        1/1                  check_false_m(stat_1.data_overrun, &quot;DOR flag not set!&quot;);
+174                     
+175                             -----------------------------------------------------------------------
+176                             -- @3. Send one more frame by Test node and wait until it is sent. Check
+177                             --    that Data Overrun flag is set. Issue Clear Data Overrun Command.
+178                             --    Check that CDO flag was cleared.
+179                             -----------------------------------------------------------------------
+180        1/1                  info_m(&quot;Step 3&quot;);
+181                     
+182        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+183        1/1                  CAN_wait_frame_sent(TEST_NODE, chn);
+184                             
+185        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+186        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+187                             
+188        1/1                  get_rx_buf_state(rx_buf_info, DUT_NODE, chn);
+189        1/1                  check_m(rx_buf_info.rx_full, &quot;RX full set&quot;);
+190        1/1                  get_controller_status(stat_1, DUT_NODE, chn);
+191        1/1                  check_m(stat_1.data_overrun, &quot;DOR flag set!&quot;);       
+192                     
+193        1/1                  command.clear_data_overrun := true;
+194        1/1                  give_controller_command(command, DUT_NODE, chn);
+195                     
+196        1/1                  get_controller_status(stat_1, DUT_NODE, chn);
+197        1/1                  check_false_m(stat_1.data_overrun, &quot;DOR flag was cleared!&quot;);
+198                     
+199                             -----------------------------------------------------------------------
+200                             -- @4. Again send frame by Test node. Check DOR is set again. Issue
+201                             --     Command[RRB]. Check Data Overrun Flag was cleared.
+202                             -----------------------------------------------------------------------
+203        1/1                  info_m(&quot;Step 4&quot;);
+204                     
+205        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+206        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+207                             
+208        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+209        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+210                             
+211        1/1                  get_controller_status(stat_1, DUT_NODE, chn);
+212        1/1                  check_m(stat_1.data_overrun, &quot;DOR flag set!&quot;);
+213                     
+214        1/1                  command.clear_data_overrun := false;
+215        1/1                  command.release_rec_buffer := true;
+216        1/1                  give_controller_command(command, DUT_NODE, chn);
+217                     
+218        1/1                  get_controller_status(stat_1, DUT_NODE, chn);
+219        1/1                  check_false_m(stat_1.data_overrun, &quot;DOR flag cleared by COMMAND[RRB]!&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.COMMAND_CDO_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

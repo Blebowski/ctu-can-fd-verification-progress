@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.SETTINGS_NISOFD_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.SETTINGS_NISOFD_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.SETTINGS_NISOFD_FTEST')">CTU_CAN_FD_TB.SETTINGS_NISOFD_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod329.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/settings_nisofd_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/settings_nisofd_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.SETTINGS_NISOFD_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod329.html" >CTU_CAN_FD_TB.SETTINGS_NISOFD_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>27</td><td>27</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>134</td><td>27</td><td>27</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+133                             -----------------------------------------------------------------------
+134        1/1                  info_m(&quot;Step 1&quot;);
+135                     
+136        1/1                  mode_1.iso_fd_support := false;
+137        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+138                     
+139        1/1                  mode_2.iso_fd_support := false;
+140        1/1                  set_core_mode(mode_2, TEST_NODE, chn);
+141                     
+142        1/1                  CAN_generate_frame(CAN_TX_frame);
+143        1/1                  CAN_TX_Frame.frame_format := FD_CAN;
+144        1/1                  CAN_TX_Frame.data_length := 4;
+145        1/1                  decode_length(CAN_TX_Frame.data_length, CAN_TX_Frame.dlc);
+146                     
+147        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+148                     
+149                             -----------------------------------------------------------------------
+150                             -- @2. Wait until the data field in DUT. Wait until not in the data
+151                             --     field. Check that DUT is NOT in CRC field.
+152                             -----------------------------------------------------------------------
+153        1/1                  info_m(&quot;Step 2&quot;);
+154                     
+155        1/1                  CAN_wait_pc_state(pc_deb_data, DUT_NODE, chn);
+156        1/1                  CAN_wait_not_pc_state(pc_deb_data, DUT_NODE, chn);
+157                     
+158        1/1                  CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+159        1/1                  check_m(pc_dbg = pc_deb_crc, &quot;Protocol control in CRC&quot;);
+160                     
+161        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+162                     
+163                             -----------------------------------------------------------------------
+164                             --  @3. Set SETTINGS[NISOFD]=0 in DUT. Send CAN FD frame by DUT.
+165                             -----------------------------------------------------------------------
+166        1/1                  info_m(&quot;Step 3&quot;);
+167                     
+168        1/1                  mode_1.iso_fd_support := true;
+169        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+170                     
+171        1/1                  mode_2.iso_fd_support := true;
+172        1/1                  set_core_mode(mode_2, TEST_NODE, chn);
+173                     
+174        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+175                     
+176                             -----------------------------------------------------------------------
+177                             --  @4. Wait until the data field in DUT. Wait until not in the data
+178                             --      field. Check that DUT is NOT in Stuff count field.
+179                             -----------------------------------------------------------------------
+180        1/1                  CAN_wait_pc_state(pc_deb_data, DUT_NODE, chn);
+181        1/1                  CAN_wait_not_pc_state(pc_deb_data, DUT_NODE, chn);
+182                     
+183        1/1                  CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+184        1/1                  check_m(pc_dbg = pc_deb_stuff_count, &quot;Protocol Control in Stuff Count&quot;);
+185                     
+186        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.SETTINGS_NISOFD_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

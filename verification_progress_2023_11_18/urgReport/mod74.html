@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.INT_TXBHCI_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.INT_TXBHCI_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.INT_TXBHCI_FTEST')">CTU_CAN_FD_TB.INT_TXBHCI_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod74.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_txbhci_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_txbhci_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.INT_TXBHCI_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod74.html" >CTU_CAN_FD_TB.INT_TXBHCI_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>39</td><td>39</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>136</td><td>39</td><td>39</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+135                             -----------------------------------------------------------------------
+136        1/1                  get_tx_buf_count(num_txt_bufs, DUT_NODE, chn);
+137        1/1                  for txt_buf in 1 to num_txt_bufs loop
+138        1/1                      for mask in boolean'left to boolean'right loop
+139        1/1                          for ena in boolean'left to boolean'right loop
+140                     
+141                                         ---------------------------------------------------------------
+142                                         -- @1.1 Check that when Interrupt is masked it is not captured.
+143                                         --      Check that when Interrupt is Enabled, it causes interrupt
+144                                         --      to propagate to output
+145                                         ---------------------------------------------------------------
+146        1/1                              info_m(&quot;Step 1.1 with:&quot; &amp;
+147                                                     &quot;MASK: &quot;  &amp; boolean'image(mask) &amp;
+148                                                     &quot;ENABLE:&quot; &amp; boolean'image(ena));
+149                     
+150        1/1                              int_mask.tx_buffer_hw_cmd := mask;
+151        1/1                              int_ena.tx_buffer_hw_cmd := ena;
+152                     
+153        1/1                              write_int_mask(int_mask, DUT_NODE, chn);
+154        1/1                              write_int_enable(int_ena, DUT_NODE, chn);
+155                     
+156                                         ---------------------------------------------------------------
+157                                         -- @1.2 Send a frame by a Test Node and Wait unitl frame is sent.
+158                                         ---------------------------------------------------------------
+159        1/1                              info_m(&quot;Step 1.2&quot;);
+160                     
+161        1/1                              CAN_generate_frame(CAN_frame);
+162        1/1                              CAN_frame.data_length := 1;
+163        1/1                              CAN_frame.frame_format := FD_CAN;
+164        1/1                              decode_length(CAN_frame.data_length, CAN_frame.dlc);
+165                     
+166        1/1                              CAN_send_frame(CAN_Frame, txt_buf, DUT_NODE, chn, frame_sent);
+167        1/1                              CAN_wait_frame_sent(DUT_NODE, chn);
+168                     
+169                                         ---------------------------------------------------------------
+170                                         -- @1.3 Check that when Interrupt is masked it is not captured.
+171                                         --      Check that when Interrupt is Enabled, it causes interrupt
+172                                         --      to propagate to output.
+173                                         ---------------------------------------------------------------
+174        1/1                              info_m(&quot;Step 1.3&quot;);
+175                     
+176        1/1                              read_int_status(int_stat, DUT_NODE, chn);
+177        1/1                              wait for 20 ns;
+178                     
+179        1/1                              check_m(int_stat.tx_buffer_hw_cmd = (not mask),
+180                                             &quot;INT_MASK[TXBHCI] != INT_STAT[TXBHCI]&quot; &amp;
+181                                             &quot;INT_MASK[TXBHCI] : &quot; &amp; boolean'image(int_mask.tx_buffer_hw_cmd) &amp;
+182                                             &quot;INT_STAT[TXBHCI] : &quot; &amp; boolean'image(int_stat.tx_buffer_hw_cmd));
+183                     
+184        1/1                              if ((not mask) and ena) then
+185        1/1                                  wait for 20 ns;
+186        1/1                                  interrupt_agent_check_asserted(chn);
+187                     
+188                                             -- Disable and check output is low
+189        1/1                                  int_ena.tx_buffer_hw_cmd := false;
+190        1/1                                  write_int_enable(int_ena, DUT_NODE, chn);
+191        1/1                                  wait for 20 ns;
+192        1/1                                  interrupt_agent_check_not_asserted(chn);
+193                     
+194                                             -- Enable and check output is high again
+195        1/1                                  int_ena.tx_buffer_hw_cmd := true;
+196        1/1                                  write_int_enable(int_ena, DUT_NODE, chn);
+197        1/1                                  wait for 20 ns;
+198        1/1                                  interrupt_agent_check_asserted(chn);
+199                     
+200                                             -- Mask, and clear and check it was cleared
+201        1/1                                  int_mask.tx_buffer_hw_cmd := true;
+202        1/1                                  write_int_mask(int_mask, DUT_NODE, chn);
+203        1/1                                  clear_int_status(int_stat, DUT_NODE, chn);
+204        1/1                                  wait for 20 ns;
+205        1/1                                  read_int_status(int_stat, DUT_NODE, chn);
+206                     
+207        1/1                                  check_false_m(int_stat.tx_buffer_hw_cmd,
+208                                                         &quot;TX Buffer Hardware Command Interrupt cleared!&quot;);
+209        1/1                                  interrupt_agent_check_not_asserted(chn);
+210                     
+211                                         else
+212        1/1                                  interrupt_agent_check_not_asserted(chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.INT_TXBHCI_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

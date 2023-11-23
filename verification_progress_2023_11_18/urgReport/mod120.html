@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TB_PLI_CONVERSION_PKG</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TB_PLI_CONVERSION_PKG'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TB_PLI_CONVERSION_PKG')">CTU_CAN_FD_TB.TB_PLI_CONVERSION_PKG</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 88.89</td>
+<td class="s8 cl rt"><a href="mod120.html#Line" > 88.89</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/pkg/tb_pli_conversion_pkg.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/pkg/tb_pli_conversion_pkg.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TB_PLI_CONVERSION_PKG'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod120.html" >CTU_CAN_FD_TB.TB_PLI_CONVERSION_PKG</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s8"><td class="lf">TOTAL</td><td></td><td>18</td><td>16</td><td>88.89</td></tr>
+<tr class="s7"><td class="lf">VHDL_PROCEDURE</td><td>132</td><td>5</td><td>4</td><td>80.00</td></tr>
+<tr class="s7"><td class="lf">VHDL_PROCEDURE</td><td>154</td><td>5</td><td>4</td><td>80.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>177</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>200</td><td>3</td><td>3</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+131                             -- By default null everywhere, no string character
+132        1/1                  output(output'length - 1 downto 0) &lt;= (OTHERS =&gt; '0');
+133                             
+134                             -- Crop if string is longer
+135        1/1                  if (output'length &lt; cropped_length * 8) then
+136        <font color = "red">0/1     ==>              cropped_length := output'length / 8;</font>
+137                             end if;
+138                             
+139                             -- Convert as if ASCII
+140        1/1                  for i in 0 to cropped_length - 1 loop
+141        1/1                      output(i * 8 + 7 downto i * 8) &lt;= std_logic_vector(to_unsigned(
+142                                         character'pos(input(input'length - i)), 8));
+143                             end loop;
+144                         end procedure;
+145                     
+146                     
+147                         procedure pli_logic_vector_to_str(
+148                                     input       : in   std_logic_vector;
+149                            variable output      : out  string
+150                         ) is
+151                             variable cropped_length : integer := input'length / 8;
+152                         begin
+153                             -- By default null everywhere, no string character
+154        1/1                  output(1 to output'high) := (OTHERS =&gt; ' ');
+155                             
+156                             -- Crop if vector is longer than output string
+157        1/1                  if (cropped_length &gt; output'length) then
+158        <font color = "red">0/1     ==>              cropped_length := output'length;</font>
+159                             end if;
+160                             
+161                             -- Convert as if ASCII
+162        1/1                  for i in 0 to cropped_length - 1 loop
+163        1/1                      output(cropped_length - i) := character'val(to_integer(unsigned(
+164                                                 input(i * 8 + 7 downto i * 8))));
+165                             end loop;    
+166                         end procedure;
+167                         
+168                     
+169                     
+170                         procedure pli_time_to_logic_vector(
+171                                      input       : in  time;
+172                             variable output      : out std_logic_vector(63 downto 0)   
+173                         ) is
+174                             variable low       : integer;
+175                             variable high      : integer;
+176                         begin 
+177        1/1                  high := input / (integer'high * 1 fs);
+178                             
+179                             -- If input is higher than integer'high, it will overflow automatically
+180                             --  performing needed modulo operation.
+181        1/1                  low := input / 1 fs;
+182                     
+183        1/1                  output := (others =&gt; '0');
+184        1/1                  output(30 downto 0) := std_logic_vector(to_unsigned(low, 31));
+185        1/1                  output(61 downto 31) := std_logic_vector(to_unsigned(high, 31));
+186                             
+187                             -- Note: Positive integer is up to 2^31 - 1, convert to two integers
+188                             --       and crop highest two bits. This will effectively overflow
+189                             --       all time values above 2^62 * 1 fs, but we don't care!
+190                         end procedure;
+191                     
+192                     
+193                         procedure pli_logic_vector_to_time(
+194                                      input       : in  std_logic_vector(63 downto 0);
+195                             variable output      : out time
+196                         ) is
+197                             variable low       : integer;
+198                             variable high      : integer;
+199                         begin
+200        1/1                  low := to_integer(unsigned(input(30 downto 0)));
+201        1/1                  high := to_integer(unsigned(input(61 downto 31)));
+202                     
+203        1/1                  output := (low * 1 fs) + (high * (integer'high * 1 fs + 1 fs)); 
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TB_PLI_CONVERSION_PKG">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

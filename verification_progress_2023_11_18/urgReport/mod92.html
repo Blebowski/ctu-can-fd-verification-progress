@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TIMESTAMP_LOW_HIGH_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TIMESTAMP_LOW_HIGH_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TIMESTAMP_LOW_HIGH_FTEST')">CTU_CAN_FD_TB.TIMESTAMP_LOW_HIGH_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 94.12</td>
+<td class="s9 cl rt"><a href="mod92.html#Line" > 94.12</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/timestamp_low_high_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/timestamp_low_high_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TIMESTAMP_LOW_HIGH_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod92.html" >CTU_CAN_FD_TB.TIMESTAMP_LOW_HIGH_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>17</td><td>16</td><td>94.12</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>122</td><td>17</td><td>16</td><td>94.12</td></tr>
+</table>
+<pre class="code"><br clear=all>
+121                             -----------------------------------------------------------------------
+122        1/1                  info_m(&quot;Step 1&quot;);
+123                     
+124                             -- Force random timestamp so that we are sure that both words of the
+125                             -- timestamp are clocked properly!
+126        1/1                  rand_logic_vect_v(ts_rand, 0.5);
+127                             
+128                             -- Keep highest bit 0 to avoid complete overflow during the test!
+129        1/1                  ts_rand(63) := '0';
+130                     
+131                             -- Additionally, keep bit 31=0. This is because timestamp is internally
+132                             -- in TB implemented from two naturals which are 0 .. 2^31 - 1. If we
+133                             -- would generate bit 31=1, conversion &quot;to_integer&quot; from such unsigned
+134                             -- value is out of scope of natural!
+135        1/1                  ts_rand(31) := '0';
+136                     
+137        1/1                  info_m(&quot;Forcing start timestamp in DUT to: &quot; &amp; to_hstring(ts_rand));
+138        1/1                  ftr_tb_set_timestamp(ts_rand, chn);
+139                     
+140        1/1                  wait for 100 ns;
+141                     
+142        1/1                  for i in 0 to 50 loop
+143                                 -- Get timestamp from Timestamp agent
+144        1/1                      timestamp_agent_get_timestamp(chn, ts_input);
+145                     
+146                                 -- Get timestamp from DUT
+147        1/1                      CAN_read_timestamp(ts_read, DUT_NODE, chn);
+148                     
+149                                 -------------------------------------------------------------------
+150                                 -- Compare both values
+151                                 -------------------------------------------------------------------
+152                                 -- Calculate difference. Two separate cases are needed to avoid
+153                                 -- underflow
+154        1/1                      if (ts_input &gt; ts_read) then
+155        <font color = "red">0/1     ==>                  diff := unsigned(ts_input) - unsigned(ts_read);</font>
+156                                 else
+157        1/1                          diff := unsigned(ts_read) - unsigned(ts_input);
+158                                 end if;
+159                     
+160        1/1                      info_m(&quot;Timestamp input: 0x&quot; &amp; to_hstring(ts_input));
+161        1/1                      info_m(&quot;Timestamp read: 0x&quot; &amp; to_hstring(ts_read));
+162                     
+163        1/1                      check_m(to_integer(diff) &lt; 10, &quot;Timestamp difference is too big! &quot; &amp; 
+164                                       &quot;Difference &quot; &amp; integer'image(to_integer(diff)));
+165                     
+166        1/1                      wait for 100 ns;
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TIMESTAMP_LOW_HIGH_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

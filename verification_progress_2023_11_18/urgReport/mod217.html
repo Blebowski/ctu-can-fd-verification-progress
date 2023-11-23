@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.INT_OF_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.INT_OF_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.INT_OF_FTEST')">CTU_CAN_FD_TB.INT_OF_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod217.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_of_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_of_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.INT_OF_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod217.html" >CTU_CAN_FD_TB.INT_OF_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>72</td><td>72</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>145</td><td>72</td><td>72</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+144                             -----------------------------------------------------------------------
+145        1/1                  info_m(&quot;Step 1&quot;);
+146                     
+147        1/1                  int_mask.overload_frame := false;
+148        1/1                  int_ena.overload_frame := true;
+149        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+150        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+151                     
+152                             -----------------------------------------------------------------------
+153                             -- @2. Send frame by DUT, wait till intermission and check OF interrupt
+154                             --     is not set. Force bus to dominant, wait one bit, and check that
+155                             --     DUT transmitts overload frame. Check that OF interrupt is set
+156                             --     and that INT pin is high.
+157                             -----------------------------------------------------------------------
+158        1/1                  info_m(&quot;Step 2&quot;);
+159                     
+160        1/1                  CAN_generate_frame(CAN_frame);
+161        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+162                     
+163        1/1                  CAN_wait_pc_state(pc_deb_intermission, DUT_NODE, chn);
+164        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+165        1/1                  check_false_m(int_stat.overload_frame,
+166                                           &quot;OF Interrupt not set before overload frame&quot;);
+167                     
+168        1/1                  force_bus_level(DOMINANT, chn);
+169        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+170        1/1                  wait for 20 ns;
+171                     
+172        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+173        1/1                  check_m(int_stat.overload_frame,
+174                                     &quot;OF Interrupt set by overload frame&quot;);
+175                     
+176        1/1                  release_bus_level(chn);
+177                     
+178        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+179        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+180                     
+181                             -----------------------------------------------------------------------
+182                             -- @3. Disable OF Interrupt and check INT pin goes low. Enable OF
+183                             --     Interrupt and check INT pin goes high.
+184                             -----------------------------------------------------------------------
+185        1/1                  info_m(&quot;Step 3&quot;);
+186                     
+187        1/1                  int_ena.overload_frame := false;
+188        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+189        1/1                  wait for 10 ns;
+190        1/1                  interrupt_agent_check_not_asserted(chn);
+191                     
+192        1/1                  int_ena.overload_frame := true;
+193        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+194        1/1                  wait for 10 ns;
+195        1/1                  interrupt_agent_check_asserted(chn);
+196                     
+197                             -----------------------------------------------------------------------
+198                             -- @4. Clear OF Interrupt and check it has been cleared and that INT
+199                             --     pin is low.
+200                             -----------------------------------------------------------------------
+201        1/1                  info_m(&quot;Step 4&quot;);
+202                     
+203        1/1                  int_stat.overload_frame := true;
+204        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+205        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+206                     
+207        1/1                  check_false_m(int_stat.overload_frame, &quot;OF Interrupt cleared!&quot;);
+208        1/1                  interrupt_agent_check_not_asserted(chn);
+209                     
+210                             -----------------------------------------------------------------------
+211                             -- @5. Mask OF Interrupt. Send again frame by DUT. Wait until ACK and
+212                             --     check OF interrupt is not set. Wait until error frame and check
+213                             --     OF interrupt is still not set.
+214                             -----------------------------------------------------------------------
+215        1/1                  info_m(&quot;Step 5&quot;);
+216                     
+217        1/1                  int_mask.overload_frame := true;
+218        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+219                     
+220        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+221                     
+222        1/1                  CAN_wait_pc_state(pc_deb_ack, DUT_NODE, chn);
+223        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+224        1/1                  check_false_m(int_stat.overload_frame,
+225                                           &quot;OF Interrupt not set before overload frame&quot;);
+226                     
+227        1/1                  force_bus_level(DOMINANT, chn);
+228        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+229        1/1                  wait for 20 ns;
+230                     
+231        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+232        1/1                  check_false_m(int_stat.overload_frame,
+233                                           &quot;OF Interrupt not set by overload frame when masked&quot;);
+234                     
+235        1/1                  release_bus_level(chn);
+236                     
+237        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+238        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+239                     
+240                             -----------------------------------------------------------------------
+241                             -- @6. Disable OF Interrupt and check it was disabled. Enable OF
+242                             --     Interrupt and check it was enabled.
+243                             -----------------------------------------------------------------------
+244        1/1                  info_m(&quot;Step 6&quot;);
+245                     
+246        1/1                  int_ena.overload_frame := false;
+247        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+248        1/1                  int_ena.overload_frame := true;
+249                     
+250        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+251        1/1                  check_false_m(int_ena.overload_frame, &quot;OF Interrupt Disabled!&quot;);
+252                     
+253        1/1                  int_ena.overload_frame := true;
+254        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+255        1/1                  int_ena.overload_frame := false;
+256        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+257        1/1                  check_m(int_ena.overload_frame, &quot;OF Interrupt Enabled!&quot;);
+258                     
+259                             -----------------------------------------------------------------------
+260                             -- @7. Mask OF Interrupt and check it was masked. Un-mask OF Interrupt
+261                             --     and check it was un-masked.
+262                             -----------------------------------------------------------------------
+263        1/1                  info_m(&quot;Step 7&quot;);
+264                     
+265        1/1                  int_mask.overload_frame := true;
+266        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+267        1/1                  int_mask.overload_frame := false;
+268        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+269        1/1                  check_m(int_mask.overload_frame, &quot;OF Interrupt masked!&quot;);
+270                     
+271        1/1                  int_mask.overload_frame := false;
+272        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+273        1/1                  int_mask.overload_frame := true;
+274        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+275        1/1                  check_false_m(int_mask.overload_frame, &quot;OF Interrupt masked!&quot;);
+276                     
+277        1/1                  info_m(&quot;Finished OF interrupt test&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.INT_OF_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

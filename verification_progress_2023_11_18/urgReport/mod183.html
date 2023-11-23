@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.INT_BE_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.INT_BE_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.INT_BE_FTEST')">CTU_CAN_FD_TB.INT_BE_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod183.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_be_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_be_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.INT_BE_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod183.html" >CTU_CAN_FD_TB.INT_BE_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>70</td><td>70</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>145</td><td>70</td><td>70</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+144                             -----------------------------------------------------------------------
+145        1/1                  info_m(&quot;Step 1&quot;);
+146                             
+147        1/1                  int_mask.bus_error_int := false;
+148        1/1                  int_ena.bus_error_int := true;
+149        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+150        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+151                     
+152                             -----------------------------------------------------------------------
+153                             -- @2. Set Test Node to Acknowledge forbidden mode. Set DUT to One shot
+154                             --     mode. Send frame by DUT, and wait till ACK field. Check that BE
+155                             --     interrupt is not set, wait until error frame and check that BE
+156                             --     interrupt is set.
+157                             -----------------------------------------------------------------------
+158        1/1                  info_m(&quot;Step 2&quot;);
+159                     
+160        1/1                  CAN_enable_retr_limit(true, 0, DUT_NODE, chn);
+161        1/1                  mode_2.acknowledge_forbidden := true;
+162        1/1                  set_core_mode(mode_2, TEST_NODE, chn);
+163                     
+164        1/1                  CAN_generate_frame(CAN_frame);
+165        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+166                             
+167        1/1                  CAN_wait_pc_state(pc_deb_ack, DUT_NODE, chn);
+168        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+169        1/1                  check_false_m(int_stat.bus_error_int,
+170                                           &quot;BE Interrupt not set before error frame&quot;);
+171                     
+172        1/1                  CAN_wait_error_frame(DUT_NODE, chn);
+173        1/1                  wait for 10 ns;
+174        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+175        1/1                  check_m(int_stat.bus_error_int, &quot;BE Interrupt set by error frame&quot;);
+176                             
+177        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+178        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+179                             
+180                             -----------------------------------------------------------------------
+181                             -- @3. Disable BE Interrupt and check INT pin goes low. Enable BE
+182                             --     Interrupt and check INT pin goes high.
+183                             -----------------------------------------------------------------------
+184        1/1                  info_m(&quot;Step 3&quot;);
+185                             
+186        1/1                  int_ena.bus_error_int := false;
+187        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+188        1/1                  wait for 10 ns;
+189        1/1                  interrupt_agent_check_not_asserted(chn);
+190                             
+191        1/1                  int_ena.bus_error_int := true;
+192        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+193        1/1                  wait for 10 ns;
+194        1/1                  interrupt_agent_check_asserted(chn);
+195                             
+196                             -----------------------------------------------------------------------
+197                             -- @4. Clear BE Interrupt and check it has been cleared and that INT
+198                             --     pin is low.
+199                             -----------------------------------------------------------------------
+200        1/1                  info_m(&quot;Step 4&quot;);
+201                             
+202        1/1                  int_stat.bus_error_int := true;
+203        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+204        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+205                     
+206        1/1                  check_false_m(int_stat.bus_error_int, &quot;BE Interrupt cleared!&quot;);
+207        1/1                  interrupt_agent_check_not_asserted(chn);  
+208                             
+209                             -----------------------------------------------------------------------
+210                             -- @5. Mask BE Interrupt. Send again frame by DUT. Wait until ACK and
+211                             --     check BE interrupt is not set. Wait until error frame and check
+212                             --     BE interrupt is still not set.
+213                             -----------------------------------------------------------------------
+214        1/1                  info_m(&quot;Step 5&quot;);
+215                     
+216        1/1                  int_mask.bus_error_int := true;
+217        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+218                             
+219        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+220                             
+221        1/1                  CAN_wait_pc_state(pc_deb_ack, DUT_NODE, chn);
+222        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+223        1/1                  check_false_m(int_stat.bus_error_int,
+224                                           &quot;BE Interrupt not set before error frame&quot;);
+225                             
+226        1/1                  CAN_wait_error_frame(DUT_NODE, chn);
+227        1/1                  wait for 10 ns;
+228        1/1                  check_false_m(int_stat.bus_error_int, &quot;BE Interrupt not set when masked&quot;);
+229                             
+230        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+231        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+232                             
+233                             -----------------------------------------------------------------------
+234                             -- @6. Disable BE Interrupt and check it was disabled. Enable BE 
+235                             --     Interrupt and check it was enabled.
+236                             -----------------------------------------------------------------------
+237        1/1                  info_m(&quot;Step 6&quot;);
+238                     
+239        1/1                  int_ena.bus_error_int := false;
+240        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+241        1/1                  int_ena.bus_error_int := true;
+242                     
+243        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+244        1/1                  check_false_m(int_ena.bus_error_int, &quot;BE Interrupt Disabled!&quot;);
+245                     
+246        1/1                  int_ena.bus_error_int := true;
+247        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+248        1/1                  int_ena.bus_error_int := false;
+249        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+250        1/1                  check_m(int_ena.bus_error_int, &quot;BE Interrupt Enabled!&quot;);
+251                             
+252                             -----------------------------------------------------------------------
+253                             -- @7. Mask BE Interrupt and check it was masked. Un-mask BE Interrupt
+254                             --     and check it was un-masked.
+255                             -----------------------------------------------------------------------
+256        1/1                  info_m(&quot;Step 7&quot;);
+257                             
+258        1/1                  int_mask.bus_error_int := true;
+259        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+260        1/1                  int_mask.bus_error_int := false;
+261        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+262        1/1                  check_m(int_mask.bus_error_int, &quot;BE Interrupt masked!&quot;);
+263                     
+264        1/1                  int_mask.bus_error_int := false;
+265        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+266        1/1                  int_mask.bus_error_int := true;
+267        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+268        1/1                  check_false_m(int_mask.bus_error_int, &quot;BE Interrupt masked!&quot;);
+269                     
+270        1/1                  info_m(&quot;Finished BE interrupt test&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.INT_BE_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

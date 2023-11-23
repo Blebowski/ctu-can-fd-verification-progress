@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TST_MEM_ACC_TXT_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TST_MEM_ACC_TXT_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TST_MEM_ACC_TXT_FTEST')">CTU_CAN_FD_TB.TST_MEM_ACC_TXT_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 98.39</td>
+<td class="s9 cl rt"><a href="mod313.html#Line" > 98.39</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tst_mem_acc_txt_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tst_mem_acc_txt_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TST_MEM_ACC_TXT_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod313.html" >CTU_CAN_FD_TB.TST_MEM_ACC_TXT_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>62</td><td>61</td><td>98.39</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>145</td><td>62</td><td>61</td><td>98.39</td></tr>
+</table>
+<pre class="code"><br clear=all>
+144                             -----------------------------------------------------------------------
+145        1/1                  info_m(&quot;Step 1&quot;);
+146                     
+147        1/1                  get_tx_buf_count(num_txt_bufs, DUT_NODE, chn);
+148        1/1                  info_m(&quot;Number of TXT buffers: &quot; &amp; integer'image(num_txt_bufs));
+149                     
+150                             -- First we must disable DUT
+151        1/1                  CAN_turn_controller(false, DUT_NODE, chn);
+152                     
+153                             -----------------------------------------------------------------------
+154                             -- @2. Iterate for each: TXT Buffer, MODE[TSTM], TST_CONTROL[TMAEN] and
+155                             --     value written to the memory.
+156                             -----------------------------------------------------------------------
+157        1/1                  info_m(&quot;Step 2&quot;);
+158        1/1                  for used_txt_buf in 1 to num_txt_bufs loop
+159        1/1                      for mode_tstm_ena in boolean'left to boolean'right loop
+160        1/1                          for mode_tma_ena in boolean'left to boolean'right loop
+161        1/1                              for i in t_test_values'low to t_test_values'high loop
+162                     
+163        1/1                                  info_m(&quot;Step 2 with &quot;        &amp;
+164                                                     &quot;TXT Buffer index: &quot; &amp; integer'image(used_txt_buf) &amp;
+165                                                     &quot;MODE[TSTM]: &quot;       &amp; boolean'image(mode_tstm_ena) &amp;
+166                                                     &quot;Test value:&quot;        &amp; to_hstring(w_values(i)));
+167                     
+168                                             -- Configure test mode
+169        1/1                                  mode.test := mode_tstm_ena;
+170        1/1                                  set_core_mode(mode, DUT_NODE, chn);
+171                     
+172        1/1                                  set_test_mem_access(true, DUT_NODE, chn);
+173        1/1                                  wait for 50 ns;
+174                     
+175                                             -- Fill test data
+176        1/1                                  for j in 0 to 20 loop
+177        1/1                                      if (i = t_test_values'high) then
+178        1/1                                          rand_logic_vect_v(w_content(j), 0.5);
+179                                                 else
+180        1/1                                          w_content(j) := w_values(i);
+181                                                 end if;
+182                                             end loop;
+183        1/1                                  wait for 10 ns;
+184                     
+185        1/1                                  case used_txt_buf is
+186        1/1                                  when 1 =&gt; tgt_mtm := TST_TGT_TXT_BUF_1;
+187        1/1                                  when 2 =&gt; tgt_mtm := TST_TGT_TXT_BUF_2;
+188        1/1                                  when 3 =&gt; tgt_mtm := TST_TGT_TXT_BUF_3;
+189        1/1                                  when 4 =&gt; tgt_mtm := TST_TGT_TXT_BUF_4;
+190        1/1                                  when 5 =&gt; tgt_mtm := TST_TGT_TXT_BUF_5;
+191        1/1                                  when 6 =&gt; tgt_mtm := TST_TGT_TXT_BUF_6;
+192        1/1                                  when 7 =&gt; tgt_mtm := TST_TGT_TXT_BUF_7;
+193        1/1                                  when 8 =&gt; tgt_mtm := TST_TGT_TXT_BUF_8;
+194                                             when others =&gt;
+195        <font color = "red">0/1     ==>                              error_m(&quot;Invalid TXT buffer&quot;);</font>
+196                                             end case;
+197                     
+198                                             -----------------------------------------------------------
+199                                             -- @2.1 Take content and write it to TXT Buffer RAM.
+200                                             -----------------------------------------------------------
+201        1/1                                  for addr in 0 to 20 loop
+202        1/1                                      test_mem_write(w_content(addr), addr, tgt_mtm, DUT_NODE, chn, mode_tma_ena);
+203                                             end loop;
+204                     
+205        1/1                                  wait for 100 ns;
+206                     
+207                                             -----------------------------------------------------------------------
+208                                             -- @2.2 Read whole TXT buffer RAM back and compare read values with
+209                                             --      written ones. Read TXT buffer RAM of other buffers, and check
+210                                             --      there are all zeroes.
+211                                             -----------------------------------------------------------------------
+212        1/1                                  info_m(&quot;Step 2.2&quot;);
+213                     
+214        1/1                                  for buf_ind in 1 to 8 loop
+215                     
+216        1/1                                      case buf_ind is
+217        1/1                                      when 1 =&gt; tgt_mtm := TST_TGT_TXT_BUF_1;
+218        1/1                                      when 2 =&gt; tgt_mtm := TST_TGT_TXT_BUF_2;
+219        1/1                                      when 3 =&gt; tgt_mtm := TST_TGT_TXT_BUF_3;
+220        1/1                                      when 4 =&gt; tgt_mtm := TST_TGT_TXT_BUF_4;
+221        1/1                                      when 5 =&gt; tgt_mtm := TST_TGT_TXT_BUF_5;
+222        1/1                                      when 6 =&gt; tgt_mtm := TST_TGT_TXT_BUF_6;
+223        1/1                                      when 7 =&gt; tgt_mtm := TST_TGT_TXT_BUF_7;
+224        1/1                                      when 8 =&gt; tgt_mtm := TST_TGT_TXT_BUF_8;
+225                                                 end case;
+226                     
+227        1/1                                      for addr in 0 to 19 loop
+228        1/1                                          test_mem_read(r_data, addr, tgt_mtm, DUT_NODE, chn);
+229                     
+230                                                     -- Only check in test mode!
+231        1/1                                          if (buf_ind = used_txt_buf and mode_tstm_ena and mode_tma_ena) then
+232        1/1                                              check_m(r_data = w_content(addr),
+233                                                             &quot;TXT Buffer &quot;            &amp; integer'image(buf_ind) &amp;
+234                                                             &quot; RAM data at address: &quot; &amp; integer'image(addr) &amp;
+235                                                             &quot; Expected: 0x&quot;          &amp; to_hstring(w_content(addr)) &amp;
+236                                                             &quot; Read: 0x&quot;              &amp; to_hstring(r_data));
+237                                                     else
+238        1/1                                              check_m(r_data = x&quot;00000000&quot;,
+239                                                             &quot;TXT Buffer &quot;            &amp; integer'image(buf_ind) &amp;
+240                                                             &quot; RAM data at address: &quot; &amp; integer'image(addr) &amp;
+241                                                             &quot; Expected: 0x00000000&quot;  &amp;
+242                                                             &quot; Read: 0x&quot;              &amp; to_hstring(r_data));
+243                                                     end if;
+244                                                 end loop;
+245                                             end loop;
+246                     
+247                                             -----------------------------------------------------------
+248                                             -- @2.3 Write all zeroes to the TXT Buffer.
+249                                             -----------------------------------------------------------
+250        1/1                                  info_m(&quot;Step 2.2&quot;);
+251                     
+252        1/1                                  case used_txt_buf is
+253        1/1                                  when 1 =&gt; tgt_mtm := TST_TGT_TXT_BUF_1;
+254        1/1                                  when 2 =&gt; tgt_mtm := TST_TGT_TXT_BUF_2;
+255        1/1                                  when 3 =&gt; tgt_mtm := TST_TGT_TXT_BUF_3;
+256        1/1                                  when 4 =&gt; tgt_mtm := TST_TGT_TXT_BUF_4;
+257        1/1                                  when 5 =&gt; tgt_mtm := TST_TGT_TXT_BUF_5;
+258        1/1                                  when 6 =&gt; tgt_mtm := TST_TGT_TXT_BUF_6;
+259        1/1                                  when 7 =&gt; tgt_mtm := TST_TGT_TXT_BUF_7;
+260        1/1                                  when 8 =&gt; tgt_mtm := TST_TGT_TXT_BUF_8;
+261                                             end case;
+262                     
+263        1/1                                  for addr in 0 to 19 loop
+264        1/1                                      test_mem_write(x&quot;00000000&quot;, addr, tgt_mtm, DUT_NODE, chn, mode_tma_ena);
+265                                             end loop;
+266                     
+267        1/1                                  wait for 100 ns;
+268        1/1                                  wait for 1 us;
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TST_MEM_ACC_TXT_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

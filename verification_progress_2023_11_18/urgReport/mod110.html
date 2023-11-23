@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TEST_CONTROLLER_AGENT_PKG</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TEST_CONTROLLER_AGENT_PKG'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TEST_CONTROLLER_AGENT_PKG')">CTU_CAN_FD_TB.TEST_CONTROLLER_AGENT_PKG</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s5 cl rt"> 51.14</td>
+<td class="s5 cl rt"><a href="mod110.html#Line" > 51.14</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/agents/test_controller_agent/test_controller_agent_pkg.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/agents/test_controller_agent/test_controller_agent_pkg.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TEST_CONTROLLER_AGENT_PKG'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod110.html" >CTU_CAN_FD_TB.TEST_CONTROLLER_AGENT_PKG</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s5"><td class="lf">TOTAL</td><td></td><td>176</td><td>90</td><td>51.14</td></tr>
+<tr class="s5"><td class="lf">VHDL_PROCEDURE</td><td>350</td><td>8</td><td>4</td><td>50.00</td></tr>
+<tr class="s4"><td class="lf">VHDL_PROCEDURE</td><td>378</td><td>18</td><td>8</td><td>44.44</td></tr>
+<tr class="s6"><td class="lf">VHDL_PROCEDURE</td><td>425</td><td>35</td><td>24</td><td>68.57</td></tr>
+<tr class="s3"><td class="lf">VHDL_PROCEDURE</td><td>521</td><td>90</td><td>32</td><td>35.56</td></tr>
+<tr class="s8"><td class="lf">VHDL_PROCEDURE</td><td>739</td><td>25</td><td>22</td><td>88.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+349                         begin
+350        1/1                  case pli_cmd is
+351                             when PLI_RST_AGNT_CMD_ASSERT =&gt;
+352        1/1                      rst_agent_assert(channel);
+353                             when PLI_RST_AGNT_CMD_DEASSERT =&gt;
+354        1/1                      rst_agent_deassert(channel);
+355                             when PLI_RST_AGNT_CMD_POLARITY_SET =&gt;
+356        1/1                      rst_agent_polarity_set(channel, pli_data_in(0));
+357                             when PLI_RST_AGNT_CMD_POLARITY_GET =&gt;
+358        <font color = "red">0/1     ==>              rst_agent_polarity_get(channel, data);</font>
+359        <font color = "red">0/1     ==>              pli_data_out(0) &lt;= data;</font>
+360        <font color = "red">0/1     ==>              wait for 0 ns;</font>
+361                             when others =&gt;
+362        <font color = "red">0/1     ==>              error_m(&quot;VPI: Unknown Reset agent command with code: 0x&quot; &amp; to_hstring(pli_cmd));</font>
+363                             end case;
+364                         end procedure;
+365                     
+366                     
+367                         procedure pli_process_clk_agent(
+368                             signal      pli_cmd         : in    std_logic_vector(7 downto 0);
+369                             signal      pli_data_out    : out   std_logic_vector;
+370                             signal      pli_data_in     : in    std_logic_vector;
+371                             signal      channel         : inout t_com_channel
+372                         ) is
+373                             variable period : time;
+374                             variable jitter : time;
+375                             variable duty : integer range 0 to 100;
+376                             variable pli_data_out_i : std_logic_vector(63 downto 0);
+377                         begin
+378        1/1                  case pli_cmd is
+379                             when PLI_CLK_AGNT_CMD_START =&gt;
+380        1/1                      clk_gen_agent_start(channel);
+381                             when PLI_CLK_AGNT_CMD_STOP =&gt;
+382        <font color = "red">0/1     ==>              clk_gen_agent_stop(channel);</font>
+383                             when PLI_CLK_AGNT_CMD_PERIOD_SET =&gt;
+384        1/1                      pli_logic_vector_to_time(pli_data_in, period);
+385        1/1                      clk_agent_set_period(channel, period);
+386                             when PLI_CLK_AGNT_CMD_PERIOD_GET =&gt;
+387        <font color = "red">0/1     ==>              clk_agent_get_period(channel, period);</font>
+388        <font color = "red">0/1     ==>              pli_time_to_logic_vector(period, pli_data_out_i);</font>
+389        <font color = "red">0/1     ==>              pli_data_out &lt;= pli_data_out_i;</font>
+390                             when PLI_CLK_AGNT_CMD_JITTER_SET =&gt;
+391        1/1                      pli_logic_vector_to_time(pli_data_in, jitter);
+392        1/1                      clk_agent_set_jitter(channel, jitter);
+393                             when PLI_CLK_AGNT_CMD_JITTER_GET =&gt;
+394        <font color = "red">0/1     ==>              clk_agent_get_jitter(channel, jitter);</font>
+395        <font color = "red">0/1     ==>              pli_time_to_logic_vector(jitter, pli_data_out_i);</font>
+396        <font color = "red">0/1     ==>              pli_data_out &lt;= pli_data_out_i;</font>
+397                             when PLI_CLK_AGNT_CMD_DUTY_SET =&gt;
+398        1/1                      duty := to_integer(unsigned(pli_data_in));
+399        1/1                      clk_agent_set_duty(channel, duty);
+400                             when PLI_CLK_AGNT_CMD_DUTY_GET =&gt;
+401        <font color = "red">0/1     ==>              clk_agent_get_duty(channel, duty);</font>
+402        <font color = "red">0/1     ==>              pli_data_out &lt;= std_logic_vector(to_unsigned(duty, 64));</font>
+403                             when others =&gt;
+404        <font color = "red">0/1     ==>              error_m(&quot;VPI: Unknown Clock generator agent command with code: 0x&quot; &amp; to_hstring(pli_cmd));</font>
+405                             end case;
+406                         end procedure;
+407                     
+408                     
+409                         procedure pli_process_mem_bus_agent(
+410                             signal      pli_cmd         : in    std_logic_vector(7 downto 0);
+411                             signal      pli_data_out    : out   std_logic_vector;
+412                             signal      pli_data_in     : in    std_logic_vector;
+413                             signal      channel         : inout t_com_channel
+414                         ) is
+415                             variable address        :  integer;
+416                             variable data_8         :  std_logic_vector(7 downto 0);
+417                             variable data_16        :  std_logic_vector(15 downto 0);
+418                             variable data_32        :  std_logic_vector(31 downto 0);
+419                             variable blocking       :  boolean;
+420                             variable setup          :  time;
+421                             variable hold           :  time;
+422                             variable period         :  time;
+423                             variable output_delay   :  time;
+424                         begin
+425        1/1                  case pli_cmd is
+426                             when PLI_MEM_BUS_AGNT_START =&gt;
+427        1/1                      mem_bus_agent_start(channel);
+428                             when PLI_MEM_BUS_AGNT_STOP =&gt;
+429        <font color = "red">0/1     ==>              mem_bus_agent_stop(channel);</font>
+430                             when PLI_MEM_BUS_AGNT_WRITE =&gt;
+431        1/1                      data_8 := pli_data_in(7 downto 0);
+432        1/1                      data_16 := pli_data_in(15 downto 0);
+433        1/1                      data_32 := pli_data_in(31 downto 0);
+434        1/1                      address := to_integer(unsigned(pli_data_in(47 downto 32)));
+435                     
+436                                 -- Blocking tag encoded in bit 50
+437        1/1                      if (pli_data_in(50) = '1') then
+438        1/1                          blocking := true;
+439                                 else
+440        <font color = "red">0/1     ==>                  blocking := false;</font>
+441                                 end if;
+442                     
+443                                 -- Access size encoded in these two bits!
+444        1/1                      if (pli_data_in(49 downto 48) = &quot;00&quot;) then
+445        <font color = "red">0/1     ==>                  mem_bus_agent_write(channel, address, data_8, blocking);</font>
+446                                 elsif (pli_data_in(49 downto 48) = &quot;01&quot;) then
+447        <font color = "red">0/1     ==>                  mem_bus_agent_write(channel, address, data_16, blocking);</font>
+448                                 elsif (pli_data_in(49 downto 48) = &quot;10&quot;) then
+449        1/1                          mem_bus_agent_write(channel, address, data_32, blocking);
+450                                 else
+451        <font color = "red">0/1     ==>                  error_m(&quot;VPI: Invalid memory bus agent write access size: &quot; &amp;</font>
+452                                             to_hstring(pli_data_in(49 downto 48)));
+453                                 end if;
+454                     
+455                             when PLI_MEM_BUS_AGNT_READ =&gt;
+456        1/1                      address := to_integer(unsigned(pli_data_in(47 downto 32)));
+457                     
+458        1/1                      pli_data_out(pli_data_out'length - 1 downto 0) &lt;= (OTHERS =&gt; '0');
+459        1/1                      if (pli_data_in(49 downto 48) = &quot;00&quot;) then
+460        <font color = "red">0/1     ==>                  mem_bus_agent_read(channel, address, data_8);</font>
+461        <font color = "red">0/1     ==>                  pli_data_out(7 downto 0) &lt;= data_8;</font>
+462                                 elsif (pli_data_in(49 downto 48) = &quot;01&quot;) then
+463        1/1                          mem_bus_agent_read(channel, address, data_16);
+464        1/1                          pli_data_out(15 downto 0) &lt;= data_16;
+465                                 elsif (pli_data_in(49 downto 48) = &quot;10&quot;) then
+466        1/1                          mem_bus_agent_read(channel, address, data_32);
+467        1/1                          pli_data_out(31 downto 0) &lt;= data_32;
+468                                 else
+469        <font color = "red">0/1     ==>                  error_m(&quot;VPI: Invalid memory bus agent read access size: &quot; &amp;</font>
+470                                             to_hstring(pli_data_in(49 downto 48)));
+471                                 end if;
+472                     
+473                             when PLI_MEM_BUS_AGNT_X_MODE_START =&gt;
+474        1/1                      mem_bus_agent_x_mode_start(channel);
+475                     
+476                             when PLI_MEM_BUS_AGNT_X_MODE_STOP =&gt;
+477        <font color = "red">0/1     ==>              mem_bus_agent_x_mode_start(channel);</font>
+478                     
+479                             when PLI_MEM_BUS_AGNT_SET_X_MODE_SETUP =&gt;
+480        1/1                      pli_logic_vector_to_time(pli_data_in, setup);
+481        1/1                      mem_bus_agent_set_x_mode_setup(channel, setup);
+482                     
+483                             when PLI_MEM_BUS_AGNT_SET_X_MODE_HOLD =&gt;
+484        1/1                      pli_logic_vector_to_time(pli_data_in, hold);
+485        1/1                      mem_bus_agent_set_x_mode_hold(channel, hold);
+486                     
+487                             when PLI_MEM_BUS_AGNT_SET_OUTPUT_DELAY =&gt;
+488        1/1                      pli_logic_vector_to_time(pli_data_in, output_delay);
+489        1/1                      mem_bus_agent_set_output_delay(channel, output_delay);
+490                     
+491                             when PLI_MEM_BUS_AGNT_WAIT_DONE =&gt;
+492        <font color = "red">0/1     ==>              mem_bus_agent_wait_done(channel);</font>
+493                     
+494                             when others =&gt;
+495        <font color = "red">0/1     ==>              error_m(&quot;VPI: Unknown Memory bus agent command with code: 0x&quot; &amp; to_hstring(pli_cmd));</font>
+496                             end case;
+497                         end procedure;
+498                     
+499                     
+500                         procedure pli_process_can_agent(
+501                             signal      pli_cmd         : in    std_logic_vector(7 downto 0);
+502                             signal      pli_data_out    : out   std_logic_vector;
+503                             signal      pli_data_in     : in    std_logic_vector;
+504                             signal      pli_data_in_2   : in    std_logic_vector;
+505                             signal      pli_str_buf_in  : in    std_logic_vector(511 downto 0);
+506                             signal      channel         : inout t_com_channel
+507                         ) is
+508                             variable progress       : boolean;
+509                             variable driven_val     : std_logic;
+510                             variable monitored_val  : std_logic;
+511                             variable driver_item    : t_can_driver_entry;
+512                             variable monitor_item   : t_can_monitor_entry;
+513                             variable timeout        : time;
+514                             variable monitor_state  : t_can_monitor_state;
+515                             variable trigger        : t_can_monitor_trigger;
+516                             variable result         : std_logic;
+517                             variable sample_rate    : time;
+518                             variable pli_data_out_i : std_logic_vector(63 downto 0);
+519                             variable input_delay    : time;
+520                         begin
+521        1/1                  case pli_cmd is
+522                     
+523                             when PLI_CAN_AGNT_DRIVER_START =&gt;
+524        1/1                      can_agent_driver_start(channel);
+525                     
+526                             when PLI_CAN_AGNT_DRIVER_STOP =&gt;
+527        1/1                      can_agent_driver_stop(channel);
+528                     
+529                             when PLI_CAN_AGNT_DRIVER_FLUSH =&gt;
+530        1/1                      can_agent_driver_flush(channel);
+531                     
+532                             when PLI_CAN_AGNT_DRIVER_GET_PROGRESS =&gt;
+533        <font color = "red">0/1     ==>              can_agent_driver_get_progress(channel, progress);</font>
+534        <font color = "red">0/1     ==>              if (progress) then</font>
+535        <font color = "red">0/1     ==>                  pli_data_out(0) &lt;= '1';</font>
+536                                 else
+537        <font color = "red">0/1     ==>                  pli_data_out(0) &lt;= '0';</font>
+538                                 end if;
+539                     
+540                             when PLI_CAN_AGNT_DRIVER_GET_DRIVEN_VAL =&gt;
+541        <font color = "red">0/1     ==>              can_agent_driver_get_driven_val(channel, driven_val);</font>
+542        <font color = "red">0/1     ==>              pli_data_out(0) &lt;= driven_val;</font>
+543                     
+544                             when PLI_CAN_AGNT_DRIVER_PUSH_ITEM =&gt;
+545                     
+546                                 -- Time conversion from 64 bits truly uses only 62 bits, stuff
+547                                 -- remaining information for driven item into remaining two
+548                                 -- bits so that we don't need to declare next signal via VPI.
+549        1/1                      driver_item.value := pli_data_in(63);
+550        1/1                      if (pli_data_in(62) = '1') then
+551        1/1                          driver_item.print_msg := true;
+552        1/1                          pli_logic_vector_to_str(pli_str_buf_in, driver_item.msg);
+553                                 else
+554        <font color = "red">0/1     ==>                  driver_item.print_msg := false;</font>
+555                                 end if;
+556        1/1                      pli_logic_vector_to_time(pli_data_in, driver_item.drive_time);
+557                     
+558        1/1                      can_agent_driver_push_item(channel, driver_item);
+559                     
+560                             when PLI_CAN_AGNT_DRIVER_SET_WAIT_TIMEOUT =&gt;
+561        <font color = "red">0/1     ==>              pli_logic_vector_to_time(pli_data_in, timeout);</font>
+562        <font color = "red">0/1     ==>              can_agent_driver_set_wait_timeout(channel, timeout);</font>
+563                     
+564                             when PLI_CAN_AGNT_DRIVER_WAIT_FINISH =&gt;
+565        1/1                      can_agent_driver_wait_finish(channel);
+566                     
+567                             when PLI_CAN_AGNT_DRIVER_DRIVE_SINGLE_ITEM =&gt;
+568                     
+569                                 -- Time conversion from 64 bits truly uses only 62 bits, stuff
+570                                 -- remaining information for driven item into remaining two
+571                                 -- bits so that we don't need to declare next signal via VPI.
+572        <font color = "red">0/1     ==>              driver_item.value := pli_data_in(63);</font>
+573        <font color = "red">0/1     ==>              if (pli_data_in(62) = '1') then</font>
+574        <font color = "red">0/1     ==>                  driver_item.print_msg := true;</font>
+575        <font color = "red">0/1     ==>                  pli_logic_vector_to_str(pli_str_buf_in, driver_item.msg);</font>
+576                                 else
+577        <font color = "red">0/1     ==>                  driver_item.print_msg := false;</font>
+578                                 end if;
+579        <font color = "red">0/1     ==>              pli_logic_vector_to_time(pli_data_in, driver_item.drive_time);</font>
+580        <font color = "red">0/1     ==>              can_agent_driver_drive_single_item(channel, driver_item);</font>
+581                     
+582                             when PLI_CAN_AGNT_DRIVER_DRIVE_ALL_ITEM =&gt;
+583        <font color = "red">0/1     ==>              can_agent_driver_drive_all_items(channel);</font>
+584                     
+585                             when PLI_CAN_AGNT_DRIVER_SET_WAIT_FOR_MONITOR =&gt;
+586        1/1                      if (pli_data_in(0) = '1') then
+587        1/1                          can_agent_driver_set_wait_for_monitor(channel, true);
+588                                 else
+589        <font color = "red">0/1     ==>                  can_agent_driver_set_wait_for_monitor(channel, false);</font>
+590                                 end if;
+591                     
+592                             when PLI_CAN_AGNT_MONITOR_START =&gt;
+593        1/1                      can_agent_monitor_start(channel);
+594                     
+595                             when PLI_CAN_AGNT_MONITOR_STOP =&gt;
+596        1/1                      can_agent_monitor_stop(channel);
+597                     
+598                             when PLI_CAN_AGNT_MONITOR_FLUSH =&gt;
+599        1/1                      can_agent_monitor_flush(channel);
+600                     
+601                             when PLI_CAN_AGNT_MONITOR_GET_STATE =&gt;
+602        <font color = "red">0/1     ==>              can_agent_monitor_get_state(channel, monitor_state);</font>
+603        <font color = "red">0/1     ==>              case monitor_state is</font>
+604                                 when mon_disabled =&gt;
+605        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;000&quot;;</font>
+606                                 when mon_waiting_for_trigger =&gt;
+607        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;001&quot;;</font>
+608                                 when mon_running =&gt;
+609        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;010&quot;;</font>
+610                                 when mon_passed =&gt;
+611        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;011&quot;;</font>
+612                                 when mon_failed =&gt;
+613        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;100&quot;;</font>
+614                                 end case;
+615                     
+616                             when PLI_CAN_AGNT_MONITOR_GET_MONITORED_VAL =&gt;
+617        <font color = "red">0/1     ==>              can_agent_monitor_get_monitored_val(channel, monitored_val);</font>
+618        <font color = "red">0/1     ==>              pli_data_out(0) &lt;= monitored_val;</font>
+619                     
+620                             when PLI_CAN_AGNT_MONITOR_PUSH_ITEM =&gt;
+621        1/1                      monitor_item.value := pli_data_in(63);
+622        1/1                      if (pli_data_in(62) = '1') then
+623        1/1                          monitor_item.print_msg := true;
+624        1/1                          pli_logic_vector_to_str(pli_str_buf_in, monitor_item.msg);
+625                                 else
+626        <font color = "red">0/1     ==>                  monitor_item.print_msg := false;</font>
+627                                 end if;
+628                     
+629                                 -- Time conversion from 64 bits truly uses only 62 bits, stuff
+630                                 -- remaining information for driven item into remaining two
+631                                 -- bits so that we don't need to declare next signal via VPI.
+632        1/1                      pli_logic_vector_to_time(pli_data_in, monitor_item.monitor_time);
+633        1/1                      pli_logic_vector_to_time(pli_data_in_2, monitor_item.sample_rate);
+634                     
+635        1/1                      can_agent_monitor_push_item(channel, monitor_item);
+636                     
+637                             when PLI_CAN_AGNT_MONITOR_SET_WAIT_TIMEOUT =&gt;
+638        <font color = "red">0/1     ==>              pli_logic_vector_to_time(pli_data_in, timeout);</font>
+639        <font color = "red">0/1     ==>              can_agent_monitor_set_wait_timeout(channel, timeout);</font>
+640                     
+641                             when PLI_CAN_AGNT_MONITOR_WAIT_FINISH =&gt;
+642        1/1                      can_agent_monitor_wait_finish(channel);
+643                     
+644                             when PLI_CAN_AGNT_MONITOR_MONITOR_SINGLE_ITEM =&gt;
+645        <font color = "red">0/1     ==>              monitor_item.value := pli_data_in(63);</font>
+646        <font color = "red">0/1     ==>              if (pli_data_in(62) = '1') then</font>
+647        <font color = "red">0/1     ==>                  monitor_item.print_msg := true;</font>
+648        <font color = "red">0/1     ==>                  pli_logic_vector_to_str(pli_str_buf_in, monitor_item.msg);</font>
+649                                 else
+650        <font color = "red">0/1     ==>                  monitor_item.print_msg := false;</font>
+651                                 end if;
+652                     
+653                                 -- Time conversion from 64 bits truly uses only 62 bits, stuff
+654                                 -- remaining information for driven item into remaining two
+655                                 -- bits so that we don't need to declare next signal via VPI.
+656        <font color = "red">0/1     ==>              pli_logic_vector_to_time(pli_data_in, monitor_item.monitor_time);</font>
+657        <font color = "red">0/1     ==>              pli_logic_vector_to_time(pli_data_in_2, monitor_item.sample_rate);</font>
+658                     
+659        <font color = "red">0/1     ==>              can_agent_monitor_single_item(channel, monitor_item);</font>
+660                     
+661                             when PLI_CAN_AGNT_MONITOR_MONITOR_ALL_ITEMS =&gt;
+662        <font color = "red">0/1     ==>              can_agent_monitor_all_items(channel);</font>
+663                     
+664                             when PLI_CAN_AGNT_MONITOR_SET_TRIGGER =&gt;
+665        1/1                      case pli_data_in(2 downto 0) is
+666                                 when &quot;000&quot; =&gt;
+667        <font color = "red">0/1     ==>                  trigger := trig_immediately;</font>
+668                                 when &quot;001&quot; =&gt;
+669        <font color = "red">0/1     ==>                  trigger := trig_can_rx_rising_edge;</font>
+670                                 when &quot;010&quot; =&gt;
+671        <font color = "red">0/1     ==>                  trigger := trig_can_rx_falling_edge;</font>
+672                                 when &quot;011&quot; =&gt;
+673        <font color = "red">0/1     ==>                  trigger := trig_can_tx_rising_edge;</font>
+674                                 when &quot;100&quot; =&gt;
+675        1/1                          trigger := trig_can_tx_falling_edge;
+676                                 when &quot;101&quot; =&gt;
+677        <font color = "red">0/1     ==>                  trigger := trig_time_elapsed;</font>
+678                                 when &quot;110&quot; =&gt;
+679        1/1                          trigger := trig_driver_start;
+680                                 when &quot;111&quot; =&gt;
+681        <font color = "red">0/1     ==>                  trigger := trig_driver_stop;</font>
+682                                 when others =&gt;
+683        <font color = "red">0/1     ==>                  error_m(&quot;Invalid monitor trigger type: &quot; &amp;</font>
+684                                             to_hstring(pli_data_in(2 downto 0)));
+685                                 end case;
+686        1/1                      can_agent_monitor_set_trigger(channel, trigger);
+687                     
+688                             when PLI_CAN_AGNT_MONITOR_GET_TRIGGER =&gt;
+689        <font color = "red">0/1     ==>              can_agent_monitor_get_trigger(channel, trigger);</font>
+690        <font color = "red">0/1     ==>              case trigger is</font>
+691                                 when trig_immediately =&gt;
+692        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;000&quot;;</font>
+693                                 when trig_can_rx_rising_edge =&gt;
+694        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;001&quot;;</font>
+695                                 when trig_can_rx_falling_edge =&gt;
+696        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;010&quot;;</font>
+697                                 when trig_can_tx_rising_edge =&gt;
+698        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;011&quot;;</font>
+699                                 when trig_can_tx_falling_edge =&gt;
+700        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;100&quot;;</font>
+701                                 when trig_time_elapsed =&gt;
+702        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;101&quot;;</font>
+703                                 when trig_driver_start =&gt;
+704        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;110&quot;;</font>
+705                                 when trig_driver_stop =&gt;
+706        <font color = "red">0/1     ==>                  pli_data_out(2 downto 0) &lt;= &quot;111&quot;;</font>
+707                                 end case;
+708                     
+709                             when PLI_CAN_AGNT_MONITOR_CHECK_RESULT =&gt;
+710        1/1                      can_agent_monitor_check_result(channel);
+711                     
+712                             when PLI_CAN_AGNT_MONITOR_SET_INPUT_DELAY =&gt;
+713        1/1                      pli_logic_vector_to_time(pli_data_in, input_delay);
+714        1/1                      can_agent_monitor_set_input_delay(channel, input_delay);
+715                     
+716                             when PLI_CAN_AGNT_TX_RX_FEEDBACK_ENABLE =&gt;
+717        1/1                      can_agent_configure_tx_to_rx_feedback(channel, true);
+718                     
+719                             when PLI_CAN_AGNT_TX_RX_FEEDBACK_DISABLE =&gt;
+720        <font color = "red">0/1     ==>              can_agent_configure_tx_to_rx_feedback(channel, false);</font>
+721                     
+722                             when others =&gt;
+723        <font color = "red">0/1     ==>              error_m(&quot;VPI: Unknown CAN agent command with code: 0x&quot; &amp; to_hstring(pli_cmd));</font>
+724                             end case;
+725                         end procedure;
+726                     
+727                     
+728                         procedure pli_process_test_agent(
+729                             signal      pli_cmd         : in    std_logic_vector(7 downto 0);
+730                             signal      pli_data_out    : out   std_logic_vector;
+731                             signal      pli_data_in     : in    std_logic_vector;
+732                             signal      pli_str_buf_in  : in    std_logic_vector(511 downto 0);
+733                             signal      test_end        : out   std_logic;
+734                             signal      test_result     : out   std_logic
+735                         ) is
+736                             variable param_name     : string(1 to 64);
+737                             variable pli_data_out_i : std_logic_vector(63 downto 0) := (OTHERS =&gt; '0');
+738                         begin
+739        1/1                  case pli_cmd is
+740                             when PLI_TEST_AGNT_TEST_END =&gt;
+741        1/1                      test_end    &lt;= '1';
+742        1/1                      test_result &lt;= pli_data_in(0);
+743                     
+744                             when PLI_TEST_AGNT_GET_CFG =&gt;
+745                                 -- PLI message string encodes desired configuration parameter
+746        1/1                      pli_logic_vector_to_str(pli_str_buf_in, param_name);
+747        1/1                      pli_data_out(pli_data_out'length - 1 downto 0) &lt;= (OTHERS =&gt; '0');
+748                     
+749                                 -- Replace '\0' by ' ' to avoid invalid characters in generated XML. This then
+750                                 -- prevents conversion of Junit XML to e.g. HTML !!
+751        1/1                      for i in 1 to 64 loop
+752        1/1                          if (param_name(i) = character'val(0)) then
+753        <font color = "red">0/1     ==>                      param_name(i) := ' ';</font>
+754                                     end if;
+755                                 end loop;
+756        1/1                      info_m(&quot;SW test queries parameter: &quot; &amp; param_name(1 to 64));
+757                     
+758        1/1                      if (param_name(1 to 20) = &quot;CFG_DUT_CLOCK_PERIOD&quot;) then
+759        1/1                          pli_time_to_logic_vector(cfg_sys_clk_period_i, pli_data_out_i);
+760        1/1                          pli_data_out &lt;= pli_data_out_i;
+761                     
+762                                 -- Data bit time
+763                                 -- MUST BE BEFORE the Nominal Bit time!!!
+764                                 elsif (param_name(1 to 14) = &quot;CFG_DUT_BRP_FD&quot;) then
+765        1/1                          pli_data_out &lt;= std_logic_vector(to_unsigned(cfg_brp_fd_i, pli_data_out'length));
+766                     
+767                                 elsif (param_name(1 to 15) = &quot;CFG_DUT_PROP_FD&quot;) then
+768        1/1                          pli_data_out &lt;= std_logic_vector(to_unsigned(cfg_prop_fd_i, pli_data_out'length));
+769                     
+770                                 elsif (param_name(1 to 14) = &quot;CFG_DUT_PH1_FD&quot;) then
+771        1/1                          pli_data_out &lt;= std_logic_vector(to_unsigned(cfg_ph_1_fd_i, pli_data_out'length));
+772                     
+773                                 elsif (param_name(1 to 14) = &quot;CFG_DUT_PH2_FD&quot;) then
+774        1/1                          pli_data_out &lt;= std_logic_vector(to_unsigned(cfg_ph_2_fd_i, pli_data_out'length));
+775                     
+776                                 elsif (param_name(1 to 14) = &quot;CFG_DUT_SJW_FD&quot;) then
+777        1/1                          pli_data_out &lt;= std_logic_vector(to_unsigned(cfg_sjw_fd_i, pli_data_out'length));
+778                     
+779                                 -- Nominal bit time
+780                                 elsif (param_name(1 to 11) = &quot;CFG_DUT_BRP&quot;) then
+781        1/1                          pli_data_out &lt;= std_logic_vector(to_unsigned(cfg_brp_i, pli_data_out'length));
+782                     
+783                                 elsif (param_name(1 to 12) = &quot;CFG_DUT_PROP&quot;) then
+784        1/1                          pli_data_out &lt;= std_logic_vector(to_unsigned(cfg_prop_i, pli_data_out'length));
+785                     
+786                                 elsif (param_name(1 to 11) = &quot;CFG_DUT_PH1&quot;) then
+787        1/1                          pli_data_out &lt;= std_logic_vector(to_unsigned(cfg_ph_1_i, pli_data_out'length));
+788                     
+789                                 elsif (param_name(1 to 11) = &quot;CFG_DUT_PH2&quot;) then
+790        1/1                          pli_data_out &lt;= std_logic_vector(to_unsigned(cfg_ph_2_i, pli_data_out'length));
+791                     
+792                                 elsif (param_name(1 to 11) = &quot;CFG_DUT_SJW&quot;) then
+793        1/1                          pli_data_out &lt;= std_logic_vector(to_unsigned(cfg_sjw_i, pli_data_out'length));
+794                     
+795                                 else
+796        <font color = "red">0/1     ==>                  error_m(&quot;Unsupported configuration parameter name: &quot; &amp; param_name);</font>
+797                                 end if;
+798                     
+799                             when PLI_TEST_AGNT_GET_SEED =&gt;
+800        1/1                      pli_data_out &lt;= std_logic_vector(to_unsigned(cfg_seed_i, pli_data_out'length));
+801                     
+802                             when others =&gt;
+803        <font color = "red">0/1     ==>              error_m(&quot;VPI: Unknown test agent command with code: 0x&quot; &amp; to_hstring(pli_cmd));</font>
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TEST_CONTROLLER_AGENT_PKG">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TB_COMMUNICATION_PKG</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TB_COMMUNICATION_PKG'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TB_COMMUNICATION_PKG')">CTU_CAN_FD_TB.TB_COMMUNICATION_PKG</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 95.00</td>
+<td class="s9 cl rt"><a href="mod90.html#Line" > 95.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/pkg/tb_communication_pkg.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/pkg/tb_communication_pkg.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TB_COMMUNICATION_PKG'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod90.html" >CTU_CAN_FD_TB.TB_COMMUNICATION_PKG</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>20</td><td>19</td><td>95.00</td></tr>
+<tr class="s8"><td class="lf">VHDL_PROCEDURE</td><td>164</td><td>6</td><td>5</td><td>83.33</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>181</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>208</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>222</td><td>3</td><td>3</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+163                         begin
+164        1/1                  if channel /= C_COM_CHANNEL_ACTIVE then
+165        1/1                      channel &lt;= C_COM_CHANNEL_ACTIVE;
+166        1/1                      wait until channel = C_COM_CHANNEL_ACTIVE;
+167        1/1                      channel &lt;= C_COM_CHANNEL_INACTIVE;
+168        1/1                      wait until channel = C_COM_CHANNEL_INACTIVE;
+169                             else
+170        <font color = "red">0/1     ==>              error_m(COM_PKG_TAG &amp; &quot;Attempting to notify over active channel!&quot;);</font>
+171                             end if;
+172                         end procedure;
+173                     
+174                     
+175                         procedure send(
+176                             signal   channel    : inout t_com_channel;
+177                             constant dest       : in    integer range 0 to C_NUM_AGENTS;
+178                             constant msg_code   : in    integer
+179                         ) is
+180                         begin
+181        1/1                  com_channel_data.set_dest_and_msg_code(dest, msg_code);
+182        1/1                  wait for 0 ns;
+183                     
+184                             -- Send over the channel
+185        1/1                  notify(channel);
+186                     
+187                             -- Wait for response back. Agents should satisfy that only one agent
+188                             -- will process sent message (thanks to dest), and therefore we
+189                             -- are guaranteed to get ACK only from one agent back.
+190        1/1                  wait until channel = C_COM_CHANNEL_ACTIVE;
+191                     
+192                             -- Check reply code
+193        1/1                  if com_channel_data.get_reply_code /= C_REPLY_CODE_OK then
+194        1/1                      error_m(COM_PKG_TAG &amp; &quot;Reply code error from &quot; &amp; integer'image(dest));
+195                             end if;
+196                     
+197        1/1                  wait until channel = C_COM_CHANNEL_INACTIVE;
+198                     
+199                         end procedure;
+200                     
+201                     
+202                         procedure receive_start(
+203                             signal   channel     : inout  t_com_channel;
+204                             constant dest        : in     integer range 0 to C_NUM_AGENTS
+205                         ) is
+206                         begin
+207                             -- Poll till there is request on the channel
+208        1/1                  while true loop
+209        1/1                      wait until channel = C_COM_CHANNEL_ACTIVE;
+210        1/1                      if (com_channel_data.get_dest = dest) then
+211        1/1                          exit;
+212                                 end if;
+213                             end loop;
+214                         end procedure;
+215                     
+216                     
+217                         procedure receive_finish(
+218                             signal   channel     : inout  t_com_channel;
+219                             constant reply_code  : in     natural
+220                         ) is
+221                         begin
+222        1/1                  com_channel_data.set_reply_code(reply_code);
+223        1/1                  wait for 0 ns;
+224        1/1                  notify(channel);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TB_COMMUNICATION_PKG">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TIMESTAMP_AGENT_PKG</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TIMESTAMP_AGENT_PKG'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TIMESTAMP_AGENT_PKG')">CTU_CAN_FD_TB.TIMESTAMP_AGENT_PKG</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 86.96</td>
+<td class="s8 cl rt"><a href="mod277.html#Line" > 86.96</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/agents/timestamp_agent/timestamp_agent_pkg.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/agents/timestamp_agent/timestamp_agent_pkg.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TIMESTAMP_AGENT_PKG'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod277.html" >CTU_CAN_FD_TB.TIMESTAMP_AGENT_PKG</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s8"><td class="lf">TOTAL</td><td></td><td>23</td><td>20</td><td>86.96</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>191</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s0"><td class="lf">VHDL_PROCEDURE</td><td>201</td><td>3</td><td>0</td><td>0.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>212</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>224</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>236</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>248</td><td>5</td><td>5</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+190                         begin
+191        1/1                  info_m(TIMESTAMP_AGENT_TAG &amp; &quot;Starting&quot;);
+192        1/1                  send(channel, C_TIMESTAMP_AGENT_ID, TIMESTAMP_AGENT_CMD_START);
+193        1/1                  debug_m(TIMESTAMP_AGENT_TAG &amp; &quot;Started&quot;);
+194                         end procedure;
+195                     
+196                     
+197                         procedure timestamp_agent_stop(
+198                             signal   channel     : inout t_com_channel
+199                         ) is
+200                         begin
+201        <font color = "red">0/1     ==>          info_m(TIMESTAMP_AGENT_TAG &amp; &quot;Stopping&quot;);</font>
+202        <font color = "red">0/1     ==>          send(channel, C_TIMESTAMP_AGENT_ID, TIMESTAMP_AGENT_CMD_STOP);</font>
+203        <font color = "red">0/1     ==>          debug_m(TIMESTAMP_AGENT_TAG &amp; &quot;Stopped&quot;);</font>
+204                         end procedure;
+205                     
+206                     
+207                         procedure timestamp_agent_set_step(
+208                             signal   channel     : inout t_com_channel;
+209                             constant step        : in    natural
+210                         ) is
+211                         begin
+212        1/1                  info_m(TIMESTAMP_AGENT_TAG &amp; &quot;Setting step&quot;);
+213        1/1                  com_channel_data.set_param(step);
+214        1/1                  send(channel, C_TIMESTAMP_AGENT_ID, TIMESTAMP_AGENT_CMD_STEP_SET);
+215        1/1                  debug_m(TIMESTAMP_AGENT_TAG &amp; &quot;Step set&quot;);
+216                         end procedure;
+217                     
+218                     
+219                         procedure timestamp_agent_set_prescaler(
+220                             signal   channel     : inout t_com_channel;
+221                             constant prescaler   : in    natural
+222                         ) is
+223                         begin
+224        1/1                  info_m(TIMESTAMP_AGENT_TAG &amp; &quot;Setting Prescaler&quot;);
+225        1/1                  com_channel_data.set_param(prescaler);
+226        1/1                  send(channel, C_TIMESTAMP_AGENT_ID, TIMESTAMP_AGENT_CMD_PRESCALER_SET);
+227        1/1                  debug_m(TIMESTAMP_AGENT_TAG &amp; &quot;Prescaler set&quot;);
+228                         end procedure;
+229                     
+230                     
+231                         procedure timestamp_agent_timestamp_preset(
+232                             signal   channel     : inout t_com_channel;
+233                             constant timestamp   : in    std_logic_vector(63 downto 0)
+234                         ) is
+235                         begin
+236        1/1                  info_m(TIMESTAMP_AGENT_TAG &amp; &quot;Presetting timestamp&quot;);
+237        1/1                  com_channel_data.set_param(timestamp);
+238        1/1                  send(channel, C_TIMESTAMP_AGENT_ID, TIMESTAMP_AGENT_CMD_TIMESTAMP_PRESET);
+239        1/1                  debug_m(TIMESTAMP_AGENT_TAG &amp; &quot;Timestamp preset&quot;);
+240                         end procedure;
+241                     
+242                         procedure timestamp_agent_get_timestamp(
+243                             signal   channel     : inout t_com_channel;
+244                             variable timestamp   : out   std_logic_vector(63 downto 0)
+245                         ) is
+246                             variable tmp : std_logic_vector(127 downto 0);
+247                         begin
+248        1/1                  info_m(TIMESTAMP_AGENT_TAG &amp; &quot;Reading timestamp&quot;);
+249        1/1                  send(channel, C_TIMESTAMP_AGENT_ID, TIMESTAMP_AGENT_CMD_GET_TIMESTAMP);
+250        1/1                  tmp := com_channel_data.get_param;
+251        1/1                  timestamp := tmp(63 downto 0);
+252        1/1                  debug_m(TIMESTAMP_AGENT_TAG &amp; &quot;Timestamp read&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TIMESTAMP_AGENT_PKG">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

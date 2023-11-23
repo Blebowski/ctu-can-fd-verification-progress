@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.RX_STATUS_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.RX_STATUS_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.RX_STATUS_FTEST')">CTU_CAN_FD_TB.RX_STATUS_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod87.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/rx_status_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/rx_status_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.RX_STATUS_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod87.html" >CTU_CAN_FD_TB.RX_STATUS_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>54</td><td>54</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>129</td><td>54</td><td>54</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+128                             ------------------------------------------------------------------------
+129        1/1                  info_m(&quot;Step 1&quot;);
+130                     
+131        1/1                  command.release_rec_buffer := true;
+132        1/1                  give_controller_command(command, DUT_NODE, chn);
+133        1/1                  command.release_rec_buffer := false;
+134                     
+135        1/1                  get_rx_buf_state(buf_info, DUT_NODE, chn);
+136                     
+137                             ------------------------------------------------------------------------
+138                             -- @2. Free memory, buffer status and message count is checked.
+139                             ------------------------------------------------------------------------
+140        1/1                  info_m(&quot;Step 2&quot;);
+141                     
+142        1/1                  check_m(buf_info.rx_empty,
+143                                   &quot;RX Buffer is not empty after Release receive Buffer command&quot;);
+144                     
+145        1/1                  check_m(buf_info.rx_buff_size = buf_info.rx_mem_free,
+146                                  &quot;Number of free words in RX Buffer after Release Receive &quot; &amp;
+147                                  &quot;Buffer command is not equal to buffer size&quot;);
+148                     
+149        1/1                  check_m(buf_info.rx_frame_count = 0 and
+150                                     buf_info.rx_write_pointer = 0 and
+151                                     buf_info.rx_read_pointer = 0,
+152                                     &quot;RX Buffer pointers are not 0 after Release Receieve Buffer command&quot;);
+153                     
+154                             -- Check RX buffer size. If it is more than 512, mark it as big.
+155                             -- This is used further to reduce lenght of test
+156        1/1                  big_rx_buffer := false;
+157        1/1                  if (buf_info.rx_buff_size &gt; 511) then
+158        1/1                      big_rx_buffer := true;
+159                             end if;
+160                     
+161                             ------------------------------------------------------------------------
+162                             -- @3. Random frames are sent on the bus by Test Node and received by DUT.
+163                             ------------------------------------------------------------------------
+164        1/1                  info_m(&quot;Step 3&quot;);
+165                     
+166        1/1                  frame_counter := 1;
+167        1/1                  while send_more loop
+168        1/1                      info_m(&quot;Sending frame nr. : &quot; &amp; integer'image(frame_counter));
+169        1/1                      frame_counter := frame_counter + 1;
+170                     
+171        1/1                      CAN_generate_frame(CAN_frame);
+172                     
+173                                 -- If RX buffer of DUT is &quot;big&quot; send only frames with 64 bytes
+174                                 -- to reduce total number of sent frames and therefore duration of
+175                                 -- the test!
+176        1/1                      if big_rx_buffer then
+177        1/1                          info_m(&quot;Using BIG RX Buffer settings (long frame) to reduce test time...&quot;);
+178        1/1                          CAN_frame.identifier := CAN_frame.identifier mod (2 ** 11);
+179        1/1                          CAN_frame.ident_type := BASE;
+180        1/1                          CAN_frame.frame_format := FD_CAN;
+181        1/1                          CAN_frame.brs := BR_SHIFT;
+182        1/1                          CAN_frame.data_length := 64;
+183                                     -- We dont care about the data content, they are zeroes!
+184        1/1                          decode_length(CAN_frame.data_length, CAN_frame.dlc);
+185        1/1                          decode_dlc_rx_buff(CAN_frame.dlc, CAN_frame.rwcnt);
+186                                 end if;
+187                     
+188                                 -- Evaluate if next frame should be sent
+189        1/1                      if (CAN_frame.rtr = RTR_FRAME and
+190                                     CAN_frame.frame_format = NORMAL_CAN)
+191                                 then
+192        1/1                          if (in_RX_buf + 4 &gt; buf_info.rx_buff_size) then
+193        1/1                              send_more := false;
+194                                     end if;
+195                                 else
+196        1/1                          if (CAN_frame.data_length mod 4 = 0) then
+197        1/1                              if ((in_RX_buf + CAN_frame.data_length / 4 + 4) &gt;
+198                                             buf_info.rx_buff_size)
+199                                         then
+200        1/1                                  send_more := false;
+201                                         end if;
+202                                     else
+203        1/1                              if ((in_RX_buf + CAN_frame.data_length / 4 + 5) &gt;
+204                                             buf_info.rx_buff_size)
+205                                         then
+206        1/1                                  send_more := false;
+207                                         end if;
+208                                     end if;
+209                                 end if;
+210                     
+211        1/1                      CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+212        1/1                      CAN_wait_frame_sent(DUT_NODE, chn);
+213                                 
+214        1/1                      CAN_wait_bus_idle(DUT_NODE, chn);
+215        1/1                      CAN_wait_bus_idle(TEST_NODE, chn);
+216                     
+217        1/1                      number_frms_sent := number_frms_sent + 1;
+218        1/1                      in_RX_buf := in_RX_buf + CAN_frame.rwcnt + 1;
+219                     
+220                                 --------------------------------------------------------------------
+221                                 -- @4. After each frame amount of remaining memory is checked
+222                                 --     towards expected value.
+223                                 --------------------------------------------------------------------
+224        1/1                      info_m(&quot;Step 4&quot;);
+225        1/1                      get_rx_buf_state(buf_info, DUT_NODE, chn);
+226        1/1                      check_m((number_frms_sent = buf_info.rx_frame_count) or (not send_more),
+227                                         &quot;Number of frames in RX Buffer not incremented&quot;);
+228                                       
+229        1/1                      check_m((buf_info.rx_mem_free + in_RX_buf) = buf_info.rx_buff_size or
+230                                         (not send_more),
+231                                         &quot;RX Buffer free memory + Number of stored words does &quot; &amp;
+232                                         &quot;not equal to RX Buffer size!&quot;);
+233                             end loop;
+234                     
+235                             ------------------------------------------------------------------------
+236                             -- @5. When buffer is filled Data overrun flag is checked and cleared.
+237                             ------------------------------------------------------------------------
+238        1/1                  info_m(&quot;Step 5&quot;);
+239                     
+240        1/1                  get_controller_status(status, DUT_NODE, chn);
+241        1/1                  check_m(status.data_overrun, &quot;Data overrun not ocurred as expected!&quot;);
+242                     
+243                             ------------------------------------------------------------------------
+244                             -- @6. After clearing Overrun flag, it is checked it was really cleared.
+245                             ------------------------------------------------------------------------
+246        1/1                  info_m(&quot;Step 6&quot;);
+247                             
+248        1/1                  command.clear_data_overrun := true;
+249        1/1                  give_controller_command(command, DUT_NODE, chn);
+250        1/1                  command.clear_data_overrun := false;
+251                     
+252        1/1                  get_controller_status(status, DUT_NODE, chn);
+253        1/1                  check_false_m(status.data_overrun, &quot;Data Overrun flag not cleared!&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.RX_STATUS_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

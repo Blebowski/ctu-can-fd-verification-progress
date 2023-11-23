@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.RETR_LIMIT_3_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.RETR_LIMIT_3_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.RETR_LIMIT_3_FTEST')">CTU_CAN_FD_TB.RETR_LIMIT_3_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod255.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/retr_limit_3_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/retr_limit_3_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.RETR_LIMIT_3_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod255.html" >CTU_CAN_FD_TB.RETR_LIMIT_3_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>33</td><td>33</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>132</td><td>33</td><td>33</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+131                             -- Hard coded threshold is enough for this test!
+132        1/1                  retr_th := 5;
+133                     
+134                             ------------------------------------------------------------------------
+135                             -- @1. Configure retransmitt limit in DUT, enable retransmitt
+136                             --     limitation. Enable Test Mode in DUT to be able manipulate with
+137                             --     Error counters. Configure Test node to Acknowledge Forbidden Mode
+138                             --     to invoke transmission of Error frames during test.
+139                             ------------------------------------------------------------------------
+140        1/1                  info_m(&quot;Step 1: Configuring retransmitt limit to 1 (DUT), ACF (Test node)&quot;);
+141                     
+142        1/1                  CAN_enable_retr_limit(true, retr_th, DUT_NODE, chn);
+143                     
+144        1/1                  mode_2.acknowledge_forbidden := true;
+145        1/1                  set_core_mode(mode_2, TEST_NODE, chn);
+146                     
+147        1/1                  mode_1.test := true;
+148        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+149                             
+150                             ------------------------------------------------------------------------
+151                             -- @2. Set DUT TX Error counter to 150. Check that DUT is Error
+152                             --     Passive. Send frame by DUT. Wait until Error frame occurs.
+153                             --     Check that Retransmit counter in DUT is now 1. Wait until 
+154                             --     Suspend transmission in DUT. Insert frame to Test node.
+155                             ------------------------------------------------------------------------
+156        1/1                  info_m(&quot;Step 2: Set DUT to Error passive&quot;);
+157                             
+158        1/1                  err_counters.tx_counter := 150;
+159        1/1                  set_error_counters(err_counters, DUT_NODE, chn);
+160                     
+161        1/1                  get_fault_state(fault_state, DUT_NODE, chn);
+162        1/1                  check_m(fault_state = fc_error_passive, &quot;Unit Error Passive!&quot;);
+163                     
+164        1/1                  CAN_generate_frame(CAN_frame);
+165        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+166        1/1                  CAN_wait_error_frame(DUT_NODE, chn);
+167                     
+168        1/1                  CAN_read_retr_ctr(retr_ctr, DUT_NODE, chn);
+169        1/1                  check_m(retr_ctr = 1,
+170                                 &quot;Retransmitt counter 1 after Error frame!&quot;);
+171                     
+172        1/1                  CAN_wait_pc_state(pc_deb_suspend, DUT_NODE, chn); -- Wait until suspend
+173        1/1                  CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+174                             
+175                             ------------------------------------------------------------------------
+176                             -- @3. Wait until Arbitration field in DUT, check that DUT is now
+177                             --     receiver. Wait until ACK field, force the bus for the whole du-
+178                             --     ration of ACK field to Recessive. Check that Error frame is
+179                             --     transmitted by DUT. Wait until Intermission. Check that Retran-
+180                             --     smitt counter is stil1 1.
+181                             ------------------------------------------------------------------------
+182        1/1                  info_m(&quot;Step 3: Check Retransmitt counter not incremented when receiver only&quot;);
+183                     
+184        1/1                  CAN_wait_pc_state(pc_deb_arbitration, DUT_NODE, chn);
+185        1/1                  wait for 10 ns; -- Operational state updated in the same clock cycle!
+186                     
+187        1/1                  get_controller_status(status, DUT_NODE, chn);
+188        1/1                  check_m(status.receiver, &quot;DUT turned receiver when in Error Passive!&quot;);
+189                     
+190        1/1                  CAN_wait_pc_state(pc_deb_ack, DUT_NODE, chn);
+191        1/1                  force_bus_level(RECESSIVE, chn);
+192                             
+193        1/1                  CAN_wait_not_pc_state(pc_deb_ack, DUT_NODE, chn);
+194        1/1                  release_bus_level(chn);
+195                             
+196        1/1                  get_controller_status(status, DUT_NODE, chn);
+197        1/1                  check_m(status.error_transmission, &quot;Error frame being transmitted!&quot;);
+198                     
+199        1/1                  CAN_wait_pc_state(pc_deb_intermission, DUT_NODE, chn);
+200        1/1                  CAN_read_retr_ctr(retr_ctr, DUT_NODE, chn);
+201        1/1                  check_m(retr_ctr = 1,
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.RETR_LIMIT_3_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

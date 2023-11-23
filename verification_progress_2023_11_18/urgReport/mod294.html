@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_FTEST')">CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod294.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/txt_buffer_transitions_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/txt_buffer_transitions_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod294.html" >CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>45</td><td>45</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>129</td><td>45</td><td>45</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+128                             -------------------------------------------------------------------------------------------
+129        1/1                  info_m(&quot;Step 1&quot;);
+130                     
+131        1/1                  mode.tx_buf_bus_off_failed := true;
+132        1/1                  mode.test := true; -- Test mode must be enabled toallow manipulation of Error counters!
+133        1/1                  set_core_mode(mode, DUT_NODE, chn);
+134                     
+135                             -------------------------------------------------------------------------------------------
+136                             --  @2. Loop for all TXT Buffers:
+137                             -------------------------------------------------------------------------------------------
+138        1/1                  info_m(&quot;Step 2&quot;);
+139        1/1                  get_tx_buf_count(num_txt_bufs, DUT_NODE, chn);
+140        1/1                  for txt_buf_index in 1 to num_txt_bufs loop
+141                     
+142                                 ---------------------------------------------------------------------------------------
+143                                 -- @2.1. Send a frame from a TXT Buffer. Wait until its transmission starts
+144                                 --       and send Set Abort Command. Check TXT Buffer is in Abort In Progress.
+145                                 ---------------------------------------------------------------------------------------
+146        1/1                      info_m(&quot;Step 2.1&quot;);
+147                     
+148                                 -- Preset the Error counter to just before bus-off
+149        1/1                      err_counters.tx_counter := 254;
+150        1/1                      err_counters.rx_counter := 0;
+151        1/1                      set_error_counters(err_counters, DUT_NODE, chn);
+152        1/1                      wait for 20 ns;
+153                     
+154                                 -- Send frame
+155        1/1                      CAN_generate_frame(CAN_frame);
+156        1/1                      CAN_send_frame(CAN_frame, txt_buf_index, DUT_NODE, chn, frame_sent);
+157        1/1                      CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+158                     
+159                                 -- Send abort
+160        1/1                      send_TXT_buf_cmd(buf_set_abort, txt_buf_index, DUT_NODE, chn);
+161        1/1                      wait for 30 ns;
+162        1/1                      get_tx_buf_state(txt_buf_index, txt_buf_state, DUT_NODE, chn);
+163        1/1                      check_m(txt_buf_state = buf_ab_progress,
+164                                         &quot;TXT Buffer &quot; &amp; integer'image(txt_buf_index) &amp; &quot; abort in progress&quot;);
+165                     
+166                                 -------------------------------------------------------------------------------------------
+167                                 -- @2.2. Invoke DUT Node to become bus-off. Check that the TXT Buffer became TX Failed.
+168                                 -------------------------------------------------------------------------------------------
+169        1/1                      info_m(&quot;Step 2&quot;);
+170                     
+171                                 -- Wait until dominant bit sent, and force it Recessive
+172        1/1                      while true loop
+173        1/1                          get_can_tx(DUT_NODE, bus_val, chn);
+174        1/1                          if (bus_val = DOMINANT) then
+175        1/1                              exit;
+176                                     end if;
+177        1/1                          wait for 10 ns;
+178                                 end loop;
+179                     
+180        1/1                      force_bus_level(RECESSIVE, chn);
+181        1/1                      wait for 2000 ns;
+182        1/1                      release_bus_level(chn);
+183                     
+184                                 -- Check we are surely in Bus off
+185        1/1                      get_fault_state(fault_state, DUT_NODE, chn);
+186        1/1                      check_m(fault_state = fc_bus_off, &quot;DUT is bus-off&quot;);
+187                     
+188                                 -- Check TXT Buffer is in TX Failed.
+189        1/1                      get_tx_buf_state(txt_buf_index, txt_buf_state, DUT_NODE, chn);
+190        1/1                      check_m(txt_buf_state = buf_failed,
+191                                         &quot;TXT Buffer &quot; &amp; integer'image(txt_buf_index) &amp; &quot; TX failed&quot;);
+192                     
+193                                 ---------------------------------------------------------------------------------------
+194                                 -- @3. Reintegrate the node on the bus. Issue &quot;Set empty&quot;.
+195                                 ---------------------------------------------------------------------------------------
+196        1/1                      info_m(&quot;Step 3&quot;);
+197                     
+198        1/1                      command.err_ctrs_rst := true;
+199        1/1                      give_controller_command(command, DUT_NODE, chn);
+200                     
+201                                 -- Wait until reintegration is over. Add some margin since DUT just started sending
+202                                 -- Error frame!
+203        1/1                      for i in 1 to 135 loop
+204        1/1                          for j in 1 to 11 loop
+205        1/1                              CAN_wait_sample_point(DUT_NODE, chn, false);
+206                                     end loop;
+207                                 end loop;
+208        1/1                      info_m(&quot;Reintegration done...&quot;);
+209                     
+210                                 -- Move TXT Buffer back to Empty
+211        1/1                      send_TXT_buf_cmd(buf_set_empty, txt_buf_index, DUT_NODE, chn);
+212        1/1                      wait for 30 ns;
+213        1/1                      get_tx_buf_state(txt_buf_index, txt_buf_state, DUT_NODE, chn);
+214        1/1                      check_m(txt_buf_state = buf_empty,
+215                                         &quot;TXT Buffer &quot; &amp; integer'image(txt_buf_index) &amp; &quot; empty&quot;);
+216                     
+217                                 -- Check we are back to error active
+218        1/1                      get_fault_state(fault_state, DUT_NODE, chn);
+219        1/1                      check_m(fault_state = fc_error_active, &quot;DUT is Error active again&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

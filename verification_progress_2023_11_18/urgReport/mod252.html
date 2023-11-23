@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.SINGLE_BUS_NODE_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.SINGLE_BUS_NODE_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.SINGLE_BUS_NODE_FTEST')">CTU_CAN_FD_TB.SINGLE_BUS_NODE_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod252.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/single_bus_node_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/single_bus_node_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.SINGLE_BUS_NODE_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod252.html" >CTU_CAN_FD_TB.SINGLE_BUS_NODE_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>32</td><td>32</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>147</td><td>32</td><td>32</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+146                             ------------------------------------------------------------------------
+147        1/1                  info_m(&quot;Step 1: Disabling Test node&quot;);
+148                     
+149        1/1                  CAN_turn_controller(false, TEST_NODE, chn);        
+150        1/1                  CAN_enable_retr_limit(false, 0, DUT_NODE, chn);
+151                             
+152                             --get_core_mode(mode_1, DUT_NODE, chn);
+153                             --mode_1.self_test := true;
+154                             --set_core_mode(mode_1, DUT_NODE, chn);
+155                             
+156                             ------------------------------------------------------------------------
+157                             -- @2. Transmitt frame by DUT.
+158                             ------------------------------------------------------------------------
+159        1/1                  info_m(&quot;Step 2: Transmit frame by DUT&quot;);
+160                     
+161        1/1                  CAN_generate_frame(frame_1);
+162        1/1                  frame_1.rtr := NO_RTR_FRAME;
+163        1/1                  frame_1.frame_format := NORMAL_CAN;
+164        1/1                  frame_1.dlc := &quot;0001&quot;;
+165        1/1                  frame_1.data_length := 1;
+166        1/1                  frame_1.identifier := 256;
+167        1/1                  frame_1.data(0) := x&quot;AA&quot;;      
+168                     
+169        1/1                  CAN_send_frame(frame_1, 1, DUT_NODE, chn, frame_sent);
+170                     
+171                             ------------------------------------------------------------------------
+172                             -- @3.  Wait until error frame starts and check that error counter is
+173                             --      incremented by 8. Repeat until node turns error passive!
+174                             ------------------------------------------------------------------------
+175        1/1                  info_m(&quot;Step 3: Looping till error passive&quot;);
+176                     
+177        1/1                  get_fault_state(fault_state_1, DUT_NODE, chn);
+178        1/1                  while (fault_state_1 = fc_error_active) loop
+179        1/1                      CAN_wait_error_frame(DUT_NODE, chn);
+180                             
+181                                 -- Wait till error frame is for sure over
+182        1/1                      for i in 0 to 13 loop
+183        1/1                          CAN_wait_sample_point(DUT_NODE, chn);
+184                                 end loop;
+185                     
+186        1/1                      read_error_counters(err_counters, DUT_NODE, chn);
+187        1/1                      retr_index := retr_index + 1;
+188        1/1                      check_m(err_counters.tx_counter = retr_index * 8, &quot;TEC incremented&quot;);
+189                                             
+190        1/1                      get_fault_state(fault_state_1, DUT_NODE, chn);
+191                             end loop;
+192                     
+193                             ------------------------------------------------------------------------
+194                             -- @4. Wait for several times that node transmitts a frame and check
+195                             --     that after each, TX Error counter is not incremented.
+196                             ------------------------------------------------------------------------
+197        1/1                  info_m(&quot;Step 4: Checking TEC stays!&quot;);
+198                     
+199        1/1                  read_error_counters(err_counters, DUT_NODE, chn);
+200        1/1                  tec_at_err_passive := err_counters.tx_counter;
+201                             
+202        1/1                  for i in 0 to 10 loop
+203        1/1                      info_m(&quot;Frame in Error passive nr:&quot; &amp; integer'image(i));
+204                     
+205        1/1                      CAN_wait_error_frame(DUT_NODE, chn);
+206                             
+207                                 -- Wait till error frame is for sure over
+208        1/1                      for j in 0 to 13 loop
+209        1/1                          CAN_wait_sample_point(DUT_NODE, chn);
+210                                 end loop;
+211                     
+212        1/1                      read_error_counters(err_counters, DUT_NODE, chn);
+213        1/1                      check_m(err_counters.tx_counter = tec_at_err_passive, &quot;TEC stable&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.SINGLE_BUS_NODE_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

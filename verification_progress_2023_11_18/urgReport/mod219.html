@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.ERR_CAPT_CTRL_BIT_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_CTRL_BIT_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.ERR_CAPT_CTRL_BIT_FTEST')">CTU_CAN_FD_TB.ERR_CAPT_CTRL_BIT_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 85.94</td>
+<td class="s8 cl rt"><a href="mod219.html#Line" > 85.94</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_ctrl_bit_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_ctrl_bit_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_CTRL_BIT_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod219.html" >CTU_CAN_FD_TB.ERR_CAPT_CTRL_BIT_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s8"><td class="lf">TOTAL</td><td></td><td>64</td><td>55</td><td>85.94</td></tr>
+<tr class="s8"><td class="lf">VHDL_PROCEDURE</td><td>137</td><td>64</td><td>55</td><td>85.94</td></tr>
+</table>
+<pre class="code"><br clear=all>
+136                             -- failing assertions due to force bit errors!
+137        1/1                  CAN_turn_controller(false, TEST_NODE, chn);
+138                     
+139                             -----------------------------------------------------------------------
+140                             -- @1. Check that ERR_CAPT contains no error (post reset).
+141                             -----------------------------------------------------------------------
+142        1/1                  info_m(&quot;Step 1&quot;);
+143                             
+144        1/1                  CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+145        1/1                  check_m(err_capt.err_pos = err_pos_other, &quot;Reset of ERR_CAPT!&quot;);
+146                             
+147                             -----------------------------------------------------------------------
+148                             -- @2. Generate CAN frame (frame with Base ID only, CAN FD frames with
+149                             --    Base and extended identifier, CAN FD frame with Base identifier),
+150                             --    send it by DUT. Wait until Arbitration field and until sample
+151                             --    point of one bit before bit error shall be detected. Force bus to
+152                             --    opposite value as shall be transmitted and wait until sample point.
+153                             --    Check that Node is transmitting error frame. Check that ERR_CAPT
+154                             --    signals Bit Error in Control field. Reset the node, Wait until
+155                             --    integration is over and check that ERR_CAPT is at its reset value
+156                             --    (this is to check that next loops will truly set ERR_CAPT).
+157                             --    Repeat with each frame type!
+158                             -----------------------------------------------------------------------
+159        1/1                  for i in 1 to 4 loop
+160        1/1                      info_m(&quot;Inner Loop: &quot; &amp; integer'image(i));
+161        1/1                      CAN_generate_frame(frame_1);
+162                     
+163                                 -- Detect patterns in which stuff bit might be placed. In such 
+164                                 -- case, avoid it. Because if we stuff the same value of bit as
+165                                 -- we are trying to force, error frame will not be sent (obviously,
+166                                 -- bus has equal value as is sent) and test will fail!
+167        1/1                      if (frame_1.dlc(3) = frame_1.dlc(2)) then
+168                                     
+169                                     -- It is enough to break first two equal bits!
+170        1/1                          frame_1.dlc(3) := not frame_1.dlc(2);
+171        1/1                          decode_dlc(frame_1.dlc, frame_1.data_length);
+172                                 end if;
+173                     
+174                                 -- ID is not important in this TC. Avoid overflows of high generated
+175                                 -- IDs on Base IDs!
+176        1/1                      frame_1.identifier := 10;
+177                                 -- This is to avoid failing assertions on simultaneous RTR and EDL
+178                                 -- flag (if r0 is corrupted by TC to be recessive!). RTR flag is
+179                                 -- not important in this TC, therefore we can afford to fixate it!
+180        1/1                      frame_1.RTR := NO_RTR_FRAME;
+181                                 
+182        1/1                      case i is
+183                                 when 1 =&gt;
+184        1/1                          frame_1.ident_type := BASE;
+185        1/1                          wait_time := 12; -- Till IDE
+186        1/1                          force_value := RECESSIVE;
+187                                 when 2 =&gt;
+188        1/1                          frame_1.frame_format := FD_CAN;
+189        1/1                          frame_1.ident_type := BASE;
+190        1/1                          wait_time := 13; -- Till EDL
+191        1/1                          force_value := DOMINANT;
+192                                 when 3 =&gt;
+193        1/1                          frame_1.frame_format := FD_CAN;
+194        1/1                          frame_1.ident_type := EXTENDED;
+195        1/1                          wait_time := 32; -- Till EDL
+196        1/1                          force_value := DOMINANT;
+197                                 when 4 =&gt;
+198        1/1                          frame_1.frame_format := FD_CAN;
+199        1/1                          frame_1.ident_type := BASE;
+200        1/1                          wait_time := 15; -- Till r0
+201                                     
+202                                     -- Extend wait time to random BRS,ESI or DLC
+203        1/1                          rand_int_v(5, tmp);
+204        1/1                          wait_time := wait_time + tmp;
+205                                     
+206                                     -- Force value:
+207                                     -- BRS -&gt; Opposite of BRS
+208                                     -- ESI -&gt; Recessive (we are error active so we transmit dominabt)
+209                                     -- DLC -&gt; opposite of n-th bit of DLC!
+210        1/1                          case tmp is
+211                                     when 0 =&gt;
+212        <font color = "red">0/1     ==>                      force_value := not frame_1.brs;</font>
+213        <font color = "red">0/1     ==>                      info_m(&quot;Forcing BRS to dominant!&quot;);</font>
+214                                     when 1 =&gt;
+215        1/1                              force_value := RECESSIVE;
+216        1/1                              info_m(&quot;Forcing ESI to recessive!&quot;);
+217                                     when 2 =&gt;
+218        1/1                              force_value := not frame_1.dlc(3);
+219        1/1                              info_m(&quot;Forcing DLC(3)&quot;);
+220                                     when 3 =&gt;
+221        <font color = "red">0/1     ==>                      force_value := not frame_1.dlc(2);</font>
+222        <font color = "red">0/1     ==>                      info_m(&quot;Forcing DLC(2)&quot;);</font>
+223                                     when 4 =&gt;
+224        <font color = "red">0/1     ==>                      force_value := not frame_1.dlc(1);</font>
+225        <font color = "red">0/1     ==>                      info_m(&quot;Forcing DLC(1)&quot;);</font>
+226                                     when 5 =&gt;
+227        <font color = "red">0/1     ==>                      force_value := not frame_1.dlc(0);</font>
+228        <font color = "red">0/1     ==>                      info_m(&quot;Forcing DLC(0)&quot;);</font>
+229                                     when others =&gt;
+230        <font color = "red">0/1     ==>                      error_m(&quot;Invalid generated number!&quot;);</font>
+231                                     end case;
+232                                 end case;
+233                                 
+234        1/1                      CAN_send_frame(frame_1, 1, DUT_NODE, chn, frame_sent);
+235        1/1                      CAN_wait_pc_state(pc_deb_arbitration, DUT_NODE, chn);
+236                                 
+237        1/1                      info_m(&quot;Waiting for: &quot; &amp; integer'image(wait_time) &amp; &quot; bits!&quot;);
+238        1/1                      for j in 1 to wait_time loop
+239        1/1                          CAN_wait_sample_point(DUT_NODE, chn);
+240                                 end loop;
+241                                 
+242                                 -- Force bus for one bit time
+243        1/1                      force_bus_level(force_value, chn);
+244        1/1                      CAN_wait_sample_point(DUT_NODE, chn, skip_stuff_bits =&gt; false);
+245        1/1                      wait for 20 ns; -- To be sure that opposite bit is sampled!
+246        1/1                      release_bus_level(chn);
+247                                 
+248                                 -- Check errors
+249        1/1                      get_controller_status(stat_1, DUT_NODE, chn);
+250        1/1                      check_m(stat_1.error_transmission,
+251                                         &quot;Error frame is being transmitted!&quot;);
+252                             
+253        1/1                      CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+254        1/1                      check_m(err_capt.err_type = can_err_bit, &quot;Bit error detected!&quot;);
+255        1/1                      check_m(err_capt.err_pos = err_pos_ctrl,
+256                                         &quot;Error detected in Control field!&quot;);
+257        1/1                      wait for 100 ns; -- For debug only to see waves properly!
+258                     
+259                                 -- Reset the node
+260        1/1                      exec_SW_reset(DUT_NODE, chn);
+261        1/1                      CAN_turn_controller(true, DUT_NODE, chn);
+262        1/1                      CAN_wait_bus_on(DUT_NODE, chn);
+263        1/1                      CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+264        1/1                      check_m(err_capt.err_pos = err_pos_other, &quot;Reset value other&quot;);
+265                             end loop;
+266                     
+267        1/1                  wait for 100 ns;
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.ERR_CAPT_CTRL_BIT_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

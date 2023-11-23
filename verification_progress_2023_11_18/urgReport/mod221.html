@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.BTR_MINIMAL_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.BTR_MINIMAL_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.BTR_MINIMAL_FTEST')">CTU_CAN_FD_TB.BTR_MINIMAL_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod221.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/btr_minimal_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/btr_minimal_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.BTR_MINIMAL_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod221.html" >CTU_CAN_FD_TB.BTR_MINIMAL_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>45</td><td>45</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>129</td><td>45</td><td>45</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+128                             -----------------------------------------------------------------------
+129        1/1                  info_m(&quot;Step 1&quot;);
+130                     
+131        1/1                  CAN_turn_controller(false, DUT_NODE, chn);
+132        1/1                  CAN_turn_controller(false, TEST_NODE, chn);
+133                     
+134        1/1                  bus_timing.prop_nbt := 1;
+135        1/1                  bus_timing.ph1_nbt := 3;
+136        1/1                  bus_timing.ph2_nbt := 3;
+137        1/1                  bus_timing.sjw_nbt := 2;
+138        1/1                  bus_timing.tq_nbt := 1;
+139                     
+140        1/1                  bus_timing.prop_dbt := 0;
+141        1/1                  bus_timing.ph1_dbt := 2;
+142        1/1                  bus_timing.ph2_dbt := 2;
+143        1/1                  bus_timing.sjw_nbt := 1;
+144        1/1                  bus_timing.tq_dbt := 1;
+145                     
+146        1/1                  CAN_configure_timing(bus_timing, DUT_NODE, chn);
+147        1/1                  CAN_configure_timing(bus_timing, TEST_NODE, chn);
+148                     
+149        1/1                  CAN_configure_ssp(ssp_no_ssp, x&quot;00&quot;, DUT_NODE, chn);
+150        1/1                  CAN_configure_ssp(ssp_no_ssp, x&quot;00&quot;, TEST_NODE, chn);
+151                     
+152        1/1                  CAN_turn_controller(true, DUT_NODE, chn);
+153        1/1                  CAN_turn_controller(true, TEST_NODE, chn);
+154                     
+155        1/1                  CAN_wait_bus_on(DUT_NODE, chn);
+156        1/1                  CAN_wait_bus_on(TEST_NODE, chn);
+157                     
+158        1/1                  info_m(&quot;CAN bus nominal bit-rate:&quot;);
+159        1/1                  info_m(&quot;PROP: &quot; &amp; integer'image(bus_timing.prop_nbt));
+160        1/1                  info_m(&quot;PH1: &quot; &amp; integer'image(bus_timing.ph1_nbt));
+161        1/1                  info_m(&quot;PH2: &quot; &amp; integer'image(bus_timing.ph2_nbt));
+162        1/1                  info_m(&quot;SJW: &quot; &amp; integer'image(bus_timing.sjw_nbt));
+163                     
+164        1/1                  info_m(&quot;CAN bus data bit-rate:&quot;);
+165        1/1                  info_m(&quot;PROP: &quot; &amp; integer'image(bus_timing.prop_dbt));
+166        1/1                  info_m(&quot;PH1: &quot; &amp; integer'image(bus_timing.ph1_dbt));
+167        1/1                  info_m(&quot;PH2: &quot; &amp; integer'image(bus_timing.ph2_dbt));
+168        1/1                  info_m(&quot;SJW: &quot; &amp; integer'image(bus_timing.sjw_dbt));
+169                     
+170                             -----------------------------------------------------------------------
+171                             -- @2. Configure small Transmitter delay, so that sampling in nominal
+172                             --     bit rate will not fire an error.
+173                             -----------------------------------------------------------------------
+174        1/1                  info_m(&quot;Step 2&quot;);
+175                     
+176        1/1                  ftr_tb_set_tran_delay(1 ns, DUT_NODE, chn);
+177        1/1                  ftr_tb_set_tran_delay(1 ns, TEST_NODE, chn);
+178                     
+179                             -----------------------------------------------------------------------
+180                             -- @3. Generate random frame which is FD frame with bit-rate shift.
+181                             --     Send the frame by DUT, receive it by Test node and check it.
+182                             -----------------------------------------------------------------------
+183        1/1                  info_m(&quot;Step 3&quot;);
+184                             
+185        1/1                  CAN_generate_frame(CAN_frame_1);
+186        1/1                  info_m(&quot;Generated frame&quot;);
+187        1/1                  CAN_frame_1.frame_format := FD_CAN;
+188        1/1                  CAN_frame_1.brs := BR_SHIFT;
+189        1/1                  CAN_frame_1.rtr := NO_RTR_FRAME;
+190                             
+191        1/1                  CAN_send_frame(CAN_frame_1, 1, DUT_NODE, chn, frame_sent);
+192        1/1                  CAN_wait_frame_sent(TEST_NODE, chn);
+193        1/1                  CAN_read_frame(CAN_frame_2, TEST_NODE, chn);
+194                             
+195        1/1                  CAN_compare_frames(CAN_frame_1, CAN_frame_2, false, frames_equal);
+196        1/1                  check_m(frames_equal, &quot;TX/RX frame equal!&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.BTR_MINIMAL_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

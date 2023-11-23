@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.COMMAND_RRB_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.COMMAND_RRB_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.COMMAND_RRB_FTEST')">CTU_CAN_FD_TB.COMMAND_RRB_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod129.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/command_rrb_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/command_rrb_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.COMMAND_RRB_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod129.html" >CTU_CAN_FD_TB.COMMAND_RRB_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>82</td><td>82</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>135</td><td>82</td><td>82</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+134                             -----------------------------------------------------------------------
+135        1/1                  info_m(&quot;Step 1&quot;);
+136                     
+137        1/1                  get_rx_buf_state(rx_buf_info, DUT_NODE, chn);
+138                             
+139        1/1                  check_m(rx_buf_info.rx_write_pointer = 0, &quot;Write pointer 0&quot;);
+140        1/1                  check_m(rx_buf_info.rx_read_pointer = 0, &quot;Read pointer 0&quot;);
+141        1/1                  check_false_m(rx_buf_info.rx_full, &quot;Full flag not set&quot;);
+142        1/1                  check_m(rx_buf_info.rx_empty, &quot;Empty flag set&quot;);
+143        1/1                  check_m(rx_buf_info.rx_frame_count = 0, &quot;Frame count 0&quot;);
+144                             
+145        1/1                  CAN_generate_frame(frame_1);
+146        1/1                  CAN_insert_TX_frame(frame_1, 1, TEST_NODE, chn);
+147        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+148                             
+149        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+150        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+151        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+152                     
+153        1/1                  get_rx_buf_state(rx_buf_info, DUT_NODE, chn);
+154                             
+155        1/1                  check_m(rx_buf_info.rx_write_pointer /= 0, &quot;Write pointer not 0&quot;);
+156        1/1                  check_m(rx_buf_info.rx_read_pointer = 0, &quot;Read pointer still 0&quot;);
+157        1/1                  check_false_m(rx_buf_info.rx_full, &quot;Full flag not set&quot;);
+158        1/1                  check_false_m(rx_buf_info.rx_empty, &quot;Empty flag not set&quot;);
+159        1/1                  check_m(rx_buf_info.rx_frame_count = 1, &quot;Frame count 1&quot;);
+160                     
+161                             -----------------------------------------------------------------------
+162                             -- @2. Issue COMMAND[RRB] and check that RX Buffer is empty again!
+163                             -----------------------------------------------------------------------
+164        1/1                  info_m(&quot;Step 2&quot;);
+165                             
+166        1/1                  command.release_rec_buffer := true;
+167        1/1                  give_controller_command(command, DUT_NODE, chn);
+168                     
+169        1/1                  get_rx_buf_state(rx_buf_info, DUT_NODE, chn);
+170        1/1                  check_m(rx_buf_info.rx_write_pointer = 0, &quot;Write pointer 0&quot;);
+171        1/1                  check_m(rx_buf_info.rx_read_pointer = 0, &quot;Read pointer 0&quot;);
+172        1/1                  check_false_m(rx_buf_info.rx_full, &quot;Full flag not set&quot;);
+173        1/1                  check_m(rx_buf_info.rx_empty, &quot;Empty flag set&quot;);
+174        1/1                  check_m(rx_buf_info.rx_frame_count = 0, &quot;Frame count 0&quot;);
+175                             
+176                             -----------------------------------------------------------------------
+177                             -- @3. Send CAN frame by Test node, wait until frame is sent and check that
+178                             --    RX Buffer is not empty again.
+179                             -----------------------------------------------------------------------
+180        1/1                  info_m(&quot;Step 3&quot;);
+181                             
+182        1/1                  CAN_generate_frame(frame_1);
+183        1/1                  CAN_insert_TX_frame(frame_1, 1, TEST_NODE, chn);
+184        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+185                     
+186        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+187                     
+188        1/1                  get_rx_buf_state(rx_buf_info, DUT_NODE, chn);
+189        1/1                  check_m(rx_buf_info.rx_write_pointer /= 0, &quot;Write pointer not 0&quot;);
+190        1/1                  check_m(rx_buf_info.rx_read_pointer = 0, &quot;Read pointer still 0&quot;);
+191        1/1                  check_false_m(rx_buf_info.rx_full, &quot;Full flag not set&quot;);
+192        1/1                  check_false_m(rx_buf_info.rx_empty, &quot;Empty flag not set&quot;);
+193        1/1                  check_m(rx_buf_info.rx_frame_count = 1, &quot;Frame count 1&quot;);
+194                     
+195        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+196        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+197                     
+198                             -----------------------------------------------------------------------
+199                             -- @4. Send frame by Test node. Wait until DUT starts receiving. Wait
+200                             --    for random amount of time and issue COMMAND[RRB].  Wait until
+201                             --    bus is idle. RX Buffer can be either empty (command was issued
+202                             --    after first word was stored), or there are is one frame (command
+203                             --    was issued before first word was stored).
+204                             -----------------------------------------------------------------------
+205        1/1                  info_m(&quot;Step 4&quot;);
+206                             
+207        1/1                  CAN_generate_frame(frame_1);
+208        1/1                  CAN_insert_TX_frame(frame_1, 1, TEST_NODE, chn);
+209        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+210                     
+211        1/1                  CAN_wait_tx_rx_start(false, true, DUT_NODE, chn);
+212                     
+213        1/1                  rand_int_v(20000, rand_val);
+214        1/1                  for i in 0 to rand_val loop
+215        1/1                      clk_agent_wait_cycle(chn);
+216                             end loop;
+217                            
+218        1/1                  command.release_rec_buffer := true;
+219        1/1                  give_controller_command(command, DUT_NODE, chn);
+220                             
+221        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+222        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+223                             
+224        1/1                  get_rx_buf_state(rx_buf_info, DUT_NODE, chn);
+225                             
+226                             -- Now there could be either one or no frame, if there is one, first
+227                             -- read it out and check it is correct!
+228        1/1                  if (rx_buf_info.rx_frame_count &gt; 0) then
+229        1/1                      check_m(rx_buf_info.rx_frame_count = 1, &quot;RX frame count 1!&quot;);
+230        1/1                      CAN_read_frame(frame_rx, DUT_NODE, chn);
+231        1/1                      CAN_compare_frames(frame_rx, frame_1, false, frames_equal);
+232                             end if;
+233                             
+234                             -- Now there shouldbe no frame
+235        1/1                  get_rx_buf_state(rx_buf_info, DUT_NODE, chn);
+236                             
+237        1/1                  check_m(rx_buf_info.rx_empty, &quot;Empty flag set&quot;);
+238        1/1                  check_m(rx_buf_info.rx_frame_count = 0, &quot;Frame count 0&quot;);
+239                             
+240                             -----------------------------------------------------------------------
+241                             -- @5. Send frame by Test node again. Wait until frame is sent and check it
+242                             --    is properly received by DUT.
+243                             -----------------------------------------------------------------------
+244        1/1                  info_m(&quot;Step 5&quot;);
+245                     
+246        1/1                  CAN_generate_frame(frame_1);
+247        1/1                  CAN_insert_TX_frame(frame_1, 1, TEST_NODE, chn);
+248        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+249                     
+250        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+251        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+252        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+253                             
+254        1/1                  get_rx_buf_state(rx_buf_info, DUT_NODE, chn);
+255        1/1                  check_m(rx_buf_info.rx_write_pointer /= 0, &quot;Write pointer not 0&quot;);
+256        1/1                  check_false_m(rx_buf_info.rx_full, &quot;Full flag not set&quot;);
+257        1/1                  check_false_m(rx_buf_info.rx_empty, &quot;Empty flag not set&quot;);
+258        1/1                  check_m(rx_buf_info.rx_frame_count = 1, &quot;Frame count 1&quot;);
+259                             
+260        1/1                  CAN_read_frame(frame_rx, DUT_NODE, chn);
+261        1/1                  CAN_compare_frames(frame_rx, frame_1, false, frames_equal);
+262        1/1                  info_m(&quot;TX frame:&quot;);
+263        1/1                  CAN_print_frame(frame_1);
+264        1/1                  info_m(&quot;RX frame:&quot;);
+265        1/1                  CAN_print_frame(frame_rx);
+266        1/1                  check_m(frames_equal, &quot;TX vs. RX frames match!&quot;);
+267                     
+268                             -- Issue COMMAND[RRB] to clean-up after itself (for next iterations)
+269        1/1                  command.release_rec_buffer := true;
+270        1/1                  give_controller_command(command, DUT_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.COMMAND_RRB_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

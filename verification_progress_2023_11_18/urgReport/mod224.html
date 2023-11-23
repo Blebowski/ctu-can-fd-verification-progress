@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TST_MEM_ACC_RX_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TST_MEM_ACC_RX_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TST_MEM_ACC_RX_FTEST')">CTU_CAN_FD_TB.TST_MEM_ACC_RX_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod224.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tst_mem_acc_rx_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tst_mem_acc_rx_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TST_MEM_ACC_RX_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod224.html" >CTU_CAN_FD_TB.TST_MEM_ACC_RX_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>26</td><td>26</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>130</td><td>26</td><td>26</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+129                             -----------------------------------------------------------------------
+130        1/1                  info_m(&quot;Step 1&quot;);
+131        1/1                  get_rx_buf_state(rx_info, DUT_NODE, chn);
+132        1/1                  mode.test := true;
+133        1/1                  set_core_mode(mode, DUT_NODE, chn);
+134                     
+135                             -- First we must disable DUT
+136        1/1                  CAN_turn_controller(false, DUT_NODE, chn);
+137        1/1                  set_test_mem_access(true, DUT_NODE, chn);
+138                     
+139        1/1                  info_m(&quot;Size of RX Buffer RAM: &quot; &amp; integer'image(rx_info.rx_mem_free));
+140                     
+141                             -----------------------------------------------------------------------
+142                             -- @2. Generate random content for whole RAM.
+143                             -----------------------------------------------------------------------
+144        1/1                  info_m(&quot;Step 2&quot;);
+145        1/1                  for i in 0 to rx_info.rx_mem_free - 1 loop
+146        1/1                      rand_logic_vect_v(w_content(i), 0.5);
+147        1/1                      wait for 1 ps; -- To avoid timeout due to max delta cycles
+148                             end loop;
+149                     
+150                             -----------------------------------------------------------------------
+151                             -- @3. Write whole RX buffer RAM.
+152                             -----------------------------------------------------------------------
+153        1/1                  info_m(&quot;Step 3&quot;);
+154                     
+155                             -- To reduce log size for biggest RX buffer size.
+156        1/1                  mem_bus_agent_disable_transaction_reporting(chn);
+157                     
+158        1/1                  for i in 0 to rx_info.rx_mem_free - 1 loop
+159        1/1                      test_mem_write(w_content(i), i, TST_TGT_RX_BUF, DUT_NODE, chn);
+160                             end loop;
+161                     
+162                             -----------------------------------------------------------------------
+163                             -- @4. Read whole RX buffer RAM back and compare read values with
+164                             --     written ones.
+165                             -----------------------------------------------------------------------
+166        1/1                  info_m(&quot;Step 4&quot;);
+167                     
+168        1/1                  for i in 0 to rx_info.rx_mem_free - 1 loop
+169        1/1                      test_mem_read(r_data, i, TST_TGT_RX_BUF, DUT_NODE, chn);
+170        1/1                      check_m(r_data = w_content(i), &quot;RX RAM data at address: &quot; &amp;
+171                                     integer'image(i) &amp; &quot; Expected: 0x&quot; &amp; to_hstring(w_content(i)) &amp;
+172                                     &quot; Read: 0x&quot; &amp; to_hstring(r_data));
+173                             end loop;
+174                     
+175        1/1                  mem_bus_agent_enable_transaction_reporting(chn);
+176                     
+177                             -----------------------------------------------------------------------
+178                             -- @5. Toggle all bits of TST_DEST[TST_ADDR] to fill its toggle
+179                             --     coverage. Field is bigger than biggest possible memory, thus
+180                             --     upper bits do not get toggled during any test access.
+181                             -----------------------------------------------------------------------
+182        1/1                  info_m(&quot;Step 5&quot;);
+183                     
+184        1/1                  w_data := (OTHERS =&gt; '0');
+185        1/1                  w_data(TST_ADDR_H downto TST_ADDR_L) := x&quot;FFFF&quot;;
+186        1/1                  CAN_write(w_data, TST_DEST_ADR, DUT_NODE, chn);
+187                     
+188        1/1                  w_data := (OTHERS =&gt; '0');
+189        1/1                  CAN_write(w_data, TST_DEST_ADR, DUT_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TST_MEM_ACC_RX_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

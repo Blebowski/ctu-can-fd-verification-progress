@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.INT_AL_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.INT_AL_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.INT_AL_FTEST')">CTU_CAN_FD_TB.INT_AL_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod321.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_al_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_al_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.INT_AL_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod321.html" >CTU_CAN_FD_TB.INT_AL_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>75</td><td>75</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>142</td><td>75</td><td>75</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+141                             -----------------------------------------------------------------------
+142        1/1                  info_m(&quot;Step 1&quot;);
+143                             
+144        1/1                  int_mask.arb_lost_int := false;
+145        1/1                  int_ena.arb_lost_int := true;
+146        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+147        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+148                     
+149                             -----------------------------------------------------------------------
+150                             -- @2. Send frame by DUT and Test Node at the same time, make DUTs
+151                             --     identifier higher that Test Nodes identifier (to loose
+152                             --     arbitration).
+153                             -----------------------------------------------------------------------
+154        1/1                  info_m(&quot;Step 2&quot;);
+155                     
+156        1/1                  CAN_generate_frame(CAN_frame);
+157        1/1                  rand_int_v(2047, CAN_frame.identifier);
+158        1/1                  CAN_insert_TX_frame(CAN_frame, 1, TEST_NODE, chn);
+159        1/1                  CAN_frame.identifier := CAN_frame.identifier + 1;
+160        1/1                  CAN_insert_TX_frame(CAN_frame, 1, DUT_NODE, chn);
+161                             
+162        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+163        1/1                  wait for 20 ns;
+164        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+165        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, DUT_NODE, chn);
+166                     
+167                             -----------------------------------------------------------------------
+168                             -- @3. Wait until the end of arbitration in DUT. Check that AL Interrupt
+169                             --     is set. Check that INT pin is high.
+170                             -----------------------------------------------------------------------
+171        1/1                  info_m(&quot;Step 3&quot;);
+172                     
+173        1/1                  CAN_wait_pc_state(pc_deb_arbitration, DUT_NODE, chn);
+174        1/1                  CAN_wait_not_pc_state(pc_deb_arbitration, DUT_NODE, chn);
+175                             
+176        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+177        1/1                  check_m(int_stat.arb_lost_int,
+178                                     &quot;AL Interrupt set after Arbitration lost!&quot;);
+179        1/1                  interrupt_agent_check_asserted(chn);
+180                             
+181        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+182        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+183                             
+184                             -----------------------------------------------------------------------
+185                             -- @4. Disable AL Interrupt and check INT pin goes low. Enable AL 
+186                             --     Interrupt and check INT pin goes high.
+187                             -----------------------------------------------------------------------
+188        1/1                  info_m(&quot;Step 4&quot;);
+189                     
+190        1/1                  int_ena.arb_lost_int := false;
+191        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+192        1/1                  wait for 10 ns;
+193        1/1                  interrupt_agent_check_not_asserted(chn);
+194                             
+195        1/1                  int_ena.arb_lost_int := true;
+196        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+197        1/1                  wait for 10 ns;
+198        1/1                  interrupt_agent_check_asserted(chn);
+199                     
+200                             -----------------------------------------------------------------------
+201                             -- @5. Clear AL Interrupt and check it has been cleared and that INT
+202                             --     pin is low.
+203                             -----------------------------------------------------------------------
+204        1/1                  info_m(&quot;Step 5&quot;);
+205                     
+206        1/1                  int_stat.arb_lost_int := true;
+207        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+208        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+209                     
+210        1/1                  check_false_m(int_stat.arb_lost_int, &quot;AL Interrupt cleared!&quot;);
+211        1/1                  interrupt_agent_check_not_asserted(chn);  
+212                             
+213                             -----------------------------------------------------------------------
+214                             -- @6. Mask AL Interrupt. Send again two frames as in step 2. Wait
+215                             --     until arbitration is over in DUT and check that AL interrupt is
+216                             --     now not set.
+217                             -----------------------------------------------------------------------
+218        1/1                  info_m(&quot;Step 6&quot;);
+219                     
+220        1/1                  int_mask.arb_lost_int := true;
+221        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+222                     
+223        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+224        1/1                  wait for 20 ns;
+225        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, TEST_NODE, chn);
+226        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, DUT_NODE, chn);
+227                     
+228        1/1                  CAN_wait_pc_state(pc_deb_arbitration, DUT_NODE, chn);
+229        1/1                  CAN_wait_not_pc_state(pc_deb_arbitration, DUT_NODE, chn);
+230                     
+231        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+232        1/1                  check_false_m(int_stat.arb_lost_int,
+233                                           &quot;AL Interrupt not set when masked&quot;);
+234        1/1                  interrupt_agent_check_not_asserted(chn);
+235                     
+236        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+237        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+238                     
+239                             -----------------------------------------------------------------------
+240                             -- @7. Disable AL Interrupt and check it was disabled. Enable AL
+241                             --     Interrupt and check it was enabled.
+242                             -----------------------------------------------------------------------
+243        1/1                  info_m(&quot;Step 7&quot;);
+244                     
+245        1/1                  int_ena.arb_lost_int := false;
+246        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+247        1/1                  int_ena.arb_lost_int := true;
+248                     
+249        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+250        1/1                  check_false_m(int_ena.arb_lost_int, &quot;AL Interrupt Disabled!&quot;);
+251                     
+252        1/1                  int_ena.arb_lost_int := true;
+253        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+254        1/1                  int_ena.arb_lost_int := false;
+255        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+256        1/1                  check_m(int_ena.arb_lost_int, &quot;AL Interrupt Enabled!&quot;);
+257                             
+258                             -----------------------------------------------------------------------
+259                             -- @8. Mask AL Interrupt and check it was masked. Un-mask DO Interrupt
+260                             --     and check it was un-masked.
+261                             -----------------------------------------------------------------------
+262        1/1                  info_m(&quot;Step 8&quot;);
+263                     
+264        1/1                  int_mask.arb_lost_int := true;
+265        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+266        1/1                  int_mask.arb_lost_int := false;
+267        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+268        1/1                  check_m(int_mask.arb_lost_int, &quot;AL Interrupt masked!&quot;);
+269                     
+270        1/1                  int_mask.arb_lost_int := false;
+271        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+272        1/1                  int_mask.arb_lost_int := true;
+273        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+274        1/1                  check_false_m(int_mask.arb_lost_int, &quot;AL Interrupt masked!&quot;);
+275                     
+276        1/1                  info_m(&quot;Finished AL interrupt test&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.INT_AL_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

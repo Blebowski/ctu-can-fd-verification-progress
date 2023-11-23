@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.MODE_TEST_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.MODE_TEST_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.MODE_TEST_FTEST')">CTU_CAN_FD_TB.MODE_TEST_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod215.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_test_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_test_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.MODE_TEST_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod215.html" >CTU_CAN_FD_TB.MODE_TEST_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>45</td><td>45</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>137</td><td>45</td><td>45</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+136                             ------------------------------------------------------------------------
+137        1/1                  info_m(&quot;Step 1: Configure test mode, check EWL/ERP!&quot;);
+138                             
+139        1/1                  mode_1.test := true;
+140        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+141                             
+142        1/1                  get_fault_thresholds(fault_th, DUT_NODE, chn);
+143        1/1                  check_m(fault_th.ewl = to_integer(unsigned(EW_LIMIT_RSTVAL)), 
+144                                 &quot;EWL equal to reset value!&quot;);
+145        1/1                  check_m(fault_th.erp = to_integer(unsigned(ERP_LIMIT_RSTVAL)), 
+146                                 &quot;ERP equal to reset value!&quot;);           
+147                     
+148                             ------------------------------------------------------------------------
+149                             -- @2. Generate random values and store them to EWL, ERP. Read back and
+150                             --     check that both were properly written!
+151                             ------------------------------------------------------------------------
+152        1/1                  info_m(&quot;Step 2: Store random values to EWL/ERP!&quot;);
+153        1/1                  rand_int_v(255, fault_th.ewl);
+154        1/1                  rand_int_v(255, fault_th.erp); 
+155        1/1                  set_fault_thresholds(fault_th, DUT_NODE, chn);
+156        1/1                  get_fault_thresholds(fault_th_2, DUT_NODE, chn);
+157                             
+158        1/1                  check_m(fault_th.ewl = fault_th_2.ewl, &quot;EWL written in test mode!&quot;);
+159        1/1                  check_m(fault_th.erp = fault_th_2.erp, &quot;ERP written in test mode!&quot;);
+160                             
+161                             ------------------------------------------------------------------------
+162                             -- @3. Disable test mode in DUT. Generate random values and store 
+163                             --     them to EWL and ERP. Read back and check that values were NOT
+164                             --     written!
+165                             ------------------------------------------------------------------------
+166        1/1                  info_m(&quot;Step 3: Disable test mode, check EWL/ERP not written!&quot;); 
+167                             
+168        1/1                  mode_1.test := false;
+169        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+170                             
+171        1/1                  rand_int_v(255, fault_th_2.ewl);
+172        1/1                  rand_int_v(255, fault_th_2.erp);
+173        1/1                  set_fault_thresholds(fault_th_2, DUT_NODE, chn);
+174        1/1                  get_fault_thresholds(fault_th_2, DUT_NODE, chn);
+175                             
+176        1/1                  check_m(fault_th.ewl = fault_th_2.ewl,
+177                                 &quot;EWL not written when not in test mode!&quot;);
+178        1/1                  check_m(fault_th.erp = fault_th_2.erp,
+179                                 &quot;ERP not written when not in test mode!&quot;);
+180                             
+181                             ------------------------------------------------------------------------
+182                             -- @4. Enable test mode in DUT. Read each error counter and check it
+183                             --     is 0! Set each error counter to random value via CTR_PRES. Read
+184                             --     back and check that value was written!
+185                             ------------------------------------------------------------------------
+186        1/1                  info_m(&quot;Step 4: Enable test mode, check CTR_PRES written!&quot;);
+187                             
+188        1/1                  mode_1.test := true;
+189        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+190                             
+191        1/1                  read_error_counters(err_counters, DUT_NODE, chn);
+192        1/1                  check_m(err_counters.rx_counter = 0, &quot;REC = 0&quot;);
+193        1/1                  check_m(err_counters.tx_counter = 0, &quot;TEC = 0&quot;);
+194        1/1                  check_m(err_counters.err_norm = 0, &quot;Errors in Nominal bit rate = 0&quot;);
+195        1/1                  check_m(err_counters.err_fd = 0, &quot;Errors in Data bit rate = 0&quot;);
+196                             
+197        1/1                  rand_int_v(511, err_counters.rx_counter);
+198        1/1                  rand_int_v(511, err_counters.tx_counter);
+199                     
+200        1/1                  set_error_counters(err_counters, DUT_NODE, chn);
+201        1/1                  read_error_counters(err_counters_2, DUT_NODE, chn);
+202                             
+203        1/1                  check_m(err_counters.rx_counter = err_counters_2.rx_counter,
+204                                 &quot;RX Error counter set!&quot;);
+205        1/1                  check_m(err_counters.tx_counter = err_counters_2.tx_counter,
+206                                 &quot;TX Error counter set!&quot;);
+207                             -- Do not test Nominal/Data bit error rate counters here since these
+208                             -- are clear only! These are tested in separate (CTR_PRES) test!
+209                             
+210                             ------------------------------------------------------------------------
+211                             -- @5. Disable test mode in DUT. Set each error counter to random 
+212                             --     values and check that these values were NOT written (counters 
+213                             --     equal to previous values).
+214                             ------------------------------------------------------------------------
+215        1/1                  info_m(&quot;Step 5: Disable test mode, check CTR_PRES not written!&quot;);
+216                             
+217        1/1                  mode_1.test := false;
+218        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+219                     
+220        1/1                  rand_int_v(511, err_counters_2.rx_counter);
+221        1/1                  rand_int_v(511, err_counters_2.tx_counter);
+222                             
+223        1/1                  set_error_counters(err_counters_2, DUT_NODE, chn);
+224        1/1                  read_error_counters(err_counters_2, DUT_NODE, chn);
+225                             
+226        1/1                  check_m(err_counters.rx_counter = err_counters_2.rx_counter,
+227                                 &quot;RX Error counter set!&quot;);
+228        1/1                  check_m(err_counters.tx_counter = err_counters_2.tx_counter,
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.MODE_TEST_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

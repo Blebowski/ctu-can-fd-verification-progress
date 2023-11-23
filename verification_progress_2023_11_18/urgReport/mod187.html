@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.MODE_SELF_TEST_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.MODE_SELF_TEST_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.MODE_SELF_TEST_FTEST')">CTU_CAN_FD_TB.MODE_SELF_TEST_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod187.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_self_test_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_self_test_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.MODE_SELF_TEST_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod187.html" >CTU_CAN_FD_TB.MODE_SELF_TEST_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>30</td><td>30</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>127</td><td>30</td><td>30</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+126                             ------------------------------------------------------------------------
+127        1/1                  info_m(&quot;Step 1: Configuring STM in DUT, ACF in Test node!&quot;);
+128                             
+129        1/1                  mode_1.self_test := true;
+130        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+131                             
+132        1/1                  mode_2.acknowledge_forbidden := true;
+133        1/1                  set_core_mode(mode_2, TEST_NODE, chn);
+134                     
+135                             ------------------------------------------------------------------------
+136                             -- @2. Send frame by DUT. Wait till ACK field.
+137                             ------------------------------------------------------------------------
+138        1/1                  info_m(&quot;Step 2: Send frame by DUT, Wait till ACK&quot;);
+139                             
+140        1/1                  CAN_generate_frame(CAN_TX_frame);
+141        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+142        1/1                  CAN_wait_pc_state(pc_deb_ack, DUT_NODE, chn);
+143                             
+144                             ------------------------------------------------------------------------
+145                             -- @3. Monitor during whole ACK field that frame bus is RECESSIVE.
+146                             ------------------------------------------------------------------------
+147        1/1                  info_m(&quot;Step 3: Checking ACK field is recessive&quot;); 
+148                             
+149        1/1                  CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+150        1/1                  while (pc_dbg = pc_deb_ack) loop
+151        1/1                      check_bus_level(RECESSIVE, &quot;Dominant ACK transmitted!&quot;, chn);
+152        1/1                      CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+153                                 
+154        1/1                      get_controller_status(status, DUT_NODE, chn);
+155        1/1                      check_m(status.transmitter, &quot;DUT receiver!&quot;);
+156                                 
+157        1/1                      wait for 100 ns; -- To make checks more sparse
+158                             end loop;
+159                             
+160                             ------------------------------------------------------------------------
+161                             -- @4. Check that after ACK field, DUT is NOT transmitting Error 
+162                             --     frame! Wait till bus is idle and check that TXT Buffer in DUT
+163                             --     is in TX OK! Check that frame was received by Test node.
+164                             ------------------------------------------------------------------------
+165        1/1                  info_m(&quot;Step 4: Check Error frame is not transmitted!&quot;); 
+166                             
+167        1/1                  get_controller_status(status, DUT_NODE, chn);
+168        1/1                  check_false_m(status.error_transmission, &quot;Error frame not transmitted!&quot;);
+169                             
+170        1/1                  CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+171                             
+172                             -- For CAN FD frames secondary ACK is still marked as ACK to DEBUG
+173                             -- register! From there if this is recessive (it is now, no ACK is sent),
+174                             -- it is interpreted as ACK Delimiter and we move directly to EOF! This
+175                             -- is OK!
+176        1/1                  check_m(pc_dbg = pc_deb_ack_delim or
+177                                     pc_dbg = pc_deb_eof, &quot;ACK delimiter follows recessive ACK!&quot;);
+178                             
+179        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+180        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+181                             
+182        1/1                  get_tx_buf_state(1, txt_buf_state, DUT_NODE, chn);
+183        1/1                  check_m(txt_buf_state = buf_done, &quot;Frame transmitted OK&quot;);
+184                             
+185        1/1                  get_rx_buf_state(rx_buf_state, TEST_NODE, chn);
+186        1/1                  check_m(rx_buf_state.rx_frame_count = 1, &quot;Frame received in LOM&quot;);
+187                             
+188        1/1                  CAN_read_frame(CAN_RX_frame, TEST_NODE, chn);
+189        1/1                  CAN_compare_frames(CAN_RX_frame, CAN_TX_frame, false, frames_equal);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.MODE_SELF_TEST_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

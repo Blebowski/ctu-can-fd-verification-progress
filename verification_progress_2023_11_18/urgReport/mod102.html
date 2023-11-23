@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.MESSAGE_FILTER_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.MESSAGE_FILTER_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.MESSAGE_FILTER_FTEST')">CTU_CAN_FD_TB.MESSAGE_FILTER_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 92.31</td>
+<td class="s9 cl rt"><a href="mod102.html#Line" > 92.31</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/message_filter_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/message_filter_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.MESSAGE_FILTER_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod102.html" >CTU_CAN_FD_TB.MESSAGE_FILTER_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>130</td><td>120</td><td>92.31</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>156</td><td>130</td><td>120</td><td>92.31</td></tr>
+</table>
+<pre class="code"><br clear=all>
+155                         begin
+156        1/1                  CAN_generate_frame(CAN_frame);
+157        1/1                  CAN_frame.brs := '0';
+158                     
+159                             ------------------------------------------------------------------------
+160                             -- Part 1 (Message filters disabled)
+161                             ------------------------------------------------------------------------
+162                             ------------------------------------------------------------------------
+163                             -- Disable filter usage in DUT. Set configuration of all filters
+164                             -- not to pass any frame (to make sure that frame does not pass filter
+165                             -- by chance).
+166                             ------------------------------------------------------------------------
+167        1/1                  CAN_set_mask_filter(filter_A, mask_filt_config, DUT_NODE, chn);
+168        1/1                  CAN_set_mask_filter(filter_B, mask_filt_config, DUT_NODE, chn);
+169        1/1                  CAN_set_mask_filter(filter_C, mask_filt_config, DUT_NODE, chn);
+170        1/1                  CAN_set_range_filter(range_filt_config, DUT_NODE, chn);
+171                     
+172        1/1                  mode.acceptance_filter := false;
+173        1/1                  set_core_mode(mode, DUT_NODE, chn);
+174                     
+175                             ------------------------------------------------------------------------
+176                             -- Send frame by Test node. Check that frame was received!
+177                             ------------------------------------------------------------------------
+178        1/1                  command.release_rec_buffer := true;
+179        1/1                  give_controller_command(command, DUT_NODE, chn);
+180                             
+181        1/1                  CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+182        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+183                             
+184        1/1                  get_rx_buf_state(rx_state, DUT_NODE, chn);
+185        1/1                  check_false_m(rx_state.rx_empty,
+186                                 &quot;Frame is not received when Message filters are disabled!&quot;);
+187                     
+188                             ------------------------------------------------------------------------
+189                             -- Enable message filters. Send frame and check that no frame is
+190                             -- received! Now fitlers are enabled, but all filters are set not to
+191                             -- pass any frame / identifier type! Thus any frame should not match
+192                             -- any filter and frame should be dropped!
+193                             ------------------------------------------------------------------------
+194        1/1                  command.release_rec_buffer := true;
+195        1/1                  give_controller_command(command, DUT_NODE, chn);
+196                             
+197        1/1                  mode.acceptance_filter := true;
+198        1/1                  set_core_mode(mode, DUT_NODE, chn);
+199                     
+200        1/1                  CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+201        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+202                             
+203        1/1                  get_rx_buf_state(rx_state, DUT_NODE, chn);
+204        1/1                  check_m(rx_state.rx_empty,
+205                                 &quot;Frame passed Message filters when all filters are disabled!&quot;);
+206                     
+207                     
+208                             ------------------------------------------------------------------------
+209                             -- Part 2 (Mask filters)
+210                             ------------------------------------------------------------------------
+211        1/1                  for i in 1 to 3 loop
+212        1/1                      case i is 
+213        1/1                          when 1 =&gt; mask_filter := filter_A;
+214        1/1                          when 2 =&gt; mask_filter := filter_B;
+215        1/1                          when 3 =&gt; mask_filter := filter_C;
+216                                 end case;
+217        1/1                      CAN_frame.ident_type := BASE;
+218        1/1                      CAN_frame.identifier := CAN_frame.identifier mod 2048;
+219                     
+220                                 --------------------------------------------------------------------
+221                                 -- First reset value of each filter so that each next iteraion does
+222                                 -- not keep the settings of previous filter!
+223                                 --------------------------------------------------------------------
+224        1/1                      mask_filt_config.acc_CAN_2_0 := false;
+225        1/1                      mask_filt_config.acc_CAN_FD := false;
+226        1/1                      mask_filt_config.ID_mask := 0;
+227        1/1                      mask_filt_config.ID_value := 0;
+228        1/1                      CAN_set_mask_filter(filter_A, mask_filt_config, DUT_NODE, chn);
+229        1/1                      CAN_set_mask_filter(filter_B, mask_filt_config, DUT_NODE, chn);
+230        1/1                      CAN_set_mask_filter(filter_C, mask_filt_config, DUT_NODE, chn);
+231                     
+232                                 --------------------------------------------------------------------
+233                                 -- Configure several settings for one mask filter. Bit Matching
+234                                 -- will be done always on one bit only to avoid long sequences.
+235                                 -- Proper masking (of all bits) is verified in Message filter
+236                                 -- unit test. In each scenario, it is evaluated whether frame should
+237                                 -- be received (PASS) or not (FAIL).
+238                                 -- Following scenarios are considered:
+239                                 --  @1. Accept only FD, Bit mask match, Frame type match -&gt; PASS
+240                                 --  @2. Accept only FD, Bit mask match, Frame type not -&gt; FAIL
+241                                 --  @3. Accept only FD, Bit mask mismatch, Frame type match -&gt; FAIL
+242                                 --  @4. Accept only 2.0, Bit mask match, Frame type match -&gt; PASS
+243                                 --  @5. Accept only 2.0, Bit mask match, Frame type not -&gt; FAIL
+244                                 --  @6. Accept only 2.0, Bit mask mismatch, Frame type match -&gt; FAIL
+245                                 --  @7. Accept both, Bit mask match, Frame type CAN 2.0 -&gt; PASS
+246                                 --  @8. Accept both, Bit mask match, Frame type FD -&gt; PASS
+247                                 --  @9. Accept both, Bit mask mismatch, Frame type any -&gt; FAIL
+248                                 --------------------------------------------------------------------
+249        1/1                      for j in 1 to 9 loop
+250        1/1                          mask_filt_config.acc_CAN_2_0 := false;
+251        1/1                          mask_filt_config.acc_CAN_FD := false;
+252        1/1                          mask_filt_config.ident_type := CAN_frame.ident_type;
+253                     
+254        1/1                          info_m(&quot;Starting scenario: &quot; &amp; integer'image(i) &amp; &quot;.&quot;); 
+255                     
+256                                     -- Set accepted frame type based on scenario:
+257        1/1                          if (j &lt; 4) then
+258        1/1                              mask_filt_config.acc_CAN_FD := true;
+259                                     elsif (j &lt; 7) then
+260        1/1                              mask_filt_config.acc_CAN_2_0 := true;
+261                                     else
+262        1/1                              mask_filt_config.acc_CAN_FD := true;
+263        1/1                              mask_filt_config.acc_CAN_2_0 := true;
+264                                     end if;
+265                     
+266                                     -- Set expected frame types
+267        1/1                          if ((j = 1) or (j = 3) or (j = 5) or (j = 8)) then
+268        1/1                              CAN_frame.frame_format := FD_CAN;
+269                                     else
+270        1/1                              CAN_frame.frame_format := NORMAL_CAN;
+271                                     end if;
+272                     
+273                                     -- Generate random mask with one bit set, use only
+274        1/1                          tmp_log_vect := (OTHERS =&gt; '0');
+275        1/1                          if (CAN_frame.ident_type = BASE) then
+276        1/1                              rand_int_v(10, tmp_int);
+277                                     else
+278        <font color = "red">0/1     ==>                      rand_int_v(28, tmp_int);</font>
+279                                     end if;
+280        1/1                          tmp_log_vect(tmp_int) := '1';
+281        1/1                          mask_filt_config.ID_mask :=
+282                                         to_integer(unsigned(tmp_log_vect));
+283        1/1                          info_m(&quot;Filter mask: &quot; &amp; integer'image(mask_filt_config.ID_mask));
+284                     
+285                                     -- Generate bit value which will either match or not match
+286                                     -- this mask depending on scenario.
+287        1/1                          tmp_log_vect := (OTHERS =&gt; '0');
+288        1/1                          rand_logic_v(tmp_log, 0.5);
+289        1/1                          tmp_log_vect(tmp_int) := tmp_log;
+290        1/1                          mask_filt_config.ID_value := 
+291                                             to_integer(unsigned(tmp_log_vect));
+292        1/1                          info_m(&quot;Filter value: &quot; &amp; integer'image(mask_filt_config.ID_value));
+293                     
+294                                     -- Set equal for scenarios wher Bit mask is match, set
+295                                     -- opposite where it is not equal!
+296        1/1                          id_sw_to_hw(CAN_frame.identifier, CAN_frame.ident_type,
+297                                                 tmp_log_vect);
+298        1/1                          if (CAN_frame.ident_type = BASE) then
+299        1/1                              tmp_int := tmp_int + 18;
+300                                     end if;
+301                     
+302        1/1                          if ((j = 1) or (j = 4) or (j = 7) or (j = 8)) then
+303        1/1                              tmp_log_vect(tmp_int) := tmp_log;
+304                                     else
+305        1/1                              tmp_log_vect(tmp_int) := not tmp_log;
+306                                     end if;
+307        1/1                          id_hw_to_sw(tmp_log_vect, CAN_frame.ident_type,
+308                                                 CAN_frame.identifier);
+309        1/1                          info_m(&quot;CAN ID: &quot; &amp; integer'image(CAN_frame.identifier));
+310                     
+311                                     -- Calculate whether frame should pass or not
+312        1/1                          should_pass := false;
+313        1/1                          if ((j = 1) or (j = 4) or (j = 7) or (j = 8)) then
+314        1/1                              should_pass := true;
+315                                     end if;
+316                     
+317                                     -- Set filter settings
+318        1/1                          CAN_set_mask_filter(mask_filter, mask_filt_config, DUT_NODE, chn);
+319                     
+320                                     -- Send Frame by Test node and check if frame is received as
+321                                     -- expected or not! Flush RX Buffer first!
+322        1/1                          command.release_rec_buffer := true;
+323        1/1                          give_controller_command(command, DUT_NODE, chn);
+324        1/1                          CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+325        1/1                          CAN_wait_frame_sent(DUT_NODE, chn);
+326                     
+327        1/1                          wait for 100 ns;
+328        1/1                          get_rx_buf_state(rx_state, DUT_NODE, chn);
+329                     
+330                                     -- Check!
+331        1/1                         check_false_m((rx_state.rx_empty = true) and (should_pass = true),
+332                                         &quot;Frame should have passed but did NOT!&quot;);
+333                                         
+334        1/1                         check_false_m((rx_state.rx_empty = false) and (should_pass = false),
+335                                         &quot;Frame should NOT have passed but did!&quot;);
+336                                 end loop;
+337                             end loop;
+338                     
+339                             ------------------------------------------------------------------------
+340                             -- Part 3 (Range filters)
+341                             ------------------------------------------------------------------------
+342                             ------------------------------------------------------------------------
+343                             -- Disable mask fitlters
+344                             ------------------------------------------------------------------------        
+345        1/1                  mask_filt_config.acc_CAN_2_0 := false;
+346        1/1                  mask_filt_config.acc_CAN_FD := false;
+347        1/1                  mask_filt_config.ID_mask := 0;
+348        1/1                  mask_filt_config.ID_value := 0;
+349        1/1                  CAN_set_mask_filter(filter_A, mask_filt_config, DUT_NODE, chn);
+350        1/1                  CAN_set_mask_filter(filter_B, mask_filt_config, DUT_NODE, chn);
+351        1/1                  CAN_set_mask_filter(filter_C, mask_filt_config, DUT_NODE, chn);
+352                     
+353                             ------------------------------------------------------------------------
+354                             -- Generate random thresholds for identifier!
+355                             ------------------------------------------------------------------------
+356        1/1                  if (CAN_frame.ident_type = BASE) then
+357        1/1                      rand_int_v((2 ** 6), l_th);
+358        1/1                      rand_int_v((2 ** 11) - 1, h_th);
+359                             else
+360        <font color = "red">0/1     ==>              rand_int_v((2 ** 14), l_th);</font>
+361        <font color = "red">0/1     ==>              rand_int_v((2 ** 28) - 1, h_th);</font>
+362                             end if;
+363                     
+364                             -- Make sure upper threshold is not lower then low threshold!
+365                             -- Avoid 0, max ident. so that we can test all cases!
+366        1/1                  l_th := l_th + 1;
+367        1/1                  if (l_th &gt;= h_th) then
+368        <font color = "red">0/1     ==>              h_th := l_th + 5;</font>
+369                             end if;
+370        1/1                  h_th := h_th - 1;
+371                     
+372                             ------------------------------------------------------------------------
+373                             -- Configure Range filter
+374                             ------------------------------------------------------------------------
+375        1/1                  range_filt_config.acc_CAN_2_0 := true;
+376        1/1                  range_filt_config.acc_CAN_FD := true;
+377        1/1                  range_filt_config.ID_th_high := h_th;
+378        1/1                  range_filt_config.ID_th_low := l_th;
+379        1/1                  CAN_set_range_filter(range_filt_config, DUT_NODE, chn);
+380        1/1                  CAN_generate_frame(CAN_frame);
+381        1/1                  CAN_frame.ident_type := BASE;
+382        1/1                  CAN_frame.rtr := RTR_FRAME;
+383                      
+384        1/1                  info_m(&quot;ID value: &quot; &amp; integer'image(CAN_frame.identifier));
+385        1/1                  info_m(&quot;Low threshold: &quot; &amp; integer'image(l_th));
+386        1/1                  info_m(&quot;High threshold: &quot; &amp; integer'image(h_th));
+387                     
+388                             ------------------------------------------------------------------------
+389                             -- Execute test of range fitlers. Following scenarios are tested:
+390                             --  @1. CAN ID Lower than Low TH -&gt; FAIL.
+391                             --  @2. CAN ID Equal to Low TH -&gt; PASS
+392                             --  @3. CAN ID between Low and High TH -&gt; PASS 
+393                             --  @4. CAN ID equal to High TH -&gt; PASS
+394                             --  @5. CAN ID higher than High TH -&gt; FAIL
+395                             ------------------------------------------------------------------------
+396        1/1                  for i in 1 to 5 loop
+397                                 
+398        1/1                      case i is
+399        1/1                          when 1 =&gt; CAN_frame.identifier := l_th - 1;
+400        1/1                          when 2 =&gt; CAN_frame.identifier := l_th;
+401        1/1                          when 3 =&gt; CAN_frame.identifier := ((h_th - l_th) / 2) + l_th;
+402        1/1                          when 4 =&gt; CAN_frame.identifier := h_th;
+403        1/1                          when 5 =&gt; CAN_frame.identifier := h_th + 1;
+404                                 end case;
+405                     
+406        1/1                      if ((i = 2) or (i = 3) or (i = 4)) then
+407        1/1                          should_pass := true;
+408                                 else
+409        1/1                          should_pass := false;
+410                                 end if;
+411                     
+412        1/1                      command.release_rec_buffer := true;
+413        1/1                      give_controller_command(command, DUT_NODE, chn);
+414                     
+415        1/1                      CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+416        1/1                      CAN_wait_frame_sent(DUT_NODE, chn);
+417        1/1                      get_rx_buf_state(rx_state, DUT_NODE, chn);
+418                     
+419        1/1                      if ((rx_state.rx_empty and should_pass) or
+420                                     ((not rx_state.rx_empty) and (not should_pass)))
+421                                 then
+422                                     -- LCOV_EXCL_START
+423        <font color = "red">0/1     ==>                  case i is</font>
+424                                         when 1 =&gt;
+425        <font color = "red">0/1     ==>                          error_m(&quot;Frame with ID lower than Low threshold passed,&quot; &amp;</font>
+426                                                   &quot;but should NOT!&quot;);
+427                                         when 2 =&gt;
+428        <font color = "red">0/1     ==>                          error_m(&quot;Frame with ID equal to Low threshold didnt pass,&quot; &amp;</font>
+429                                                   &quot;but should!&quot;);
+430                                         when 3 =&gt;                        
+431        <font color = "red">0/1     ==>                          error_m(&quot;Frame with ID betwen Low and High threshold did&quot; &amp;</font>
+432                                                   &quot;not pass, but should!&quot;);
+433                                         when 4 =&gt;                        
+434        <font color = "red">0/1     ==>                          error_m(&quot;Frame with ID equal to Hig threshold did not,&quot; &amp;</font>
+435                                                   &quot;pass, but should!&quot;);
+436                                         when 5 =&gt;
+437        <font color = "red">0/1     ==>                          error_m(&quot;Frame with ID higher than High threshold did,&quot; &amp;</font>
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.MESSAGE_FILTER_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
