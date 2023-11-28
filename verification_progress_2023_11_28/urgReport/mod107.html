@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TX_CMD_SET_EMPTY_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TX_CMD_SET_EMPTY_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TX_CMD_SET_EMPTY_FTEST')">CTU_CAN_FD_TB.TX_CMD_SET_EMPTY_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod107.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tx_cmd_set_empty_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tx_cmd_set_empty_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TX_CMD_SET_EMPTY_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod107.html" >CTU_CAN_FD_TB.TX_CMD_SET_EMPTY_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>47</td><td>47</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>122</td><td>47</td><td>47</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+121                     
+122        1/1                  get_tx_buf_count(num_buffers, DUT_NODE, chn);
+123                     
+124        1/1                  for buf_nr in 1 to num_buffers loop
+125                     
+126        1/1                      info_m(&quot;Testing with TXT Buffer: &quot; &amp; integer'image(buf_nr));
+127                     
+128                                 -----------------------------------------------------------------------
+129                                 -- @1. Check TXT Buffer is empty. Issue Set empty and check it is still
+130                                 --    empty.
+131                                 -----------------------------------------------------------------------
+132        1/1                      info_m(&quot;Step 1&quot;);
+133                     
+134        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+135        1/1                      check_m(txt_state = buf_empty, &quot;TXT Buffer empty upon start&quot;);
+136        1/1                      send_TXT_buf_cmd(buf_set_empty, buf_nr, DUT_NODE, chn);
+137        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+138        1/1                      check_m(txt_state = buf_empty, &quot;TXT Buffer still empty even post restart!&quot;);
+139                     
+140                                 ------------------------------------------------------------------------
+141                                 -- @2. Generate random CAN frame, send it from TXT Buffer and wait until
+142                                 --     it is received. Check TXT Buffer is in TX OK. Issue Set Empty
+143                                 --     command and check TXT Buffer is empty.
+144                                 ------------------------------------------------------------------------
+145        1/1                      info_m(&quot;Step 2&quot;);
+146                     
+147        1/1                      CAN_generate_frame(CAN_frame);
+148        1/1                      CAN_send_frame(CAN_frame, buf_nr, DUT_NODE, chn, frame_sent);
+149        1/1                      CAN_wait_frame_sent(DUT_NODE, chn);
+150                     
+151        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+152        1/1                      check_m(txt_state = buf_done, &quot;TXT Buffer OK after frame sent!&quot;);
+153        1/1                      send_TXT_buf_cmd(buf_set_empty, buf_nr, DUT_NODE, chn);
+154        1/1                      wait for 11 ns; -- This command is pipelined, delay must be inserted!
+155        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+156        1/1                      check_m(txt_state = buf_empty, &quot;Set Empty: TX OK -&gt; Empty&quot;);
+157                     
+158                                 ------------------------------------------------------------------------
+159                                 -- @3. Generate random CAN frame, send it fom TXT Buffer and issue Set
+160                                 --    Abort command. Wait until frame is over and check TXT Buffer is
+161                                 --    Aborted. Issue Set Empty command and check it becomes Empty.
+162                                 ------------------------------------------------------------------------
+163        1/1                      info_m(&quot;Step 3&quot;);
+164                     
+165        1/1                      CAN_generate_frame(CAN_frame);
+166        1/1                      CAN_send_frame(CAN_frame, buf_nr, DUT_NODE, chn, frame_sent);
+167        1/1                      CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+168        1/1                      send_TXT_buf_cmd(buf_set_abort, buf_nr, DUT_NODE, chn);
+169        1/1                      CAN_wait_bus_idle(DUT_NODE, chn);
+170                     
+171        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+172        1/1                      check_m(txt_state = buf_aborted, &quot;TXT Buffer Aborted!&quot;);
+173        1/1                      send_TXT_buf_cmd(buf_set_empty, buf_nr, DUT_NODE, chn);
+174        1/1                      wait for 11 ns; -- This command is pipelined, delay must be inserted!
+175        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+176        1/1                      check_m(txt_state = buf_empty, &quot;Set Empty: Aborted -&gt; Empty&quot;);
+177                     
+178                                 -----------------------------------------------------------------------
+179                                 -- @4. Set One shot mode in DUT. Forbid ACK in Test node. Send CAN frame
+180                                 --     by DUT. Wait until CAN frame is sent and check TXT Buffer from
+181                                 --     which it was sent ended in TX Error. Issue Set empty command and
+182                                 --     check TXT Buffer is Empty.
+183                                 -----------------------------------------------------------------------
+184        1/1                      info_m(&quot;Step 4&quot;);
+185                     
+186        1/1                      CAN_enable_retr_limit(true, 0, DUT_NODE, chn);
+187        1/1                      mode_2.acknowledge_forbidden := true;
+188        1/1                      set_core_mode(mode_2, TEST_NODE, chn);
+189                     
+190        1/1                      CAN_generate_frame(CAN_frame);
+191        1/1                      CAN_send_frame(CAN_frame, buf_nr, DUT_NODE, chn, frame_sent);
+192        1/1                      CAN_wait_frame_sent(DUT_NODE, chn);
+193                     
+194        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+195        1/1                      check_m(txt_state = buf_failed, &quot;TXT Buffer Failed!&quot;);
+196                     
+197        1/1                      send_TXT_buf_cmd(buf_set_empty, buf_nr, DUT_NODE, chn);
+198        1/1                      wait for 11 ns; -- This command is pipelined, delay must be inserted!
+199        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+200        1/1                      check_m(txt_state = buf_empty, &quot;Set Empty: TX Failed -&gt; Empty&quot;);
+201                     
+202                                 -- Re-enable ACK fr next iterations
+203        1/1                      CAN_enable_retr_limit(true, 0, DUT_NODE, chn);
+204        1/1                      mode_2.acknowledge_forbidden := false;
+205        1/1                      set_core_mode(mode_2, TEST_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TX_CMD_SET_EMPTY_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.MODE_FD_ENABLE_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.MODE_FD_ENABLE_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.MODE_FD_ENABLE_FTEST')">CTU_CAN_FD_TB.MODE_FD_ENABLE_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod93.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_fd_enable_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_fd_enable_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.MODE_FD_ENABLE_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod93.html" >CTU_CAN_FD_TB.MODE_FD_ENABLE_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>44</td><td>44</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>137</td><td>44</td><td>44</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+136                             ------------------------------------------------------------------------
+137        1/1                  info_m(&quot;Step 1: Sending CAN FD frame when FD mode enabled!&quot;);
+138                             
+139        1/1                  CAN_generate_frame(CAN_TX_frame);
+140        1/1                  CAN_TX_frame.frame_format := FD_CAN;
+141        1/1                  CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+142        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+143                             
+144        1/1                  CAN_read_frame(CAN_RX_frame, DUT_NODE, chn);
+145        1/1                  CAN_compare_frames(CAN_RX_frame, CAN_TX_frame, false, frames_equal);
+146        1/1                  check_m(frames_equal, &quot;TX - RX frames matching!&quot;);
+147                     
+148                             ------------------------------------------------------------------------
+149                             -- @2. Disable Flexible data-rate mode in DUT. Send CAN frame by 
+150                             --     Test node. Wait till Control field of DUT. Set both nodes to
+151                             --     One-shot mode.
+152                             ------------------------------------------------------------------------
+153        1/1                  info_m(&quot;Step 2: Disable FD mode, send frame!&quot;);
+154                             
+155        1/1                  mode_1.flexible_data_rate := false;
+156        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+157                             
+158        1/1                  CAN_enable_retr_limit(true, 0, TEST_NODE, chn);
+159        1/1                  CAN_enable_retr_limit(true, 0, DUT_NODE, chn);
+160                             
+161        1/1                  CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+162        1/1                  CAN_wait_pc_state(pc_deb_control, DUT_NODE, chn);
+163                     
+164                             ------------------------------------------------------------------------
+165                             -- @3. Wait till DUT is not in Control field. Check that it is 
+166                             --     transmitting error frame. Read Error code capture and check that
+167                             --     it shows Form Error during Control field. Wait till the frame is
+168                             --     transmitted.
+169                             ------------------------------------------------------------------------
+170        1/1                  info_m(&quot;Step 3: Check error frame is transmitted, Form error occurs!&quot;);
+171                             
+172        1/1                  CAN_wait_not_pc_state(pc_deb_control, DUT_NODE, chn);
+173        1/1                  get_controller_status(status, DUT_NODE, chn);
+174        1/1                  check_m(status.error_transmission,
+175                                 &quot;Error frame transmitted as response to CAN FD frame!&quot;);
+176                             
+177        1/1                  CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+178        1/1                  check_m(err_capt.err_type = can_err_form,
+179                                 &quot;Error type: &quot; &amp; SW_error_type'image(err_capt.err_type));
+180        1/1                  check_m(err_capt.err_pos = err_pos_ctrl,
+181                                 &quot;Error in :&quot; &amp; SW_error_position'image(err_capt.err_pos));
+182                             
+183        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+184                     
+185                             ------------------------------------------------------------------------
+186                             -- @4. Set Test node to Acknowledge forbidden mode. Transmitt frame by 
+187                             --     DUT. Wait till it is sent, read Error code capture and check it
+188                             --     is NOT equal to Form error (this is just to achieve change in 
+189                             --     Error code capture).
+190                             ------------------------------------------------------------------------
+191        1/1                  mode_2.acknowledge_forbidden := true;
+192        1/1                  set_core_mode(mode_2, TEST_NODE, chn);
+193                             
+194        1/1                  CAN_TX_frame.frame_format := NORMAL_CAN;
+195        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+196        1/1                  CAN_TX_frame.frame_format := FD_CAN;
+197                             
+198        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+199                             
+200        1/1                  CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+201        1/1                  check_false_m(err_capt.err_type = can_err_form, &quot;Error type changed!&quot;);
+202                             
+203        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+204                             
+205                             ------------------------------------------------------------------------
+206                             -- @5. Unset ACK forbidden in Test node. Send frame by DUT.
+207                             ------------------------------------------------------------------------
+208        1/1                  info_m(&quot;Step 4: Send frame by node with FD disabled&quot;);
+209                             
+210        1/1                  wait for 20000 ns;
+211        1/1                  mode_2.acknowledge_forbidden := false;
+212        1/1                  set_core_mode(mode_2, TEST_NODE, chn);
+213                             
+214        1/1                  CAN_TX_frame.frame_format := FD_CAN;
+215        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+216                     
+217                             ------------------------------------------------------------------------
+218                             -- @6. Wait until frame is sent and check that it is received OK in
+219                             --     Test node. Make sure it CAN 2.0 frame.
+220                             ------------------------------------------------------------------------
+221        1/1                  info_m(&quot;Step 5: Check Test node receives CAN 2.0 frame!&quot;);
+222                             
+223        1/1                  CAN_wait_frame_sent(TEST_NODE, chn);
+224        1/1                  CAN_read_frame(CAN_RX_frame, TEST_NODE, chn);
+225                         
+226        1/1                  check_m(CAN_RX_frame.frame_format = NORMAL_CAN, &quot;CAN 2.0 frame received&quot;);
+227        1/1                  check_m(CAN_RX_frame.dlc = CAN_TX_frame.dlc, &quot;TX/RX DLC matching&quot;);
+228                         
+229        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.MODE_FD_ENABLE_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

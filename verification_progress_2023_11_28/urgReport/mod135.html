@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.MODE_TXBBM_4_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.MODE_TXBBM_4_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.MODE_TXBBM_4_FTEST')">CTU_CAN_FD_TB.MODE_TXBBM_4_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod135.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_txbbm_4_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_txbbm_4_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.MODE_TXBBM_4_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod135.html" >CTU_CAN_FD_TB.MODE_TXBBM_4_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>83</td><td>83</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>157</td><td>83</td><td>83</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+156                             -----------------------------------------------------------------------
+157        1/1                  info_m(&quot;Step 1&quot;);
+158                     
+159        1/1                  mode_1.tx_buf_backup := true;
+160        1/1                  mode_1.parity_check := true;
+161        1/1                  mode_1.test := true;
+162        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+163                     
+164        1/1                  get_tx_buf_count(txt_buf_count, DUT_NODE, chn);
+165                     
+166                             -----------------------------------------------------------------------
+167                             -- @2. Loop 2 times for each TXT Buffer:
+168                             -----------------------------------------------------------------------
+169        1/1                  for x in 1 to txt_buf_count loop
+170                     
+171        1/1                      for iteration in 1 to 2 loop
+172        1/1                          info_m(&quot;Step 2, TXT Buffer: &quot; &amp; integer'image(x) &amp;
+173                                                     &quot;iteration: &quot; &amp; integer'image(iteration));
+174                     
+175                                     -------------------------------------------------------------------
+176                                     -- @2.1 Generate random priorities of TXT Buffers and apply
+177                                     --      them in DUT. Generate random index of TXT Buffer which is
+178                                     --      for sure &quot;original&quot; TXT Buffer and insert random frame to it.
+179                                     -------------------------------------------------------------------
+180        1/1                          info_m(&quot;Step 2.1&quot;);
+181                     
+182        1/1                          for i in 1 to txt_buf_count loop
+183        1/1                              rand_int_v(7, tmp_int);
+184        1/1                              CAN_configure_tx_priority(i, tmp_int, DUT_NODE, chn);
+185                                     end loop;
+186                     
+187        1/1                          txt_buf_index := x;
+188        1/1                          if (txt_buf_index mod 2 = 0) then
+189        1/1                              txt_buf_index := txt_buf_index - 1;
+190                                     end if;
+191                     
+192                                     -- We need to generate frame which has some data bytes, to be able
+193                                     -- to corrupt such data bytes
+194        1/1                          CAN_generate_frame(CAN_TX_frame);
+195        1/1                          CAN_TX_frame.rtr := NO_RTR_FRAME;
+196        1/1                          if CAN_TX_frame.data_length = 0 then
+197        1/1                              CAN_TX_frame.data_length := 1;
+198                                     end if;
+199        1/1                          decode_length(CAN_TX_frame.data_length, CAN_TX_frame.dlc);
+200        1/1                          decode_dlc_rx_buff(CAN_TX_frame.dlc, CAN_TX_frame.rwcnt);
+201        1/1                          CAN_insert_TX_frame(CAN_TX_frame, txt_buf_index, DUT_NODE, chn);
+202        1/1                          CAN_insert_TX_frame(CAN_TX_frame, txt_buf_index + 1, DUT_NODE, chn);
+203                     
+204                                     -------------------------------------------------------------------
+205                                     -- @2.2 Enable test access to buffer RAMs. Generate random word
+206                                     --      index (within data bytesof TXT Buffer), and flip such bit.
+207                                     --      Disable test access.
+208                                     -------------------------------------------------------------------
+209        1/1                          info_m(&quot;Step 2.2&quot;);
+210                     
+211                                     -- Enable test access
+212        1/1                          set_test_mem_access(true, DUT_NODE, chn);
+213        1/1                          tst_mem := txt_buf_to_test_mem_tgt(txt_buf_index);
+214                     
+215                                     -- Read, flip, and write back
+216        1/1                          rand_int_v(31, corrupt_bit_index);
+217        1/1                          info_m(&quot;RWCNT is: &quot; &amp; integer'image(CAN_TX_frame.rwcnt));
+218        1/1                          rand_int_v(CAN_TX_frame.rwcnt - 4, corrupt_wrd_index);
+219        1/1                          corrupt_wrd_index := corrupt_wrd_index + 4;
+220        1/1                          test_mem_read(r_data, corrupt_wrd_index, tst_mem, DUT_NODE, chn);
+221        1/1                          r_data(corrupt_bit_index) := not r_data(corrupt_bit_index);
+222        1/1                          test_mem_write(r_data, corrupt_wrd_index, tst_mem, DUT_NODE, chn);
+223                     
+224                                     -- Disable test mem access
+225        1/1                          set_test_mem_access(false, DUT_NODE, chn);
+226                     
+227                                     -----------------------------------------------------------------------
+228                                     -- @2.3 Send Set ready command to selected original TXT Buffer. Wait
+229                                     --      until DUT starts transmission, and check that original TXT
+230                                     --      Buffer is in &quot;TX in progress&quot;. Wait until error frame is
+231                                     --      transmitted. Check that &quot;original&quot; TXT Buffer ended in
+232                                     --      &quot;Parity Error&quot;. Wait until &quot;backup&quot; TXT Buffer becomes
+233                                     --      &quot;TX in progress&quot;.
+234                                     -----------------------------------------------------------------------
+235        1/1                          info_m(&quot;Step 2.3&quot;);
+236                     
+237        1/1                          txt_buf_vector := x&quot;00&quot;;
+238        1/1                          txt_buf_vector(txt_buf_index - 1) := '1';
+239                     
+240        1/1                          send_TXT_buf_cmd(buf_set_ready, txt_buf_vector, DUT_NODE, chn);
+241                     
+242        1/1                          CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+243                     
+244                                     -- Check transmission from &quot;original&quot; TXT Buffer
+245        1/1                          get_tx_buf_state(txt_buf_index, txt_buf_state, DUT_NODE, chn);
+246        1/1                          check_m(txt_buf_state = buf_tx_progress, &quot;'Original' TXT Buffer is in 'TX in Progress'&quot;);
+247        1/1                          get_tx_buf_state(txt_buf_index + 1, txt_buf_state, DUT_NODE, chn);
+248        1/1                          check_m(txt_buf_state = buf_ready, &quot;'Backup' TXT Buffer is in 'TX ready'&quot;);
+249                     
+250                                     -- Send Set abort to get covered Abort in Progress -&gt; Parity Error transition!
+251        1/1                          if (iteration = 2) then
+252        1/1                              send_TXT_buf_cmd(buf_set_abort, txt_buf_index, DUT_NODE, chn);
+253        1/1                              wait for 30 ns;
+254        1/1                              get_tx_buf_state(txt_buf_index, txt_buf_state, DUT_NODE, chn);
+255        1/1                              check_m(txt_buf_state = buf_ab_progress,
+256                                                 &quot;'Original' TXT Buffer is in 'Abort in Progress'&quot;);
+257                                     end if;
+258                     
+259        1/1                          CAN_wait_error_frame(DUT_NODE, chn);
+260                     
+261                                     -- Check that original ended in &quot;Parity error&quot;
+262        1/1                          get_tx_buf_state(txt_buf_index, txt_buf_state, DUT_NODE, chn);
+263        1/1                          check_m(txt_buf_state = buf_parity_err, &quot;'Original' TXT Buffer is in 'TX Parity error'&quot;);
+264                     
+265        1/1                          if (iteration = 1) then
+266        1/1                              get_tx_buf_state(txt_buf_index + 1, txt_buf_state, DUT_NODE, chn);
+267        1/1                              check_m(txt_buf_state = buf_ready, &quot;'Backup' TXT Buffer is in 'TX ready'&quot;);
+268                                     else
+269        1/1                              get_tx_buf_state(txt_buf_index + 1, txt_buf_state, DUT_NODE, chn);
+270        1/1                              check_m(txt_buf_state = buf_aborted, &quot;'Backup' TXT Buffer is in 'Aborted'&quot;);
+271                                     end if;
+272                     
+273                                     -- Check parity error was set.
+274        1/1                          get_controller_status(status_1, DUT_NODE, chn);
+275        1/1                          check_m(status_1.tx_parity_error, &quot;Parity error set.&quot;);
+276        1/1                          check_false_m(status_1.tx_double_parity_error, &quot;Double parity error not set.&quot;);
+277                     
+278                                     -- If abort was issued, then it acted on Both TXT Buffers, so
+279                                     -- transmission from Backup Buffer will not follow! Only wait till
+280                                     -- bus is idle and go to next TXT Buffer
+281        1/1                          if (iteration = 2) then
+282        1/1                              CAN_wait_bus_idle(DUT_NODE, chn);
+283        1/1                              CAN_wait_bus_idle(TEST_NODE, chn);
+284        1/1                              exit;
+285                                     end if;
+286                     
+287                                     -- Wait until next &quot;arbitration&quot;. This should be during next frame
+288        1/1                          CAN_wait_pc_state(pc_deb_arbitration, DUT_NODE, chn);
+289        1/1                          get_tx_buf_state(txt_buf_index + 1, txt_buf_state, DUT_NODE, chn);
+290        1/1                          check_m(txt_buf_state = buf_tx_progress, &quot;'Backup' TXT Buffer is in 'TX in Progress'&quot;);
+291                     
+292                                     -----------------------------------------------------------------------
+293                                     -- @2.3 Wait until transmission ends and bus is idle. Check that
+294                                     --      &quot;original&quot; TXT Buffer is in &quot;TX Parity Error&quot; state and
+295                                     --      &quot;backup&quot; TXT buffer ended in &quot;TX OK&quot; state.
+296                                     -----------------------------------------------------------------------
+297        1/1                          info_m(&quot;Step 2.3&quot;);
+298                     
+299        1/1                          CAN_wait_frame_sent(DUT_NODE, chn);
+300        1/1                          CAN_wait_bus_idle(TEST_NODE, chn);
+301        1/1                          CAN_wait_bus_idle(DUT_NODE, chn);
+302                     
+303        1/1                          get_tx_buf_state(txt_buf_index, txt_buf_state, DUT_NODE, chn);
+304        1/1                          check_m(txt_buf_state = buf_parity_err, &quot;'Original' TXT Buffer is in 'Parity error'&quot;);
+305        1/1                          get_tx_buf_state(txt_buf_index + 1, txt_buf_state, DUT_NODE, chn);
+306        1/1                          check_m(txt_buf_state = buf_done, &quot;'Backup' TXT Buffer is in 'TX OK'&quot;);
+307                     
+308                                     -- Check and clear STATUS[TXPE]
+309        1/1                          get_controller_status(status_1, DUT_NODE, chn);
+310        1/1                          check_m(status_1.tx_parity_error, &quot;Parity error set.&quot;);
+311        1/1                          check_false_m(status_1.tx_double_parity_error, &quot;Double parity error not set.&quot;);
+312                     
+313        1/1                          command_1.clear_txpe := true;
+314        1/1                          give_controller_command(command_1, DUT_NODE, chn);
+315                     
+316        1/1                          get_controller_status(status_1, DUT_NODE, chn);
+317        1/1                          check_false_m(status_1.tx_parity_error, &quot;Parity error not set.&quot;);
+318        1/1                          check_false_m(status_1.tx_double_parity_error, &quot;Double parity error not set.&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.MODE_TXBBM_4_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

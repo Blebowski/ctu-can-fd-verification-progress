@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.FEATURE_TEST_LIST_PKG</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.FEATURE_TEST_LIST_PKG'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.FEATURE_TEST_LIST_PKG')">CTU_CAN_FD_TB.FEATURE_TEST_LIST_PKG</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.18</td>
+<td class="s9 cl rt"><a href="mod317.html#Line" > 99.18</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/agents/feature_test_agent/feature_test_list_pkg.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/agents/feature_test_agent/feature_test_list_pkg.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.FEATURE_TEST_LIST_PKG'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod317.html" >CTU_CAN_FD_TB.FEATURE_TEST_LIST_PKG</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>122</td><td>121</td><td>99.18</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>244</td><td>122</td><td>121</td><td>99.18</td></tr>
+</table>
+<pre class="code"><br clear=all>
+243                         begin
+244        1/1                  if (test_name = &quot;alc_base_id&quot;) then
+245        1/1                      alc_base_id_ftest_exec(channel);
+246                             elsif (test_name = &quot;alc_ide&quot;) then
+247        1/1                      alc_ide_ftest_exec(channel);
+248                             elsif (test_name = &quot;alc_id_extension&quot;) then
+249        1/1                      alc_id_extension_ftest_exec(channel);
+250                             elsif (test_name = &quot;alc_rtr_ext_id&quot;) then
+251        1/1                      alc_rtr_ext_id_ftest_exec(channel);
+252                             elsif (test_name = &quot;alc_rtr_r0&quot;) then
+253        1/1                      alc_rtr_r0_ftest_exec(channel);
+254                             elsif (test_name = &quot;alc_srr_rtr&quot;) then
+255        1/1                      alc_srr_rtr_ftest_exec(channel);
+256                             elsif (test_name = &quot;alc_srr_rtr_2&quot;) then
+257        1/1                      alc_srr_rtr_2_ftest_exec(channel);
+258                     
+259                             elsif (test_name = &quot;btr&quot;) then
+260        1/1                      btr_ftest_exec(channel);
+261                             elsif (test_name = &quot;btr_fd&quot;) then
+262        1/1                      btr_fd_ftest_exec(channel);
+263                             elsif (test_name = &quot;btr_maximal&quot;) then
+264        1/1                      btr_maximal_ftest_exec(channel);
+265                             elsif (test_name = &quot;btr_minimal&quot;) then
+266        1/1                      btr_minimal_ftest_exec(channel);
+267                             elsif (test_name = &quot;btr_ssp_access&quot;) then
+268        1/1                      btr_ssp_access_ftest_exec(channel);
+269                             elsif (test_name = &quot;bus_start&quot;) then
+270        1/1                      bus_start_ftest_exec(channel);
+271                             elsif (test_name = &quot;byte_enable&quot;) then
+272        1/1                      byte_enable_ftest_exec(channel);
+273                     
+274                             elsif (test_name = &quot;command_cdo&quot;) then
+275        1/1                      command_cdo_ftest_exec(channel);
+276                             elsif (test_name = &quot;command_ercrst&quot;) then
+277        1/1                      command_ercrst_ftest_exec(channel);
+278                             elsif (test_name = &quot;command_frcrst&quot;) then
+279        1/1                      command_frcrst_ftest_exec(channel);
+280                             elsif (test_name = &quot;command_rrb&quot;) then
+281        1/1                      command_rrb_ftest_exec(channel);
+282                     
+283                             elsif (test_name = &quot;device_id&quot;) then
+284        1/1                      device_id_ftest_exec(channel);
+285                             elsif (test_name = &quot;disable_in_tx&quot;) then
+286        1/1                      disable_in_tx_ftest_exec(channel);
+287                             elsif (test_name = &quot;dlc_can20_8_64_bytes&quot;) then
+288        1/1                      dlc_can20_8_64_bytes_ftest_exec(channel);
+289                     
+290                             elsif (test_name = &quot;err_capt_ack_ack&quot;) then
+291        1/1                      err_capt_ack_ack_ftest_exec(channel);
+292                             elsif (test_name = &quot;err_capt_arb_bit&quot;) then
+293        1/1                      err_capt_arb_bit_ftest_exec(channel);
+294                             elsif (test_name = &quot;err_capt_arb_stuff&quot;) then
+295        1/1                      err_capt_arb_stuff_ftest_exec(channel);
+296                             elsif (test_name = &quot;err_capt_crc_bit&quot;) then
+297        1/1                      err_capt_crc_bit_ftest_exec(channel);
+298                             elsif (test_name = &quot;err_capt_crc_err&quot;) then
+299        1/1                      err_capt_crc_err_ftest_exec(channel);
+300                             elsif (test_name = &quot;err_capt_ctrl_bit&quot;) then
+301        1/1                      err_capt_ctrl_bit_ftest_exec(channel);
+302                             elsif (test_name = &quot;err_capt_ctrl_form&quot;) then
+303        1/1                      err_capt_ctrl_form_ftest_exec(channel);
+304                             elsif (test_name = &quot;err_capt_data_bit&quot;) then
+305        1/1                      err_capt_data_bit_ftest_exec(channel);
+306                             elsif (test_name = &quot;err_capt_eof&quot;) then
+307        1/1                      err_capt_eof_ftest_exec(channel);
+308                             elsif (test_name = &quot;err_capt_err_frm&quot;) then
+309        1/1                      err_capt_err_frm_ftest_exec(channel);
+310                             elsif (test_name = &quot;err_capt_ovr_frm&quot;) then
+311        1/1                      err_capt_ovr_frm_ftest_exec(channel);
+312                             elsif (test_name = &quot;err_capt_sof&quot;) then
+313        1/1                      err_capt_sof_ftest_exec(channel);
+314                             elsif (test_name = &quot;err_norm_fd&quot;) then
+315        1/1                      err_norm_fd_ftest_exec(channel);
+316                     
+317                             elsif (test_name = &quot;fault_state&quot;) then
+318        1/1                      fault_state_ftest_exec(channel);
+319                     
+320                             elsif (test_name = &quot;frame_test_fstc&quot;) then
+321        1/1                      frame_test_fstc_ftest_exec(channel);
+322                             elsif (test_name = &quot;frame_test_fcrc&quot;) then
+323        1/1                      frame_test_fcrc_ftest_exec(channel);
+324                             elsif (test_name = &quot;frame_test_sdlc&quot;) then
+325        1/1                      frame_test_sdlc_ftest_exec(channel);
+326                             elsif (test_name = &quot;frame_test_ignore&quot;) then
+327        1/1                      frame_test_ignore_ftest_exec(channel);
+328                     
+329                             elsif (test_name = &quot;glitch_filtering&quot;) then
+330        1/1                      glitch_filtering_ftest_exec(channel);
+331                     
+332                             elsif (test_name = &quot;invalid_frames&quot;) then
+333        1/1                      invalid_frames_ftest_exec(channel);
+334                             elsif (test_name = &quot;int_al&quot;) then
+335        1/1                      int_al_ftest_exec(channel);
+336                             elsif (test_name = &quot;int_be&quot;) then
+337        1/1                      int_be_ftest_exec(channel);
+338                             elsif (test_name = &quot;int_do&quot;) then
+339        1/1                      int_do_ftest_exec(channel);
+340                             elsif (test_name = &quot;int_ewl&quot;) then
+341        1/1                      int_ewl_ftest_exec(channel);
+342                             elsif (test_name = &quot;int_fcs&quot;) then
+343        1/1                      int_fcs_ftest_exec(channel);
+344                             elsif (test_name = &quot;int_rx&quot;) then
+345        1/1                      int_rx_ftest_exec(channel);
+346                             elsif (test_name = &quot;int_rxf&quot;) then
+347        1/1                      int_rxf_ftest_exec(channel);
+348                             elsif (test_name = &quot;int_tx&quot;) then
+349        1/1                      int_tx_ftest_exec(channel);
+350                             elsif (test_name = &quot;int_of&quot;) then
+351        1/1                      int_of_ftest_exec(channel);
+352                             elsif (test_name = &quot;int_bs&quot;) then
+353        1/1                      int_bs_ftest_exec(channel);
+354                             elsif (test_name = &quot;int_rxne&quot;) then
+355        1/1                      int_rxne_ftest_exec(channel);
+356                             elsif (test_name = &quot;int_txbhci&quot;) then
+357        1/1                      int_txbhci_ftest_exec(channel);
+358                     
+359                             elsif (test_name = &quot;message_filter&quot;) then
+360        1/1                      message_filter_ftest_exec(channel);
+361                             elsif (test_name = &quot;mode_bus_monitoring&quot;) then
+362        1/1                      mode_bus_monitoring_ftest_exec(channel);
+363                             elsif (test_name = &quot;mode_fd_enable&quot;) then
+364        1/1                      mode_fd_enable_ftest_exec(channel);
+365                             elsif (test_name = &quot;mode_loopback&quot;) then
+366        1/1                      mode_loopback_ftest_exec(channel);
+367                             elsif (test_name = &quot;mode_fdrf&quot;) then
+368        1/1                      mode_fdrf_ftest_exec(channel);
+369                             elsif (test_name = &quot;mode_pex&quot;) then
+370        1/1                      mode_pex_ftest_exec(channel);
+371                             elsif (test_name = &quot;mode_restr_op&quot;) then
+372        1/1                      mode_restr_op_ftest_exec(channel);
+373                             elsif (test_name = &quot;mode_test&quot;) then
+374        1/1                      mode_test_ftest_exec(channel);
+375                             elsif (test_name = &quot;mode_self_test&quot;) then
+376        1/1                      mode_self_test_ftest_exec(channel);
+377                             elsif (test_name = &quot;mode_frame_filters&quot;) then
+378        1/1                      mode_frame_filters_ftest_exec(channel);
+379                             elsif (test_name = &quot;mode_rst&quot;) then
+380        1/1                      mode_rst_ftest_exec(channel);
+381                             elsif (test_name = &quot;mode_rxbam&quot;) then
+382        1/1                      mode_rxbam_ftest_exec(channel);
+383                             elsif (test_name = &quot;mode_txbbm&quot;) then
+384        1/1                      mode_txbbm_ftest_exec(channel);
+385                             elsif (test_name = &quot;mode_txbbm_2&quot;) then
+386        1/1                      mode_txbbm_2_ftest_exec(channel);
+387                             elsif (test_name = &quot;mode_txbbm_3&quot;) then
+388        1/1                      mode_txbbm_3_ftest_exec(channel);
+389                             elsif (test_name = &quot;mode_txbbm_4&quot;) then
+390        1/1                      mode_txbbm_4_ftest_exec(channel);
+391                             elsif (test_name = &quot;mode_txbbm_5&quot;) then
+392        1/1                      mode_txbbm_5_ftest_exec(channel);
+393                     
+394                             elsif (test_name = &quot;no_sof_tx&quot;) then
+395        1/1                      no_sof_tx_ftest_exec(channel);
+396                     
+397                             elsif (test_name = &quot;one_shot&quot;) then
+398        1/1                      one_shot_ftest_exec(channel);
+399                             elsif (test_name = &quot;overload&quot;) then
+400        1/1                      overload_ftest_exec(channel);
+401                     
+402                             elsif (test_name = &quot;rec_saturation&quot;) then
+403        1/1                      rec_saturation_ftest_exec(channel);
+404                             elsif (test_name = &quot;retr_limit&quot;) then
+405        1/1                      retr_limit_ftest_exec(channel);
+406                             elsif (test_name = &quot;retr_limit_2&quot;) then
+407        1/1                      retr_limit_2_ftest_exec(channel);
+408                             elsif (test_name = &quot;retr_limit_3&quot;) then
+409        1/1                      retr_limit_3_ftest_exec(channel);
+410                             elsif (test_name = &quot;rx_buf_empty_read&quot;) then
+411        1/1                      rx_buf_empty_read_ftest_exec(channel);
+412                             elsif (test_name = &quot;rx_counter&quot;) then
+413        1/1                      rx_counter_ftest_exec(channel);
+414                             elsif (test_name = &quot;rx_settings_rtsop&quot;) then
+415        1/1                      rx_settings_rtsop_ftest_exec(channel);
+416                             elsif (test_name = &quot;rx_status&quot;) then
+417        1/1                      rx_status_ftest_exec(channel);
+418                             elsif (test_name = &quot;rx_status_mof&quot;) then
+419        1/1                      rx_status_mof_ftest_exec(channel);
+420                     
+421                             elsif (test_name = &quot;scan_mode&quot;) then
+422        1/1                      scan_mode_ftest_exec(channel);
+423                             elsif (test_name = &quot;settings_tbfbo&quot;) then
+424        1/1                      settings_tbfbo_ftest_exec(channel);
+425                             elsif (test_name = &quot;settings_nisofd&quot;) then
+426        1/1                      settings_nisofd_ftest_exec(channel);
+427                             elsif (test_name = &quot;single_bus_node&quot;) then
+428        1/1                      single_bus_node_ftest_exec(channel);
+429                             elsif (test_name = &quot;ssp_cfg&quot;) then
+430        1/1                      ssp_cfg_ftest_exec(channel);
+431                             elsif (test_name = &quot;ssp_4_bits_flying&quot;) then
+432        1/1                      ssp_4_bits_flying_ftest_exec(channel);
+433                             elsif (test_name = &quot;status_eft&quot;) then
+434        1/1                      status_eft_ftest_exec(channel);
+435                             elsif (test_name = &quot;status_ewl&quot;) then
+436        1/1                      status_ewl_ftest_exec(channel);
+437                             elsif (test_name = &quot;status_idle&quot;) then
+438        1/1                      status_idle_ftest_exec(channel);
+439                             elsif (test_name = &quot;status_rxne&quot;) then
+440        1/1                      status_rxne_ftest_exec(channel);
+441                             elsif (test_name = &quot;status_rxs&quot;) then
+442        1/1                      status_rxs_ftest_exec(channel);
+443                             elsif (test_name = &quot;status_txnf&quot;) then
+444        1/1                      status_txnf_ftest_exec(channel);
+445                             elsif (test_name = &quot;status_txs&quot;) then
+446        1/1                      status_txs_ftest_exec(channel);
+447                             elsif (test_name = &quot;status_rxpe&quot;) then
+448        1/1                      status_rxpe_ftest_exec(channel);
+449                             elsif (test_name = &quot;status_txpe&quot;) then
+450        1/1                      status_txpe_ftest_exec(channel);
+451                             elsif (test_name = &quot;stuff_in_data&quot;) then
+452        1/1                      stuff_in_data_ftest_exec(channel);
+453                     
+454                             elsif (test_name = &quot;trv_delay&quot;) then
+455        1/1                      trv_delay_ftest_exec(channel);
+456                             elsif (test_name = &quot;tst_mem_acc_rx&quot;) then
+457        1/1                      tst_mem_acc_rx_ftest_exec(channel);
+458                             elsif (test_name = &quot;tst_mem_acc_txt&quot;) then
+459        1/1                      tst_mem_acc_txt_ftest_exec(channel);
+460                             elsif (test_name = &quot;tx_arb_consistency&quot;) then
+461        1/1                      tx_arb_consistency_ftest_exec(channel);
+462                             elsif (test_name = &quot;tx_arb_consistency_2&quot;) then
+463        1/1                      tx_arb_consistency_2_ftest_exec(channel);
+464                             elsif (test_name = &quot;tx_arb_time_tran&quot;) then
+465        1/1                      tx_arb_time_tran_ftest_exec(channel);
+466                             elsif (test_name = &quot;tx_cmd_set_abort&quot;) then
+467        1/1                      tx_cmd_set_abort_ftest_exec(channel);
+468                             elsif (test_name = &quot;tx_cmd_set_empty&quot;) then
+469        1/1                      tx_cmd_set_empty_ftest_exec(channel);
+470                             elsif (test_name = &quot;tx_cmd_set_ready&quot;) then
+471        1/1                      tx_cmd_set_ready_ftest_exec(channel);
+472                             elsif (test_name = &quot;tx_counter&quot;) then
+473        1/1                      tx_counter_ftest_exec(channel);
+474                             elsif (test_name = &quot;tx_from_intermission&quot;) then
+475        1/1                      tx_from_intermission_ftest_exec(channel);
+476                             elsif (test_name = &quot;tx_priority_change&quot;) then
+477        1/1                      tx_priority_change_ftest_exec(channel);
+478                             elsif (test_name = &quot;tx_priority&quot;) then
+479        1/1                      tx_priority_ftest_exec(channel);
+480                             elsif (test_name = &quot;tx_status&quot;) then
+481        1/1                      tx_status_ftest_exec(channel);
+482                             elsif (test_name = &quot;timestamp_low_high&quot;) then
+483        1/1                      timestamp_low_high_ftest_exec(channel);
+484                             elsif (test_name = &quot;txt_buffer_byte_access&quot;) then
+485        1/1                      txt_buffer_byte_access_ftest_exec(channel);
+486                             elsif (test_name = &quot;txt_buffer_hazard&quot;) then
+487        1/1                      txt_buffer_hazard_ftest_exec(channel);
+488                             elsif (test_name = &quot;txt_buffer_transitions&quot;) then
+489        1/1                      txt_buffer_transitions_ftest_exec(channel);
+490                             elsif (test_name = &quot;txt_buffer_transitions_2&quot;) then
+491        1/1                      txt_buffer_transitions_2_ftest_exec(channel);
+492                             elsif (test_name = &quot;txt_buffer_transitions_3&quot;) then
+493        1/1                      txt_buffer_transitions_3_ftest_exec(channel);
+494                             elsif (test_name = &quot;txt_buffer_transitions_4&quot;) then
+495        1/1                      txt_buffer_transitions_4_ftest_exec(channel);
+496                     
+497                             elsif (test_name = &quot;frame_filters_mask&quot;) then
+498        1/1                      frame_filters_mask_ftest_exec(channel);
+499                     
+500                             else
+501        <font color = "red">0/1     ==>              error_m(&quot;Unknown feature test name: &quot; &amp; test_name);</font>
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.FEATURE_TEST_LIST_PKG">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

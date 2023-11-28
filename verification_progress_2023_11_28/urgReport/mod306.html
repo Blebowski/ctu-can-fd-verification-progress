@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TX_ARB_TIME_TRAN_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TX_ARB_TIME_TRAN_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TX_ARB_TIME_TRAN_FTEST')">CTU_CAN_FD_TB.TX_ARB_TIME_TRAN_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 97.22</td>
+<td class="s9 cl rt"><a href="mod306.html#Line" > 97.22</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tx_arb_time_tran_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tx_arb_time_tran_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TX_ARB_TIME_TRAN_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod306.html" >CTU_CAN_FD_TB.TX_ARB_TIME_TRAN_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>72</td><td>70</td><td>97.22</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>168</td><td>72</td><td>70</td><td>97.22</td></tr>
+</table>
+<pre class="code"><br clear=all>
+167                             -------------------------------------------------------------------------
+168        1/1                  info_m(&quot;Step 1&quot;);
+169                     
+170        1/1                  mode.time_triggered_transm := true;
+171        1/1                  set_core_mode(mode, DUT_NODE, chn);
+172                     
+173                             -------------------------------------------------------------------------
+174                             -- @2. Configure random timestamp to testbench. Generate random frame and
+175                             --     insert it for transmission from TXT Buffer 1 of DUT. Generate
+176                             --     random time of transmission for the frame and Issue &quot;set ready&quot;
+177                             --     command for TXT Buffer 1. Wait until node turns transmitter! Read
+178                             --     current timestamp from TB and check that difference between expected
+179                             --     time of transmission and actual time when transmission started is
+180                             --     less than 1 bit time (transmission is not processed immediately, but
+181                             --     in each sample point). Wait until frame is sent.
+182                             -------------------------------------------------------------------------
+183        1/1                  info_m(&quot;Step 2&quot;);
+184                     
+185                             -- Force random timestamp so that we are sure that both words of the
+186                             -- timestamp are clocked properly!
+187        1/1                  rand_logic_vect_v(ts_rand, 0.5);
+188                     
+189                             -- Keep highest bit 0 to avoid complete overflow during the test!
+190        1/1                  ts_rand(63) := '0';
+191                     
+192                             -- Additionally, keep bit 31=0. This is because timestamp is internally
+193                             -- in TB implemented from two naturals which are 0 .. 2^31 - 1. If we
+194                             -- would generate bit 31=1, conversion &quot;to_integer&quot; from such unsigned
+195                             -- value is out of scope of natural!
+196        1/1                  ts_rand(31) := '0';
+197                     
+198        1/1                  CAN_generate_frame(CAN_frame);
+199        1/1                  rand_int_v(10000, ts_offset);
+200        1/1                  info_m(&quot;Offset from current time of transmission: &quot; &amp;
+201                                     integer'image(ts_offset));
+202                     
+203        1/1                  info_m(&quot;Random timestamp set: &quot; &amp; to_hstring(ts_rand));
+204        1/1                  ftr_tb_set_timestamp(ts_rand, chn);
+205                     
+206        1/1                  ts_offset_padded := (OTHERS =&gt; '0');
+207        1/1                  ts_offset_padded(31 downto 0) := std_logic_vector(to_unsigned(ts_offset, 32));
+208        1/1                  ts_expected := std_logic_vector(unsigned(ts_rand) + to_unsigned(ts_offset, 64));
+209        1/1                  CAN_frame.timestamp := ts_expected;
+210        1/1                  info_m(&quot;Expected time of transmission: &quot; &amp; to_hstring(ts_expected));
+211                     
+212        1/1                  CAN_insert_TX_frame(CAN_frame, 1, DUT_NODE, chn);
+213        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, DUT_NODE, chn);
+214                     
+215                             -- Capture immediate timestamp after set ready and after TX start!
+216        1/1                  timestamp_agent_get_timestamp(chn, ts_set_ready);
+217        1/1                  CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+218        1/1                  timestamp_agent_get_timestamp(chn, ts_tx_start);
+219                     
+220                             -- Read bit-time, calculate diff and check
+221        1/1                  CAN_read_timing_v(bus_timing, DUT_NODE, chn);
+222        1/1                  clk_per_bit := bus_timing.tq_nbt * (1 + bus_timing.prop_nbt +
+223                                             bus_timing.ph1_nbt + bus_timing.ph2_nbt);
+224        1/1                  if (unsigned(ts_tx_start) &gt; unsigned(ts_expected)) then
+225        1/1                      diff := to_integer(unsigned(ts_tx_start) - unsigned(ts_expected));
+226                             else
+227        <font color = "red">0/1     ==>              diff := to_integer(unsigned(ts_expected) - unsigned(ts_tx_start));</font>
+228                             end if;
+229                     
+230                             -- If it happends that RX trigger occurs just after timestamp matches,
+231                             -- but frame validation is still in progress, then diff can be actually
+232                             -- higher than one bit time by the length of validation!
+233        1/1                  check_m(diff &lt; clk_per_bit + 10, &quot;Time of transmission correct!&quot; &amp;
+234                                 &quot; Diff: &quot; &amp; integer'image(diff) &amp;
+235                                 &quot; Time per bit: &quot; &amp; integer'image(clk_per_bit));
+236                     
+237        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+238                     
+239                             ------------------------------------------------------------------------
+240                             -- @3. Generate CAN frame for transmission with timestamp lower than
+241                             --     actual value of timestamp input of CTU CAN FD. Insert it for
+242                             --     transmission and issue &quot;set ready&quot; command to this TXT Buffer.
+243                             --     Wait until transmission starts and check that difference between
+244                             --     start of transmission and time when &quot;set ready&quot; command was sent
+245                             --     is less than 1 bit time. Wait until frame is sent.
+246                             ------------------------------------------------------------------------
+247        1/1                  info_m(&quot;Step 3&quot;);
+248                     
+249        1/1                  timestamp_agent_get_timestamp(chn, ts_actual);
+250        1/1                  CAN_generate_frame(CAN_frame);
+251        1/1                  CAN_frame.timestamp := std_logic_vector(unsigned(ts_actual) - 1);
+252                     
+253        1/1                  CAN_insert_TX_frame(CAN_frame, 1, DUT_NODE, chn);
+254        1/1                  send_TXT_buf_cmd(buf_set_ready, 1, DUT_NODE, chn);
+255                     
+256                             -- Capture immediate timestamp after set ready and after TX start!
+257        1/1                  timestamp_agent_get_timestamp(chn, ts_set_ready);
+258        1/1                  CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+259        1/1                  timestamp_agent_get_timestamp(chn, ts_tx_start);
+260                     
+261        1/1                  if (unsigned(ts_tx_start) &gt; unsigned(ts_set_ready)) then
+262        1/1                      diff := to_integer(unsigned(ts_tx_start) - unsigned(ts_set_ready));
+263                             else
+264        <font color = "red">0/1     ==>              diff := to_integer(unsigned(ts_set_ready) - unsigned(ts_tx_start));</font>
+265                             end if;
+266                     
+267        1/1                  check_m(diff &lt; clk_per_bit, &quot;Time of transmission correct!&quot;);
+268                     
+269        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+270                     
+271        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+272        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+273                     
+274                             -- Read two dummy frames to empty RX Buffer for further reads!
+275        1/1                  CAN_read_frame(CAN_frame_rx_1, TEST_NODE, chn);
+276        1/1                  CAN_read_frame(CAN_frame_rx_1, TEST_NODE, chn);
+277                     
+278                             ------------------------------------------------------------------------
+279                             -- @4. Configure TXT Buffer 1 to higher priority than TXT Buffer 2. Insert
+280                             --     CAN frame with earlier time of transmission to TXT Buffer 2. Mark
+281                             --     both frames as ready. Wait until both frames are transmitted! Check
+282                             --     that first frame from Test node was transmitted!
+283                             ------------------------------------------------------------------------
+284        1/1                  info_m(&quot;Step 4&quot;);
+285                     
+286                             -- Generate buffers random!
+287        1/1                  pick_random_txt_buffer(buf_1_index, DUT_NODE, chn);
+288        1/1                  buf_2_index := buf_1_index;
+289        1/1                  while (buf_2_index = buf_1_index) loop
+290        1/1                      pick_random_txt_buffer(buf_2_index, DUT_NODE, chn);
+291                             end loop;
+292                     
+293        1/1                  CAN_configure_tx_priority(buf_2_index, 1, DUT_NODE, chn);
+294        1/1                  CAN_configure_tx_priority(buf_1_index, 2, DUT_NODE, chn);
+295        1/1                  info_m(&quot;Higher priority buffer: &quot; &amp; integer'image(buf_1_index));
+296        1/1                  info_m(&quot;Lower priority buffer: &quot; &amp; integer'image(buf_2_index));
+297                     
+298        1/1                  CAN_generate_frame(CAN_frame);
+299        1/1                  CAN_generate_frame(CAN_frame_2);
+300                     
+301        1/1                  timestamp_agent_get_timestamp(chn, CAN_frame.timestamp);
+302        1/1                  CAN_frame_2.timestamp := std_logic_vector(unsigned(CAN_frame.timestamp) + 3000);
+303                     
+304        1/1                  CAN_insert_TX_frame(CAN_frame_2, buf_1_index, DUT_NODE, chn);
+305        1/1                  CAN_insert_TX_frame(CAN_frame, buf_2_index, DUT_NODE, chn);
+306                     
+307        1/1                  send_TXT_buf_cmd(buf_set_ready, buf_1_index, DUT_NODE, chn);
+308        1/1                  send_TXT_buf_cmd(buf_set_ready, buf_2_index, DUT_NODE, chn);
+309                     
+310        1/1                  CAN_wait_frame_sent(TEST_NODE, chn);
+311        1/1                  CAN_wait_frame_sent(TEST_NODE, chn);
+312                     
+313        1/1                  CAN_read_frame(CAN_frame_rx_1, TEST_NODE, chn);
+314        1/1                  CAN_read_frame(CAN_frame_rx_2, TEST_NODE, chn);
+315                     
+316        1/1                  CAN_compare_frames(CAN_frame_rx_1, CAN_frame_2, false, frames_equal);
+317        1/1                  check_m(frames_equal,
+318                                 &quot;Higher priority buffer sent first although it has later timestamp!&quot;);
+319                     
+320        1/1                  CAN_compare_frames(CAN_frame_rx_2, CAN_frame, false, frames_equal);
+321        1/1                  check_m(frames_equal,
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TX_ARB_TIME_TRAN_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

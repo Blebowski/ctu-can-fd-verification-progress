@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.BYTE_ENABLE_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.BYTE_ENABLE_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.BYTE_ENABLE_FTEST')">CTU_CAN_FD_TB.BYTE_ENABLE_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 96.15</td>
+<td class="s9 cl rt"><a href="mod263.html#Line" > 96.15</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/byte_enable_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/byte_enable_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.BYTE_ENABLE_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod263.html" >CTU_CAN_FD_TB.BYTE_ENABLE_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>52</td><td>50</td><td>96.15</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>130</td><td>52</td><td>50</td><td>96.15</td></tr>
+</table>
+<pre class="code"><br clear=all>
+129                             ------------------------------------------------------------------------
+130        1/1                  info_m(&quot;Step 1: 32-bit read&quot;);
+131                     
+132        1/1                  CAN_turn_controller(false, DUT_NODE, chn);
+133        1/1                  address := YOLO_REG_ADR;
+134        1/1                  CAN_read(data_32, address, DUT_NODE, chn);
+135        1/1                  check_m(data_32 = x&quot;DEADBEEF&quot;, &quot;32 bit read error&quot;);
+136                     
+137                             ------------------------------------------------------------------------
+138                             -- @2. Read 32-bit register via 2 16 bit accesses. Check correct values.
+139                             ------------------------------------------------------------------------
+140        1/1                  info_m(&quot;Step 2: 16-bit read&quot;);
+141                     
+142        1/1                  for i in 0 to 1 loop        
+143        1/1                      data_16 := (OTHERS =&gt; '0');
+144        1/1                      address := std_logic_vector(to_unsigned(
+145                     		            (to_integer(unsigned(YOLO_REG_ADR)) + i * 2), 12));
+146        1/1                      CAN_read(data_16, address, DUT_NODE, chn);
+147                     
+148        1/1                      exp_16 := YOLO_VAL_RSTVAL(16 * i + 15 downto 16 * i);
+149        1/1                      if (i = 0) then
+150        1/1                          check_m(data_16 = exp_16, &quot;16 bit access - lower half word&quot;);
+151                                 else
+152        1/1                          check_m(data_16 = exp_16, &quot;16 bit access - upper half word&quot;);
+153                                 end if;
+154                             end loop;
+155                     
+156                             ------------------------------------------------------------------------
+157                             -- @3. Read 32-bit register via 4 8 bit accesses. Check correct values.
+158                             ------------------------------------------------------------------------
+159        1/1                  info_m(&quot;Step 3: 8-bit read&quot;);
+160                     
+161        1/1                  for i in 0 to 3 loop
+162        1/1                      data_8 := (OTHERS =&gt; '0');
+163        1/1                      address := std_logic_vector(to_unsigned(
+164                     		            (to_integer(unsigned(YOLO_REG_ADR)) + i), 12));
+165        1/1                      CAN_read(data_8, address, DUT_NODE, chn);
+166                     
+167                                 -- Checking if valid 1 byte matches register value
+168        1/1                      exp_8 := YOLO_VAL_RSTVAL(8 * i + 7 downto 8 * i);
+169        1/1                      check_m (exp_8 = data_8, &quot;8 bit access, byte: &quot; &amp; integer'image(i));
+170                             end loop;
+171                     
+172                             ------------------------------------------------------------------------
+173                             -- @4. Erase 32-bit R/W register. Write pattern to a single byte. Read 
+174                             --     32-bit check that pattern was written to single byte only and 
+175                             --     rest are zeroes. Repeat with each byte!
+176                             ------------------------------------------------------------------------
+177        1/1                  info_m(&quot;Step 4: 8-bit write&quot;);
+178                     
+179        1/1                  for i in 0 to 3 loop
+180        1/1                      address := BTR_FD_ADR;
+181        1/1                      data_32 := (OTHERS =&gt; '0');
+182        1/1                      CAN_write(data_32, address, DUT_NODE, chn);
+183                     
+184        1/1                      address := std_logic_vector(to_unsigned(
+185                     		            (to_integer(unsigned(BTR_FD_ADR)) + i), 12));
+186        1/1                      data_8 := x&quot;AA&quot;;
+187        1/1                      CAN_write(data_8, address, DUT_NODE, chn);
+188                                 
+189        1/1                      CAN_read(data_32, BTR_FD_ADR, DUT_NODE, chn);
+190                     
+191                                 -- Checking if one written byte was written OK!
+192        1/1                      check_m(data_32(8 * i + 7 downto 8 * i) = x&quot;AA&quot;,
+193                                         &quot;Write access - 8 bit (valid byte), Index :&quot; &amp; integer'image(i));
+194                     
+195                                 -- Checking if other bytes are 0
+196        1/1                      case i is
+197                                 when 0 =&gt;
+198        1/1                          check_m(data_32(31 downto 8) = x&quot;000000&quot;,
+199                                            &quot;Write access - 8 bit (Empty byte 0)&quot;);
+200                                 when 1 =&gt;
+201        1/1                          check_m(data_32(31 downto 16) = x&quot;0000&quot; and
+202                                             data_32(7 downto 0) = x&quot;00&quot;,
+203                                             &quot;Write access - 8 bit (Empty byte 1)&quot;);
+204                                 when 2 =&gt;
+205        1/1                          check_m(data_32(31 downto 24) = x&quot;00&quot; and
+206                                             data_32(15 downto 0) = x&quot;0000&quot;,
+207                                             &quot;Write access - 8 bit (Empty byte 2)&quot;);
+208                     
+209                                 when 3 =&gt;
+210        1/1                          check_m(data_32(23 downto 0) = x&quot;000000&quot;,
+211                                             &quot;Write access - 8 bit (Empty byte 3)&quot;);
+212                     
+213                                 when others =&gt;
+214        <font color = "red">0/1     ==>                  error_m(&quot;Invalid byte index&quot;); -- LCOV_EXCL_LINE</font>
+215                                 end case;
+216                             end loop;
+217                             
+218                             ------------------------------------------------------------------------
+219                             --  @5. Erase 32-bit R/W register. Write pattern to lower half word. Read
+220                             --      32-bit, check that pattern was written to half word only and rest
+221                             --      are zeroes. Repeat with upper half word!
+222                             ------------------------------------------------------------------------
+223        1/1                  info_m(&quot;Step 4: 16-bit write&quot;);
+224                     
+225        1/1                  for i in 0 to 1 loop
+226        1/1                      address := BTR_FD_ADR;
+227        1/1                      data_32 := (OTHERS =&gt; '0');
+228        1/1                      CAN_write(data_32, address, DUT_NODE, chn);
+229                     
+230        1/1                      address := std_logic_vector(to_unsigned(
+231                                             (to_integer(unsigned(BTR_FD_ADR)) + (i * 2)), 12));
+232        1/1                      data_16 := x&quot;AAAA&quot;;
+233        1/1                      CAN_write(data_16, address, DUT_NODE, chn);
+234                                 
+235        1/1                      data_32 := (OTHERS =&gt; '0');
+236        1/1                      CAN_read(data_32, BTR_FD_ADR, DUT_NODE, chn);
+237                                 
+238                                 -- Checking if one written byte was written OK!
+239        1/1                      check_m(data_32(16 * i + 15 downto 16 * i) = x&quot;AAAA&quot;,
+240                                       &quot;Write access - 16 bit (valid half word), Index :&quot; &amp; integer'image(i));
+241                     
+242                                 -- Checking if other half word is 0
+243        1/1                      case i is
+244                                 when 0 =&gt;
+245        1/1                          check_m(data_32(31 downto 16) = x&quot;0000&quot;,
+246                                             &quot;Write access - 16 bit (Empty half word 0)&quot;);
+247                                 when 1 =&gt;
+248        1/1                          check_m(data_32(15 downto 0) = x&quot;0000&quot;,
+249                                             &quot;Write access - 16 bit (Empty half word 1)&quot;);
+250                     
+251                                 when others =&gt;
+252        <font color = "red">0/1     ==>                  error_m(&quot;Invalid half word index&quot;); -- LCOV_EXCL_LINE</font>
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.BYTE_ENABLE_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

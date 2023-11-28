@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.ERR_CAPT_OVR_FRM_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_OVR_FRM_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.ERR_CAPT_OVR_FRM_FTEST')">CTU_CAN_FD_TB.ERR_CAPT_OVR_FRM_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod29.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_ovr_frm_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_ovr_frm_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_OVR_FRM_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod29.html" >CTU_CAN_FD_TB.ERR_CAPT_OVR_FRM_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>28</td><td>28</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>129</td><td>28</td><td>28</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+128                             -----------------------------------------------------------------------
+129        1/1                  info_m(&quot;Step 1&quot;);
+130                             
+131        1/1                  CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+132        1/1                  check_m(err_capt.err_pos = err_pos_other, &quot;Reset of ERR_CAPT!&quot;);
+133                             
+134                             -----------------------------------------------------------------------
+135                             -- @2. Generate CAN frame and send it by DUT. Wait until intermission
+136                             --     field and force bus low (overload condition). Check that DUT
+137                             --     transmitts Overload frame. Wait for random number of bits (0-4)
+138                             --     and force bus high for one bit time. Check that DUT is
+139                             --     transmitting Error frame. Read Error code capture and check that
+140                             --     error occured in Overload frame and it was a bit error!
+141                             -----------------------------------------------------------------------        
+142        1/1                  CAN_generate_frame(frame_1);
+143        1/1                  CAN_send_frame(frame_1, 1, DUT_NODE, chn, frame_sent);
+144        1/1                  CAN_wait_pc_state(pc_deb_intermission, DUT_NODE, chn);
+145        1/1                  wait for 20 ns;
+146                             
+147                             -- Cause overload condition
+148        1/1                  force_bus_level(DOMINANT, chn);
+149        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+150        1/1                  wait for 20 ns; -- To be sure that opposite bit is sampled!
+151        1/1                  release_bus_level(chn);
+152                             
+153        1/1                  CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+154        1/1                  check_m(pc_dbg = pc_deb_overload, &quot;Overload frame transmitted!&quot;);
+155                             
+156        1/1                  rand_int_v(4, wait_time);
+157        1/1                  info_m(&quot;Waiting for: &quot; &amp; integer'image(wait_time) &amp; &quot; bits!&quot;);
+158        1/1                  for i in 1 to wait_time loop
+159        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+160                             end loop; 
+161        1/1                  wait for 20 ns;
+162                     
+163                             -- Cause bit error in Overload frame!
+164        1/1                  force_bus_level(RECESSIVE, chn);
+165        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+166        1/1                  wait for 20 ns; -- To be sure that opposite bit is sampled!
+167        1/1                  release_bus_level(chn);
+168                     
+169        1/1                  get_controller_status(stat_1, DUT_NODE, chn);
+170        1/1                  check_m(stat_1.error_transmission, &quot;Error frame is being transmitted!&quot;);
+171                     
+172        1/1                  CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+173        1/1                  check_m(err_capt.err_type = can_err_bit, &quot;Bit error detected!&quot;);
+174        1/1                  check_m(err_capt.err_pos = err_pos_overload_frame,
+175                                     &quot;Error detected in Overload frame!&quot;);
+176                             
+177                             -- For debug only to see waves properly!
+178        1/1                  wait for 100 ns;
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.ERR_CAPT_OVR_FRM_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

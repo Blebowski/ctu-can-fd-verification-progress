@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.INT_EWL_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.INT_EWL_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.INT_EWL_FTEST')">CTU_CAN_FD_TB.INT_EWL_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod76.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_ewl_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_ewl_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.INT_EWL_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod76.html" >CTU_CAN_FD_TB.INT_EWL_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>97</td><td>97</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>156</td><td>97</td><td>97</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+155                             -----------------------------------------------------------------------
+156        1/1                  info_m(&quot;Step 1: Setting EWL Interrupt&quot;);
+157                     
+158        1/1                  int_mask.error_warning_int := false;
+159        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+160                     
+161        1/1                  int_ena.error_warning_int := true;
+162        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+163                     
+164        1/1                  mode.test := true;
+165        1/1                  set_core_mode(mode, DUT_NODE, chn);
+166                     
+167                             -----------------------------------------------------------------------
+168                             -- @2. Set TX Error counter to 96. Check that EWL Interrupt was set. 
+169                             --     Check that EWL Interrupt is set and INT pin is high.
+170                             -----------------------------------------------------------------------
+171        1/1                  info_m(&quot;Step 2: Check EWL from TX Error counter&quot;);
+172                     
+173        1/1                  read_error_counters(err_ctrs, DUT_NODE, chn);
+174        1/1                  err_ctrs.tx_counter := 96;
+175        1/1                  set_error_counters(err_ctrs, DUT_NODE, chn);
+176                     
+177        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+178        1/1                  check_m(int_stat.error_warning_int,
+179                                     &quot;EWL Interrupt set when RX Error counter &gt;= EWL!&quot;);
+180        1/1                  interrupt_agent_check_asserted(chn);
+181                     
+182                             -----------------------------------------------------------------------
+183                             -- @3. Disable EWL Interrupt and check INT pin goes low. Enable EWL 
+184                             --     Interrupt and check INT pin goes high. 
+185                             -----------------------------------------------------------------------
+186        1/1                  info_m(&quot;Step 3: Check EWL from TX counter toggles INT pin.&quot;);
+187                     
+188        1/1                  int_ena.error_warning_int := false;
+189        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+190        1/1                  wait for 10 ns;
+191        1/1                  interrupt_agent_check_not_asserted(chn);
+192                     
+193        1/1                  int_ena.error_warning_int := true;
+194        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+195        1/1                  wait for 10 ns;
+196        1/1                  interrupt_agent_check_asserted(chn);
+197                     
+198                             -----------------------------------------------------------------------
+199                             -- @4. Clear EWL Interrupt and check it not set. Set TX Error
+200                             --     counter to 95. Check EWL is set. Clear EWL Interrupt. Check EWL
+201                             --     interrupt is cleared.
+202                             -----------------------------------------------------------------------
+203        1/1                  info_m(&quot;Step 4: Check EWL is set again.&quot;);
+204                     
+205        1/1                  int_stat.error_warning_int := true;
+206        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+207                     
+208        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+209        1/1                  check_false_m(int_stat.error_warning_int,
+210                                 &quot;EWL Interrupt set again when RX Error counter &gt;= EWL!&quot;);
+211                     
+212        1/1                  err_ctrs.tx_counter := 95;
+213        1/1                  set_error_counters(err_ctrs, DUT_NODE, chn);
+214                     
+215        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+216        1/1                  check_m(int_stat.error_warning_int,
+217                                 &quot;EWL Interrupt set when TX Error counter &lt; EWL!&quot;);
+218        1/1                  interrupt_agent_check_asserted(chn);
+219                             
+220        1/1                  int_stat.error_warning_int := true;
+221        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+222                     
+223        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+224        1/1                  check_false_m(int_stat.error_warning_int,
+225                                 &quot;EWL Interrupt cleared!&quot;);
+226                     
+227                             -----------------------------------------------------------------------
+228                             -- @5. Set RX Error counter to 96. Check that EWL Interrupt was set. 
+229                             --     Check that INT pin goes high. 
+230                             -----------------------------------------------------------------------
+231        1/1                  info_m(&quot;Step 5: Check EWL from RX Error counter&quot;);
+232                     
+233        1/1                  err_ctrs.rx_counter := 96;
+234        1/1                  set_error_counters(err_ctrs, DUT_NODE, chn);
+235                     
+236        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+237        1/1                  check_m(int_stat.error_warning_int, &quot;EWL Interrupt set when TX Error counter &gt;= EWL!&quot;);
+238        1/1                  interrupt_agent_check_asserted(chn);
+239                     
+240                             -----------------------------------------------------------------------
+241                             -- @6. Disable EWL Interrupt and check INT pin goes low. Enable EWL 
+242                             --     Interrupt and check INT pin goes high again. 
+243                             -----------------------------------------------------------------------
+244        1/1                  info_m(&quot;Step 6: Check EWL from RX counter toggles INT pin.&quot;);
+245                     
+246        1/1                  int_ena.error_warning_int := false;
+247        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+248        1/1                  wait for 10 ns;
+249        1/1                  interrupt_agent_check_not_asserted(chn);
+250                     
+251        1/1                  int_ena.error_warning_int := true;
+252        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+253        1/1                  wait for 10 ns;
+254        1/1                  interrupt_agent_check_asserted(chn);
+255                     
+256                             -----------------------------------------------------------------------
+257                             -- @7. Clear EWL Interrupt. Check that EWL Interrupt is not set. Set RX
+258                             --     Error counter to 95. Check EWL is set. Check INT pin goes high
+259                             --     and Interrupt is set. Clear the interrupt and check.
+260                             -----------------------------------------------------------------------
+261        1/1                  info_m(&quot;Step 7: Check EWL from RX counter is set again.&quot;);
+262                     
+263        1/1                  int_stat.error_warning_int := true;
+264        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+265                     
+266        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+267        1/1                  check_false_m(int_stat.error_warning_int,
+268                                 &quot;EWL Interrupt not set again when TX Error counter &gt;= EWL!&quot;);
+269                             
+270        1/1                  err_ctrs.rx_counter := 95;
+271        1/1                  set_error_counters(err_ctrs, DUT_NODE, chn);
+272                     
+273        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+274        1/1                  check_m(int_stat.error_warning_int,
+275                                 &quot;EWL Interrupt set when RX Error counter &lt; EWL!&quot;);
+276        1/1                  interrupt_agent_check_asserted(chn);
+277                     
+278        1/1                  int_stat.error_warning_int := true;
+279        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+280                             
+281        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+282        1/1                  check_false_m(int_stat.error_warning_int, &quot;EWL Interrupt cleared!&quot;);
+283                     
+284                             -----------------------------------------------------------------------
+285                             -- @8. Mask EWL Interrupt. Set TX Error counter to 96. Check that EWL 
+286                             --     interrupt was not set.
+287                             -----------------------------------------------------------------------
+288        1/1                  info_m(&quot;Step 8: Check EWL is not set when masked!&quot;);
+289                     
+290        1/1                  int_mask.error_warning_int := true;
+291        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+292                     
+293        1/1                  err_ctrs.tx_counter := 96;
+294        1/1                  set_error_counters(err_ctrs, DUT_NODE, chn);
+295                     
+296        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+297        1/1                  check_false_m(int_stat.error_warning_int, &quot;EWL Interrupt not set when masked!&quot;);
+298        1/1                  interrupt_agent_check_not_asserted(chn);
+299                     
+300                             -----------------------------------------------------------------------
+301                             -- @9. Disable EWL Interrupt and check it was disabled. Enable EWL 
+302                             --     Interrupt and check it was enabled.
+303                             -----------------------------------------------------------------------
+304        1/1                  info_m(&quot;Step 9: Check EWL Interrupt enable works OK!&quot;);
+305                     
+306        1/1                  int_ena.error_warning_int := false;
+307        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+308                     
+309        1/1                  int_ena.error_warning_int := true;
+310        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+311                     
+312        1/1                  check_false_m(int_ena.error_warning_int, &quot;EWL Interrupt enabled!&quot;);
+313                     
+314        1/1                  int_ena.error_warning_int := true;
+315        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+316        1/1                  int_ena.error_warning_int := false;
+317                     
+318        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+319        1/1                  check_m(int_ena.error_warning_int, &quot;EWL Interrupt disabled!&quot;);
+320                     
+321                             -----------------------------------------------------------------------
+322                             -- @10. Mask EWL Interrupt and check it was masked. Un-mask EWL 
+323                             --      Interrupt and check it was un-masked.
+324                             -----------------------------------------------------------------------
+325        1/1                  info_m(&quot;Step 10: Check EWL Interrupt mask works OK!&quot;);
+326                     
+327        1/1                  int_mask.error_warning_int := true;
+328        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+329        1/1                  int_mask.error_warning_int := false;
+330                     
+331        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+332        1/1                  check_m(int_mask.error_warning_int, &quot;EWL Interrupt masked!&quot;);
+333                     
+334        1/1                  int_mask.error_warning_int := false;
+335        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+336        1/1                  int_mask.error_warning_int := true;
+337                     
+338        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+339        1/1                  check_false_m(int_mask.error_warning_int, &quot;EWL Interrupt masked!&quot;);
+340                     
+341        1/1                  info_m(&quot;Finished EWL interrupt test&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.INT_EWL_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.MODE_RST_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.MODE_RST_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.MODE_RST_FTEST')">CTU_CAN_FD_TB.MODE_RST_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 91.30</td>
+<td class="s9 cl rt"><a href="mod156.html#Line" > 91.30</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_rst_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_rst_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.MODE_RST_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod156.html" >CTU_CAN_FD_TB.MODE_RST_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>92</td><td>84</td><td>91.30</td></tr>
+<tr class="s8"><td class="lf">VHDL_PROCEDURE</td><td>139</td><td>6</td><td>5</td><td>83.33</td></tr>
+<tr class="s8"><td class="lf">VHDL_PROCEDURE</td><td>157</td><td>14</td><td>12</td><td>85.71</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>190</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>238</td><td>63</td><td>58</td><td>92.06</td></tr>
+</table>
+<pre class="code"><br clear=all>
+138                         begin
+139        1/1                  if (reg.size /= 16 and reg.size /= 8 and reg.size /= 32) then
+140        <font color = "red">0/1     ==>              error_m(&quot;Unsupported register size: &quot; &amp; integer'image(reg.size));</font>
+141                             end if;
+142                     
+143        1/1                  check_m(value'length = reg.size, &quot;Valid register size&quot;);
+144        1/1                  for i in 0 to reg.size - 1 loop
+145        1/1                      if (reg.is_implem(i) = '0') then
+146        1/1                          value(i) := '0';
+147                                 end if;
+148                             end loop;
+149                         end procedure;
+150                     
+151                     
+152                         procedure get_reg_rst_val(
+153                             reg                         : in     t_memory_reg;
+154                             result                      : inout  std_logic_vector
+155                         ) is
+156                         begin
+157        1/1                  if (reg.size = 8) then
+158        1/1                      case reg.address(1 downto 0) is
+159        1/1                      when &quot;00&quot; =&gt; result := reg.reset_val(7 downto 0);
+160        1/1                      when &quot;01&quot; =&gt; result := reg.reset_val(15 downto 8);
+161        1/1                      when &quot;10&quot; =&gt; result := reg.reset_val(23 downto 16);
+162        1/1                      when &quot;11&quot; =&gt; result := reg.reset_val(31 downto 24);
+163                                 when others =&gt;
+164        <font color = "red">0/1     ==>                  error_m(&quot;Address undefined: &quot; &amp; to_string(unsigned(reg.address)));</font>
+165                                 end case;
+166                             end if;
+167                     
+168        1/1                  if (reg.size = 16) then
+169        1/1                      case (reg.address(1)) is
+170        1/1                      when '0' =&gt; result := reg.reset_val(15 downto 0);
+171        1/1                      when '1' =&gt; result := reg.reset_val(31 downto 16);
+172                                 when others =&gt;
+173        <font color = "red">0/1     ==>                  error_m(&quot;Address undefined: &quot; &amp; to_string(unsigned(reg.address)));</font>
+174                                 end case;
+175                             end if;
+176                     
+177        1/1                  if (reg.size = 32) then
+178        1/1                      result := reg.reset_val;
+179                             end if;
+180                         end procedure;
+181                     
+182                     
+183                         procedure test_rw_reg(
+184                                      reg       : in    t_memory_reg;
+185                             variable rand_data : inout std_logic_vector;
+186                             variable read_data : inout std_logic_vector;
+187                             signal channel     : inout t_com_channel
+188                         ) is
+189                         begin
+190        1/1                  mask_reg_val(reg, rand_data);
+191        1/1                  info_m (&quot;Testing RW register at address: &quot; &amp; to_hstring(reg.address) &amp;
+192                                     &quot; size: &quot; &amp; integer'image(reg.size));
+193                             -- When testing MODE register, exceptions:
+194                             --  1. Do not issue soft reset
+195                             --  2. Keep Test mode always on!
+196        1/1                  if (reg.address = MODE_ADR) then
+197        1/1                      rand_data(RST_IND) := '0';
+198        1/1                      rand_data(TSTM_IND) := '1';
+199                             end if;
+200        1/1                  CAN_write(rand_data, reg.address, DUT_NODE, channel);
+201        1/1                  CAN_read(read_data, reg.address, DUT_NODE, channel);
+202        1/1                  mask_reg_val(reg, read_data);
+203        1/1                  check_m(read_data = rand_data, &quot;Address: 0x&quot; &amp;
+204                                     to_hstring(unsigned(reg.address)) &amp;
+205                                     &quot; RW register written! Expected data: 0x&quot; &amp;
+206                                     to_hstring(unsigned(rand_data)) &amp; &quot; Read data: 0x&quot; &amp;
+207                                     to_hstring(unsigned(read_data)));
+208                         end procedure;
+209                     
+210                     
+211                         procedure mode_rst_ftest_exec(
+212                             signal      chn             : inout  t_com_channel
+213                         ) is
+214                             variable r_data_32      : std_logic_vector(31 downto 0) := (OTHERS =&gt; '0');
+215                             variable r_data_16      : std_logic_vector(15 downto 0) := (OTHERS =&gt; '0');
+216                             variable r_data_8       : std_logic_vector(7 downto 0) := (OTHERS =&gt; '0');
+217                     
+218                             variable reg_model      : t_Control_registers_list;
+219                     
+220                             variable rand_data_8    : std_logic_vector(7 downto 0) := (OTHERS =&gt; '0');
+221                             variable rand_data_16   : std_logic_vector(15 downto 0) := (OTHERS =&gt; '0');
+222                             variable rand_data_32   : std_logic_vector(31 downto 0) := (OTHERS =&gt; '0');
+223                     
+224                             variable reg_rst_val_32 : std_logic_vector(31 downto 0) := (OTHERS =&gt; '0');
+225                             variable reg_rst_val_16 : std_logic_vector(15 downto 0) := (OTHERS =&gt; '0');
+226                             variable reg_rst_val_8  : std_logic_vector(7 downto 0) := (OTHERS =&gt; '0');
+227                     
+228                             variable num_txt_bufs   : natural;
+229                     
+230                             variable test_regs_present : boolean;
+231                     
+232                             variable mode           : SW_mode := SW_mode_rst_val;
+233                         begin
+234                     
+235                             -----------------------------------------------------------------------
+236                             -- @1. Write all RW registers to random value. Check they were written.
+237                             -----------------------------------------------------------------------
+238        1/1                  info_m(&quot;Step 1&quot;);
+239        1/1                  for i in 0 to Control_registers_list'length - 1 loop
+240        1/1                      if (Control_registers_list(i).reg_type = reg_read_write) then
+241                     
+242        1/1                          rand_logic_vect_v(rand_data_8, 0.5);
+243        1/1                          rand_logic_vect_v(rand_data_16, 0.5);
+244        1/1                          rand_logic_vect_v(rand_data_32, 0.5);
+245                     
+246                                     ---------------------------------------------------------------
+247                                     -- 8 bit register size
+248                                     ---------------------------------------------------------------
+249        1/1                          if (Control_registers_list(i).size = 8) then
+250        1/1                              test_rw_reg(Control_registers_list(i),
+251                                                     rand_data_8, r_data_8, chn);
+252                     
+253                                     ---------------------------------------------------------------
+254                                     -- 16 bit register size
+255                                     ---------------------------------------------------------------
+256                                     elsif (Control_registers_list(i).size = 16) then
+257        1/1                              test_rw_reg(Control_registers_list(i),
+258                                                     rand_data_16, r_data_16, chn);
+259                     
+260                                     ---------------------------------------------------------------
+261                                     -- 32 bit register size
+262                                     ---------------------------------------------------------------
+263                                     elsif (Control_registers_list(i).size = 32) then
+264        1/1                              test_rw_reg(Control_registers_list(i),
+265                                                     rand_data_32, r_data_32, chn);
+266                     
+267                                     else
+268        <font color = "red">0/1     ==>                      error_m(&quot;Unsupported register size: &quot; &amp;</font>
+269                                                     integer'image(Control_registers_list(i).size));
+270                                     end if;
+271                     
+272                                 end if;
+273                             end loop;
+274                     
+275                             -----------------------------------------------------------------------
+276                             -- @2. Execute SW reset via MODE[RST].
+277                             -----------------------------------------------------------------------
+278        1/1                  info_m(&quot;Step 2&quot;);
+279        1/1                  exec_SW_reset(DUT_NODE, chn);
+280                     
+281                             -----------------------------------------------------------------------
+282                             -- @3. Read all Control registers and check they return their reset
+283                             --     value.
+284                             -----------------------------------------------------------------------
+285        1/1                  info_m(&quot;Step 3 - Control registers&quot;);
+286        1/1                  for i in 0 to Control_registers_list'length - 1 loop
+287                     
+288        1/1                      if (Control_registers_list(i).size = 8) then
+289        1/1                          CAN_read(r_data_8, Control_registers_list(i).address,
+290                                              DUT_NODE, chn);
+291        1/1                          mask_reg_val(Control_registers_list(i), r_data_8);
+292                     
+293        1/1                          get_reg_rst_val(Control_registers_list(i), reg_rst_val_8);
+294        1/1                          mask_reg_val(Control_registers_list(i), reg_rst_val_8);
+295                     
+296        1/1                          check_m(r_data_8 = reg_rst_val_8, &quot;Address: 0x&quot; &amp;
+297                                     to_hstring(unsigned(Control_registers_list(i).address)) &amp;
+298                                     &quot; Reset value! Expected reset value: 0x&quot; &amp;
+299                                         to_hstring(unsigned(reg_rst_val_8)) &amp; &quot; Read data: 0x&quot; &amp;
+300                                         to_hstring(unsigned(r_data_8)));
+301                     
+302                                 elsif (Control_registers_list(i).size = 16) then
+303        1/1                          CAN_read(r_data_16, Control_registers_list(i).address,
+304                                              DUT_NODE, chn);
+305        1/1                          mask_reg_val(Control_registers_list(i), r_data_16);
+306                     
+307        1/1                          get_reg_rst_val(Control_registers_list(i), reg_rst_val_16);
+308        1/1                          mask_reg_val(Control_registers_list(i), reg_rst_val_16);
+309                     
+310        1/1                          check_m(r_data_16 = reg_rst_val_16, &quot;Address: 0x&quot; &amp;
+311                                     to_hstring(unsigned(Control_registers_list(i).address)) &amp;
+312                                     &quot; Reset value! Expected reset value: 0x&quot; &amp;
+313                                         to_hstring(unsigned(reg_rst_val_16)) &amp; &quot; Read data: 0x&quot; &amp;
+314                                         to_hstring(unsigned(r_data_16)));
+315                     
+316                                 elsif (Control_registers_list(i).size = 32) then
+317        1/1                          CAN_read(r_data_32, Control_registers_list(i).address,
+318                                              DUT_NODE, chn);
+319        1/1                          mask_reg_val(Control_registers_list(i), r_data_32);
+320                     
+321        1/1                          get_reg_rst_val(Control_registers_list(i), reg_rst_val_32);
+322        1/1                          mask_reg_val(Control_registers_list(i), reg_rst_val_32);
+323                     
+324                                     -- RX_MEM_INFO register, all bits generic dependant -&gt; Skip!
+325        1/1                          if (Control_registers_list(i).address = RX_MEM_INFO_ADR) then
+326        1/1                              next;
+327                                     end if;
+328                     
+329                                     -- TXTB_INFO is generic dependant -&gt; Get number of TXT Buffers
+330        1/1                          if (Control_registers_list(i).address = TX_STATUS_ADR) then
+331        1/1                              get_tx_buf_count(num_txt_bufs, DUT_NODE, chn);
+332        1/1                              reg_rst_val_32 := (OTHERS =&gt; '0');
+333                     
+334                                         -- Each buffer should be &quot;EMPTY&quot;
+335        1/1                              for bi in 0 to num_txt_bufs - 1 loop
+336        1/1                                  reg_rst_val_32((bi + 1) * 4 - 1 downto bi * 4) := &quot;1000&quot;;
+337                                         end loop;
+338                                     end if;
+339                     
+340                                     -- Timestamp High/Low registers reflect current value of external
+341                                     -- input -&gt; skip them!
+342        1/1                          if (Control_registers_list(i).address = TIMESTAMP_LOW_ADR or
+343                                         Control_registers_list(i).address = TIMESTAMP_HIGH_ADR)
+344                                     then
+345        1/1                              next;
+346                                     end if;
+347                     
+348                                     -- STATUS register -&gt; Mask STCNT, STRGS and SPRT bits
+349        1/1                          if (Control_registers_list(i).address = STATUS_ADR) then
+350        1/1                              r_data_32(STCNT_IND) := '0';
+351        1/1                              r_data_32(STRGS_IND) := '0';
+352        1/1                              r_data_32(SPRT_IND)  := '0';
+353                                     end if;
+354                     
+355        1/1                          check_m(r_data_32 = reg_rst_val_32, &quot;Address: 0x&quot; &amp;
+356                                     to_hstring(unsigned(Control_registers_list(i).address)) &amp;
+357                                     &quot; Reset value! Expected reset value: 0x&quot; &amp;
+358                                         to_hstring(unsigned(reg_rst_val_32)) &amp; &quot; Read data: 0x&quot; &amp;
+359                                         to_hstring(unsigned(r_data_32)));
+360                                 else
+361        <font color = "red">0/1     ==>                  error_m(&quot;Unsupported register size: &quot; &amp;</font>
+362                                                 integer'image(Control_registers_list(i).size));
+363                                 end if;
+364                     
+365                             end loop;
+366                     
+367                             -----------------------------------------------------------------------
+368                             -- @4. Check if Test registers are present and test all read write
+369                             --     registers in test registers.
+370                             -----------------------------------------------------------------------
+371        1/1                  info_m(&quot;Step 4 - Test Test registers&quot;);
+372                     
+373        1/1                  CAN_check_test_registers(test_regs_present, DUT_NODE, chn);
+374                     
+375        1/1                  if (test_regs_present) then
+376                     
+377                                 -- Enable Test mode since test registers are accessible only in
+378                                 -- Test mode
+379        1/1                      mode.test := true;
+380        1/1                      set_core_mode(mode, DUT_NODE, chn);
+381                     
+382        1/1                      for i in 0 to Test_registers_list'length - 1 loop
+383        1/1                          if (Test_registers_list(i).reg_type = reg_read_write) then
+384        1/1                              rand_logic_vect_v(rand_data_8, 0.5);
+385        1/1                              rand_logic_vect_v(rand_data_16, 0.5);
+386        1/1                              rand_logic_vect_v(rand_data_32, 0.5);
+387                     
+388                                         -- Do not write Write strobe. It is auto-clear, so it cant
+389                                         -- be read back! Also, disable test mode access, since
+390                                         -- random address which overflows memory boundary can be
+391                                         -- set by this test!
+392        1/1                              if (Test_registers_list(i).address = TST_CONTROL_ADR) then
+393        1/1                                  rand_data_32(TWRSTB_IND) := '0';
+394        1/1                                  rand_data_32(TMAENA_IND) := '0';
+395                                         end if;
+396                     
+397                                         -----------------------------------------------------------
+398                                         -- 8 bit register size
+399                                         -----------------------------------------------------------
+400        1/1                              if (Test_registers_list(i).size = 8) then
+401        <font color = "red">0/1     ==>                          test_rw_reg(Test_registers_list(i),</font>
+402                                                         rand_data_8, r_data_8, chn);
+403                     
+404                                         -----------------------------------------------------------
+405                                         -- 16 bit register size
+406                                         -----------------------------------------------------------
+407                                         elsif (Test_registers_list(i).size = 16) then
+408        <font color = "red">0/1     ==>                          test_rw_reg(Test_registers_list(i),</font>
+409                                                         rand_data_16, r_data_16, chn);
+410                     
+411                                         -----------------------------------------------------------
+412                                         -- 32 bit register size
+413                                         -----------------------------------------------------------
+414                                         elsif (Test_registers_list(i).size = 32) then
+415        1/1                                  test_rw_reg(Test_registers_list(i),
+416                                                         rand_data_32, r_data_32, chn);
+417                     
+418                                         else
+419        <font color = "red">0/1     ==>                          error_m(&quot;Unsupported register size: &quot; &amp;</font>
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.MODE_RST_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

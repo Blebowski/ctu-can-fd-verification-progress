@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.ERR_CAPT_DATA_BIT_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_DATA_BIT_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.ERR_CAPT_DATA_BIT_FTEST')">CTU_CAN_FD_TB.ERR_CAPT_DATA_BIT_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod337.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_data_bit_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_data_bit_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_DATA_BIT_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod337.html" >CTU_CAN_FD_TB.ERR_CAPT_DATA_BIT_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>30</td><td>30</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>127</td><td>30</td><td>30</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+126                             -----------------------------------------------------------------------
+127        1/1                  info_m(&quot;Step 1&quot;);
+128                     
+129        1/1                  CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+130        1/1                  check_m(err_capt.err_pos = err_pos_other, &quot;Reset of ERR_CAPT!&quot;);
+131                     
+132                             -----------------------------------------------------------------------
+133                             -- @2. Generate CAN frame, send it by DUT. Wait until data field.
+134                             --    Wait for random duration of data field. Force bus to opposite
+135                             --    value as transmitted bit wait until sample point. Check that
+136                             --    error frame is being transmitted. Check that ERR_CAPT signals bit
+137                             --    error in data field!
+138                             -----------------------------------------------------------------------
+139        1/1                  info_m(&quot;Step 2&quot;);
+140                     
+141        1/1                  CAN_generate_frame(frame_1);
+142        1/1                  frame_1.rtr := NO_RTR_FRAME;
+143                             
+144                             -- Don't sample by SSP!
+145        1/1                  frame_1.brs := BR_NO_SHIFT;
+146                             
+147        1/1                  if (frame_1.data_length = 0) then
+148        1/1                      frame_1.data_length := 1;
+149        1/1                      decode_length(frame_1.data_length, frame_1.dlc);
+150                             end if;
+151                             
+152        1/1                  CAN_send_frame(frame_1, 1, DUT_NODE, chn, frame_sent);
+153        1/1                  CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+154        1/1                  CAN_wait_pc_state(pc_deb_data, DUT_NODE, chn);
+155                     
+156                             -- Wait for random number of bits within data field
+157        1/1                  rand_int_v((frame_1.data_length * 8) - 1, tmp);
+158        1/1                  info_m(&quot;Waiting for: &quot; &amp; integer'image(tmp) &amp; &quot; bits!&quot;);
+159        1/1                  for i in 0 to tmp - 1 loop
+160        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+161                             end loop;
+162                     
+163        1/1                  CAN_wait_sync_seg(DUT_NODE, chn);
+164        1/1                  wait for 20 ns;
+165                     
+166        1/1                  get_can_tx(DUT_NODE, tx_bus_level, chn);
+167        1/1                  force_bus_level(not tx_bus_level, chn);
+168        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+169        1/1                  wait for 20 ns; -- To be sure that opposite bit is sampled!
+170        1/1                  release_bus_level(chn);
+171                             
+172        1/1                  get_controller_status(stat_1, DUT_NODE, chn);
+173        1/1                  check_m(stat_1.error_transmission, &quot;Error frame is being transmitted!&quot;);
+174                             
+175        1/1                  CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+176        1/1                  check_m(err_capt.err_type = can_err_bit, &quot;Bit error detected!&quot;);
+177        1/1                  check_m(err_capt.err_pos = err_pos_data, &quot;Error detected in Data field!&quot;);
+178                             
+179        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.ERR_CAPT_DATA_BIT_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

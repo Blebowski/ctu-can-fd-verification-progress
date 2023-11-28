@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.FRAME_TEST_IGNORE_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.FRAME_TEST_IGNORE_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.FRAME_TEST_IGNORE_FTEST')">CTU_CAN_FD_TB.FRAME_TEST_IGNORE_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod184.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/frame_test_ignore_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/frame_test_ignore_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.FRAME_TEST_IGNORE_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod184.html" >CTU_CAN_FD_TB.FRAME_TEST_IGNORE_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>58</td><td>58</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>121</td><td>17</td><td>17</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>194</td><td>41</td><td>41</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+120                             -- Record DLC
+121        1/1                  output_dlc := (others =&gt; '0');
+122        1/1                  CAN_wait_pc_state(pc_deb_control, DUT_NODE, chn);
+123                             
+124                             -- Fixed frame format assumed since Frame is with Base identifier and CAN FD.
+125                             -- IDE, EDL, r0, BRS, ESI
+126        1/1                  for i in 0 to 4 loop
+127        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+128                             end loop;
+129                     
+130        1/1                  for i in 0 to 3 loop
+131        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+132        1/1                      get_can_tx(DUT_NODE, output_dlc(3 - i), chn);
+133                             end loop;
+134                     
+135                             -- Record stuff count
+136        1/1                  output_stc := (others =&gt; '0');
+137        1/1                  CAN_wait_pc_state(pc_deb_stuff_count, DUT_NODE, chn);
+138                             
+139        1/1                  for i in 0 to 3 loop
+140        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+141        1/1                      get_can_tx(DUT_NODE, output_stc(i), chn);
+142                             end loop;
+143                     
+144                             -- Record CRC
+145        1/1                  output_crc := (others =&gt; '0');
+146        1/1                  CAN_wait_pc_state(pc_deb_crc, DUT_NODE, chn);
+147                             
+148        1/1                  for i in 0 to crc_length - 1 loop
+149        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+150        1/1                      get_can_tx(DUT_NODE, output_crc(i), chn);
+151                             end loop;
+152                         end procedure;
+153                     
+154                     
+155                         procedure frame_test_ignore_ftest_exec(
+156                             signal      chn             : inout  t_com_channel
+157                         ) is
+158                             variable CAN_TX_frame       :       SW_CAN_frame_type;
+159                             variable CAN_RX_frame       :       SW_CAN_frame_type;
+160                             variable frame_sent         :       boolean := false;
+161                             variable frames_equal       :       boolean := false;
+162                             variable mode_1             :       SW_mode := SW_mode_rst_val;
+163                             
+164                             variable err_counters       :       SW_error_counters := (0, 0, 0, 0);
+165                             variable err_counters_2     :       SW_error_counters := (0, 0, 0, 0);
+166                     
+167                             variable fault_th           :       SW_fault_thresholds;
+168                             variable fault_th_2         :       SW_fault_thresholds;
+169                     
+170                             variable txt_buf_count      :       natural;
+171                             variable tmp_int            :       natural;
+172                             variable txt_buf_index      :       natural;
+173                     
+174                             variable status_1           :       SW_status;
+175                     
+176                             variable txt_buf_vector     :       std_logic_vector(7 downto 0) := x&quot;00&quot;;
+177                             variable txt_buf_state      :       SW_TXT_Buffer_state_type;
+178                     
+179                             variable golden_dlc         :       std_logic_vector(3 downto 0);
+180                             variable golden_crc         :       std_logic_vector(20 downto 0);
+181                             variable golden_stc         :       std_logic_vector(3 downto 0);
+182                     
+183                             variable real_dlc           :       std_logic_vector(3 downto 0);
+184                             variable real_crc           :       std_logic_vector(20 downto 0);
+185                             variable real_stc           :       std_logic_vector(3 downto 0);
+186                     
+187                             variable tprm               :       natural;
+188                             variable crc_length         :       natural;
+189                         begin
+190                     
+191                             -----------------------------------------------------------------------
+192                             -- @1. Disable test mode in DUT.
+193                             -----------------------------------------------------------------------
+194        1/1                  info_m(&quot;Step 1&quot;);
+195                     
+196        1/1                  mode_1.test := false;
+197        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+198                             
+199        1/1                  get_tx_buf_count(txt_buf_count, DUT_NODE, chn);
+200                     
+201                             -----------------------------------------------------------------------
+202                             -- @2. Generate random CAN FD frame. Set FRAME_TEST_W so that no CRC,
+203                             --     Stuff count bit is flipped, no DLC is swapped. Send the can
+204                             --     frame by DUT. Record transmitted value of DLC, Stuff count and
+205                             --     CRC.
+206                             -----------------------------------------------------------------------
+207        1/1                  info_m(&quot;Step 2&quot;);
+208                     
+209        1/1                  CAN_generate_frame(CAN_TX_frame);
+210        1/1                  CAN_TX_frame.frame_format := FD_CAN;
+211        1/1                  CAN_TX_frame.ident_type := BASE;
+212        1/1                  CAN_TX_frame.identifier := CAN_TX_frame.identifier mod 2**11;
+213        1/1                  info_m(&quot;Transmitted frame:&quot;);
+214        1/1                  CAN_print_frame(CAN_TX_frame);
+215                     
+216        1/1                  if (CAN_TX_frame.data_length &gt; 16) then
+217        1/1                      crc_length := 21;
+218                             else
+219        1/1                      crc_length := 17;
+220                             end if;
+221                     
+222        1/1                  pick_random_txt_buffer(txt_buf_index, DUT_NODE, chn);
+223        1/1                  CAN_insert_TX_frame(CAN_TX_frame, txt_buf_index, DUT_NODE, chn);
+224                     
+225        1/1                  CAN_set_frame_test(txt_buf_index, 0, false, false, false,
+226                                                DUT_NODE, chn);
+227                     
+228        1/1                  send_TXT_buf_cmd(buf_set_ready, txt_buf_index, DUT_NODE, chn);
+229                     
+230        1/1                  record_dlc_stc_crc(crc_length, golden_dlc, golden_stc, golden_crc, chn);
+231                     
+232        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+233                     
+234                             -----------------------------------------------------------------------
+235                             -- @3. Set FRAME_TEST_W so that Stuff count, CRC shall be flipped, and
+236                             --     DLC shall be swapped. Keep MODE[TSTM] = 0. Send the same CAN
+237                             --     frame as in previous step, and again record transmitted value
+238                             --     of DLC, stuff count and CRC. Check that transmitted values
+239                             --     match (nothing was flipped).
+240                             -----------------------------------------------------------------------
+241        1/1                  info_m(&quot;Step 3&quot;);
+242                     
+243        1/1                  CAN_insert_TX_frame(CAN_TX_frame, txt_buf_index, DUT_NODE, chn);
+244                     
+245                             -- Attempt to swap DLC, bit-flip CRC and Stuff count fields.
+246        1/1                  rand_int_v(15, tprm);
+247        1/1                  CAN_set_frame_test(txt_buf_index, tprm, true, true, true,
+248                                                DUT_NODE, chn);
+249                     
+250        1/1                  send_TXT_buf_cmd(buf_set_ready, txt_buf_index, DUT_NODE, chn);
+251                     
+252        1/1                  record_dlc_stc_crc(crc_length, real_dlc, real_stc, real_crc, chn);
+253                     
+254        1/1                  wait for 50 ns;
+255                     
+256        1/1                  info_m(&quot;*******************************************************&quot;);
+257        1/1                  info_m(&quot;Golden DLC:         &quot; &amp; to_string(golden_dlc));
+258        1/1                  info_m(&quot;Golden Stuff count: &quot; &amp; to_string(golden_stc));
+259        1/1                  info_m(&quot;Golden CRC:         &quot; &amp; to_string(golden_crc));
+260        1/1                  info_m(&quot;*******************************************************&quot;);
+261        1/1                  info_m(&quot;Real DLC:           &quot; &amp; to_string(real_dlc));
+262        1/1                  info_m(&quot;Real Stuff count:   &quot; &amp; to_string(real_stc));
+263        1/1                  info_m(&quot;Real CRC:           &quot; &amp; to_string(real_crc));
+264        1/1                  info_m(&quot;*******************************************************&quot;);
+265                             
+266        1/1                  check_m(golden_dlc = real_dlc, &quot;DLC match&quot;);
+267        1/1                  check_m(golden_stc = real_stc, &quot;Stuff count match&quot;);
+268        1/1                  check_m(golden_crc = real_crc, &quot;CRC match&quot;);
+269                     
+270        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+271        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.FRAME_TEST_IGNORE_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

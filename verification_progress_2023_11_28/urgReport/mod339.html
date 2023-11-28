@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TRV_DELAY_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TRV_DELAY_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TRV_DELAY_FTEST')">CTU_CAN_FD_TB.TRV_DELAY_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 97.22</td>
+<td class="s9 cl rt"><a href="mod339.html#Line" > 97.22</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/trv_delay_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/trv_delay_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TRV_DELAY_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod339.html" >CTU_CAN_FD_TB.TRV_DELAY_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>72</td><td>70</td><td>97.22</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>141</td><td>72</td><td>70</td><td>97.22</td></tr>
+</table>
+<pre class="code"><br clear=all>
+140                             -----------------------------------------------------------------------
+141        1/1                  info_m(&quot;Step 1&quot;);
+142                     
+143        1/1                  CAN_turn_controller(false, DUT_NODE, chn);
+144        1/1                  CAN_turn_controller(false, TEST_NODE, chn);
+145                     
+146                             -- Should be 250 Kbit/s
+147        1/1                  bus_timing.prop_nbt := 37;
+148        1/1                  bus_timing.ph1_nbt := 37;
+149        1/1                  bus_timing.ph2_nbt := 25;
+150        1/1                  bus_timing.tq_nbt := 4;
+151        1/1                  bus_timing.sjw_nbt := 5;
+152                     
+153                             -- Should be 2 Mbit/s
+154        1/1                  bus_timing.prop_dbt := 10;
+155        1/1                  bus_timing.ph1_dbt := 20;
+156        1/1                  bus_timing.ph2_dbt := 19;
+157        1/1                  bus_timing.tq_dbt := 1;
+158        1/1                  bus_timing.sjw_dbt := 5;
+159                     
+160        1/1                  CAN_configure_timing(bus_timing, DUT_NODE, chn);
+161        1/1                  CAN_configure_timing(bus_timing, TEST_NODE, chn);
+162                     
+163        1/1                  CAN_configure_ssp(ssp_meas_n_offset, &quot;00000111&quot;, DUT_NODE, chn);
+164        1/1                  CAN_configure_ssp(ssp_meas_n_offset, &quot;00000111&quot;, TEST_NODE, chn);
+165                     
+166                             -- Turn the controllers on!
+167        1/1                  CAN_turn_controller(true, DUT_NODE, chn);
+168        1/1                  CAN_turn_controller(true, TEST_NODE, chn);
+169                     
+170                             -- Wait till integration is over!
+171        1/1                  CAN_wait_bus_on(DUT_NODE, chn);
+172        1/1                  CAN_wait_bus_on(TEST_NODE, chn);
+173                             
+174                             -----------------------------------------------------------------------
+175                             -- @2. Configure delay to 1 ns in TB. Run CAN FD frame and verify that
+176                             --     measured delay is correct! 
+177                             -----------------------------------------------------------------------
+178        1/1                  info_m(&quot;Step 2&quot;);
+179        1/1                  ftr_tb_set_tran_delay(1 ns, DUT_NODE, chn);
+180        1/1                  CAN_generate_frame(CAN_TX_frame);
+181        1/1                  CAN_TX_frame.rtr := NO_RTR_FRAME;
+182        1/1                  CAN_TX_frame.frame_format := FD_CAN;
+183        1/1                  CAN_TX_frame.brs := BR_SHIFT;
+184                     
+185        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+186        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+187                     
+188        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+189        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+190                     
+191        1/1                  read_trv_delay(measured_delay, DUT_NODE, chn);
+192                             
+193                             -- Measured delay is always rounded up to nearest multiple of 10 ns
+194                             -- (Delay of 1 ns -&gt; 10 ns -&gt; 1)!
+195        1/1                  check_m(measured_delay = 2, &quot;Minimal transmitter delay!&quot; &amp;
+196                                   &quot; Expected: &quot; &amp; integer'image(2) &amp;
+197                                   &quot; Measured: &quot; &amp; integer'image(measured_delay));
+198                     
+199        1/1                  CAN_read_frame(CAN_RX_frame, TEST_NODE, chn);
+200        1/1                  CAN_compare_frames(CAN_RX_frame, CAN_TX_frame, false, frames_equal);
+201                             
+202        1/1                  check_m(frames_equal, &quot;TX RX frames match&quot;);
+203                     
+204                             -----------------------------------------------------------------------
+205                             -- @3. Configure delay to 1255 ns in TB. Run CAN FD frame and verify
+206                             --     that measured delay is 127.
+207                             -----------------------------------------------------------------------
+208        1/1                  info_m(&quot;Step 3&quot;);
+209        1/1                  ftr_tb_set_tran_delay(1255 ns, DUT_NODE, chn);
+210                     
+211        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+212        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+213                     
+214        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+215        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+216                     
+217        1/1                  read_trv_delay(measured_delay, DUT_NODE, chn);
+218                             
+219                             -- Measured delay is always rounded up to nearest multiple of 10 ns
+220                             -- (Delay of 1255 ns -&gt; 1250 -&gt; 125 + 2 synchronisation cycles = 127)!
+221        1/1                  check_m(measured_delay = 127, &quot;Maximal transmitter delay!&quot; &amp;
+222                                   &quot; Expected: &quot; &amp; integer'image(127) &amp;
+223                                   &quot; Measured: &quot; &amp; integer'image(measured_delay));
+224                     
+225        1/1                  CAN_read_frame(CAN_RX_frame, TEST_NODE, chn);
+226        1/1                  CAN_compare_frames(CAN_RX_frame, CAN_TX_frame, false, frames_equal);
+227                     
+228        1/1                  check_m(frames_equal, &quot;TX RX frames match&quot;);
+229                     
+230                             -----------------------------------------------------------------------
+231                             -- @4. Configure Transmitter delay to 130. Run CAN FD frame and verify
+232                             --     that measured value is 127 (value has not overflown!).
+233                             -----------------------------------------------------------------------
+234        1/1                  info_m(&quot;Step 4&quot;);
+235        1/1                  ftr_tb_set_tran_delay(1305 ns, DUT_NODE, chn);
+236                     
+237        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+238        1/1                  CAN_wait_frame_sent(TEST_NODE, chn);
+239                     
+240        1/1                  read_trv_delay(measured_delay, DUT_NODE, chn);
+241                             
+242                             -- Measured delay should have saturated at 127!
+243        1/1                  check_m(measured_delay = 127, &quot;Saturated transmitter delay!&quot; &amp;
+244                                   &quot; Expected: &quot; &amp; integer'image(127) &amp;
+245                                   &quot; Measured: &quot; &amp; integer'image(measured_delay));
+246                     
+247                             -- Now CAN frame should pass because SSP Offset is high enough that
+248                             -- it will compensate for missing delay caused by saturation!
+249                     
+250        1/1                  CAN_read_frame(CAN_RX_frame, TEST_NODE, chn);
+251        1/1                  CAN_compare_frames(CAN_RX_frame, CAN_TX_frame, false, frames_equal);
+252                     
+253        1/1                  check_m(frames_equal, &quot;TX RX frames match&quot;);
+254                     
+255                             -----------------------------------------------------------------------
+256                             --  @5. Configure transmitter delay to random value between 0 and 126.
+257                             --      Run CAN FD frame and check it is measured correctly!
+258                             -----------------------------------------------------------------------
+259        1/1                  info_m(&quot;Step 5&quot;);
+260                     
+261        1/1                  rand_int_v(1259, rand_time);
+262        1/1                  if (rand_time = 0) then
+263        <font color = "red">0/1     ==>              rand_time := 1;</font>
+264                             end if;
+265                     
+266                             -----------------------------------------------------------------------
+267                             -- Here we avoid explicit multiples of 10 ns! The reason is following:
+268                             --  When delay is e.g. 120 ns, then value will arrive at CAN RX when
+269                             --  rising_edge is active. Therefore sampled value might, or might not
+270                             --  be processed by clock based on which delta cycle was processed
+271                             --  first (Since signal delayer does not work with system clocks, it
+272                             --  might not be processed the same way as e.g. shift register!)
+273                             --  This would cause occasional test failures based on which process
+274                             --  was executed first (either rising_edge sampling the data, or data
+275                             --  delayed by signal delayer).
+276                             -----------------------------------------------------------------------
+277        1/1                  if (rand_time mod 10 = 0) then
+278        <font color = "red">0/1     ==>              rand_time := rand_time + 1;</font>
+279                             end if;
+280                             
+281        1/1                  info_m(&quot;Random time is: &quot; &amp; integer'image(rand_time) &amp; &quot; ns&quot;);
+282        1/1                  ftr_tb_set_tran_delay((rand_time * 1 ns), DUT_NODE, chn);
+283                     
+284        1/1                  CAN_send_frame(CAN_TX_frame, 1, DUT_NODE, chn, frame_sent);
+285        1/1                  CAN_wait_frame_sent(TEST_NODE, chn);
+286                     
+287        1/1                  read_trv_delay(measured_delay, DUT_NODE, chn);
+288                     
+289                             -- Ceil will give us one more clock cycle. We need one more to
+290                             -- compensate full input delay.
+291        1/1                  rand_time_ceiled := integer(ceil(real(rand_time) / 10.0)) + 1;
+292                     
+293                             -- Measured delay is always rounded up to nearest multiple of 10 ns
+294        1/1                  check_m(measured_delay = rand_time_ceiled, &quot;Random transmitter delay!&quot; &amp;
+295                                   &quot; Expected: &quot; &amp; integer'image(rand_time_ceiled) &amp;
+296                                   &quot; Measured: &quot; &amp; integer'image(measured_delay));
+297                     
+298                             -- Now CAN frame should pass because SSP Offset is high enough that
+299                             -- it will compensate for missing delay caused by saturation!
+300                     
+301        1/1                  CAN_read_frame(CAN_RX_frame, TEST_NODE, chn);
+302        1/1                  CAN_compare_frames(CAN_RX_frame, CAN_TX_frame, false, frames_equal);
+303                     
+304        1/1                  check_m(frames_equal, &quot;TX RX frames match&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TRV_DELAY_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

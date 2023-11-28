@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TX_COUNTER_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TX_COUNTER_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TX_COUNTER_FTEST')">CTU_CAN_FD_TB.TX_COUNTER_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod155.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tx_counter_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tx_counter_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TX_COUNTER_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod155.html" >CTU_CAN_FD_TB.TX_COUNTER_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>52</td><td>52</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>142</td><td>52</td><td>52</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+141                             ------------------------------------------------------------------------
+142        1/1                  info_m(&quot;Step 1: Read initial counter values.&quot;);
+143                             
+144        1/1                  read_traffic_counters(ctrs_1, DUT_NODE, chn);
+145        1/1                  CAN_enable_retr_limit(true, 0, TEST_NODE, chn);
+146                             
+147                             ------------------------------------------------------------------------
+148                             --  @2. Send frame from DUT. Wait until EOF field. Read TX counter and
+149                             --      check it did not change yet.
+150                             ------------------------------------------------------------------------
+151        1/1                  info_m(&quot;Step 2: Send frame by DUT!&quot;);
+152                             
+153        1/1                  CAN_generate_frame(CAN_frame);
+154        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+155                             
+156        1/1                  CAN_wait_pc_state(pc_deb_eof, DUT_NODE, chn);
+157        1/1                  read_traffic_counters(ctrs_2, DUT_NODE, chn);
+158                             
+159        1/1                  check_m(ctrs_1.tx_frames = ctrs_2.tx_frames,
+160                                 &quot;TX counter unchanged before EOF!&quot;);
+161        1/1                  check_m(ctrs_1.rx_frames = ctrs_2.rx_frames,
+162                                 &quot;RX counter unchanged before EOF!&quot;);
+163                             
+164                             ------------------------------------------------------------------------
+165                             --  @3. Wait until the end of EOF. Read TX counter and check it was 
+166                             --     incremented. Read RX counter and check it is not incremented!       
+167                             ------------------------------------------------------------------------
+168        1/1                  info_m(&quot;Step 3: Check TX, RX counters after frame.&quot;);
+169                             
+170        1/1                  CAN_wait_not_pc_state(pc_deb_eof, DUT_NODE, chn);
+171        1/1                  read_traffic_counters(ctrs_3, DUT_NODE, chn);
+172                             
+173        1/1                  check_m(ctrs_1.tx_frames + 1 = ctrs_3.tx_frames,
+174                                 &quot;TX counter changed after EOF!&quot;);
+175        1/1                  check_m(ctrs_1.rx_frames = ctrs_3.rx_frames,
+176                                 &quot;RX counter unchanged after EOF!&quot;);
+177                             
+178        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+179                     
+180                             ------------------------------------------------------------------------
+181                             --  @4. Send Frame from DUT. Wait till ACK field. Corrupt ACK field to
+182                             --     be recessive. Wait till DUT is not in ACK field anymore. Check
+183                             --     DUT is transmitting Error frame.
+184                             ------------------------------------------------------------------------
+185        1/1                  info_m(&quot;Step 4: Send frame and force ACK recessive!&quot;);
+186                             
+187        1/1                  CAN_generate_frame(CAN_frame);
+188        1/1                  CAN_frame.frame_format := NORMAL_CAN;
+189        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+190                             
+191        1/1                  CAN_wait_pc_state(pc_deb_ack, DUT_NODE, chn);
+192        1/1                  force_bus_level(RECESSIVE, chn);
+193        1/1                  CAN_wait_not_pc_state(pc_deb_ack, DUT_NODE, chn);
+194                             
+195        1/1                  get_controller_status(status, DUT_NODE, chn);
+196        1/1                  check_m(status.error_transmission, &quot;Error frame is being transmitted!&quot;);
+197                             
+198        1/1                  release_bus_level(chn);
+199                             
+200                             ------------------------------------------------------------------------
+201                             -- @5. Wait until Test node also starts transmitting error frame. Wait until
+202                             --    bus is idle, check that TX Counter was not incremented.
+203                             ------------------------------------------------------------------------
+204        1/1                  info_m(&quot;Step 5: Wait until error frame!&quot;);
+205                             
+206        1/1                  CAN_wait_error_frame(TEST_NODE, chn);    
+207        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+208                             
+209        1/1                  read_traffic_counters(ctrs_4, DUT_NODE, chn);
+210                             
+211        1/1                  check_m(ctrs_3.tx_frames = ctrs_4.tx_frames,
+212                                 &quot;TX counter unchanged after Error frame!&quot;);
+213        1/1                  check_m(ctrs_3.rx_frames = ctrs_4.rx_frames,
+214                                 &quot;RX counter unchanged after Error frame!&quot;);
+215                             
+216                             ------------------------------------------------------------------------
+217                             -- @6. Send random amount of frames by DUT and check that TX counter
+218                             --    was incremented by N!
+219                             ------------------------------------------------------------------------
+220        1/1                  info_m(&quot;Step 6: Send N random frames!&quot;);
+221                             
+222        1/1                  rand_int_v(6, rand_value);
+223        1/1                  for i in 0 to rand_value - 1 loop
+224        1/1                      CAN_generate_frame(CAN_frame);
+225        1/1                      CAN_send_frame(CAN_frame, 2, DUT_NODE, chn, frame_sent);
+226        1/1                      CAN_wait_frame_sent(DUT_NODE, chn);
+227                             end loop;
+228                     
+229                             ------------------------------------------------------------------------
+230                             -- @7. Check that TX counter was incremented by N!
+231                             ------------------------------------------------------------------------
+232        1/1                  info_m(&quot;Step 7: Check TX counter was incremented by N!&quot;);
+233                             
+234        1/1                  read_traffic_counters(ctrs_5, DUT_NODE, chn);
+235        1/1                  check_m(ctrs_4.tx_frames + rand_value = ctrs_5.tx_frames,
+236                                   &quot;TX Frames counter incremented by: &quot; &amp; integer'image(rand_value));
+237                     
+238                             ------------------------------------------------------------------------
+239                             --  @8. Issue COMMAND[RXFRCRST] and check TX counter was NOT cleared in 
+240                             --      DUT.
+241                             ------------------------------------------------------------------------
+242        1/1                  info_m(&quot;Step 8&quot;);
+243                             
+244        1/1                  command.rx_frame_ctr_rst := true;
+245        1/1                  give_controller_command(command, DUT_NODE, chn);
+246        1/1                  read_traffic_counters(ctrs_1, DUT_NODE, chn);
+247        1/1                  check_m(ctrs_1.tx_frames = ctrs_5.tx_frames,
+248                                   &quot;TX counter not cleared by COMMAND[RXFRCRST]&quot;);
+249                     
+250                             ------------------------------------------------------------------------
+251                             --  @9. Issue COMMAND[TXFRCRST] and check TX counter was cleared in 
+252                             --      DUT.
+253                             ------------------------------------------------------------------------
+254        1/1                  info_m(&quot;Step 9&quot;);
+255                     
+256        1/1                  command.rx_frame_ctr_rst := false;
+257        1/1                  command.tx_frame_ctr_rst := true;
+258        1/1                  give_controller_command(command, DUT_NODE, chn);
+259        1/1                  read_traffic_counters(ctrs_1, DUT_NODE, chn);
+260        1/1                  check_m(ctrs_1.tx_frames = 0, &quot;TX counter cleared by COMMAND[TXFRCRST]&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TX_COUNTER_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

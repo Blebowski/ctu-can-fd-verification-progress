@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.INTERRUPT_AGENT_PKG</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.INTERRUPT_AGENT_PKG'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.INTERRUPT_AGENT_PKG')">CTU_CAN_FD_TB.INTERRUPT_AGENT_PKG</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s4 cl rt"> 42.86</td>
+<td class="s4 cl rt"><a href="mod34.html#Line" > 42.86</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/agents/interrupt_agent/interrupt_agent_pkg.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/agents/interrupt_agent/interrupt_agent_pkg.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.INTERRUPT_AGENT_PKG'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod34.html" >CTU_CAN_FD_TB.INTERRUPT_AGENT_PKG</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s4"><td class="lf">TOTAL</td><td></td><td>14</td><td>6</td><td>42.86</td></tr>
+<tr class="s0"><td class="lf">VHDL_PROCEDURE</td><td>173</td><td>4</td><td>0</td><td>0.00</td></tr>
+<tr class="s0"><td class="lf">VHDL_PROCEDURE</td><td>185</td><td>4</td><td>0</td><td>0.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>196</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>206</td><td>3</td><td>3</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+172                         begin
+173        <font color = "red">0/1     ==>          info_m(INTERRUPT_AGENT_TAG &amp; &quot;Setting polarity&quot;);</font>
+174        <font color = "red">0/1     ==>          com_channel_data.set_param(polarity);</font>
+175        <font color = "red">0/1     ==>          send(channel, C_INTERRUPT_AGENT_ID, INTERRUPT_AGNT_CMD_POLARITY_SET);</font>
+176        <font color = "red">0/1     ==>          debug_m(INTERRUPT_AGENT_TAG &amp; &quot;Polarity set&quot;);</font>
+177                         end procedure;
+178                     
+179                     
+180                         procedure interrupt_agent_polarity_get(
+181                             signal   channel     : inout t_com_channel;
+182                             variable polarity    : out   std_logic
+183                         )is
+184                         begin
+185        <font color = "red">0/1     ==>          info_m(INTERRUPT_AGENT_TAG &amp; &quot;Getting polarity&quot;);</font>
+186        <font color = "red">0/1     ==>          send(channel, C_INTERRUPT_AGENT_ID, INTERRUPT_AGNT_CMD_POLARITY_GET);</font>
+187        <font color = "red">0/1     ==>          polarity := com_channel_data.get_param;</font>
+188        <font color = "red">0/1     ==>          debug_m(INTERRUPT_AGENT_TAG &amp; &quot;Polarity got&quot;);</font>
+189                         end procedure;
+190                     
+191                     
+192                         procedure interrupt_agent_check_asserted(
+193                             signal   channel     : inout t_com_channel
+194                         )is
+195                         begin
+196        1/1                  info_m(INTERRUPT_AGENT_TAG &amp; &quot;Checking asserted&quot;);
+197        1/1                  send(channel, C_INTERRUPT_AGENT_ID, INTERRUPT_AGNT_CMD_CHECK_ASSERTED);
+198        1/1                  debug_m(INTERRUPT_AGENT_TAG &amp; &quot;Asserted checked&quot;);
+199                         end procedure;
+200                     
+201                     
+202                         procedure interrupt_agent_check_not_asserted(
+203                             signal   channel     : inout t_com_channel
+204                         )is
+205                         begin
+206        1/1                  info_m(INTERRUPT_AGENT_TAG &amp; &quot;Checking not asserted&quot;);
+207        1/1                  send(channel, C_INTERRUPT_AGENT_ID, INTERRUPT_AGNT_CMD_CHECK_NOT_ASSERTED);
+208        1/1                  debug_m(INTERRUPT_AGENT_TAG &amp; &quot;Not asserted checked&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.INTERRUPT_AGENT_PKG">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TB_REPORT_PKG</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TB_REPORT_PKG'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TB_REPORT_PKG')">CTU_CAN_FD_TB.TB_REPORT_PKG</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s6 cl rt"> 65.00</td>
+<td class="s6 cl rt"><a href="mod211.html#Line" > 65.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/pkg/tb_report_pkg.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/pkg/tb_report_pkg.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TB_REPORT_PKG'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod211.html" >CTU_CAN_FD_TB.TB_REPORT_PKG</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s6"><td class="lf">TOTAL</td><td></td><td>20</td><td>13</td><td>65.00</td></tr>
+<tr class="s0"><td class="lf">VHDL_PROCEDURE</td><td>136</td><td>1</td><td>0</td><td>0.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>144</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>156</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s0"><td class="lf">VHDL_PROCEDURE</td><td>169</td><td>3</td><td>0</td><td>0.00</td></tr>
+<tr class="s5"><td class="lf">VHDL_PROCEDURE</td><td>183</td><td>2</td><td>1</td><td>50.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>194</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s6"><td class="lf">VHDL_PROCEDURE</td><td>211</td><td>5</td><td>3</td><td>60.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+135                         begin
+136        <font color = "red">0/1     ==>          verbosity &lt;= value;</font>
+137                         end procedure;
+138                     
+139                     
+140                         procedure info_m(
+141                             msg         : in string
+142                         ) is
+143                         begin
+144        1/1                  if (global_verbosity = verbosity_debug or
+145                                 global_verbosity = verbosity_info)
+146                             then
+147        1/1                      report &quot;INFO: &quot; &amp; msg severity note;
+148                             end if;
+149                         end procedure;
+150                     
+151                     
+152                         procedure warning_m(
+153                                      msg         : in string
+154                         ) is
+155                         begin
+156        1/1                  if (global_verbosity = verbosity_debug or
+157                                 global_verbosity = verbosity_info or
+158                                 global_verbosity = verbosity_warning)
+159                             then
+160        1/1                      report &quot;WARNING: &quot; &amp; msg severity warning;
+161                             end if;
+162                         end procedure;
+163                     
+164                     
+165                         procedure error_m(
+166                                      msg         : in string
+167                         ) is
+168                         begin
+169        <font color = "red">0/1     ==>          if ((global_verbosity = verbosity_debug or</font>
+170                                 global_verbosity = verbosity_info or
+171                                 global_verbosity = verbosity_warning or
+172                                 global_verbosity = verbosity_error))
+173                             then
+174        <font color = "red">0/1     ==>              ctu_vip_test_result.set_result(false);</font>
+175        <font color = "red">0/1     ==>              report &quot;ERROR: &quot; &amp; msg severity error;</font>
+176                             end if;
+177                         end procedure;
+178                     
+179                         procedure debug_m(
+180                                      msg         : in string
+181                         ) is
+182                         begin
+183        1/1                  if (global_verbosity = verbosity_debug) then
+184        <font color = "red">0/1     ==>              report &quot;DEBUG: &quot; &amp; msg severity note;</font>
+185                             end if;
+186                         end procedure;
+187                     
+188                     
+189                         procedure check_m(
+190                                      cond        : in boolean;
+191                                      msg         : in string
+192                         ) is
+193                         begin
+194        1/1                  if (cond) then
+195        1/1                      if (global_verbosity = verbosity_debug or
+196                                     global_verbosity = verbosity_info) then
+197        1/1                          report &quot;PASS: &quot; &amp; msg;
+198                                 end if;
+199                             else
+200        1/1                      ctu_vip_test_result.set_result(false);
+201        1/1                      report &quot;FAIL: &quot; &amp; msg severity error;
+202                             end if;
+203                         end procedure;
+204                     
+205                     
+206                         procedure check_false_m(
+207                                      cond        : in boolean;
+208                                      msg         : in string
+209                         ) is
+210                         begin
+211        1/1                  if (not cond) then
+212        1/1                      if (global_verbosity = verbosity_debug or
+213                                     global_verbosity = verbosity_info) then
+214        1/1                          report &quot;PASS: &quot; &amp; msg;
+215                                 end if;
+216                             else
+217        <font color = "red">0/1     ==>              ctu_vip_test_result.set_result(false);</font>
+218        <font color = "red">0/1     ==>              report &quot;FAIL: &quot; &amp; msg severity error;</font>
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TB_REPORT_PKG">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

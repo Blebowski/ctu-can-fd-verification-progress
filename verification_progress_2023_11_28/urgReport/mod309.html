@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_4_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_4_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_4_FTEST')">CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_4_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod309.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/txt_buffer_transitions_4_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/txt_buffer_transitions_4_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_4_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod309.html" >CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_4_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>31</td><td>31</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>135</td><td>31</td><td>31</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+134                             -------------------------------------------------------------------------------------------
+135        1/1                  info_m(&quot;Step 1&quot;);
+136        1/1                  get_tx_buf_count(num_txt_bufs, DUT_NODE, chn);
+137                     
+138                             -- Configure test mode to allow bit-flips via test channel in TXT Buffer Memory.
+139        1/1                  mode.test := true;
+140        1/1                  mode.parity_check := true;
+141        1/1                  set_core_mode(mode, DUT_NODE, chn);
+142                     
+143                             -- Generate single common frame
+144        1/1                  CAN_generate_frame(CAN_frame);
+145        1/1                  CAN_frame.frame_format := FD_CAN;
+146        1/1                  CAN_frame.data_length := 16;
+147        1/1                  CAN_frame.rtr := NO_RTR_FRAME;
+148        1/1                  decode_length(CAN_frame.data_length, CAN_frame.dlc);
+149                     
+150        1/1                  for txt_buf_index in 1 to num_txt_bufs loop
+151                     
+152                                 -----------------------------------------------------------------------------------
+153                                 -- @1.1. Insert a frame into a TXT Buffer. Insert a bit-flip into a data word
+154                                 --       inside TXT Buffer.
+155                                 -----------------------------------------------------------------------------------
+156        1/1                      info_m(&quot;Step 1.1&quot;);
+157                     
+158        1/1                      CAN_insert_TX_frame(CAN_frame, txt_buf_index, DUT_NODE, chn);
+159                     
+160        1/1                      set_test_mem_access(true, DUT_NODE, chn);
+161                     
+162        1/1                      tst_mem := txt_buf_to_test_mem_tgt(txt_buf_index);
+163                     
+164                                 -- Read, flip, and write back
+165        1/1                      corrupt_wrd_index := 5;             -- Flip bit in data bytes 5-8
+166        1/1                      rand_int_v(31, corrupt_bit_index);
+167        1/1                      test_mem_read(r_data, corrupt_wrd_index, tst_mem, DUT_NODE, chn);
+168        1/1                      r_data(corrupt_bit_index) := not r_data(corrupt_bit_index);
+169        1/1                      test_mem_write(r_data, corrupt_wrd_index, tst_mem, DUT_NODE, chn);
+170                     
+171                                 -- Disable test mem access
+172        1/1                      set_test_mem_access(false, DUT_NODE, chn);
+173                     
+174                                 ---------------------------------------------------------------------------------------
+175                                 -- @1.2. Send Set Ready Command. Wait until DUT starts transmitting the frame, and then
+176                                 --       send Set Abort Command.
+177                                 ---------------------------------------------------------------------------------------
+178        1/1                      info_m(&quot;Step 1.2&quot;);
+179                     
+180        1/1                      send_TXT_buf_cmd(buf_set_ready, txt_buf_index, DUT_NODE, chn);
+181        1/1                      CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+182        1/1                      wait for 1000 ns;
+183                     
+184        1/1                      send_TXT_buf_cmd(buf_set_abort, txt_buf_index, DUT_NODE, chn);
+185                     
+186                                 ---------------------------------------------------------------------------------------
+187                                 -- @1.3. Wait until bus is idle. Check TXT Buffer ended in Parity Error.
+188                                 ---------------------------------------------------------------------------------------
+189        1/1                      info_m(&quot;Step 1.3&quot;);
+190                     
+191        1/1                      CAN_wait_bus_idle(DUT_NODE, chn);
+192        1/1                      CAN_wait_bus_idle(TEST_NODE, chn);
+193                     
+194        1/1                      get_tx_buf_state(txt_buf_index, txt_buf_state, DUT_NODE, chn);
+195                     
+196        1/1                      check_m(txt_buf_state = buf_parity_err, &quot;TXT Buffer in parity error state&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TXT_BUFFER_TRANSITIONS_4_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

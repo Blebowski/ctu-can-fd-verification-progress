@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.INT_FCS_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.INT_FCS_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.INT_FCS_FTEST')">CTU_CAN_FD_TB.INT_FCS_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod169.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_fcs_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_fcs_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.INT_FCS_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod169.html" >CTU_CAN_FD_TB.INT_FCS_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>127</td><td>127</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>161</td><td>127</td><td>127</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+160                             -----------------------------------------------------------------------
+161        1/1                  info_m(&quot;Step 1: Setting FCS Interrupt&quot;);
+162                     
+163        1/1                  int_mask.fcs_changed_int := false;
+164        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+165                     
+166        1/1                  int_ena.fcs_changed_int := true;
+167        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+168                     
+169        1/1                  mode.test := true;
+170        1/1                  set_core_mode(mode, DUT_NODE, chn);
+171                     
+172                             -----------------------------------------------------------------------
+173                             -- @2. Check unit is Error Active. Set TX Error counter to 128. Check
+174                             --     unit is Error passive. Check FCS Interrupt is present. Check that
+175                             --     INT pin is high.
+176                             -----------------------------------------------------------------------
+177        1/1                  info_m(&quot;Step 2: FCS Interrupt - Error Active -&gt; Error Pasive&quot;);
+178                     
+179        1/1                  get_fault_state(fault_state, DUT_NODE, chn);
+180        1/1                  check_m(fault_state = fc_error_active, &quot;Unit Error Active&quot;);
+181                     
+182        1/1                  read_error_counters(err_ctrs, DUT_NODE, chn);
+183        1/1                  err_ctrs.tx_counter := 128;
+184        1/1                  set_error_counters(err_ctrs, DUT_NODE, chn);
+185                     
+186        1/1                  get_fault_state(fault_state, DUT_NODE, chn);
+187        1/1                  check_m(fault_state = fc_error_passive, &quot;Unit Error Passive&quot;);
+188                     
+189        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+190        1/1                  check_m(int_stat.fcs_changed_int,
+191                                 &quot;FCS Interrupt set on Error Active -&gt; Error Passive&quot;);
+192        1/1                  interrupt_agent_check_asserted(chn);
+193                             
+194                             -----------------------------------------------------------------------
+195                             -- @3. Disable FCS Interrupt and check INT pin goes low. Enable FCS 
+196                             --     Interrupt and check INT pin goes high.
+197                             -----------------------------------------------------------------------
+198        1/1                  info_m(&quot;Step 3: Check FCS Interrupt toggles INT pin&quot;);
+199                     
+200        1/1                  int_ena.fcs_changed_int := false;
+201        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+202        1/1                  wait for 10 ns;
+203        1/1                  interrupt_agent_check_not_asserted(chn);
+204                     
+205        1/1                  int_ena.fcs_changed_int := true;
+206        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+207        1/1                  wait for 10 ns;
+208        1/1                  interrupt_agent_check_asserted(chn);        
+209                     
+210                             -----------------------------------------------------------------------
+211                             -- @4. Clear FCS Interrupt. Check it is cleared.
+212                             -----------------------------------------------------------------------
+213        1/1                  info_m(&quot;Step 4: Clear FCS Interrupt - Check it is cleared&quot;);
+214                     
+215        1/1                  int_stat.fcs_changed_int := true;
+216        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+217                     
+218        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+219        1/1                  check_false_m(int_stat.fcs_changed_int,
+220                                 &quot;FCS Interrupt still set after clear!&quot;);
+221        1/1                  interrupt_agent_check_not_asserted(chn);             
+222                     
+223                             -----------------------------------------------------------------------
+224                             -- @5. Set TX Error counter to 127. Check unit is Error active. Check 
+225                             --     that FCS Interrupt is set. Check INT pin is high.
+226                             -----------------------------------------------------------------------
+227        1/1                  info_m(&quot;Step 5: FCS Interrupt - Error Passive -&gt; Error Active!&quot;);
+228                     
+229        1/1                  err_ctrs.tx_counter := 127;
+230        1/1                  set_error_counters(err_ctrs, DUT_NODE, chn);
+231                     
+232        1/1                  get_fault_state(fault_state, DUT_NODE, chn);
+233        1/1                  check_m(fault_state = fc_error_active, &quot;Unit Error Active&quot;);
+234                     
+235        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+236        1/1                  check_m(int_stat.fcs_changed_int,
+237                                 &quot;FCS Interrupt set on Error Passive -&gt; Error Active&quot;);
+238        1/1                  interrupt_agent_check_asserted(chn);
+239                     
+240                             -----------------------------------------------------------------------
+241                             -- @6. Clear FCS Interrupt. Check it is cleared.
+242                             -----------------------------------------------------------------------
+243        1/1                  info_m(&quot;Step 6: Clear FCS Interrupt - Check it is cleared&quot;);
+244                     
+245        1/1                  int_stat.fcs_changed_int := true;
+246        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+247        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+248                             
+249        1/1                  check_false_m(int_stat.fcs_changed_int,
+250                                 &quot;FCS Interrupt still set after clear!&quot;);
+251        1/1                  interrupt_agent_check_not_asserted(chn);
+252                     
+253                             -----------------------------------------------------------------------
+254                             -- @7. Set TX Error counter to 196. Check EPI Interrupt is set. Clear 
+255                             --    FCS Interrupt.
+256                             -----------------------------------------------------------------------
+257        1/1                  info_m(&quot;Step 7: FCS Interrupt - Moving to Error Passive!&quot;);
+258        1/1                  err_ctrs.tx_counter := 196;
+259        1/1                  set_error_counters(err_ctrs, DUT_NODE, chn);
+260        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+261        1/1                  check_m(int_stat.fcs_changed_int, &quot;FCS Interrupt set!&quot;);
+262        1/1                  int_stat.fcs_changed_int := true;
+263        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+264        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+265        1/1                  check_false_m(int_stat.fcs_changed_int,
+266                                 &quot;FCS Interrupt still set after clear!&quot;);
+267                             
+268                             -----------------------------------------------------------------------
+269                             -- @8. Set TX Error counter to 256. Check that unit is Bus-off. Check 
+270                             --     that FCS Interrupt is set. Check INT pin is high.
+271                             -----------------------------------------------------------------------
+272        1/1                  info_m(&quot;Step 8: FCS Interrupt - Error Passive -&gt; Bus off!&quot;);
+273                     
+274        1/1                  err_ctrs.tx_counter := 256;
+275        1/1                  set_error_counters(err_ctrs, DUT_NODE, chn);
+276                     
+277        1/1                  get_fault_state(fault_state, DUT_NODE, chn);
+278        1/1                  check_m(fault_state = fc_bus_off, &quot;Unit Bus Off&quot;);
+279                     
+280        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+281        1/1                  check_m(int_stat.fcs_changed_int,
+282                                 &quot;FCS Interrupt: Error Passive -&gt; Bus Off&quot;);
+283        1/1                  interrupt_agent_check_asserted(chn);
+284                     
+285                             -----------------------------------------------------------------------
+286                             -- @9. Clear FCS Interrupt. Check it is cleared. Check INT pin is low.
+287                             -----------------------------------------------------------------------
+288        1/1                  info_m(&quot;Step 9: FCS Interrupt clear&quot;);
+289                     
+290        1/1                  int_stat.fcs_changed_int := true;
+291        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+292                             
+293        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+294        1/1                  check_false_m(int_stat.fcs_changed_int,
+295                                 &quot;FCS Interrupt still set after clear!&quot;);
+296        1/1                  interrupt_agent_check_not_asserted(chn);
+297                             
+298                             -----------------------------------------------------------------------
+299                             -- @10. Issue ERCRST command. Wait till unit turns Error Active. This
+300                             --      does not test proper duration after which unit turns Error 
+301                             --      active (128 ocurrences of 11 consecutive Recessive bits)!!!
+302                             --      Meanwhile check that FCS Interrupt is not set.
+303                             -----------------------------------------------------------------------
+304        1/1                  info_m(&quot;Step 10: Issue ERCRST command, wait till Error Active&quot;);
+305                             
+306                             -- Here we have to wait a little bit since this command is processed
+307                             -- in Sample point of Idle!
+308        1/1                  wait for 2000 ns;
+309        1/1                  command.err_ctrs_rst := true;
+310        1/1                  give_controller_command(command, DUT_NODE, chn);
+311        1/1                  command.err_ctrs_rst := false;
+312                             
+313        1/1                  get_fault_state(fault_state, DUT_NODE, chn);
+314        1/1                  mem_bus_agent_disable_transaction_reporting(chn);
+315        1/1                  while (fault_state = fc_bus_off) loop
+316        1/1                      read_int_status(int_stat, DUT_NODE, chn);
+317        1/1                      get_fault_state(fault_state, DUT_NODE, chn);
+318        1/1                      if (fault_state = fc_bus_off) then
+319        1/1                          check_false_m(int_stat.fcs_changed_int,
+320                                         &quot;FCS Interrupt not set in Bus-off.&quot;);
+321                                 end if;
+322        1/1                      wait for 5000 ns;
+323                             end loop;
+324        1/1                  mem_bus_agent_enable_transaction_reporting(chn);
+325                             
+326                             -----------------------------------------------------------------------
+327                             -- @11. When Unit turns Error Active, check that FCS Interrupt is set.
+328                             --      Check INT pin is high. Clear FCS Interrupt.
+329                             -----------------------------------------------------------------------
+330        1/1                  info_m(&quot;Step 11: FCS Interrupt: Bus-off -&gt; Error Active&quot;);
+331                     
+332        1/1                  get_fault_state(fault_state, DUT_NODE, chn);
+333        1/1                  check_m(fault_state = fc_error_active,
+334                                 &quot;Reintegration -&gt; Unit turned Error Active&quot;);
+335                     
+336        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+337        1/1                  check_m(int_stat.fcs_changed_int,
+338                                 &quot;FCS Interrupt set: Bus-off -&gt; Error Active&quot;);
+339        1/1                  interrupt_agent_check_asserted(chn);
+340                     
+341        1/1                  int_stat.fcs_changed_int := true;
+342        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+343                     
+344        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+345        1/1                  check_false_m(int_stat.fcs_changed_int,
+346                                 &quot;FCS Interrupt still set after clear!&quot;);
+347                                 
+348                             -----------------------------------------------------------------------
+349                             -- @12. Mask FCS Interrupt. Set TX Error counter to 128. Check Unit is
+350                             --      Error Passive. Check FCS Interrupt is not set. Check INT pin is
+351                             --      low.
+352                             -----------------------------------------------------------------------
+353        1/1                  info_m(&quot;Step 12: FCS Interrupt not set when masked&quot;);
+354                     
+355        1/1                  int_mask.fcs_changed_int := true;
+356        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+357                     
+358        1/1                  err_ctrs.tx_counter := 128;
+359        1/1                  set_error_counters(err_ctrs, DUT_NODE, chn);
+360                     
+361        1/1                  get_fault_state(fault_state, DUT_NODE, chn);
+362        1/1                  check_m(fault_state = fc_error_passive, &quot;Unit turned Error Passive&quot;);
+363                     
+364        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+365        1/1                  check_false_m(int_stat.fcs_changed_int,
+366                                 &quot;FCS Interrupt not set when masked!&quot;);
+367        1/1                  interrupt_agent_check_not_asserted(chn);
+368                     
+369                             -----------------------------------------------------------------------
+370                             -- @13. Disable FCS Interrupt and check it was disabled. Enable FCS
+371                             --      Interrupt and check it was enabled.
+372                             -----------------------------------------------------------------------
+373        1/1                  info_m(&quot;Step 13: Check FCS Interrupt enable works OK!&quot;);
+374                     
+375        1/1                  int_ena.fcs_changed_int := false;
+376        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+377        1/1                  int_ena.fcs_changed_int := true;
+378                     
+379        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+380        1/1                  check_false_m(int_ena.fcs_changed_int, &quot;FCS Interrupt enabled!&quot;);
+381                     
+382        1/1                  int_ena.fcs_changed_int := true;
+383        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+384        1/1                  int_ena.fcs_changed_int := false;
+385                     
+386        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+387        1/1                  check_m(int_ena.fcs_changed_int, &quot;FCS Interrupt disabled!&quot;);
+388                             
+389                             -----------------------------------------------------------------------
+390                             -- @14. Mask FCS Interrupt and check it was masked. Un-mask FCS
+391                             --      Interrupt and check it was un-masked.
+392                             -----------------------------------------------------------------------
+393        1/1                  info_m(&quot;Step 14: Check FCSI Interrupt mask works OK!&quot;);
+394                     
+395        1/1                  int_mask.fcs_changed_int := true;
+396        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+397        1/1                  int_mask.fcs_changed_int := false;
+398                     
+399        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+400        1/1                  check_m(int_mask.fcs_changed_int, &quot;FCS Interrupt masked!&quot;);
+401                     
+402        1/1                  int_mask.fcs_changed_int := false;
+403        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+404        1/1                  int_mask.fcs_changed_int := true;
+405                     
+406        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+407        1/1                  check_false_m(int_mask.fcs_changed_int, &quot;FCS Interrupt masked!&quot;);
+408                             
+409        1/1                  info_m(&quot;Finished FCS interrupt test&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.INT_FCS_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

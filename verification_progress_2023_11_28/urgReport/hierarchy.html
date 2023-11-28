@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Design Hierarchy</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.treetable.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.treetable.js"></script>
+<script type="text/javascript" src="js/.colResizable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    }  });
+  $("#hierarchyTable tbody tr").mousedown(function() {
+    $("tr.selected").removeClass("selected");
+    $("td.selected").removeClass("selected");
+    $(this).addClass("selected");
+    $(this).children().addClass("selected");
+  });
+  $("tr[data-tt-id='hierarchyTable_root']").each(function () {
+    $(this).attr("style", "display:none");
+  });
+  $("tr[data-tt-parent-id='hierarchyTable_root']").each(function () {
+    $(this).attr("style", "display:table-row");
+    $("#hierarchyTable").treetable("expandNode", $(this).attr("data-tt-id"));
+  });
+  $("table").colResizable({    liveDrag:true,
+    fixed:false,
+    draggingClass:"dragging"
+  });
+});
+function expandAll() {
+  $("#hierarchyTable").treetable("expandAll");
+}
+function collapseAll() {
+  if ($("tr[data-tt-parent-id='hierarchyTable_root']").length > 0) {
+    $("tr[data-tt-parent-id='hierarchyTable_root']").each(function () {
+      var nodeId = $(this).attr("data-tt-id");
+      var node = $("#hierarchyTable").treetable("node", nodeId);
+      $("#hierarchyTable").treetable("collapseNodeRecursive", node);
+    });
+  } else {
+    $("#hierarchyTable").treetable("collapseAll");
+  }
+}
+</script>
+</head>
+<body><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Design Hierarchy</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-center">
+<table class="noborder">
+  <tr>
+    <td class="noborder"><input type="button" value="Expand All" onClick="expandAll()"></td>
+    <td class="noborder"><input type="button" value="Collapse All" onClick="collapseAll()"></td>
+  </tr>
+</table>
+<br clear=all>
+<table id="hierarchyTable" border="0" cellpadding="0" cellspacing="0" class="sortable">
+  <thead class="table-header">
+    <tr>
+<th class="alfsrt">NAME</th><th>SCORE</th><th>LINE</th><th>COND</th><th>TOGGLE</th><th>FSM</th><th>BRANCH</th><th>ASSERT</th>    </tr>
+  </thead>
+  <tbody>
+    <tr data-tt-id="hierarchyTable_root">
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>    </tr>
+    <tr data-tt-id="inst_hash_970787267" data-tt-parent-id="hierarchyTable_root">
+<td class="wordwrap"><a href="mod171.html#inst_tag_419" id="tag_urg_inst_419">TB_TOP_CTU_CAN_FD</a></td>
+<td class="s9 cl rt"> 94.81</td>
+<td class="s9 cl rt"> 94.32</td>
+<td class="s9 cl rt"> 95.81</td>
+<td class="s9 cl rt"> 92.87</td>
+<td class="s9 cl rt"> 90.45</td>
+<td class="s9 cl rt"> 95.43</td>
+<td class="s10 cl rt">100.00</td>
+    </tr>
+    <tr data-tt-id="inst_hash_728950516" data-tt-parent-id="inst_hash_970787267">
+<td class="wordwrap"><a href="mod300.html#inst_tag_1066" id="tag_urg_inst_1066">CTU_CAN_FD_VIP_INST</a></td>
+<td class="s5 cl rt"> 55.39</td>
+<td class="s7 cl rt"> 73.55</td>
+<td class="s5 cl rt"> 52.38</td>
+<td class="s7 cl rt"> 73.48</td>
+<td class="s2 cl rt"> 20.00</td>
+<td class="s5 cl rt"> 57.55</td>
+<td class="wht cl rt"></td>
+    </tr>
+    <tr data-tt-id="inst_hash_50254605" data-tt-parent-id="inst_hash_728950516">
+<td class="wordwrap"><a href="mod232.html#inst_tag_561" id="tag_urg_inst_561">CAN_AGENT_GEN</a></td>
+<td class="s5 cl rt"> 51.47</td>
+<td class="s5 cl rt"> 58.33</td>
+<td class="s3 cl rt"> 38.64</td>
+<td class="s9 cl rt"> 99.98</td>
+<td class="s2 cl rt"> 20.00</td>
+<td class="s4 cl rt"> 40.40</td>
+<td class="wht cl rt"></td>
+    </tr>
+    <tr data-tt-id="inst_hash_1138730269" data-tt-parent-id="inst_hash_50254605">
+<td class="wordwrap"><a href="mod307.html#inst_tag_1073" id="tag_urg_inst_1073">COMPLIANCE_AGENT_INST</a></td>
+<td class="s5 cl rt"> 51.47</td>
+<td class="s5 cl rt"> 58.33</td>
+<td class="s3 cl rt"> 38.64</td>
+<td class="s9 cl rt"> 99.98</td>
+<td class="s2 cl rt"> 20.00</td>
+<td class="s4 cl rt"> 40.40</td>
+<td class="wht cl rt"></td>
+    </tr>
+    <tr data-tt-id="inst_hash_1318170086" data-tt-parent-id="inst_hash_728950516">
+<td class="wordwrap"><a href="mod331.html#inst_tag_1239" id="tag_urg_inst_1239">CLK_GEN_AGENT_INST</a></td>
+<td class="s7 cl rt"> 78.32</td>
+<td class="s6 cl rt"> 65.71</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s6 cl rt"> 69.23</td>
+<td class="wht cl rt"></td>
+    </tr>
+    <tr data-tt-id="inst_hash_2121362006" data-tt-parent-id="inst_hash_728950516">
+<td class="wordwrap"><a href="mod52.html#inst_tag_146" id="tag_urg_inst_146">INTERRUPT_AGENT_INST</a></td>
+<td class="s5 cl rt"> 51.21</td>
+<td class="s6 cl rt"> 63.64</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"> 40.00</td>
+<td class="wht cl rt"></td>
+    </tr>
+    <tr data-tt-id="inst_hash_58068163" data-tt-parent-id="inst_hash_728950516">
+<td class="wordwrap"><a href="mod186.html#inst_tag_440" id="tag_urg_inst_440">MEM_BUS_AGENT_INST</a></td>
+<td class="s6 cl rt"> 65.58</td>
+<td class="s7 cl rt"> 74.05</td>
+<td class="s6 cl rt"> 60.00</td>
+<td class="s5 cl rt"> 55.18</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 73.08</td>
+<td class="wht cl rt"></td>
+    </tr>
+    <tr data-tt-id="inst_hash_616023329" data-tt-parent-id="inst_hash_728950516">
+<td class="wordwrap"><a href="mod72.html#inst_tag_200" id="tag_urg_inst_200">REFERENCE_TEST_AGENT_INST</a></td>
+<td class="s9 cl rt"> 94.32</td>
+<td class="s9 cl rt"> 97.73</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 90.91</td>
+<td class="wht cl rt"></td>
+    </tr>
+    <tr data-tt-id="inst_hash_1064634922" data-tt-parent-id="inst_hash_728950516">
+<td class="wordwrap"><a href="mod242.html#inst_tag_645" id="tag_urg_inst_645">RESET_AGENT_INST</a></td>
+<td class="s6 cl rt"> 67.16</td>
+<td class="s7 cl rt"> 76.47</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 75.00</td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="wht cl rt"></td>
+    </tr>
+    <tr data-tt-id="inst_hash_820148016" data-tt-parent-id="inst_hash_728950516">
+<td class="wordwrap"><a href="mod284.html#inst_tag_853" id="tag_urg_inst_853">TEST_CONTROLLER_AGENT_INST</a></td>
+<td class="s7 cl rt"> 75.26</td>
+<td class="s9 cl rt"> 92.78</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s3 cl rt"> 33.24</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 75.00</td>
+<td class="wht cl rt"></td>
+    </tr>
+    <tr data-tt-id="inst_hash_387677630" data-tt-parent-id="inst_hash_728950516">
+<td class="wordwrap"><a href="mod21.html#inst_tag_35" id="tag_urg_inst_35">TEST_PROBE_AGENT_INST</a></td>
+<td class="s7 cl rt"> 79.64</td>
+<td class="s8 cl rt"> 86.21</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 80.00</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 72.73</td>
+<td class="wht cl rt"></td>
+    </tr>
+    <tr data-tt-id="inst_hash_320986723" data-tt-parent-id="inst_hash_728950516">
+<td class="wordwrap"><a href="mod302.html#inst_tag_1068" id="tag_urg_inst_1068">TIMESTAMP_AGENT_INST</a></td>
+<td class="s7 cl rt"> 73.30</td>
+<td class="s7 cl rt"> 78.12</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 70.35</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 71.43</td>
+<td class="wht cl rt"></td>
+    </tr>
+    <tr data-tt-id="inst_hash_943873656" data-tt-parent-id="inst_hash_970787267">
+<td class="wordwrap"><a href="mod293.html#inst_tag_1017" id="tag_urg_inst_1017">DUT</a></td>
+<td class="s9 cl rt"> 97.36</td>
+<td class="s9 cl rt"> 98.72</td>
+<td class="s9 cl rt"> 96.33</td>
+<td class="s9 cl rt"> 98.12</td>
+<td class="s9 cl rt"> 93.21</td>
+<td class="s9 cl rt"> 97.79</td>
+<td class="s10 cl rt">100.00</td>
+    </tr>
+    <tr data-tt-id="inst_hash_943873656_subtree" data-tt-parent-id="inst_hash_943873656">
+<td class="wordwrap"><a href="hierarchy1.html" class=subtree>subtree...</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+
+<script>
+$("#hierarchyTable").treetable({ expandable: true });
+</script>
+</body>
+</html>

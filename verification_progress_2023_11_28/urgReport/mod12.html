@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.INT_RX_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.INT_RX_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.INT_RX_FTEST')">CTU_CAN_FD_TB.INT_RX_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod12.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_rx_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/int_rx_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.INT_RX_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod12.html" >CTU_CAN_FD_TB.INT_RX_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>117</td><td>117</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>151</td><td>117</td><td>117</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+150                             -----------------------------------------------------------------------
+151        1/1                  info_m(&quot;Step 1: Setting RX Interrupt&quot;);
+152                     
+153        1/1                  int_mask.receive_int := false;
+154        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+155                     
+156        1/1                  int_ena.receive_int := true;
+157        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+158                             
+159                             -----------------------------------------------------------------------
+160                             --  @2. Set Retransmitt limit to 0 on Test node (One shot-mode). Enable 
+161                             --      Retransmitt limitations on Test node. Send frame by Test node.
+162                             -----------------------------------------------------------------------
+163        1/1                  info_m(&quot;Step 2: Sending frame&quot;);
+164                     
+165        1/1                  CAN_enable_retr_limit(true, 0, TEST_NODE, chn);
+166        1/1                  CAN_generate_frame(CAN_frame);
+167        1/1                  CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+168                             
+169                             -----------------------------------------------------------------------
+170                             -- @3. Monitor DUT frame, check that in the beginning of EOF, 
+171                             --     Interrupt is Not set, after EOF it is set.
+172                             -----------------------------------------------------------------------  
+173        1/1                  info_m(&quot;Step 3: Check RX Interrupt is set in EOF!&quot;);
+174                     
+175        1/1                  CAN_wait_pc_state(pc_deb_eof, DUT_NODE, chn);
+176        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+177        1/1                  check_false_m(int_stat.receive_int,
+178                                 &quot;RX Interrupt not set in beginning of EOF&quot;);
+179        1/1                  CAN_wait_not_pc_state(pc_deb_eof, DUT_NODE, chn);
+180        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+181                             
+182        1/1                  check_m(int_stat.receive_int, &quot;RX Interrupt set at the end of EOF&quot;);
+183                             
+184                             -- Wait till bus is idle, read-out received frame so that there is
+185                             -- nothing in RX Buffer of DUT.
+186        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+187        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+188        1/1                  CAN_read_frame(CAN_frame_rx, DUT_NODE, chn);
+189        1/1                  CAN_compare_frames(CAN_frame, CAN_frame_rx, false, frames_equal);
+190                             
+191        1/1                  check_m(frames_equal, &quot;TX, RX frames should be equal!&quot;);
+192                             
+193                             -----------------------------------------------------------------------
+194                             -- @4. Check that INT pin is high. Disable RX Interrupt and check that
+195                             --     INT pin goes low. Enable Interrupt and check it goes high again.
+196                             -----------------------------------------------------------------------
+197        1/1                  info_m(&quot;Step 4: Check INT pin toggles&quot;);
+198                     
+199        1/1                  interrupt_agent_check_asserted(chn);
+200        1/1                  int_ena.receive_int := false;
+201        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+202        1/1                  wait for 10 ns;
+203                             
+204        1/1                  interrupt_agent_check_not_asserted(chn);
+205                             
+206        1/1                  int_ena.receive_int := true;
+207        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+208        1/1                  wait for 10 ns;
+209                             
+210        1/1                  interrupt_agent_check_asserted(chn);
+211                     
+212                             -----------------------------------------------------------------------
+213                             --  @5. Clear RX Interrupt, check it is cleared and INT pin goes low.
+214                             -----------------------------------------------------------------------
+215        1/1                  info_m(&quot;Step 4: Clear RX Interrupt, Check INT pin toggles&quot;);
+216                     
+217        1/1                  int_stat.receive_int := true;
+218        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+219        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+220                             
+221        1/1                  check_false_m(int_mask.receive_int, &quot;RX Interrupt status should be 0!&quot;);
+222        1/1                  interrupt_agent_check_not_asserted(chn);
+223                             
+224                             -----------------------------------------------------------------------
+225                             --  @6. Send Frame by Test node. Force bus level during ACK to recessive, 
+226                             --      check that error frame is transmitted by both nodes. Wait till
+227                             --      bus is idle, check.
+228                             -----------------------------------------------------------------------
+229        1/1                  info_m(&quot;Step 6: Check RX Interrupt is not set upon Error Frame!&quot;);
+230                     
+231        1/1                  CAN_generate_frame(CAN_frame);
+232        1/1                  CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+233                     
+234        1/1                  CAN_wait_pc_state(pc_deb_ack, DUT_NODE, chn);
+235        1/1                  force_bus_level(RECESSIVE, chn);
+236        1/1                  CAN_wait_not_pc_state(pc_deb_ack, DUT_NODE, chn);
+237        1/1                  CAN_read_pc_debug_m(pc_dbg, DUT_NODE, chn);
+238        1/1                  release_bus_level(chn);
+239                             
+240        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+241        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+242                     
+243        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+244                             
+245        1/1                  check_false_m(int_stat.receive_int, &quot;RX Interrupt status should be 0!&quot;);
+246        1/1                  interrupt_agent_check_not_asserted(chn);
+247                     
+248                             -----------------------------------------------------------------------
+249                             --  @7. Mask RX Interrupt. Send frame by Test node. Check that after
+250                             --      frame RX Interrupt was not set. Check that INT pin is low.
+251                             -----------------------------------------------------------------------
+252        1/1                  info_m(&quot;Step 7: Check Masked RX Interrupt is not captured&quot;);
+253                     
+254        1/1                  int_mask.receive_int := true;
+255        1/1                  int_ena.receive_int := true;
+256        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+257                     
+258        1/1                  CAN_generate_frame(CAN_frame);
+259        1/1                  CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+260        1/1                  CAN_wait_frame_sent(TEST_NODE, chn);
+261                     
+262        1/1                  CAN_read_frame(CAN_frame_rx, DUT_NODE, chn);
+263        1/1                  CAN_compare_frames(CAN_frame, CAN_frame_rx, false, frames_equal);
+264        1/1                  check_m(frames_equal, &quot;TX, RX frames should be equal!&quot;);
+265                     
+266        1/1                  read_int_status(int_stat, DUT_NODE, chn);        
+267        1/1                  check_false_m(int_stat.receive_int, &quot;RX Interrupt status should be 0!&quot;);
+268        1/1                  interrupt_agent_check_not_asserted(chn);
+269                     
+270                             -----------------------------------------------------------------------
+271                             --  @8. Unmask RX Interrupt. Send frame by Test node. Check that after 
+272                             --      frame RX Interrupt was set. Check INT pin is high.
+273                             -----------------------------------------------------------------------
+274        1/1                  info_m(&quot;Step 8: Check Un-Masked RX Interrupt is captured&quot;);
+275                     
+276        1/1                  int_mask.receive_int := false;
+277        1/1                  int_ena.receive_int := true;
+278        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+279                     
+280        1/1                  CAN_generate_frame(CAN_frame);
+281        1/1                  CAN_send_frame(CAN_frame, 1, TEST_NODE, chn, frame_sent);
+282        1/1                  CAN_wait_frame_sent(TEST_NODE, chn);
+283                     
+284        1/1                  CAN_read_frame(CAN_frame_rx, DUT_NODE, chn);
+285        1/1                  CAN_compare_frames(CAN_frame, CAN_frame_rx, false, frames_equal);
+286        1/1                  check_m(frames_equal, &quot;TX, RX frames should be equal!&quot;);
+287                     
+288        1/1                  read_int_status(int_stat, DUT_NODE, chn);        
+289        1/1                  check_m(int_stat.receive_int, &quot;RX Interrupt status should be 1!&quot;);
+290        1/1                  interrupt_agent_check_asserted(chn);
+291                             
+292                             -----------------------------------------------------------------------
+293                             --  @9. Disable RX Interrupt, check that RX interrupt was disabled.
+294                             -----------------------------------------------------------------------
+295        1/1                  info_m(&quot;Step 9: Check RX Interrupt Enable Set&quot;);
+296                     
+297        1/1                  int_ena.receive_int := false;
+298        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+299        1/1                  int_ena.receive_int := true;
+300                     
+301        1/1                  read_int_enable(int_ena, DUT_NODE, chn);
+302        1/1                  check_false_m(int_ena.receive_int, &quot;RX Interrupt should be disabled!&quot;);
+303                             
+304                             -----------------------------------------------------------------------
+305                             -- @10. Enable RX Interrupt, check that RX interrupt was enabled.
+306                             -----------------------------------------------------------------------
+307        1/1                  info_m(&quot;Step 10: Check RX Interrupt Enable Clear&quot;);
+308                     
+309        1/1                  int_ena.receive_int := true;
+310        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+311        1/1                  int_ena.receive_int := false;
+312                     
+313        1/1                  read_int_enable(int_ena, DUT_NODE, chn);        
+314        1/1                  check_m(int_ena.receive_int, &quot;RX Interrupt should be enabled!&quot;);        
+315                             
+316                             -----------------------------------------------------------------------
+317                             -- @11. Mask RX Interrupt, check RX Interrupt is Masked.
+318                             -----------------------------------------------------------------------
+319        1/1                  info_m(&quot;Step 11: Check RX Interrupt Mask Set&quot;);
+320                     
+321        1/1                  int_mask.receive_int := true;
+322        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+323        1/1                  int_mask.receive_int := false;
+324        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+325                             
+326        1/1                  check_m(int_ena.receive_int, &quot;RX Interrupt should be masked!&quot;);        
+327                             
+328                             -----------------------------------------------------------------------
+329                             -- @12. Un-Mask RX Interrupt, check RX Interrupt is Un-masked.
+330                             -----------------------------------------------------------------------
+331        1/1                  info_m(&quot;Step 12: Check RX Interrupt Mask Clear&quot;);
+332                     
+333        1/1                  int_mask.receive_int := false;
+334        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+335        1/1                  int_mask.receive_int := true;
+336        1/1                  read_int_mask(int_mask, DUT_NODE, chn);
+337                             
+338        1/1                  check_false_m(int_mask.receive_int, &quot;RX Interrupt should be unmasked!&quot;);
+339                             
+340                             -----------------------------------------------------------------------
+341                             -- @13. Send frame by DUT. Check that after frame RX Interrupt is 
+342                             --     not set and INT pin remains low.
+343                             -----------------------------------------------------------------------
+344        1/1                  info_m(&quot;Step 13: Check TX does not cause RX Interrupt to be captured!&quot;);
+345                     
+346        1/1                  int_stat.receive_int := true;
+347        1/1                  clear_int_status(int_stat, DUT_NODE, chn);
+348                             
+349        1/1                  int_mask.receive_int := false;
+350        1/1                  write_int_mask(int_mask, DUT_NODE, chn);
+351                             
+352        1/1                  int_ena.receive_int := true;
+353        1/1                  write_int_enable(int_ena, DUT_NODE, chn);
+354                     
+355        1/1                  CAN_generate_frame(CAN_frame);
+356        1/1                  CAN_send_frame(CAN_frame, 1, DUT_NODE, chn, frame_sent);
+357        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+358                             
+359        1/1                  CAN_read_frame(CAN_frame_rx, TEST_NODE, chn);
+360        1/1                  CAN_compare_frames(CAN_frame, CAN_frame_rx, false, frames_equal);
+361        1/1                  check_m(frames_equal, &quot;TX, RX frames should be equal!&quot;);
+362                             
+363        1/1                  read_int_status(int_stat, DUT_NODE, chn);
+364        1/1                  check_false_m(int_stat.receive_int, &quot;RX Interrupt should not be set after TX!&quot;);
+365        1/1                  interrupt_agent_check_not_asserted(chn);
+366                             
+367        1/1                  info_m(&quot;Finished RX interrupt test&quot;);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.INT_RX_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

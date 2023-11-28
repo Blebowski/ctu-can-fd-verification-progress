@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_RTL.RX_BUFFER_POINTERS RTL</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_RTL.RX_BUFFER_POINTERS RTL'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_RTL.RX_BUFFER_POINTERS RTL')">CTU_CAN_FD_RTL.RX_BUFFER_POINTERS RTL</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 88.77</td>
+<td class="s9 cl rt"><a href="mod66.html#Line" > 95.12</a></td>
+<td class="s9 cl rt"><a href="mod66.html#Cond" > 90.00</a></td>
+<td class="s7 cl rt"><a href="mod66.html#Toggle" > 77.64</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod66.html#Branch" > 92.31</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/rx_buffer/rx_buffer_pointers.vhd')">/home/oille/Downloads/ctucanfd_ip_core/src/rx_buffer/rx_buffer_pointers.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod66.html#inst_tag_186"  onclick="showContent('inst_tag_186')">TB_TOP_CTU_CAN_FD.DUT.RX_BUFFER_INST.RX_BUFFER_POINTERS_INST</a></td>
+<td class="s8 cl rt"> 88.77</td>
+<td class="s9 cl rt"><a href="mod66.html#Line" > 95.12</a></td>
+<td class="s9 cl rt"><a href="mod66.html#Cond" > 90.00</a></td>
+<td class="s7 cl rt"><a href="mod66.html#Toggle" > 77.64</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod66.html#Branch" > 92.31</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_CTU_CAN_FD_RTL.RX_BUFFER_POINTERS RTL'>
+<hr>
+<a name="inst_tag_186"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy1.html#tag_urg_inst_186" >TB_TOP_CTU_CAN_FD.DUT.RX_BUFFER_INST.RX_BUFFER_POINTERS_INST</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 88.77</td>
+<td class="s9 cl rt"><a href="mod66.html#Line" > 95.12</a></td>
+<td class="s9 cl rt"><a href="mod66.html#Cond" > 90.00</a></td>
+<td class="s7 cl rt"><a href="mod66.html#Toggle" > 77.64</a></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"><a href="mod66.html#Branch" > 92.31</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 88.77</td>
+<td class="s9 cl rt"> 95.12</td>
+<td class="s9 cl rt"> 90.00</td>
+<td class="s7 cl rt"> 77.64</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 92.31</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 97.08</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 97.83</td>
+<td class="s9 cl rt"> 91.88</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 98.59</td>
+<td class="wht cl rt"></td>
+<td><a href="mod91.html#inst_tag_223" >RX_BUFFER_INST<img src="ex.gif" class="icon"></a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td colspan=8>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_RTL.RX_BUFFER_POINTERS RTL'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod66.html" >CTU_CAN_FD_RTL.RX_BUFFER_POINTERS RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>41</td><td>39</td><td>95.12</td></tr>
+<tr class="s10"><td class="lf">VHDL_FUNCTION</td><td>176</td><td>6</td><td>6</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>239</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>254</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>281</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>305</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s8"><td class="lf">VHDL_PROCESS</td><td>320</td><td>15</td><td>13</td><td>86.67</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>381</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>394</td><td>1</td><td>1</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+175                         begin
+176        1/1                  temp := input;
+177        1/1                  log := 0;
+178        1/1                  while (temp &gt; 1) loop
+179        1/1                      temp := temp / 2;
+180        1/1                      log := log + 1;
+181                             end loop;
+182        1/1                  return log;
+183                         end function log2;
+184                     
+185                         -- Width of memory pointer
+186                         constant C_PTR_WIDTH            : natural := log2(G_RX_BUFF_SIZE);
+187                     
+188                         -- Width of free memory
+189                         constant C_FREE_MEM_WIDTH       : natural := C_PTR_WIDTH + 1;
+190                     
+191                         signal read_pointer_i           : unsigned(C_PTR_WIDTH - 1 downto 0);
+192                         signal read_pointer_inc_1_i     : unsigned(C_PTR_WIDTH - 1 downto 0);
+193                         signal write_pointer_i          : unsigned(C_PTR_WIDTH - 1 downto 0);
+194                     
+195                         signal write_pointer_raw_i      : unsigned(C_PTR_WIDTH - 1 downto 0);
+196                         signal write_pointer_raw_d      : unsigned(C_PTR_WIDTH - 1 downto 0);
+197                         signal write_pointer_raw_ce     : std_logic;
+198                     
+199                         signal write_pointer_ts_i       : unsigned(C_PTR_WIDTH - 1 downto 0);
+200                         signal write_pointer_ts_d       : unsigned(C_PTR_WIDTH - 1 downto 0);
+201                         signal write_pointer_ts_ce      : std_logic;
+202                     
+203                         signal rx_mem_free_i_i          : unsigned(C_FREE_MEM_WIDTH - 1 downto 0);
+204                     
+205                         -----------------------------------------------------------------------------------------------
+206                         -- Memory free status signals
+207                         -----------------------------------------------------------------------------------------------
+208                     
+209                         -- Raw value of number of free memory words.
+210                         signal rx_mem_free_raw          : unsigned(C_FREE_MEM_WIDTH - 1 downto 0);
+211                     
+212                         -- Number of free memory words calculated during frame storing before commit
+213                         -- combinationally incremented by 1.
+214                         signal rx_mem_free_raw_inc_1    : unsigned(C_FREE_MEM_WIDTH - 1 downto 0);
+215                     
+216                         -- Number of free memory words calculated during frame storing before commit
+217                         -- combinationally decremented by 1.
+218                         signal rx_mem_free_raw_dec_1    : unsigned(C_FREE_MEM_WIDTH - 1 downto 0);
+219                     
+220                         -- Number of free memory words available to SW, combinationally icnremented
+221                         -- by 1.
+222                         signal rx_mem_free_i_inc_1      : unsigned(C_FREE_MEM_WIDTH - 1 downto 0);
+223                     
+224                     begin
+225                         read_pointer            &lt;= std_logic_vector(resize(read_pointer_i, 12));
+226                         read_pointer_inc_1      &lt;= std_logic_vector(resize(read_pointer_inc_1_i, 12));
+227                         write_pointer           &lt;= std_logic_vector(resize(write_pointer_i, 12));
+228                         write_pointer_raw       &lt;= std_logic_vector(resize(write_pointer_raw_i, 12));
+229                         write_pointer_ts        &lt;= std_logic_vector(resize(write_pointer_ts_i, 12));
+230                         rx_mem_free_i           &lt;= std_logic_vector(resize(rx_mem_free_i_i, 13));
+231                     
+232                     
+233                         -----------------------------------------------------------------------------------------------
+234                         -- Read pointer, incremented during read from RX Buffer FIFO. Moving to next word by reading
+235                         -- (if there is sth to read).
+236                         -----------------------------------------------------------------------------------------------
+237                         read_pointer_proc : process(clk_sys, rx_buf_res_n_q_scan)
+238                         begin
+239        1/1                  if (rx_buf_res_n_q_scan = '0') then
+240        1/1                      read_pointer_i &lt;= (others =&gt; '0');
+241                             elsif (rising_edge(clk_sys)) then
+242        1/1                      if (read_increment = '1') then
+243        1/1                          read_pointer_i &lt;= read_pointer_inc_1_i;
+244                                 end if;
+245                             end if;
+246                         end process;
+247                     
+248                         -----------------------------------------------------------------------------------------------
+249                         -- Write pointers available to the user manipulation. Loading &quot;write_pointer_raw_int&quot; to
+250                         -- &quot;write_pointer_int&quot; when frame is committed.
+251                         -----------------------------------------------------------------------------------------------
+252                         write_pointer_proc : process(clk_sys, rx_buf_res_n_q_scan)
+253                         begin
+254        1/1                  if (rx_buf_res_n_q_scan = '0') then
+255        1/1                      write_pointer_i &lt;= (others =&gt; '0');
+256                             elsif (rising_edge(clk_sys)) then
+257        1/1                      if (commit_rx_frame = '1') then
+258        1/1                          write_pointer_i &lt;= write_pointer_raw_i;
+259                                 end if;
+260                             end if;
+261                         end process;
+262                     
+263                     
+264                         -----------------------------------------------------------------------------------------------
+265                         -- Write pointers raw manipulation:
+266                         --  1. Increment when word is written to memory.
+267                         --  2. Reset when &quot;rec_abort_f&quot; is active (Error frame) or frame finished and overrun occurred
+268                         --     meanwhile. Reset to value of last commited write pointer.
+269                         -----------------------------------------------------------------------------------------------
+270                         write_pointer_raw_d &lt;= write_pointer_raw_i + 1 when (write_raw_OK = '1')
+271                                                                        else
+272                                                        write_pointer_i;
+273                     
+274                         write_pointer_raw_ce &lt;= '1' when (write_raw_OK = '1') else
+275                                                 '1' when (rec_abort_f = '1') else
+276                                                 '1' when (commit_overrun_abort = '1') else
+277                                                 '0';
+278                     
+279                         write_pointer_raw_proc : process(clk_sys, rx_buf_res_n_q_scan)
+280                         begin
+281        1/1                  if (rx_buf_res_n_q_scan = '0') then
+282        1/1                     write_pointer_raw_i &lt;= (others =&gt; '0');
+283                             elsif (rising_edge(clk_sys)) then
+284        1/1                      if (write_pointer_raw_ce = '1') then
+285        1/1                          write_pointer_raw_i &lt;= write_pointer_raw_d;
+286                                 end if;
+287                             end if;
+288                         end process;
+289                     
+290                     
+291                         -----------------------------------------------------------------------------------------------
+292                         -- Timestamp write pointer.
+293                         -----------------------------------------------------------------------------------------------
+294                         write_pointer_ts_d &lt;= write_pointer_raw_i when (store_ts_wr_ptr = '1')
+295                                                                   else
+296                                            write_pointer_ts_i + 1;
+297                     
+298                         -- Tick only when it should be incremented or stored
+299                         write_pointer_ts_ce &lt;= '1' when (store_ts_wr_ptr = '1') else
+300                                                '1' when (inc_ts_wr_ptr = '1') else
+301                                                '0';
+302                     
+303                         timestamp_write_ptr_proc : process(clk_sys, rx_buf_res_n_q_scan)
+304                         begin
+305        1/1                  if (rx_buf_res_n_q_scan = '0') then
+306        1/1                      write_pointer_ts_i  &lt;= (others =&gt; '0');
+307                             elsif (rising_edge(clk_sys)) then
+308        1/1                      if (write_pointer_ts_ce = '1') then
+309        1/1                          write_pointer_ts_i &lt;= write_pointer_ts_d;
+310                                 end if;
+311                             end if;
+312                         end process;
+313                     
+314                     
+315                         -----------------------------------------------------------------------------------------------
+316                         -- Calculating amount of free memory.
+317                         -----------------------------------------------------------------------------------------------
+318                         mem_free_proc : process(clk_sys, rx_buf_res_n_q_scan)
+319                         begin
+320        1/1                  if (rx_buf_res_n_q_scan = '0') then
+321        1/1                      rx_mem_free_i_i &lt;= to_unsigned(G_RX_BUFF_SIZE, C_FREE_MEM_WIDTH);
+322        1/1                      rx_mem_free_raw &lt;= to_unsigned(G_RX_BUFF_SIZE, C_FREE_MEM_WIDTH);
+323                     
+324                             elsif (rising_edge(clk_sys)) then
+325                     
+326                                 ---------------------------------------------------------------------------------------
+327                                 -- Calculate free memory internally (raw)
+328                                 ---------------------------------------------------------------------------------------
+329        1/1                      if (read_increment = '1') then
+330                     
+331                                     -- Read of memory word, and abort at the same time. Revert last commited value of
+332                                     -- read pointer incremented by 1.
+333        1/1                          if (rec_abort_f = '1' or commit_overrun_abort = '1') then
+334        <font color = "red">0/1     ==>                      rx_mem_free_raw &lt;= rx_mem_free_i_inc_1;</font>
+335                     
+336                                     -- Read of memory word and no write of memory word. Load raw value incremented by 1.
+337                                     elsif (write_raw_OK = '0') then
+338        1/1                              rx_mem_free_raw &lt;= rx_mem_free_raw_inc_1;
+339                     
+340                                     -- Implicit else: Read increment and write of a word at the same time,
+341                                     -- rx_mem_free_raw remains unchanged.
+342                                     end if;
+343                     
+344                                 else
+345                     
+346                                     -- Abort, or abort was previously flaged -&gt; Revert last commited value.
+347        1/1                          if (rec_abort_f = '1' or commit_overrun_abort = '1') then
+348        1/1                              rx_mem_free_raw &lt;= rx_mem_free_i_i;
+349                     
+350                                     -- No read, write only, decrement by 1.
+351                                     elsif (write_raw_OK = '1') then
+352        1/1                              rx_mem_free_raw &lt;= rx_mem_free_raw_dec_1;
+353                                     end if;
+354                                 end if;
+355                     
+356                                 ---------------------------------------------------------------------------------------
+357                                 -- Calculate free memory for user:
+358                                 --      1. Increment when user reads the frame.
+359                                 --      2. Load RAW value when comitt occurs
+360                                 ---------------------------------------------------------------------------------------
+361        1/1                      if (read_increment = '1') then
+362        1/1                          if (commit_rx_frame = '1') then
+363        <font color = "red">0/1     ==>                      rx_mem_free_i_i &lt;= rx_mem_free_raw_inc_1;</font>
+364                                     else
+365        1/1                              rx_mem_free_i_i &lt;= rx_mem_free_i_inc_1;
+366                                     end if;
+367                     
+368                                 elsif (commit_rx_frame = '1') then
+369        1/1                          rx_mem_free_i_i &lt;= rx_mem_free_raw;
+370                                 end if;
+371                     
+372                             end if;
+373                         end process;
+374                     
+375                     
+376                         -----------------------------------------------------------------------------------------------
+377                         -- Calculating incremented value of free memory combinationally
+378                         -----------------------------------------------------------------------------------------------
+379                         mem_free_arith_proc : process(rx_mem_free_i_i, rx_mem_free_raw)
+380                         begin
+381        1/1                  rx_mem_free_i_inc_1     &lt;= rx_mem_free_i_i + 1;
+382        1/1                  rx_mem_free_raw_inc_1   &lt;= rx_mem_free_raw + 1;
+383        1/1                  rx_mem_free_raw_dec_1   &lt;= rx_mem_free_raw - 1;
+384                         end process;
+385                     
+386                         -----------------------------------------------------------------------------------------------
+387                         -- Calculation of Incremented Read Pointer combinationally. This is used for two things:
+388                         --  1. Actual Increment of Read pointer during read of RX_DATA.
+389                         --  2. Adressing RX Buffer RAM read side by incremented value to avoid one clock cycle delay on
+390                         --     &quot;read_pointer_int&quot; and thus allow bursts on read from RX_DATA register!
+391                         -----------------------------------------------------------------------------------------------
+392                         read_pointer_inc_proc : process(read_pointer_i)
+393                         begin
+394        1/1                  read_pointer_inc_1_i &lt;= read_pointer_i + 1;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod66.html" >CTU_CAN_FD_RTL.RX_BUFFER_POINTERS RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">Conditions</td><td>20</td><td>18</td><td>90.00</td></tr>
+<tr class="s9"><td class="lf">Logical</td><td>20</td><td>18</td><td>90.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       270
+ EXPRESSION (WRITE_RAW_OK = '1')
+            ----------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       274
+ EXPRESSION (WRITE_RAW_OK = '1')
+            ----------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       275
+ EXPRESSION (REC_ABORT_F = '1')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       276
+ EXPRESSION (COMMIT_OVERRUN_ABORT = '1')
+            --------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       294
+ EXPRESSION (STORE_TS_WR_PTR = '1')
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       299
+ EXPRESSION (STORE_TS_WR_PTR = '1')
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       300
+ EXPRESSION (INC_TS_WR_PTR = '1')
+            ----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       333
+ EXPRESSION ((REC_ABORT_F = '1') OR (COMMIT_OVERRUN_ABORT = '1'))
+             ---------1---------    --------------2-------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>0</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>1</td><td>-</td><td class="lf">Not Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       347
+ EXPRESSION ((REC_ABORT_F = '1') OR (COMMIT_OVERRUN_ABORT = '1'))
+             ---------1---------    --------------2-------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod66.html" >CTU_CAN_FD_RTL.RX_BUFFER_POINTERS RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">29</td>
+<td class="rt">23</td>
+<td class="rt">79.31 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">322</td>
+<td class="rt">250</td>
+<td class="rt">77.64 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">161</td>
+<td class="rt">125</td>
+<td class="rt">77.64 </td>
+</tr><tr class="s7">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">161</td>
+<td class="rt">125</td>
+<td class="rt">77.64 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s6">
+<td>Ports</td>
+<td class="rt">15</td>
+<td class="rt">9</td>
+<td class="rt">60.00 </td>
+</tr><tr class="s5">
+<td>Port Bits</td>
+<td class="rt">164</td>
+<td class="rt">92</td>
+<td class="rt">56.10 </td>
+</tr><tr class="s5">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">82</td>
+<td class="rt">46</td>
+<td class="rt">56.10 </td>
+</tr><tr class="s5">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">82</td>
+<td class="rt">46</td>
+<td class="rt">56.10 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">14</td>
+<td class="rt">14</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">158</td>
+<td class="rt">158</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">79</td>
+<td class="rt">79</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">79</td>
+<td class="rt">79</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RX_BUF_RES_N_Q_SCAN</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>REC_ABORT_F</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>COMMIT_RX_FRAME</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WRITE_RAW_OK</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>COMMIT_OVERRUN_ABORT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STORE_TS_WR_PTR</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>INC_TS_WR_PTR</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>READ_INCREMENT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>READ_POINTER[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>READ_POINTER[11:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>READ_POINTER_INC_1[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>READ_POINTER_INC_1[11:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WRITE_POINTER[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WRITE_POINTER[11:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WRITE_POINTER_RAW[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WRITE_POINTER_RAW[11:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WRITE_POINTER_TS[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WRITE_POINTER_TS[11:6]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>RX_MEM_FREE_I[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>RX_MEM_FREE_I[12:7]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>READ_POINTER_I[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>READ_POINTER_INC_1_I[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>WRITE_POINTER_I[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>WRITE_POINTER_RAW_I[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>WRITE_POINTER_RAW_D[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>WRITE_POINTER_RAW_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>WRITE_POINTER_TS_I[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>WRITE_POINTER_TS_D[5:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>WRITE_POINTER_TS_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>RX_MEM_FREE_I_I[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>RX_MEM_FREE_RAW[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>RX_MEM_FREE_RAW_INC_1[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>RX_MEM_FREE_RAW_DEC_1[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>RX_MEM_FREE_I_INC_1[6:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod66.html" >CTU_CAN_FD_RTL.RX_BUFFER_POINTERS RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s9">
+<td>Branches</td>
+<td></td>
+<td class="rt">39</td>
+<td class="rt">36</td>
+<td class="rt">92.31 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">239</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">254</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">270</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">274</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">281</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">294</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">299</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">305</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s7">
+<td>IF</td>
+<td class="rt">320</td>
+<td class="rt">12</td>
+<td class="rt">9</td>
+<td class="rt">75.00 </td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+239                if (rx_buf_res_n_q_scan = '0') then
+                   <font color = "green">-1-</font>  
+240                    read_pointer_i <= (others => '0');
+           <font color = "green">            ==></font>
+241                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+242                    if (read_increment = '1') then
+                       <font color = "green">-3-</font>  
+243                        read_pointer_i <= read_pointer_inc_1_i;
+           <font color = "green">                ==></font>
+244                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+245                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+254                if (rx_buf_res_n_q_scan = '0') then
+                   <font color = "green">-1-</font>  
+255                    write_pointer_i <= (others => '0');
+           <font color = "green">            ==></font>
+256                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+257                    if (commit_rx_frame = '1') then
+                       <font color = "green">-3-</font>  
+258                        write_pointer_i <= write_pointer_raw_i;
+           <font color = "green">                ==></font>
+259                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+260                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+270            write_pointer_raw_d <= write_pointer_raw_i + 1 when (write_raw_OK = '1')
+                                                              <font color = "green">-1-</font>  
+                                                              <font color = "green">==></font>  
+                                                              <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+274            write_pointer_raw_ce <= '1' when (write_raw_OK = '1') else
+                                           <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+275                                    '1' when (rec_abort_f = '1') else
+                                           <font color = "green">-2-</font>  
+           <font color = "green">                            ==></font>
+276                                    '1' when (commit_overrun_abort = '1') else
+                                           <font color = "green">-3-</font>  
+                                           <font color = "green">==></font>  
+                                           <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+281                if (rx_buf_res_n_q_scan = '0') then
+                   <font color = "green">-1-</font>  
+282                   write_pointer_raw_i <= (others => '0');
+           <font color = "green">           ==></font>
+283                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+284                    if (write_pointer_raw_ce = '1') then
+                       <font color = "green">-3-</font>  
+285                        write_pointer_raw_i <= write_pointer_raw_d;
+           <font color = "green">                ==></font>
+286                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+287                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+294            write_pointer_ts_d <= write_pointer_raw_i when (store_ts_wr_ptr = '1')
+                                                         <font color = "green">-1-</font>  
+                                                         <font color = "green">==></font>  
+                                                         <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+299            write_pointer_ts_ce <= '1' when (store_ts_wr_ptr = '1') else
+                                          <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+300                                   '1' when (inc_ts_wr_ptr = '1') else
+                                          <font color = "green">-2-</font>  
+                                          <font color = "green">==></font>  
+                                          <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+305                if (rx_buf_res_n_q_scan = '0') then
+                   <font color = "green">-1-</font>  
+306                    write_pointer_ts_i  <= (others => '0');
+           <font color = "green">            ==></font>
+307                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+308                    if (write_pointer_ts_ce = '1') then
+                       <font color = "green">-3-</font>  
+309                        write_pointer_ts_i <= write_pointer_ts_d;
+           <font color = "green">                ==></font>
+310                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+311                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+320                if (rx_buf_res_n_q_scan = '0') then
+                   <font color = "green">-1-</font>  
+321                    rx_mem_free_i_i <= to_unsigned(G_RX_BUFF_SIZE, C_FREE_MEM_WIDTH);
+           <font color = "green">            ==></font>
+322                    rx_mem_free_raw <= to_unsigned(G_RX_BUFF_SIZE, C_FREE_MEM_WIDTH);
+323        
+324                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+325        
+326                    ---------------------------------------------------------------------------------------
+327                    -- Calculate free memory internally (raw)
+328                    ---------------------------------------------------------------------------------------
+329                    if (read_increment = '1') then
+                       <font color = "green">-3-</font>  
+330        
+331                        -- Read of memory word, and abort at the same time. Revert last commited value of
+332                        -- read pointer incremented by 1.
+333                        if (rec_abort_f = '1' or commit_overrun_abort = '1') then
+                           <font color = "red">-4-</font>  
+334                            rx_mem_free_raw <= rx_mem_free_i_inc_1;
+           <font color = "red">                    ==></font>
+335        
+336                        -- Read of memory word and no write of memory word. Load raw value incremented by 1.
+337                        elsif (write_raw_OK = '0') then
+                              <font color = "red">-5-</font>  
+338                            rx_mem_free_raw <= rx_mem_free_raw_inc_1;
+           <font color = "green">                    ==></font>
+339        
+340                        -- Implicit else: Read increment and write of a word at the same time,
+341                        -- rx_mem_free_raw remains unchanged.
+342                        end if;
+                           MISSING_ELSE
+           <font color = "red">                ==></font>
+343        
+344                    else
+345        
+346                        -- Abort, or abort was previously flaged -> Revert last commited value.
+347                        if (rec_abort_f = '1' or commit_overrun_abort = '1') then
+                           <font color = "green">-6-</font>  
+348                            rx_mem_free_raw <= rx_mem_free_i_i;
+           <font color = "green">                    ==></font>
+349        
+350                        -- No read, write only, decrement by 1.
+351                        elsif (write_raw_OK = '1') then
+                              <font color = "green">-7-</font>  
+352                            rx_mem_free_raw <= rx_mem_free_raw_dec_1;
+           <font color = "green">                    ==></font>
+353                        end if;
+                           MISSING_ELSE
+           <font color = "green">                ==></font>
+354                    end if;
+355        
+356                    ---------------------------------------------------------------------------------------
+357                    -- Calculate free memory for user:
+358                    --      1. Increment when user reads the frame.
+359                    --      2. Load RAW value when comitt occurs
+360                    ---------------------------------------------------------------------------------------
+361                    if (read_increment = '1') then
+                       <font color = "green">-8-</font>  
+362                        if (commit_rx_frame = '1') then
+                           <font color = "red">-9-</font>  
+363                            rx_mem_free_i_i <= rx_mem_free_raw_inc_1;
+           <font color = "red">                    ==></font>
+364                        else
+365                            rx_mem_free_i_i <= rx_mem_free_i_inc_1;
+           <font color = "green">                    ==></font>
+366                        end if;
+367        
+368                    elsif (commit_rx_frame = '1') then
+                          <font color = "green">-10-</font>  
+369                        rx_mem_free_i_i <= rx_mem_free_raw;
+           <font color = "green">                ==></font>
+370                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+371        
+372                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>-7-</th><th nowrap width=80>-8-</th><th nowrap width=80>-9-</th><th nowrap width=80>-10-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_186">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_CTU_CAN_FD_RTL.RX_BUFFER_POINTERS RTL">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

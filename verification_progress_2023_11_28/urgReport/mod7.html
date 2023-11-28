@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.ERR_CAPT_CRC_BIT_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_CRC_BIT_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.ERR_CAPT_CRC_BIT_FTEST')">CTU_CAN_FD_TB.ERR_CAPT_CRC_BIT_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 97.22</td>
+<td class="s9 cl rt"><a href="mod7.html#Line" > 97.22</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_crc_bit_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_capt_crc_bit_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.ERR_CAPT_CRC_BIT_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod7.html" >CTU_CAN_FD_TB.ERR_CAPT_CRC_BIT_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>36</td><td>35</td><td>97.22</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>128</td><td>36</td><td>35</td><td>97.22</td></tr>
+</table>
+<pre class="code"><br clear=all>
+127                             -----------------------------------------------------------------------
+128        1/1                  info_m(&quot;Step 1&quot;);
+129                     
+130        1/1                  CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+131        1/1                  check_m(err_capt.err_pos = err_pos_other, &quot;Reset of ERR_CAPT!&quot;);
+132                     
+133                             -----------------------------------------------------------------------
+134                             -- @2. Generate CAN frame, send it by DUT. Wait until data field.
+135                             --    Wait for random duration of data field. Force bus to opposite
+136                             --    value as transmitted bit wait until sample point. Check that
+137                             --    error frame is being transmitted. Check that ERR_CAPT signals bit
+138                             --    error in data field!
+139                             -----------------------------------------------------------------------
+140        1/1                  info_m(&quot;Step 2&quot;);
+141                     
+142        1/1                  CAN_generate_frame(frame_1);
+143        1/1                  frame_1.rtr := NO_RTR_FRAME;
+144                             
+145                             -- Don't sample by SSP!
+146        1/1                  frame_1.brs := BR_NO_SHIFT;
+147                             
+148        1/1                  CAN_send_frame(frame_1, 1, DUT_NODE, chn, frame_sent);
+149        1/1                  CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+150                             
+151        1/1                  if (frame_1.frame_format = FD_CAN) then
+152        1/1                      CAN_wait_pc_state(pc_deb_stuff_count, DUT_NODE, chn);
+153                             else
+154        1/1                      CAN_wait_pc_state(pc_deb_crc, DUT_NODE, chn);
+155                             end if;
+156                     
+157                             -- Wait for random number of bits
+158        1/1                  if (frame_1.frame_format = FD_CAN) then
+159        1/1                      if (frame_1.data_length &gt; 16) then
+160        <font color = "red">0/1     ==>                  crc_len := 24; -- CRC21 + Stuff count + Parity - 1</font>
+161                                 else
+162        1/1                          crc_len := 20; -- CRC17 + Stuff count + Parity - 1
+163                                 end if;
+164                             else
+165        1/1                      crc_len := 15; -- CRC 15 (CAN 2.0 frames have no Stuff count)!
+166                             end if;
+167                     
+168                             -- Wait for Random amount of bits, but not longer than CRC field!
+169        1/1                  rand_int_v(crc_len - 1, tmp);
+170        1/1                  info_m(&quot;Waiting for: &quot; &amp; integer'image(tmp) &amp; &quot; bits!&quot;);
+171        1/1                  for i in 1 to tmp loop
+172        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+173                             end loop;
+174                     
+175        1/1                  CAN_wait_sync_seg(DUT_NODE, chn);
+176        1/1                  wait for 20 ns;
+177                     
+178        1/1                  get_can_tx(DUT_NODE, can_tx_val, chn);
+179        1/1                  force_bus_level(not can_tx_val, chn);
+180        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+181        1/1                  wait for 20 ns; -- To be sure that opposite bit is sampled!
+182        1/1                  release_bus_level(chn);
+183                             
+184        1/1                  get_controller_status(stat_1, DUT_NODE, chn);
+185        1/1                  check_m(stat_1.error_transmission, &quot;Error frame is being transmitted!&quot;);
+186                             
+187        1/1                  CAN_read_error_code_capture(err_capt, DUT_NODE, chn);
+188                             
+189                             -----------------------------------------------------------------------
+190                             -- It might happend that we corrupt a bit which is just stuff bit (due
+191                             -- to randomization). If this is a CAN FD frame, this will be considered
+192                             -- as form error (stuff error during fixed bit stuffing shall be reported
+193                             -- as form error). In such case, form error has higher priority than
+194                             -- stuff error, so form error is reported. Tolerate this as this is not
+195                             -- a bug!
+196                             -----------------------------------------------------------------------
+197        1/1                  if (frame_1.frame_format = FD_CAN) then
+198        1/1                      check_m(err_capt.err_type = can_err_bit or
+199                                       err_capt.err_type = can_err_form, &quot;Bit or Form error detected!&quot;);
+200                             else
+201        1/1                      check_m(err_capt.err_type = can_err_bit, &quot;Bit error detected!&quot;);
+202                             end if;
+203                                 
+204        1/1                  check_m(err_capt.err_pos = err_pos_crc, &quot;Error detected in CRC field!&quot;);
+205                             
+206        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.ERR_CAPT_CRC_BIT_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

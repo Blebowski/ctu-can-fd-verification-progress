@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.MODE_PEX_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.MODE_PEX_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.MODE_PEX_FTEST')">CTU_CAN_FD_TB.MODE_PEX_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod207.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_pex_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_pex_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.MODE_PEX_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod207.html" >CTU_CAN_FD_TB.MODE_PEX_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>76</td><td>76</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>146</td><td>6</td><td>6</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>167</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>189</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>212</td><td>59</td><td>59</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+145                         begin
+146        1/1                  get_controller_status(status, node, chn);
+147                             
+148        1/1                  if (expected) then
+149        1/1                      check_m(status.protocol_exception, &quot;STATUS[PEX] is set&quot;);
+150        1/1                      command.clear_pexs_flag := true;
+151        1/1                      give_controller_command(command, node, chn);
+152                             else
+153        1/1                      check_false_m(status.protocol_exception, &quot;STATUS[PEX] is not set&quot;);
+154                             end if;
+155                             
+156                         end procedure;
+157                     
+158                         procedure wait_till_fdf(
+159                             variable can_frame          :       SW_CAN_frame_type;
+160                             constant node               :       t_feature_node;
+161                             signal   chn                : inout t_com_channel
+162                         ) is
+163                             variable num_bits_to_wait : natural;
+164                         begin
+165                             -- Here we assume frame is FD Frame!
+166                             
+167        1/1                  if (can_frame.ident_type = BASE) then
+168        1/1                      num_bits_to_wait := 14;
+169                             else
+170        1/1                      num_bits_to_wait := 33;
+171                             end if;
+172                             
+173        1/1                  CAN_wait_tx_rx_start(false, true, node, chn);
+174        1/1                  wait for 15 ns;
+175        1/1                  for i in 1 to num_bits_to_wait loop
+176        1/1                      CAN_wait_sample_point(node, chn);
+177                             end loop;
+178                         end procedure;
+179                     
+180                     
+181                         procedure configure_pex_fdf(
+182                             constant pex_ena            :       boolean;
+183                             constant fde_ena            :       boolean;
+184                             constant node               :       t_feature_node;
+185                             signal   chn                : inout t_com_channel
+186                         ) is
+187                             variable mode               : SW_mode := SW_mode_rst_val;
+188                         begin
+189        1/1                  get_core_mode(mode, DUT_NODE, chn);
+190        1/1                  mode.pex_support := pex_ena;
+191        1/1                  mode.flexible_data_rate := fde_ena;
+192        1/1                  set_core_mode(mode, DUT_NODE, chn);
+193                         end procedure;
+194                     
+195                     
+196                         procedure mode_pex_ftest_exec(
+197                             signal      chn             : inout  t_com_channel
+198                         ) is
+199                             variable CAN_TX_frame       :       SW_CAN_frame_type;
+200                             variable CAN_RX_frame       :       SW_CAN_frame_type;
+201                             variable frame_sent         :       boolean := false;
+202                     
+203                             variable mode_1             :       SW_mode := SW_mode_rst_val;
+204                             variable mode_2             :       SW_mode := SW_mode_rst_val;
+205                             variable txt_buf_state      :       SW_TXT_Buffer_state_type;
+206                             variable rx_buf_state       :       SW_RX_Buffer_info;
+207                             variable status             :       SW_status;
+208                             variable frames_equal       :       boolean := false;
+209                             variable pc_dbg             :       SW_PC_Debug;   
+210                         begin
+211                     
+212        1/1                  info_m(&quot;Generating random CAN FD frame&quot;);
+213        1/1                  CAN_generate_frame(CAN_TX_frame);
+214        1/1                  CAN_TX_frame.frame_format := FD_CAN;
+215                     
+216                             ------------------------------------------------------------------------
+217                             -- @1. First part - CAN 2.0 - no protocol exception.
+218                             ------------------------------------------------------------------------
+219        1/1                  info_m(&quot;Part 1&quot;);
+220                             
+221                                 --------------------------------------------------------------------
+222                                 -- @1.1 Configure SETTINGS[PEX]=0 and MODE[FDE]=0 in DUT. Send 
+223                                 --      CAN FD frame by Test node.
+224                                 --------------------------------------------------------------------
+225        1/1                      info_m(&quot;Step 1.1&quot;);
+226                                 
+227        1/1                      configure_pex_fdf(pex_ena =&gt; false, fde_ena =&gt; false,
+228                                                   node =&gt; DUT_NODE, chn =&gt; chn);
+229        1/1                      CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+230                     
+231                                 --------------------------------------------------------------------
+232                                 -- @1.2 Wait until sample poing of r0/FDF bit. Check that DUT sends
+233                                 --      error frame. Wait till end of frame.
+234                                 --------------------------------------------------------------------
+235        1/1                      info_m(&quot;Step 1.2&quot;);
+236                                 
+237        1/1                      wait_till_fdf(CAN_TX_frame, DUT_NODE, chn);
+238        1/1                      wait for 20 ns;
+239        1/1                      get_controller_status(status, DUT_NODE, chn);
+240        1/1                      check_m(status.error_transmission, &quot;Error frame being transmitted&quot;);
+241                                 
+242        1/1                      CAN_wait_bus_idle(DUT_NODE, chn);
+243                     
+244                                 -------------------------------------------------------------------
+245                                 -- @1.3 Check that STATUS[PEXS] is not set (no Protocol exception 
+246                                 --      occured).
+247                                 -------------------------------------------------------------------
+248        1/1                      info_m(&quot;Step 1.3&quot;);
+249                                 
+250        1/1                      check_pex_flag(false, DUT_NODE, chn);
+251                     
+252                             ------------------------------------------------------------------------
+253                             -- @2. Second part - CAN FD Tolerant
+254                             ------------------------------------------------------------------------
+255        1/1                  info_m(&quot;Part 2&quot;); 
+256                     
+257                                 --------------------------------------------------------------------
+258                                 -- @2.1 Configure SETTINGS[PEX]=1 and MODE[FDE]=0 in DUT. Send 
+259                                 --      CAN FD frame by Test node.
+260                                 --------------------------------------------------------------------
+261        1/1                      info_m(&quot;Step 2.1&quot;);
+262                                 
+263        1/1                      configure_pex_fdf(pex_ena =&gt; true, fde_ena =&gt; false,
+264                                                   node =&gt; DUT_NODE, chn =&gt; chn);
+265        1/1                      CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+266                     
+267                                 --------------------------------------------------------------------
+268                                 -- @2.2 Wait until start of r0/FDF bit. Wait one more bit and check 
+269                                 --      that DUT is NOT sending error frame. Check that node is
+270                                 --      idle (in inte gration state). Wait till end of frame.
+271                                 --------------------------------------------------------------------
+272        1/1                      info_m(&quot;Step 2.2&quot;);
+273                                 
+274        1/1                      wait_till_fdf(CAN_TX_frame, DUT_NODE, chn);
+275        1/1                      wait for 20 ns;
+276        1/1                      get_controller_status(status, DUT_NODE, chn);
+277        1/1                      check_false_m(status.error_transmission, &quot;Error frame not transmitted&quot;);
+278                                 
+279                                 -- TODO: If we add &quot;Integrating&quot; STATUS bit, use it to check it!
+280                                 --check_m(status.bus_status, &quot;Node is off the bus (integrating)&quot;);
+281        1/1                      CAN_wait_bus_idle(DUT_NODE, chn);
+282                     
+283                                 --------------------------------------------------------------------
+284                                 -- @2.3 Check that STATUS[PEXS] is set. Clear it via COMMAND[CPEXS]
+285                                 --     and check that it has been cleared.
+286                                 --------------------------------------------------------------------
+287        1/1                      info_m(&quot;Step 2.3&quot;);
+288                                 
+289        1/1                      check_pex_flag(true, DUT_NODE, chn);
+290                     
+291                             ------------------------------------------------------------------------
+292                             -- @3. Third part - CAN FD Enabled - no protocol exception.
+293                             ------------------------------------------------------------------------
+294        1/1                  info_m(&quot;Part 3&quot;);
+295                             
+296                                 -------------------------------------------------------------------
+297                                 -- @3.1 Configure SETTINGS[PEX]=0 and MODE[FDE]=1 in DUT. Send
+298                                 --      CAN FD frame by Test node.
+299                                 -------------------------------------------------------------------
+300        1/1                      info_m(&quot;Step 3.1&quot;);
+301                                 
+302        1/1                      configure_pex_fdf(pex_ena =&gt; false, fde_ena =&gt; true,
+303                                                   node =&gt; DUT_NODE, chn =&gt; chn);
+304        1/1                      CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+305                                 
+306                                 -------------------------------------------------------------------
+307                                 -- @3.2 Wait till sample point of FDF in Test node and force CAN RX
+308                                 --      of DUT to Recessive value.
+309                                 -------------------------------------------------------------------
+310        1/1                      info_m(&quot;Step 3.2&quot;);
+311                                 
+312        1/1                      wait_till_fdf(CAN_TX_frame, DUT_NODE, chn);
+313        1/1                      force_can_rx(RECESSIVE, DUT_NODE, chn);
+314                     
+315                                 -------------------------------------------------------------------
+316                                 -- @3.3 Wait till sample point of next bit (R0), release the force,
+317                                 --      and check that DUT is transmitting Error frame. Wait till
+318                                 --      end of frame.
+319                                 -------------------------------------------------------------------
+320        1/1                      info_m(&quot;Step 3.3&quot;);
+321                                 
+322        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+323        1/1                      wait for 20 ns;
+324        1/1                      release_can_rx(chn);
+325        1/1                      get_controller_status(status, DUT_NODE, chn);
+326        1/1                      check_m(status.error_transmission, &quot;Error frame transmitted&quot;);
+327        1/1                      CAN_wait_bus_idle(DUT_NODE, chn);
+328                     
+329                                 -------------------------------------------------------------------
+330                                 -- @3.4 Check that STATUS[PEXS] is not set.
+331                                 -------------------------------------------------------------------
+332        1/1                      info_m(&quot;Step 3.4&quot;);
+333                                 
+334        1/1                      check_pex_flag(false, DUT_NODE, chn);
+335                     
+336                             ------------------------------------------------------------------------
+337                             -- @4. Fourth part - CAN FD Enabled - Protocol exception.
+338                             ------------------------------------------------------------------------
+339        1/1                  info_m(&quot;Part 4&quot;);
+340                             
+341                                 --------------------------------------------------------------------
+342                                 -- @4.1 Configure SETTINGS[PEX]=1 and MODE[FDE]=1 in DUT. Send 
+343                                 --      CAN FD frame by Test node.
+344                                 --------------------------------------------------------------------
+345        1/1                      info_m(&quot;Part 4.1&quot;);
+346                                 
+347        1/1                      configure_pex_fdf(pex_ena =&gt; true, fde_ena =&gt; true,
+348                                                   node =&gt; DUT_NODE, chn =&gt; chn);
+349        1/1                      CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+350                                 
+351                                 --------------------------------------------------------------------
+352                                 -- @4.2 Wait till sample point of FDF in Test node and force CAN RX
+353                                 --      of DUT to Recessive value.
+354                                 --------------------------------------------------------------------
+355        1/1                      info_m(&quot;Part 4.2&quot;);
+356                                 
+357        1/1                      wait_till_fdf(CAN_TX_frame, DUT_NODE, chn);
+358        1/1                      force_can_rx(RECESSIVE, DUT_NODE, chn);
+359                     
+360                                 --------------------------------------------------------------------
+361                                 -- @4.3 Wait till sample point of next bit, release the force, and
+362                                 --      check that DUT is NOT transmitting Error frame and that it
+363                                 ---     is idle. Wait till end of frame.
+364                                 --------------------------------------------------------------------
+365        1/1                      info_m(&quot;Step 4.3&quot;);
+366                     
+367        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+368        1/1                      wait for 20 ns;
+369        1/1                      release_can_rx(chn);
+370        1/1                      get_controller_status(status, DUT_NODE, chn);
+371        1/1                      check_false_m(status.error_transmission, &quot;Error frame NOT transmitted&quot;);
+372                                 
+373                                 -- TODO: Check integration status bit if added!
+374                                 
+375        1/1                      CAN_wait_bus_idle(DUT_NODE, chn);
+376                                 
+377                                 --------------------------------------------------------------------
+378                                 -- @4.4 Check that STATUS[PEXS] is set. Clear it via COMMAND[CPEXS]
+379                                 --      and check that it has been cleared.
+380                                 --------------------------------------------------------------------
+381        1/1                      info_m(&quot;Step 4.4&quot;);
+382                                 
+383        1/1                      check_pex_flag(true, DUT_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.MODE_PEX_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

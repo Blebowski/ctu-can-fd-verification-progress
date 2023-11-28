@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.MODE_FRAME_FILTERS_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.MODE_FRAME_FILTERS_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.MODE_FRAME_FILTERS_FTEST')">CTU_CAN_FD_TB.MODE_FRAME_FILTERS_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod147.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_frame_filters_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/mode_frame_filters_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.MODE_FRAME_FILTERS_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod147.html" >CTU_CAN_FD_TB.MODE_FRAME_FILTERS_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>44</td><td>44</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>137</td><td>44</td><td>44</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+136                             ------------------------------------------------------------------------
+137        1/1                  info_m(&quot;Step 1: Configure frame filters&quot;);
+138                             
+139        1/1                  mode_1.acceptance_filter := true;
+140        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+141                     
+142                             -- Filter A (accept BASE IDs with LSB equal to 1)
+143        1/1                  filt_A_cfg.ID_value := 1;
+144        1/1                  filt_A_cfg.ID_mask := 1;
+145        1/1                  filt_A_cfg.ident_type := BASE;
+146        1/1                  filt_A_cfg.acc_CAN_2_0 := true;
+147        1/1                  filt_A_cfg.acc_CAN_FD := true;
+148        1/1                  CAN_set_mask_filter(filter_A, filt_A_cfg, DUT_NODE, chn);
+149                             
+150                             -- Filter B and C (dont accept any frame type)
+151        1/1                  filt_B_C_cfg.ID_value := 1;
+152        1/1                  filt_B_C_cfg.ID_mask := 1;
+153        1/1                  filt_B_C_cfg.ident_type := BASE;
+154        1/1                  filt_B_C_cfg.acc_CAN_2_0 := false;
+155        1/1                  filt_B_C_cfg.acc_CAN_FD := false;
+156        1/1                  CAN_set_mask_filter(filter_B, filt_B_C_cfg, DUT_NODE, chn);
+157        1/1                  CAN_set_mask_filter(filter_C, filt_B_C_cfg, DUT_NODE, chn);
+158                     
+159                             -- Range filters (dont accept any frame type)
+160        1/1                  filter_range_cfg.ID_th_low := 0;
+161        1/1                  filter_range_cfg.ID_th_high := 0;
+162        1/1                  filter_range_cfg.ident_type := BASE; 
+163        1/1                  filter_range_cfg.acc_CAN_2_0 := false;
+164        1/1                  filter_range_cfg.acc_CAN_FD := false;
+165        1/1                  CAN_set_range_filter(filter_range_cfg, DUT_NODE, chn);
+166                     
+167                             ------------------------------------------------------------------------
+168                             -- @2. Generate random CAN frame and send by Test node. Wait till frame is 
+169                             --     received. If frame should be received (LSB of ID=1), check it is
+170                             --     received. If it should not be received, check it is not received!
+171                             ------------------------------------------------------------------------
+172        1/1                  info_m(&quot;Step 2: Check frame filters mode operation&quot;);
+173                             
+174        1/1                  CAN_generate_frame(CAN_TX_frame);
+175        1/1                  CAN_TX_frame.ident_type := BASE;
+176        1/1                  CAN_TX_frame.identifier := CAN_TX_frame.identifier mod 2048;
+177                             
+178        1/1                  CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+179        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+180                             
+181        1/1                  get_rx_buf_state(rx_buf_state, DUT_NODE, chn);
+182                             
+183                             -- Frame should be received
+184        1/1                  if (CAN_TX_frame.identifier mod 2 = 1) then
+185        1/1                      check_m(rx_buf_state.rx_frame_count = 1, &quot;Frame not filtered out!&quot;); 
+186        1/1                      CAN_read_frame(CAN_RX_frame, DUT_NODE, chn);
+187        1/1                      CAN_compare_frames(CAN_RX_frame, CAN_TX_frame, false, frames_equal);
+188                                 
+189                             -- Frame should not be received
+190                             else
+191        1/1                      check_m(rx_buf_state.rx_frame_count = 0, &quot;Frame filtered out!&quot;);
+192                             end if;
+193                                     
+194                             ------------------------------------------------------------------------
+195                             -- @3. Disable frame filters mode in DUT. Send CAN frame with LSB of
+196                             --     ID=0,(should not be received according to frame filters settings).
+197                             ------------------------------------------------------------------------
+198        1/1                  info_m(&quot;Step 3: Check frame filters mode disabled!&quot;);
+199                             
+200        1/1                  mode_1.acceptance_filter := false;
+201        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+202                             
+203        1/1                  CAN_TX_frame.identifier := 10; -- Filter A set to filter it out!
+204        1/1                  CAN_send_frame(CAN_TX_frame, 1, TEST_NODE, chn, frame_sent);
+205        1/1                  CAN_wait_frame_sent(DUT_NODE, chn);
+206                             
+207        1/1                  get_rx_buf_state(rx_buf_state, DUT_NODE, chn);
+208                             
+209        1/1                  check_m(rx_buf_state.rx_frame_count = 1,
+210                                 &quot;Frame not filtered out when frame filters mode disabled!&quot;); 
+211        1/1                  CAN_read_frame(CAN_RX_frame, DUT_NODE, chn);
+212        1/1                      CAN_compare_frames(CAN_RX_frame, CAN_TX_frame, false, frames_equal);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.MODE_FRAME_FILTERS_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

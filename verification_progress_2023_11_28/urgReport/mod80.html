@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.SSP_CFG_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.SSP_CFG_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.SSP_CFG_FTEST')">CTU_CAN_FD_TB.SSP_CFG_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 95.04</td>
+<td class="s9 cl rt"><a href="mod80.html#Line" > 95.04</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/ssp_cfg_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/ssp_cfg_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.SSP_CFG_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod80.html" >CTU_CAN_FD_TB.SSP_CFG_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>121</td><td>115</td><td>95.04</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>152</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>197</td><td>116</td><td>110</td><td>94.83</td></tr>
+</table>
+<pre class="code"><br clear=all>
+151                         begin
+152        1/1                  bit_time_length := bus_timing.tq_dbt * (1 + bus_timing.prop_dbt +
+153                                 bus_timing.ph1_dbt + bus_timing.ph2_dbt);
+154                     
+155        1/1                  if (to_integer(unsigned(ssp_offset_generated)) &gt;= bit_time_length) then
+156        1/1                      ssp_offset_corrected := std_logic_vector(to_unsigned(bit_time_length - 1, 8));
+157        1/1                      info_m(&quot;Correcting SSP offset. Bit time length: &quot; &amp;
+158                                       integer'image(bit_time_length) &amp; &quot; cycles. New SSP offset value:&quot; &amp;
+159                                       integer'image(to_integer(unsigned(ssp_offset_corrected))));
+160                             else
+161        1/1                      ssp_offset_corrected := ssp_offset_generated;
+162                             end if;
+163                     
+164                         end procedure;
+165                     
+166                         procedure ssp_cfg_ftest_exec(
+167                             signal      chn             : inout  t_com_channel
+168                         ) is
+169                     
+170                             -- Generated frames
+171                             variable frame_1            :     SW_CAN_frame_type;
+172                     
+173                             -- Node status
+174                             variable stat_1             :     SW_status;
+175                     
+176                             variable frame_sent         :     boolean;
+177                     
+178                             variable rand_trv_delay     :     natural;
+179                             variable tmp                :     natural;
+180                     
+181                             variable ssp_source         :     SSP_set_command_type;
+182                             variable ssp_offset_var     :     std_logic_vector(7 downto 0);
+183                             variable ssp_pos            :     natural;
+184                     
+185                             variable bus_timing         :     bit_time_config_type;
+186                             variable num_bit_waits      :     natural;
+187                             variable num_bit_waits_max  :     natural;
+188                             variable tx_val             :     std_logic;
+189                             variable bit_rate           :     real;
+190                             variable cycles_per_bit     :     integer;
+191                         begin
+192                     
+193                             -----------------------------------------------------------------------
+194                             -- @1. Generate random TRV_DELAY between 0 and 125. Configure it in TB
+195                             --    as delay between CAN TX and CAN RX.
+196                             -----------------------------------------------------------------------
+197        1/1                  info_m(&quot;Step 1&quot;);
+198                     
+199        1/1                  CAN_turn_controller(false, DUT_NODE, chn);
+200        1/1                  CAN_turn_controller(false, TEST_NODE, chn);
+201                     
+202                             -- Should be 250 Kbit/s
+203        1/1                  bus_timing.prop_nbt := 37;
+204        1/1                  bus_timing.ph1_nbt := 37;
+205        1/1                  bus_timing.ph2_nbt := 25;
+206        1/1                  bus_timing.tq_nbt := 4;
+207        1/1                  bus_timing.sjw_nbt := 5;
+208                     
+209                             -- Generate random data bit timing!
+210        1/1                  rand_int_v(63, bus_timing.prop_dbt);
+211        1/1                  rand_int_v(31, bus_timing.ph1_dbt);
+212        1/1                  rand_int_v(31, bus_timing.ph2_dbt);
+213                     
+214                             -- Constrain time quanta to something realistinc for data phase so
+215                             -- that we don't have too long run times!
+216        1/1                  rand_int_v(4, bus_timing.tq_dbt);
+217        1/1                  rand_int_v(33, bus_timing.sjw_dbt);
+218                     
+219                             -- Minimal time quanta
+220        1/1                  if (bus_timing.tq_dbt = 0) then
+221        1/1                      bus_timing.tq_dbt := 1;
+222                             end if;
+223                     
+224        1/1                  cycles_per_bit := bus_timing.tq_dbt * (1 + bus_timing.prop_dbt +
+225                                                 bus_timing.ph1_dbt + bus_timing.ph2_dbt);
+226                     
+227                             -- Constrain minimal bit times
+228        1/1                  if (cycles_per_bit &lt; 7) then
+229        <font color = "red">0/1     ==>              bus_timing.prop_dbt := 7;</font>
+230                             end if;
+231                     
+232        1/1                  if (bus_timing.tq_dbt = 1 and bus_timing.ph2_dbt = 1) then
+233        <font color = "red">0/1     ==>              bus_timing.ph2_dbt := 2;</font>
+234                             end if;
+235                     
+236        1/1                  cycles_per_bit := bus_timing.tq_dbt * (1 + bus_timing.prop_dbt +
+237                                                 bus_timing.ph1_dbt + bus_timing.ph2_dbt);
+238        1/1                  info_m(&quot;Cycles per bit:&quot; &amp; integer'image(cycles_per_bit));
+239                     
+240        1/1                  info_m(&quot;Generated data bit time bit-rate:&quot;);
+241        1/1                  info_m(&quot;TQ: &quot; &amp; integer'image(bus_timing.tq_dbt));
+242        1/1                  info_m(&quot;PROP: &quot; &amp; integer'image(bus_timing.prop_dbt));
+243        1/1                  info_m(&quot;PH1: &quot; &amp; integer'image(bus_timing.ph1_dbt));
+244        1/1                  info_m(&quot;PH2: &quot; &amp; integer'image(bus_timing.ph2_dbt));
+245        1/1                  bit_rate := 100000000.0 / (real(cycles_per_bit));
+246        1/1                  info_m(&quot;Data bit rate: &quot; &amp; real'image(bit_rate/1000000.0) &amp; &quot; Mbit/s&quot;);
+247                     
+248                             -- We configure Nominal bit-rate to 500 Kbit/s so that generated
+249                             -- TRV_DELAY will not cause error frames in arbitration bit-rate!
+250        1/1                  CAN_configure_timing(bus_timing, DUT_NODE, chn);
+251        1/1                  CAN_configure_timing(bus_timing, TEST_NODE, chn);
+252                     
+253        1/1                  rand_int_v(1259, rand_trv_delay);
+254        1/1                  if (rand_trv_delay = 0) then
+255        <font color = "red">0/1     ==>              rand_trv_delay := 1;</font>
+256                             end if;
+257                     
+258                             -----------------------------------------------------------------------
+259                             -- Here we avoid explicit multiples of 10 ns! The reason is following:
+260                             --  When delay is e.g. 120 ns, then value will arrive at CAN RX when
+261                             --  rising_edge is active. Therefore sampled value might, or might not
+262                             --  be processed by clock based on which delta cycle was processed
+263                             --  first (Since signal delayer does not work with system clocks, it
+264                             --  might not be processed the same way as e.g. shift register!)
+265                             --  This would cause occasional test failures based on which process
+266                             --  was executed first (either rising_edge sampling the data, or data
+267                             --  delayed by signal delayer).
+268                             -----------------------------------------------------------------------
+269        1/1                  if (rand_trv_delay mod 10 = 0) then
+270        1/1                      rand_trv_delay := rand_trv_delay + 1;
+271                             end if;
+272                     
+273                             -----------------------------------------------------------------------
+274                             -- @2. Generate random SSP_CFG[SSP_SRC]. If it is offset only, generate
+275                             --    SSP_OFFSET which is higher than TRV_DELAY. If it is
+276                             --    SSP_SRC_MEAS_N_OFFSET, set SSP_OFFSET to random value between 0
+277                             --    and 255. Saturate calculated value of SSP_SRC at 255. If it is
+278                             --    SSP_SRC_NO_SSP, calculate SSP position from regular data-bit rate.
+279                             -----------------------------------------------------------------------
+280        1/1                  info_m(&quot;Step 2&quot;);
+281                     
+282                             -- Init values
+283        1/1                  ssp_offset_var := (OTHERS =&gt; '0');
+284        1/1                  ssp_source := ssp_meas_n_offset;
+285                     
+286        1/1                  info_m(&quot;SSP source:&quot;);
+287        1/1                  rand_int_v(2, tmp);
+288        1/1                  if (tmp = 0) then
+289        1/1                      info_m(&quot;TRV_DELAY + Offset&quot;);
+290        1/1                      ssp_source := ssp_meas_n_offset;
+291        1/1                      rand_logic_vect_v (ssp_offset_var, 0.3);
+292        1/1                      info_m(&quot;Generated SSP offset: &quot; &amp; integer'image(to_integer(unsigned(ssp_offset_var))));
+293                     
+294        1/1                      correct_ssp_offset(ssp_offset_var, bus_timing, ssp_offset_var);
+295                     
+296                                 -- Need to have non-zero offset to avoid races
+297        1/1                      if (ssp_offset_var = &quot;00000000&quot;) then
+298        <font color = "red">0/1     ==>                  ssp_offset_var := &quot;00000001&quot;;</font>
+299                                 end if;
+300                     
+301                                 -- SSP position is offset + delay
+302        1/1                      info_m(&quot;Post correction SSP offset: &quot; &amp; integer'image(to_integer(unsigned(ssp_offset_var))));
+303        1/1                      info_m(&quot;Trv delay div: &quot; &amp; integer'image(rand_trv_delay / 10));
+304                     
+305        1/1                      ssp_pos := to_integer(unsigned(ssp_offset_var)) + rand_trv_delay / 10;
+306        1/1                      if (ssp_pos &gt; 255) then
+307        <font color = "red">0/1     ==>                  ssp_pos := 255;</font>
+308                                 end if;
+309                     
+310                                 -- This is to compensate input delay of CTU CAN FD! See Datasheet.
+311                                 -- section 2.5.3.
+312        1/1                      ssp_pos := ssp_pos + 2;
+313                     
+314                             elsif (tmp = 1) then
+315        1/1                      info_m(&quot;NO SSP&quot;);
+316        1/1                      ssp_source := ssp_no_ssp;
+317                     
+318        1/1                      CAN_read_timing_v(bus_timing, DUT_NODE, chn);
+319        1/1                      ssp_pos := bus_timing.tq_dbt *
+320                                             (bus_timing.prop_dbt + bus_timing.ph1_dbt + 1);
+321                     
+322                     
+323                                 -- In case of no SSP, we sample by regular sample point. Due to this,
+324                                 -- we need to shorten trvdelay to less than delay of regular sample
+325                                 -- point! SP in data sample here is in 20 + 10 + 1 = 31 System clocks.
+326                                 -- Consider 2 clock cycle input delay and 1 cycle reserve!
+327        1/1                      rand_int_v(280, rand_trv_delay);
+328        1/1                      if ((rand_trv_delay / 10) &gt; (ssp_pos - 3)) then
+329        1/1                          rand_trv_delay := (ssp_pos - 3) * 10;
+330                                 end if;
+331        1/1                      if (rand_trv_delay mod 10 = 0) then
+332        1/1                          rand_trv_delay := rand_trv_delay + 1;
+333                                 end if;
+334                             else
+335        1/1                      info_m(&quot;Offset only&quot;);
+336        1/1                      ssp_source := ssp_offset;
+337        1/1                      rand_logic_vect_v (ssp_offset_var, 0.3);
+338                     
+339        1/1                      correct_ssp_offset(ssp_offset_var, bus_timing, ssp_offset_var);
+340                     
+341        1/1                      info_m(&quot;Post correction SSP offset: &quot; &amp; integer'image(to_integer(unsigned(ssp_offset_var))));
+342                     
+343                                 -- Here lengthen the SSP offset so that we are sufficiently over TRV_DELAY!
+344                                 -- It should be enough to lengthen it by two clock cycles (input delay of
+345                                 -- CTU CAN FD) + one cycle reserve for truncation of non-multiple of 10
+346                                 -- divided by 10!
+347        1/1                      if (to_integer(unsigned(ssp_offset_var)) &lt;= rand_trv_delay/10) then
+348        1/1                          ssp_offset_var := std_logic_vector(to_unsigned(rand_trv_delay/10, 8) + 3);
+349                                 end if;
+350                     
+351                                 -- SSP position is offset only!
+352        1/1                      ssp_pos := to_integer(unsigned(ssp_offset_var));
+353        1/1                      if (ssp_pos &gt; 255) then
+354        <font color = "red">0/1     ==>                  ssp_pos := 255;</font>
+355                                 end if;
+356                             end if;
+357                     
+358        1/1                  info_m(&quot;Random TRV_DELAY is: &quot; &amp; integer'image(rand_trv_delay) &amp; &quot; ns&quot;);
+359        1/1                  ftr_tb_set_tran_delay((rand_trv_delay * 1 ns), DUT_NODE, chn);
+360                     
+361        1/1                  info_m(&quot;SSP position: &quot; &amp; integer'image(ssp_pos));
+362        1/1                  CAN_configure_ssp(ssp_source, ssp_offset_var, DUT_NODE, chn);
+363        1/1                  CAN_configure_ssp(ssp_source, ssp_offset_var, TEST_NODE, chn);
+364                     
+365        1/1                  CAN_turn_controller(true, DUT_NODE, chn);
+366        1/1                  CAN_turn_controller(true, TEST_NODE, chn);
+367                     
+368                             -- Wait till integration is over!
+369        1/1                  CAN_wait_bus_on(DUT_NODE, chn);
+370        1/1                  CAN_wait_bus_on(TEST_NODE, chn);
+371                     
+372                             -----------------------------------------------------------------------
+373                             -- @3. Generate random CAN FD frame with bit-rate shift. Wait until
+374                             --    bit-rate is shifted and wait for random number of bits (but do
+375                             --    not exceed length of data phase). Wait until edge on CAN TX or
+376                             --    CAN RX. Store transmitted value on CAN TX after the edge. Wait
+377                             --    for expected position of Secondary sample point - 3 clock cycle.
+378                             -----------------------------------------------------------------------
+379        1/1                  info_m(&quot;Step 3&quot;);
+380                     
+381        1/1                  CAN_generate_frame(frame_1);
+382        1/1                  frame_1.frame_format := FD_CAN;
+383        1/1                  frame_1.brs := BR_SHIFT;
+384                     
+385        1/1                  CAN_send_frame(frame_1, 1, DUT_NODE, chn, frame_sent);
+386        1/1                  CAN_wait_pc_state(pc_deb_control, DUT_NODE, chn);
+387                     
+388        1/1                  CAN_wait_not_pc_state(pc_deb_control, DUT_NODE, chn);
+389                     
+390        1/1                  num_bit_waits_max := frame_1.data_length * 8;
+391        1/1                  rand_int_v(num_bit_waits_max, num_bit_waits);
+392                     
+393        1/1                  info_m(&quot;Frame data length: &quot; &amp; integer'image(frame_1.data_length * 8) &amp;
+394                                   &quot; bits&quot;);
+395        1/1                  info_m(&quot;Waiting for: &quot; &amp; integer'image(num_bit_waits) &amp; &quot; bits&quot;);
+396        1/1                  for i in 0 to num_bit_waits - 1 loop
+397        1/1                      CAN_wait_sample_point(DUT_NODE, chn, false);
+398                             end loop;
+399                     
+400                             -- Wait until SYNC segment. This is 1 clock cycle after start of bit.
+401        1/1                  CAN_wait_sync_seg(DUT_NODE, chn);
+402        1/1                  wait for (ssp_pos - 2) * 10 ns;
+403                     
+404                             -----------------------------------------------------------------------
+405                             -- @4. Now we are 3 cycles before Secondary sampling point. Force bus
+406                             --     to opposite value than was sent.
+407                             -----------------------------------------------------------------------
+408        1/1                  info_m(&quot;Step 4&quot;);
+409        1/1                  force_bus_level(not tx_val, chn);
+410                     
+411                             -- Now we should be in the cycle where SSP is active!!
+412        1/1                  wait for 21 ns;
+413                     
+414                             -----------------------------------------------------------------------
+415                             -- @5. Wait for one clock cycle and if SSP_CFG[SSP_SRC] = SSP_SRC_NO_SSP,
+416                             --     error frame is being transmitted (regular sample point should be
+417                             --     used to detect bit errors). If SSP_CFG[SSP_SRC] /= SSP_SRC_NO_SSP
+418                             --     check that Error frame is not transmitted and wait until nearest
+419                             --     Sample point. Check that after this Sample point, error frame is
+420                             --     transmitted. Wait until bus is idle in both nodes.
+421                             -----------------------------------------------------------------------
+422        1/1                  info_m(&quot;Step 5&quot;);
+423                     
+424        1/1                  wait for 11 ns;
+425        1/1                  release_bus_level(chn);
+426                     
+427        1/1                  if (ssp_source = ssp_no_ssp) then
+428        1/1                      wait for 20 ns;
+429        1/1                      get_controller_status(stat_1, DUT_NODE, chn);
+430        1/1                      check_m(stat_1.error_transmission,
+431                                         &quot;Error frame transmitted with NO_SSP&quot;);
+432                             else
+433        1/1                      get_controller_status(stat_1, DUT_NODE, chn);
+434        1/1                      check_false_m(stat_1.error_transmission,
+435                                               &quot;Error frame NOT transmitted yet!&quot;);
+436        1/1                      CAN_wait_sample_point(DUT_NODE, chn, false);
+437        1/1                      wait for 21 ns;
+438        1/1                      get_controller_status(stat_1, DUT_NODE, chn);
+439        1/1                      check_m(stat_1.error_transmission,
+440                                         &quot;Error frame transmitted after nearest sample point!&quot;);
+441                             end if;
+442                     
+443        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+444        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.SSP_CFG_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

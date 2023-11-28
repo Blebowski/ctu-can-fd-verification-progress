@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.ERR_NORM_FD_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.ERR_NORM_FD_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.ERR_NORM_FD_FTEST')">CTU_CAN_FD_TB.ERR_NORM_FD_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod117.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_norm_fd_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/err_norm_fd_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.ERR_NORM_FD_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod117.html" >CTU_CAN_FD_TB.ERR_NORM_FD_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>68</td><td>68</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>147</td><td>68</td><td>68</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+146                             -----------------------------------------------------------------------
+147        1/1                  info_m(&quot;Step 1&quot;);
+148                     
+149        1/1                  CAN_enable_retr_limit(true, 0, DUT_NODE, chn);
+150                     
+151        1/1                  read_error_counters(err_counters_1_1, DUT_NODE, chn);
+152        1/1                  read_error_counters(err_counters_1_2, TEST_NODE, chn);
+153                     
+154        1/1                  CAN_generate_frame(frame_1);
+155        1/1                  if (frame_1.frame_format = FD_CAN) then
+156        1/1                      frame_1.brs := BR_NO_SHIFT;
+157                             end if;
+158        1/1                  CAN_send_frame(frame_1, 1, DUT_NODE, chn, frame_sent);
+159        1/1                  CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+160                     
+161                             -- Should be enough to cover many parts of CAN frame but not go beyond
+162                             -- frame!
+163        1/1                  rand_int_v(14, wait_time);
+164                             -- We need at least 1 bit to wait, otherwise we try to corrupt still in SOF!
+165        1/1                  wait_time := wait_time + 1;
+166        1/1                  info_m(&quot;Waiting for:&quot; &amp; integer'image(wait_time) &amp; &quot; bits!&quot;);
+167                     
+168        1/1                  for i in 1 to wait_time loop
+169        1/1                      CAN_wait_sync_seg(DUT_NODE, chn);
+170        1/1                      info_m(&quot;Wait sync&quot;);
+171        1/1                      wait for 20 ns;
+172                             end loop;
+173        1/1                  info_m(&quot;Waiting finished!&quot;);
+174                     
+175        1/1                  get_can_tx(DUT_NODE, can_tx_val, chn);
+176        1/1                  while (can_tx_val = RECESSIVE) loop
+177        1/1                      wait for 10 ns;
+178        1/1                      get_can_tx(DUT_NODE, can_tx_val, chn);
+179                             end loop;
+180                     
+181        1/1                  force_bus_level(RECESSIVE, chn);
+182        1/1                  CAN_wait_sample_point(DUT_NODE, chn, false);
+183        1/1                  wait for 20 ns; -- To be sure that opposite bit is sampled!
+184        1/1                  release_bus_level(chn);
+185                     
+186        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+187        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+188        1/1                  read_error_counters(err_counters_2_1, DUT_NODE, chn);
+189        1/1                  read_error_counters(err_counters_2_2, TEST_NODE, chn);
+190                     
+191        1/1                  check_m(err_counters_1_1.err_norm + 1 = err_counters_2_1.err_norm,
+192                                     &quot;ERR_NORM incremented by 1 in transmitter!&quot;);
+193        1/1                  check_m(err_counters_1_2.err_norm + 1 = err_counters_2_2.err_norm,
+194                                     &quot;ERR_NORM incremented by 1 in receiver!&quot;);
+195                     
+196        1/1                  check_m(err_counters_1_1.err_fd = err_counters_2_1.err_fd,
+197                                     &quot;ERR_FD not incremented by 1 in transmitter!&quot;);
+198        1/1                  check_m(err_counters_1_2.err_fd = err_counters_2_2.err_fd,
+199                                     &quot;ERR_FD not incremented by 1 in receiver!&quot;);
+200                     
+201                             -----------------------------------------------------------------------
+202                             -- @2. Generate random frame where bit rate shall be switched. Wait
+203                             --     until data portion of that frame. Wait until Recessive bit is
+204                             --     transmitted. Force bus Dominant for 1 bit time! Wait until bus is
+205                             --     idle. Check that ERR_FD incremented in DUT and Test node by 1.
+206                             --     Check that ERR_NORM remained the same in DUT and Test node.
+207                             -----------------------------------------------------------------------
+208        1/1                  info_m(&quot;Step 2&quot;);
+209                     
+210        1/1                  read_error_counters(err_counters_1_1, DUT_NODE, chn);
+211        1/1                  read_error_counters(err_counters_1_2, TEST_NODE, chn);
+212                     
+213        1/1                  CAN_generate_frame(frame_1);
+214        1/1                  frame_1.frame_format := FD_CAN;
+215        1/1                  frame_1.brs := BR_SHIFT;
+216                     
+217        1/1                  CAN_send_frame(frame_1, 1, DUT_NODE, chn, frame_sent);
+218        1/1                  CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+219                     
+220        1/1                  CAN_wait_pc_state(pc_deb_control, DUT_NODE, chn);
+221        1/1                  CAN_wait_not_pc_state(pc_deb_control, DUT_NODE, chn);
+222                     
+223                             -- Now we should be in Data bit rate! This is either CRC or data field!
+224        1/1                  rand_int_v(15, wait_time);
+225                             -- We need at least 1 bit to wait, otherwise we try to corrupt still in SOF!
+226        1/1                  wait_time := wait_time + 1;
+227        1/1                  info_m(&quot;Waiting for:&quot; &amp; integer'image(wait_time) &amp; &quot; bits!&quot;);
+228                     
+229        1/1                  for i in 1 to wait_time loop
+230        1/1                      CAN_wait_sync_seg(DUT_NODE, chn);
+231        1/1                      info_m(&quot;Wait sync&quot;);
+232        1/1                      wait for 20 ns;
+233                             end loop;
+234        1/1                  info_m(&quot;Waiting finished!&quot;);
+235                     
+236        1/1                  get_can_tx(DUT_NODE, can_tx_val, chn);
+237        1/1                  while (can_tx_val = DOMINANT) loop
+238        1/1                      wait for 10 ns;
+239        1/1                      get_can_tx(DUT_NODE, can_tx_val, chn);
+240                             end loop;
+241                     
+242        1/1                  force_bus_level(DOMINANT, chn);
+243        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+244        1/1                  CAN_wait_sample_point(DUT_NODE, chn);
+245        1/1                  wait for 20 ns;
+246        1/1                  release_bus_level(chn);
+247                     
+248        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+249        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+250        1/1                  read_error_counters(err_counters_2_1, DUT_NODE, chn);
+251        1/1                  read_error_counters(err_counters_2_2, TEST_NODE, chn);
+252                     
+253        1/1                  check_m((err_counters_1_1.err_fd + 1 = err_counters_2_1.err_fd),
+254                                     &quot;ERR_FD incremented by 1 in transmitter!&quot;);
+255        1/1                  check_m(err_counters_1_2.err_fd + 1 = err_counters_2_2.err_fd,
+256                                     &quot;ERR_FD incremented by 1 in receiver!&quot;);
+257                     
+258        1/1                  check_m(err_counters_1_1.err_norm = err_counters_2_1.err_norm,
+259                                     &quot;ERR_NORM not incremented by 1 in transmitter!&quot;);
+260        1/1                  check_m(err_counters_1_2.err_norm = err_counters_2_2.err_norm,
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.ERR_NORM_FD_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

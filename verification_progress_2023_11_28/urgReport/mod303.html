@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.STATUS_TXNF_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.STATUS_TXNF_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.STATUS_TXNF_FTEST')">CTU_CAN_FD_TB.STATUS_TXNF_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod303.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/status_txnf_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/status_txnf_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.STATUS_TXNF_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod303.html" >CTU_CAN_FD_TB.STATUS_TXNF_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>29</td><td>29</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>126</td><td>29</td><td>29</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+125                             -- Read number of TXT buffers to adapt based on number of TXT buffers.
+126        1/1                  get_tx_buf_count(num_txt_bufs, DUT_NODE, chn);
+127                             
+128                             -----------------------------------------------------------------------
+129                             -- @1. Set BMM mode in DUT. Check that STATUS[TXNF] is set (all TXT
+130                             --    Buffers should be empty).
+131                             -----------------------------------------------------------------------
+132        1/1                  info_m(&quot;Step 1&quot;);
+133                             
+134        1/1                  mode_1.bus_monitoring := true;
+135        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+136                     
+137        1/1                  get_controller_status(stat_1, DUT_NODE, chn);
+138        1/1                  check_m(stat_1.tx_buffer_empty, &quot;STATUS[TXNF] set!&quot;);
+139                     
+140                             -----------------------------------------------------------------------
+141                             -- @2. Issue Set ready consecutively to all TXT Buffers. Check that
+142                             --     STATUS[TXNF] is set before last buffer. Check that after last
+143                             --     buffer STATUS[TXNF] is not set.
+144                             -----------------------------------------------------------------------
+145        1/1                  info_m(&quot;Step 2&quot;);
+146                             
+147        1/1                  for i in 1 to num_txt_bufs loop
+148        1/1                      send_TXT_buf_cmd(buf_set_ready, i, DUT_NODE, chn);
+149                                 
+150                                 -- Waiting time for FSM to change state!
+151        1/1                      wait for 20 ns;
+152                                 
+153        1/1                      get_controller_status(stat_1, DUT_NODE, chn);
+154                     
+155        1/1                      if (i = num_txt_bufs) then
+156        1/1                          check_false_m(stat_1.tx_buffer_empty,
+157                                         &quot;STATUS[TXNF] not set after last TXT Buffer&quot;);
+158                                 else
+159        1/1                          check_m(stat_1.tx_buffer_empty,
+160                                         &quot;STATUS[TXNF] set before last TXT Buffer&quot;);
+161                                 end if;
+162                             end loop;
+163                     
+164                             -----------------------------------------------------------------------
+165                             -- @3. Check that all TXT Buffers are Failed now. Move always single
+166                             --    buffer to empty and check that STATUS[TXNF] is set. Move this
+167                             --    buffer to Failed again and check that STATUS[TXNF] is not set.
+168                             --    Repeat with each TXT Buffer.
+169                             -----------------------------------------------------------------------
+170        1/1                  info_m(&quot;Step 3&quot;);
+171                             
+172        1/1                  for i in 1 to num_txt_bufs loop
+173        1/1                      get_tx_buf_state(i, txt_buf_state, DUT_NODE, chn);
+174        1/1                      check_m(txt_buf_state = buf_failed, &quot;TXT Buffer: &quot; &amp;
+175                                     integer'image(i) &amp; &quot; failed!&quot;);
+176                             end loop;
+177                     
+178        1/1                  for i in 1 to num_txt_bufs loop
+179        1/1                      send_TXT_buf_cmd(buf_set_empty, i, DUT_NODE, chn);
+180                                 
+181                                 -- Waiting time for FSM to change state!
+182        1/1                      wait for 20 ns;
+183                                 
+184        1/1                      get_controller_status(stat_1, DUT_NODE, chn);
+185        1/1                      check_m(stat_1.tx_buffer_empty, &quot;STATUS[TXNF] set!&quot;);
+186                                 
+187        1/1                      send_TXT_buf_cmd(buf_set_ready, i, DUT_NODE, chn);
+188                                 
+189                                 -- Waiting time for FSM to change state!
+190        1/1                      wait for 20 ns;
+191                                 
+192        1/1                      get_controller_status(stat_1, DUT_NODE, chn);
+193        1/1                      check_false_m(stat_1.tx_buffer_empty, &quot;STATUS[TXNF] not set!&quot;);
+194                                 
+195        1/1                      get_tx_buf_state(i, txt_buf_state, DUT_NODE, chn);
+196        1/1                      check_m(txt_buf_state = buf_failed, &quot;TXT Buffer: &quot; &amp;
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.STATUS_TXNF_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

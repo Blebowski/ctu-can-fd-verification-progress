@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.FRAME_TEST_FCRC_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.FRAME_TEST_FCRC_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.FRAME_TEST_FCRC_FTEST')">CTU_CAN_FD_TB.FRAME_TEST_FCRC_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 97.62</td>
+<td class="s9 cl rt"><a href="mod61.html#Line" > 97.62</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/frame_test_fcrc_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/frame_test_fcrc_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.FRAME_TEST_FCRC_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod61.html" >CTU_CAN_FD_TB.FRAME_TEST_FCRC_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>42</td><td>41</td><td>97.62</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCEDURE</td><td>148</td><td>42</td><td>41</td><td>97.62</td></tr>
+</table>
+<pre class="code"><br clear=all>
+147                             -----------------------------------------------------------------------
+148        1/1                  info_m(&quot;Step 1&quot;);
+149                     
+150        1/1                  mode_1.test := true;
+151                             -- Self test mode is needed so that DUT will not send Error frame after
+152                             -- not getting ACK due to flipped bit. This-way we can check that test-node
+153                             -- has detected CRC error!
+154        1/1                  mode_1.self_test := true;
+155        1/1                  set_core_mode(mode_1, DUT_NODE, chn);
+156                             
+157        1/1                  get_tx_buf_count(txt_buf_count, DUT_NODE, chn);
+158                             
+159                             -----------------------------------------------------------------------
+160                             -- @2. Generate random CAN FD frame. Transmit it by DUT, record
+161                             --     transmitted value of CRC ignoring stuff bits.
+162                             -----------------------------------------------------------------------
+163        1/1                  info_m(&quot;Step 2&quot;);
+164                     
+165        1/1                  CAN_generate_frame(CAN_TX_frame);
+166        1/1                  CAN_TX_frame.frame_format := FD_CAN;
+167        1/1                  if (CAN_TX_frame.data_length &gt; 16) then
+168        <font color = "red">0/1     ==>              crc_length := 21;</font>
+169                             else
+170        1/1                      crc_length := 17;
+171                             end if;
+172                     
+173        1/1                  pick_random_txt_buffer(txt_buf_index, DUT_NODE, chn);
+174        1/1                  CAN_insert_TX_frame(CAN_TX_frame, txt_buf_index, DUT_NODE, chn);
+175                     
+176        1/1                  send_TXT_buf_cmd(buf_set_ready, txt_buf_index, DUT_NODE, chn);
+177                     
+178        1/1                  CAN_wait_pc_state(pc_deb_crc, DUT_NODE, chn);
+179                             
+180        1/1                  for i in 0 to crc_length - 1 loop
+181        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+182        1/1                      get_can_tx(DUT_NODE, golden_crc(i), chn);
+183                             end loop;
+184                     
+185        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+186                     
+187                             -----------------------------------------------------------------------
+188                             -- @3. Send again the same frame as in previous point, only flip 
+189                             --     random bit of CRC, again record the CRC. Check that transmitted
+190                             --     stuff count has correct bit flipped.
+191                             -----------------------------------------------------------------------
+192        1/1                  info_m(&quot;Step 3&quot;);
+193                     
+194        1/1                  CAN_insert_TX_frame(CAN_TX_frame, txt_buf_index, DUT_NODE, chn);
+195                     
+196        1/1                  rand_int_v(crc_length - 1, bit_to_flip);
+197        1/1                  CAN_set_frame_test(txt_buf_index, bit_to_flip, false, true, false,
+198                                                DUT_NODE, chn);
+199                     
+200        1/1                  send_TXT_buf_cmd(buf_set_ready, txt_buf_index, DUT_NODE, chn);
+201                     
+202        1/1                  CAN_wait_pc_state(pc_deb_crc, DUT_NODE, chn);
+203                             
+204        1/1                  for i in 0 to crc_length - 1 loop
+205        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+206        1/1                      get_can_tx(DUT_NODE, real_crc(i), chn);
+207                             end loop;
+208                     
+209                             -- Calculate expected stuff count
+210        1/1                  expected_crc := golden_crc;
+211        1/1                  expected_crc(bit_to_flip) := not expected_crc(bit_to_flip);
+212                     
+213        1/1                  info_m(&quot;Golden CRC:   &quot; &amp; to_string(golden_crc));
+214        1/1                  info_m(&quot;Expected CRC: &quot; &amp; to_string(expected_crc));
+215        1/1                  info_m(&quot;Real CRC:     &quot; &amp; to_string(real_crc));
+216        1/1                  check_m(expected_crc = real_crc, &quot;Expected CRC = Real CRC&quot;);
+217                     
+218                             -----------------------------------------------------------------------
+219                             -- @4. Wait until error frame is transmitted (frame is corrupted,
+220                             --     TEST_NODE should transmit error frame). Check that TEST_NODE
+221                             --     detects Form error. Wait until frame is transmitted.
+222                             -----------------------------------------------------------------------
+223        1/1                  info_m(&quot;Step 4&quot;);
+224                     
+225        1/1                  CAN_wait_error_frame(TEST_NODE, chn);
+226        1/1                  wait for 20 ns;
+227                     
+228        1/1                  CAN_read_error_code_capture(err_capt, TEST_NODE, chn);
+229                     
+230        1/1                  check_m(err_capt.err_pos = err_pos_ack, &quot;Error in ACK field&quot;);
+231        1/1                  check_m(err_capt.err_type = can_err_crc, &quot;CRC error detected&quot;);
+232                     
+233        1/1                  CAN_wait_bus_idle(DUT_NODE, chn);
+234        1/1                  CAN_wait_bus_idle(TEST_NODE, chn);
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.FRAME_TEST_FCRC_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

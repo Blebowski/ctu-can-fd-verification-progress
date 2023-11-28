@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.TX_CMD_SET_ABORT_FTEST</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.TX_CMD_SET_ABORT_FTEST'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.TX_CMD_SET_ABORT_FTEST')">CTU_CAN_FD_TB.TX_CMD_SET_ABORT_FTEST</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod268.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tx_cmd_set_abort_ftest.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/feature_tests/tx_cmd_set_abort_ftest.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.TX_CMD_SET_ABORT_FTEST'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod268.html" >CTU_CAN_FD_TB.TX_CMD_SET_ABORT_FTEST</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>28</td><td>28</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCEDURE</td><td>120</td><td>28</td><td>28</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+119                     
+120        1/1                  get_tx_buf_count(num_buffers, DUT_NODE, chn);
+121                     
+122        1/1                  for buf_nr in 1 to num_buffers loop
+123                     
+124        1/1                      info_m(&quot;Testing with TXT Buffer: &quot; &amp; integer'image(buf_nr));
+125                     
+126                                 -----------------------------------------------------------------------
+127                                 -- @1. Generate frame and insert it for transmission to random TXT Buffer.
+128                                 --    Wait until sample point. Issue Set Ready command and check TXT
+129                                 --    Buffer becomes Ready. Issue Set Abort command and check TXT Buffer
+130                                 --    becomes Aborted. Bit time should be sufficiently long so that there
+131                                 --    is enough time to issue two commands and read buffer state ones
+132                                 --    before next sample point arrives.
+133                                 -----------------------------------------------------------------------
+134        1/1                      info_m(&quot;Step 1&quot;);
+135                     
+136        1/1                      CAN_generate_frame(CAN_frame);
+137        1/1                      CAN_insert_TX_frame(CAN_frame, buf_nr, DUT_NODE, chn);
+138                     
+139        1/1                      CAN_wait_sample_point(DUT_NODE, chn);
+140        1/1                      send_TXT_buf_cmd(buf_set_ready, buf_nr, DUT_NODE, chn);
+141        1/1                      wait for 11 ns; -- This command is pipelined, delay must be inserted!
+142        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+143        1/1                      check_m(txt_state = buf_ready, &quot;TXT Buffer ready!&quot;);
+144                     
+145        1/1                      send_TXT_buf_cmd(buf_set_abort, buf_nr, DUT_NODE, chn);
+146        1/1                      wait for 11 ns; -- This command is pipelined, delay must be inserted!
+147        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+148        1/1                      check_m(txt_state = buf_aborted, &quot;Set Abort: Ready -&gt; Aborted&quot;);
+149                     
+150                                 -----------------------------------------------------------------------
+151                                 -- @2. Issue Set Ready command and wait until transmission starts. Check
+152                                 --    that TXT Buffer is in TX in progress. Issue Set Abort and check
+153                                 --    that TXT Buffer moves to Abort in progress. Wait until
+154                                 --    transmission is over and check TXT Buffer is aborted.
+155                                 -----------------------------------------------------------------------
+156        1/1                      info_m(&quot;Step 2&quot;);
+157                     
+158        1/1                      send_TXT_buf_cmd(buf_set_ready, buf_nr, DUT_NODE, chn);
+159        1/1                      CAN_wait_tx_rx_start(true, false, DUT_NODE, chn);
+160        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+161        1/1                      check_m(txt_state = buf_tx_progress, &quot;TXT Buffer TX in Progress&quot;);
+162                     
+163        1/1                      send_TXT_buf_cmd(buf_set_abort, buf_nr, DUT_NODE, chn);
+164        1/1                      wait for 11 ns; -- This command is pipelined, delay must be inserted!
+165        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+166        1/1                      check_m(txt_state = buf_ab_progress,
+167                                     &quot;Set Abort: TX in Progress -&gt; Abort in Progress&quot;);
+168                     
+169        1/1                      CAN_wait_frame_sent(DUT_NODE, chn);
+170        1/1                      CAN_wait_bus_idle(DUT_NODE, chn);
+171                     
+172        1/1                      get_tx_buf_state(buf_nr, txt_state, DUT_NODE, chn);
+173        1/1                      check_m(txt_state = buf_done,
+</pre>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_CTU_CAN_FD_TB.TX_CMD_SET_ABORT_FTEST">
+    <li>
+      <a href="#Line">Line</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
