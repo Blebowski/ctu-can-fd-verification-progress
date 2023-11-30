@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="1" failures="0" tests="2" time="5.982498407363892">
+	<testsuite disabled="0" errors="1" failures="0" name="Test results" skipped="0" tests="2" time="5.982498407363892">
+		<testcase name="sim_tb_rtl_test_compliance_full_typ_iso_8_6_20_429254_2023_11_30_21_31_22_528515.log" time="5.982498">
+			<error type="error" message="{'line': '\x1b[91mReport ERROR\x1b[0m at 548290001000 FS in design unit TB_REPORT_PKG from process /TB_TOP_CTU_CAN_FD/CTU_CAN_FD_VIP_INST/CAN_AGENT_GEN/COMPLIANCE_AGENT_INST/RECEIVER_PROC:\n', 'line_number': 505, 'after_lines': ['    &quot;FAIL: CAN Agent: Mismatches in monitor!&quot;\n']}"/>
+			<system-out>Log file not exported! Run with '--junit-exp-logs' </system-out>
+		</testcase>
+		<testcase name="elab_tb_rtl_test_compliance_full_typ_iso_8_6_20_2023_11_30_21_31_22_416948.log">
+			<system-out>Log file not exported! Run with '--junit-exp-logs' </system-out>
+		</testcase>
+	</testsuite>
+</testsuites>
