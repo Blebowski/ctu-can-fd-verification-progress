@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: \CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_PROTOCOL_CONTROL_FSM_RTL_psl </title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_PROTOCOL_CONTROL_FSM_RTL_psl '>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_\\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_PROTOCOL_CONTROL_FSM_RTL_psl ')">\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_PROTOCOL_CONTROL_FSM_RTL_psl </a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 92.97</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod359.html#Toggle" > 85.94</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod359.html#Assert" >100.00</a></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/can_core/protocol_control_fsm.vhd')">/home/oille/Downloads/ctucanfd_ip_core/src/can_core/protocol_control_fsm.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod359.html#inst_tag_1290"  onclick="showContent('inst_tag_1290')">TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.PROTOCOL_CONTROL_INST.PROTOCOL_CONTROL_FSM_INST.INLINED_PSL<img src="fx.gif" class="icon"></a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_PROTOCOL_CONTROL_FSM_RTL_psl '>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod359.html" >\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_PROTOCOL_CONTROL_FSM_RTL_psl </a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Totals</td>
+<td class="rt">63</td>
+<td class="rt">54</td>
+<td class="rt">85.71 </td>
+</tr><tr class="s8">
+<td>Total Bits</td>
+<td class="rt">128</td>
+<td class="rt">110</td>
+<td class="rt">85.94 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">64</td>
+<td class="rt">55</td>
+<td class="rt">85.94 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">64</td>
+<td class="rt">55</td>
+<td class="rt">85.94 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">63</td>
+<td class="rt">54</td>
+<td class="rt">85.71 </td>
+</tr><tr class="s8">
+<td>Port Bits</td>
+<td class="rt">128</td>
+<td class="rt">110</td>
+<td class="rt">85.94 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">64</td>
+<td class="rt">55</td>
+<td class="rt">85.94 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">64</td>
+<td class="rt">55</td>
+<td class="rt">85.94 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CRC_USE_17</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CRC_USE_21</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RX_TRIGGER</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ERR_FRM_REQ</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>REC_IS_RTR</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>REC_FRAME_TYPE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>SP_CONTROL_Q_I[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>IS_RECEIVER</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_MODE_ROM</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>IS_TRANSMITTER</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STUFF_ENABLE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>DESTUFF_ENABLE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PEX_ON_FDF_ENABLE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_STATUS_PEXS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PEX_ON_RES_ENABLE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PEXS_SET</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ARBITRATION_LOST_I</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_0</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_1</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_2</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_3</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_4</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_5</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_6</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_7</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_8</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_9</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_10</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_11</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_12</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_13</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_14</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_15</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_16</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_17</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_18</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_19</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_20</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_21</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_22</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_23</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_24</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_25</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_26</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_27</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_28</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_29</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_30</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_31</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_32</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_33</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_34</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_35</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_36</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_37</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_38</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_39</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_40</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_41</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_42</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_43</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_44</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Assert"></a>
+Assert Coverage for Module : <a href="mod359.html" >\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_PROTOCOL_CONTROL_FSM_RTL_psl </a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Attempted</th><th nowrap width=80>Percent</th><th nowrap width=80>Succeeded/Matched</th><th nowrap width=80>Percent</th></tr><tr>
+<td class="wht cl"><a href="#1730327583" >Assertions</a></td>
+<td class="wht cl rt">9</td>
+<td class="s10 cl rt">9</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">9</td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="#1941521174" >Cover properties</a></td>
+<td class="wht cl rt">35</td>
+<td class="s10 cl rt">35</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">35</td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="#2064331109" >Cover sequences</a></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+</tr><tr>
+<td class="wht cl"><b>Total</b></td>
+<td class="wht cl rt">44</td>
+<td class="s10 cl rt">44</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">44</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<br clear=all>
+<a name="1730327583"></a>
+<b>Assertion Details</b><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td>Attempts</td><td>Real Successes</td><td>Failures</td><td>Incomplete</td></tr><tr>
+<td class="wht cl"><a name="1749818668"></a>
+NO_ERR_FRM_REQ_IN_OFF</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="954575072"></a>
+NO_ERR_OVR_IN_ROM_MODE</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1653550213"></a>
+NO_SECONDARY_SAMPLE_RECEIVER</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1446614378"></a>
+NO_SIMUL_CRC_17_CRC_21_ASRT</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="926337286"></a>
+NO_SIMUL_RX_RTR_AND_FD_FRAME_ASRT</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1851468768"></a>
+NO_SIMUL_RX_TRIGGER_ERR_REQ_ASRT</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1239471170"></a>
+NO_SOF_RECEIVER</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1695698441"></a>
+NO_STUFF_DESTUFF_IN_EOF</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1789213135"></a>
+NO_TX_IN_ROM_MODE</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="1941521174"></a>
+<b>Cover Directives for Properties: Details</b><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td>Attempts</td><td>Matches</td><td>Incomplete</td></tr><tr>
+<td class="wht cl"><a name="446938087"></a>
+ARB_LOST_BASE_ID_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">223</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="2057947503"></a>
+ARB_LOST_EXT_ID_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">173</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="928737800"></a>
+ARB_LOST_IDE_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">9</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="183531994"></a>
+ARB_LOST_RTR_R1_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">12</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1796350034"></a>
+ARB_LOST_RTR_SRR_R1_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">30</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1774211444"></a>
+ERR_FRM_REQ_IN_SOF_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">50</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="85313867"></a>
+ERR_FRM_REQ_IN_S_PC_ACK_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">19</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="2009146525"></a>
+ERR_FRM_REQ_IN_S_PC_ACT_ERR_FLAG_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">678</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="578092671"></a>
+ERR_FRM_REQ_IN_S_PC_BASE_ID_IN_BASE_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">1842</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1336806400"></a>
+ERR_FRM_REQ_IN_S_PC_CRC_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">321</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1118852688"></a>
+ERR_FRM_REQ_IN_S_PC_CRC_DELIM_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">5</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="833745772"></a>
+ERR_FRM_REQ_IN_S_PC_DATA_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">9056</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1216603449"></a>
+ERR_FRM_REQ_IN_S_PC_DLC_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">390</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1646188998"></a>
+ERR_FRM_REQ_IN_S_PC_EDL_R0_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">13</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="692987365"></a>
+ERR_FRM_REQ_IN_S_PC_EDL_R1_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">26</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="2059742488"></a>
+ERR_FRM_REQ_IN_S_PC_EOF_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">762</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1780798241"></a>
+ERR_FRM_REQ_IN_S_PC_ERR_DELIM_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">166</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1024352807"></a>
+ERR_FRM_REQ_IN_S_PC_ESI_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">19</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1811945815"></a>
+ERR_FRM_REQ_IN_S_PC_EXT_ID_IN_EXT_ID_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">362</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="847184478"></a>
+ERR_FRM_REQ_IN_S_PC_EXT_ID_IN_IDE_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">45</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1121013640"></a>
+ERR_FRM_REQ_IN_S_PC_EXT_ID_IN_RTR_SRR_R1_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">230</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1579729241"></a>
+ERR_FRM_REQ_IN_S_PC_OVR_DELIM_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">60</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="604431862"></a>
+ERR_FRM_REQ_IN_S_PC_OVR_FLAG_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">66</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="566814838"></a>
+ERR_FRM_REQ_IN_S_PC_R0_EXT_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">16</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1089246219"></a>
+ERR_FRM_REQ_IN_S_PC_R0_FD_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">46</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1062562840"></a>
+ERR_FRM_REQ_IN_S_PC_RTR_R1_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">30</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1737696240"></a>
+ERR_FRM_REQ_IN_S_PC_STUFF_COUNT_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">89</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="660571514"></a>
+OVR_FROM_EOF_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">105</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="515881428"></a>
+OVR_FROM_ERR_DELIM</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">78</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1853263876"></a>
+OVR_FROM_INTERMISSION_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">225</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1299249947"></a>
+OVR_FROM_OVR_DELIM_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">24</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="309255838"></a>
+PEX_IN_S_PC_EDL_R1_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">3</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="2110057080"></a>
+PEX_IN_S_PC_R0_FD_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">18688</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="897119433"></a>
+PEX_ON_FDF_ENABLE_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">24765</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="597855023"></a>
+PEX_ON_RES_ENABLE_COV</td>
+<td class="s9 cl rt">756132689</td>
+<td class="s9 cl rt">6932888</td>
+<td class="wht cl rt">0</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_PROTOCOL_CONTROL_FSM_RTL_psl ">
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Assert">Assert</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
