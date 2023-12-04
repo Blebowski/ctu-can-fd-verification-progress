@@ -1,0 +1,2802 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_RTL.CONTROL_COUNTER RTL</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_RTL.CONTROL_COUNTER RTL'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_RTL.CONTROL_COUNTER RTL')">CTU_CAN_FD_RTL.CONTROL_COUNTER RTL</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod173.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod173.html#Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod173.html#Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod173.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/can_core/control_counter.vhd')">/home/oille/Downloads/ctucanfd_ip_core/src/can_core/control_counter.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod173.html#inst_tag_930"  onclick="showContent('inst_tag_930')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></td>
+<td class="s9 cl rt"> 97.78</td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_930_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_930_Cond" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod173.html#inst_tag_930_Toggle" > 91.14</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_930_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod173.html#inst_tag_929"  onclick="showContent('inst_tag_929')">TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_929_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_929_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_929_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_929_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='inst_tag_930'>
+<hr>
+<a name="inst_tag_930"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy3.html#tag_urg_inst_930" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 97.78</td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_930_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_930_Cond" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod173.html#inst_tag_930_Toggle" > 91.14</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_930_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 97.81</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 91.25</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s8 cl rt"> 81.90</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 73.68</td>
+<td class="s9 cl rt"> 90.12</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod189.html#inst_tag_994" >PROTOCOL_CONTROL_INST</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod401.html#inst_tag_2659" id="tag_urg_inst_2659">INLINED_PSL</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div name='inst_tag_929'>
+<hr>
+<a name="inst_tag_929"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy2.html#tag_urg_inst_929" >TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_929_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_929_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_929_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod173.html#inst_tag_929_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 99.18</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 99.18</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod189.html#inst_tag_993" >PROTOCOL_CONTROL_INST<img src="ex.gif" class="icon"></a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td colspan=8>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_RTL.CONTROL_COUNTER RTL'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod173.html" >CTU_CAN_FD_RTL.CONTROL_COUNTER RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>14</td><td>14</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>203</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>230</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>278</td><td>6</td><td>6</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+202                         begin
+203        1/1                  if (res_n = '0') then
+204        1/1                      ctrl_ctr_q &lt;= (others =&gt; '0');
+205                             elsif (rising_edge(clk_sys)) then
+206        1/1                      if (ctrl_ctr_ce = '1') then
+207        1/1                          ctrl_ctr_q &lt;= ctrl_ctr_d;
+208                                 end if;
+209                             end if;
+210                         end process;
+211                     
+212                         -----------------------------------------------------------------------------------------------
+213                         -- Complementary counter.
+214                         --
+215                         -- Counts bits during data field. This is done to calculate address of Data word in TXT Buffer,
+216                         -- byte index within memory word and indicate whole byte of data elapsed!
+217                         --
+218                         -- Counter is erased when control counter is preloaded (upon data field), and counts only
+219                         -- during data field.
+220                         -----------------------------------------------------------------------------------------------
+221                         compl_ctr_d &lt;= (others =&gt; '0') when (ctrl_ctr_pload = '1') else
+222                                        compl_ctr_q + 1;
+223                     
+224                         compl_ctr_ce &lt;= '1' when (ctrl_ctr_pload = '1') else
+225                                         '1' when (compl_ctr_ena = '1') else
+226                                         '0';
+227                     
+228                         compl_reg_proc : process(clk_sys, res_n)
+229                         begin
+230        1/1                  if (res_n = '0') then
+231        1/1                      compl_ctr_q &lt;= (others =&gt; '0');
+232                             elsif (rising_edge(clk_sys)) then
+233        1/1                      if (compl_ctr_ce = '1') then
+234        1/1                          compl_ctr_q &lt;= compl_ctr_d;
+235                                 end if;
+236                             end if;
+237                         end process;
+238                     
+239                         -----------------------------------------------------------------------------------------------
+240                         -- Status signals calculated from complementary counter
+241                         -----------------------------------------------------------------------------------------------
+242                         -- Control counter counted number of bits is on last bit within a byte!
+243                         ctrl_counted_byte &lt;= '1' when (compl_ctr_q(2 downto 0) = &quot;111&quot;)
+244                                                  else
+245                                              '0';
+246                     
+247                         -- Byte index within memory word!
+248                         ctrl_counted_byte_index &lt;= std_logic_vector(compl_ctr_q(4 downto 3));
+249                     
+250                         -- Complementary counter divided by 32
+251                         compl_ctr_div_32 &lt;= compl_ctr_q(G_CTRL_CTR_WIDTH - 1 downto 5);
+252                     
+253                         -- Complementary counter divided by 32, + 5
+254                         compl_ctr_div_32_plus_5 &lt;= to_integer(compl_ctr_div_32) + 5;
+255                     
+256                         -- Saturate to 19
+257                         compl_ctr_div_32_plus_5_sat &lt;=
+258                             compl_ctr_div_32_plus_5 when (compl_ctr_div_32_plus_5 &lt; 19) else
+259                             19;
+260                     
+261                         -----------------------------------------------------------------------------------------------
+262                         -- Index of word in TXT Buffer memory. Always Index one word further than we are transmitting
+263                         -- to allow loading data on TXT Buffer RAM output:
+264                         --  Data Bytes 1 - 4 (0 - 32) = Address word 5
+265                         --  Data Bytes 5 - 8 (33 - 64) = Address word 6
+266                         --  ...
+267                         --  Data Bytes 61 - 64 () = Address word 19
+268                         -----------------------------------------------------------------------------------------------
+269                         ctrl_ctr_mem_index &lt;=
+270                             std_logic_vector(to_unsigned(compl_ctr_div_32_plus_5_sat, 5));
+271                     
+272                     
+273                         -----------------------------------------------------------------------------------------------
+274                         -- Arbitration lost capture register
+275                         -----------------------------------------------------------------------------------------------
+276                         alc_capt_reg_proc : process(res_n, clk_sys)
+277                         begin
+278        1/1                  if (res_n = '0') then
+279        1/1                      alc_alc_bit &lt;= (others =&gt; '0');
+280        1/1                      alc_alc_id_field &lt;= (others =&gt; '0');
+281                             elsif (rising_edge(clk_sys)) then
+282        1/1                      if (arbitration_lost = '1') then
+283        1/1                          alc_alc_bit &lt;= std_logic_vector(ctrl_ctr_q(4 downto 0));
+284        1/1                          alc_alc_id_field &lt;= arbitration_part;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod173.html" >CTU_CAN_FD_RTL.CONTROL_COUNTER RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       181
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       182
+ EXPRESSION (RX_TRIGGER = '1')
+            ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       186
+ EXPRESSION ((RX_TRIGGER = '1') AND (CTRL_CTR_ENA = '1'))
+            ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       186
+ SUB-EXPRESSION ((RX_TRIGGER = '1') AND (CTRL_CTR_ENA = '1'))
+                 ---------1--------     ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       187
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       190
+ EXPRESSION (CTRL_CTR_Q = 0)
+            --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       194
+ EXPRESSION (CTRL_CTR_Q = 1)
+            --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       221
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       224
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       225
+ EXPRESSION (COMPL_CTR_ENA = '1')
+            ----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       243
+ EXPRESSION (COMPL_CTR_Q(2 DOWNTO 0) = &quot;111&quot;)
+            ----------------1----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       258
+ EXPRESSION (COMPL_CTR_DIV_32_PLUS_5 &lt; 19)
+            ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod173.html" >CTU_CAN_FD_RTL.CONTROL_COUNTER RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">23</td>
+<td class="rt">23</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">158</td>
+<td class="rt">158</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">79</td>
+<td class="rt">79</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">79</td>
+<td class="rt">79</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">16</td>
+<td class="rt">16</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">74</td>
+<td class="rt">74</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">37</td>
+<td class="rt">37</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">37</td>
+<td class="rt">37</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">7</td>
+<td class="rt">7</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">84</td>
+<td class="rt">84</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">42</td>
+<td class="rt">42</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">42</td>
+<td class="rt">42</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RX_TRIGGER</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_PLOAD</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_PLOAD_VAL[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>COMPL_CTR_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ARBITRATION_LOST</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ARBITRATION_PART[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_ZERO</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_CTR_ONE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_COUNTED_BYTE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_COUNTED_BYTE_INDEX[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_CTR_MEM_INDEX[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ALC_ALC_BIT[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ALC_ALC_ID_FIELD[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>CTRL_CTR_D[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>CTRL_CTR_Q[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>CTRL_CTR_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_D[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_Q[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_DIV_32[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod173.html" >CTU_CAN_FD_RTL.CONTROL_COUNTER RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">31</td>
+<td class="rt">31</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">181</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">186</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">190</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">194</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">203</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">221</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">224</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">230</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">243</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">258</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">278</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+181            ctrl_ctr_d <= unsigned(ctrl_ctr_pload_val) when (ctrl_ctr_pload = '1') else
+                                                          <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+182                                      (ctrl_ctr_q - 1) when (rx_trigger = '1') else
+                                                          <font color = "green">-2-</font>  
+                                                          <font color = "green">==></font>  
+                                                          <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+186            ctrl_ctr_ce <= '1' when (rx_trigger = '1' and ctrl_ctr_ena = '1') else
+                                  <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+187                           '1' when (ctrl_ctr_pload = '1') else
+                                  <font color = "green">-2-</font>  
+                                  <font color = "green">==></font>  
+                                  <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+190            ctrl_ctr_zero <= '1' when (ctrl_ctr_q = 0)
+                                    <font color = "green">-1-</font>  
+                                    <font color = "green">==></font>  
+                                    <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+194            ctrl_ctr_one <= '1' when (ctrl_ctr_q = 1)
+                                   <font color = "green">-1-</font>  
+                                   <font color = "green">==></font>  
+                                   <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+203                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+204                    ctrl_ctr_q <= (others => '0');
+           <font color = "green">            ==></font>
+205                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+206                    if (ctrl_ctr_ce = '1') then
+                       <font color = "green">-3-</font>  
+207                        ctrl_ctr_q <= ctrl_ctr_d;
+           <font color = "green">                ==></font>
+208                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+209                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+221            compl_ctr_d <= (others => '0') when (ctrl_ctr_pload = '1') else
+                                              <font color = "green">-1-</font>  
+                                              <font color = "green">==></font>  
+                                              <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+224            compl_ctr_ce <= '1' when (ctrl_ctr_pload = '1') else
+                                   <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+225                            '1' when (compl_ctr_ena = '1') else
+                                   <font color = "green">-2-</font>  
+                                   <font color = "green">==></font>  
+                                   <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+230                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+231                    compl_ctr_q <= (others => '0');
+           <font color = "green">            ==></font>
+232                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+233                    if (compl_ctr_ce = '1') then
+                       <font color = "green">-3-</font>  
+234                        compl_ctr_q <= compl_ctr_d;
+           <font color = "green">                ==></font>
+235                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+236                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+243            ctrl_counted_byte <= '1' when (compl_ctr_q(2 downto 0) = "111")
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+258                compl_ctr_div_32_plus_5 when (compl_ctr_div_32_plus_5 < 19) else
+                                           <font color = "green">-1-</font>  
+                                           <font color = "green">==></font>  
+                                           <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+278                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+279                    alc_alc_bit <= (others => '0');
+           <font color = "green">            ==></font>
+280                    alc_alc_id_field <= (others => '0');
+281                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+282                    if (arbitration_lost = '1') then
+                       <font color = "green">-3-</font>  
+283                        alc_alc_bit <= std_logic_vector(ctrl_ctr_q(4 downto 0));
+           <font color = "green">                ==></font>
+284                        alc_alc_id_field <= arbitration_part;
+285                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+286                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_930'>
+<a name="inst_tag_930_Line"></a>
+<b>Line Coverage for Instance : <a href="mod173.html#inst_tag_930" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>14</td><td>14</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>203</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>230</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>278</td><td>6</td><td>6</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+202                         begin
+203        1/1                  if (res_n = '0') then
+204        1/1                      ctrl_ctr_q &lt;= (others =&gt; '0');
+205                             elsif (rising_edge(clk_sys)) then
+206        1/1                      if (ctrl_ctr_ce = '1') then
+207        1/1                          ctrl_ctr_q &lt;= ctrl_ctr_d;
+208                                 end if;
+209                             end if;
+210                         end process;
+211                     
+212                         -----------------------------------------------------------------------------------------------
+213                         -- Complementary counter.
+214                         --
+215                         -- Counts bits during data field. This is done to calculate address of Data word in TXT Buffer,
+216                         -- byte index within memory word and indicate whole byte of data elapsed!
+217                         --
+218                         -- Counter is erased when control counter is preloaded (upon data field), and counts only
+219                         -- during data field.
+220                         -----------------------------------------------------------------------------------------------
+221                         compl_ctr_d &lt;= (others =&gt; '0') when (ctrl_ctr_pload = '1') else
+222                                        compl_ctr_q + 1;
+223                     
+224                         compl_ctr_ce &lt;= '1' when (ctrl_ctr_pload = '1') else
+225                                         '1' when (compl_ctr_ena = '1') else
+226                                         '0';
+227                     
+228                         compl_reg_proc : process(clk_sys, res_n)
+229                         begin
+230        1/1                  if (res_n = '0') then
+231        1/1                      compl_ctr_q &lt;= (others =&gt; '0');
+232                             elsif (rising_edge(clk_sys)) then
+233        1/1                      if (compl_ctr_ce = '1') then
+234        1/1                          compl_ctr_q &lt;= compl_ctr_d;
+235                                 end if;
+236                             end if;
+237                         end process;
+238                     
+239                         -----------------------------------------------------------------------------------------------
+240                         -- Status signals calculated from complementary counter
+241                         -----------------------------------------------------------------------------------------------
+242                         -- Control counter counted number of bits is on last bit within a byte!
+243                         ctrl_counted_byte &lt;= '1' when (compl_ctr_q(2 downto 0) = &quot;111&quot;)
+244                                                  else
+245                                              '0';
+246                     
+247                         -- Byte index within memory word!
+248                         ctrl_counted_byte_index &lt;= std_logic_vector(compl_ctr_q(4 downto 3));
+249                     
+250                         -- Complementary counter divided by 32
+251                         compl_ctr_div_32 &lt;= compl_ctr_q(G_CTRL_CTR_WIDTH - 1 downto 5);
+252                     
+253                         -- Complementary counter divided by 32, + 5
+254                         compl_ctr_div_32_plus_5 &lt;= to_integer(compl_ctr_div_32) + 5;
+255                     
+256                         -- Saturate to 19
+257                         compl_ctr_div_32_plus_5_sat &lt;=
+258                             compl_ctr_div_32_plus_5 when (compl_ctr_div_32_plus_5 &lt; 19) else
+259                             19;
+260                     
+261                         -----------------------------------------------------------------------------------------------
+262                         -- Index of word in TXT Buffer memory. Always Index one word further than we are transmitting
+263                         -- to allow loading data on TXT Buffer RAM output:
+264                         --  Data Bytes 1 - 4 (0 - 32) = Address word 5
+265                         --  Data Bytes 5 - 8 (33 - 64) = Address word 6
+266                         --  ...
+267                         --  Data Bytes 61 - 64 () = Address word 19
+268                         -----------------------------------------------------------------------------------------------
+269                         ctrl_ctr_mem_index &lt;=
+270                             std_logic_vector(to_unsigned(compl_ctr_div_32_plus_5_sat, 5));
+271                     
+272                     
+273                         -----------------------------------------------------------------------------------------------
+274                         -- Arbitration lost capture register
+275                         -----------------------------------------------------------------------------------------------
+276                         alc_capt_reg_proc : process(res_n, clk_sys)
+277                         begin
+278        1/1                  if (res_n = '0') then
+279        1/1                      alc_alc_bit &lt;= (others =&gt; '0');
+280        1/1                      alc_alc_id_field &lt;= (others =&gt; '0');
+281                             elsif (rising_edge(clk_sys)) then
+282        1/1                      if (arbitration_lost = '1') then
+283        1/1                          alc_alc_bit &lt;= std_logic_vector(ctrl_ctr_q(4 downto 0));
+284        1/1                          alc_alc_id_field &lt;= arbitration_part;
+</pre>
+<hr>
+<a name="inst_tag_930_Cond"></a>
+<b>Cond Coverage for Instance : <a href="mod173.html#inst_tag_930" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       181
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       182
+ EXPRESSION (RX_TRIGGER = '1')
+            ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       186
+ EXPRESSION ((RX_TRIGGER = '1') AND (CTRL_CTR_ENA = '1'))
+            ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       186
+ SUB-EXPRESSION ((RX_TRIGGER = '1') AND (CTRL_CTR_ENA = '1'))
+                 ---------1--------     ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       187
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       190
+ EXPRESSION (CTRL_CTR_Q = 0)
+            --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       194
+ EXPRESSION (CTRL_CTR_Q = 1)
+            --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       221
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       224
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       225
+ EXPRESSION (COMPL_CTR_ENA = '1')
+            ----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       243
+ EXPRESSION (COMPL_CTR_Q(2 DOWNTO 0) = &quot;111&quot;)
+            ----------------1----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       258
+ EXPRESSION (COMPL_CTR_DIV_32_PLUS_5 &lt; 19)
+            ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="inst_tag_930_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod173.html#inst_tag_930" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s9">
+<td>Totals</td>
+<td class="rt">23</td>
+<td class="rt">21</td>
+<td class="rt">91.30 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">158</td>
+<td class="rt">144</td>
+<td class="rt">91.14 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">79</td>
+<td class="rt">73</td>
+<td class="rt">92.41 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">79</td>
+<td class="rt">71</td>
+<td class="rt">89.87 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Ports</td>
+<td class="rt">16</td>
+<td class="rt">14</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s8">
+<td>Port Bits</td>
+<td class="rt">74</td>
+<td class="rt">60</td>
+<td class="rt">81.08 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">37</td>
+<td class="rt">31</td>
+<td class="rt">83.78 </td>
+</tr><tr class="s7">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">37</td>
+<td class="rt">29</td>
+<td class="rt">78.38 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">7</td>
+<td class="rt">7</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">84</td>
+<td class="rt">84</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">42</td>
+<td class="rt">42</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">42</td>
+<td class="rt">42</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RX_TRIGGER</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_PLOAD</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_PLOAD_VAL[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>COMPL_CTR_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ARBITRATION_LOST</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ARBITRATION_PART[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_ZERO</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_CTR_ONE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_COUNTED_BYTE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_COUNTED_BYTE_INDEX[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_CTR_MEM_INDEX[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ALC_ALC_BIT[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ALC_ALC_BIT[4:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ALC_ALC_ID_FIELD[0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ALC_ALC_ID_FIELD[2:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>CTRL_CTR_D[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>CTRL_CTR_Q[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>CTRL_CTR_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_D[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_Q[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_DIV_32[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="inst_tag_930_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod173.html#inst_tag_930" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">31</td>
+<td class="rt">31</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">181</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">186</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">190</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">194</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">203</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">221</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">224</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">230</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">243</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">258</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">278</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+181            ctrl_ctr_d <= unsigned(ctrl_ctr_pload_val) when (ctrl_ctr_pload = '1') else
+                                                          <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+182                                      (ctrl_ctr_q - 1) when (rx_trigger = '1') else
+                                                          <font color = "green">-2-</font>  
+                                                          <font color = "green">==></font>  
+                                                          <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+186            ctrl_ctr_ce <= '1' when (rx_trigger = '1' and ctrl_ctr_ena = '1') else
+                                  <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+187                           '1' when (ctrl_ctr_pload = '1') else
+                                  <font color = "green">-2-</font>  
+                                  <font color = "green">==></font>  
+                                  <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+190            ctrl_ctr_zero <= '1' when (ctrl_ctr_q = 0)
+                                    <font color = "green">-1-</font>  
+                                    <font color = "green">==></font>  
+                                    <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+194            ctrl_ctr_one <= '1' when (ctrl_ctr_q = 1)
+                                   <font color = "green">-1-</font>  
+                                   <font color = "green">==></font>  
+                                   <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+203                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+204                    ctrl_ctr_q <= (others => '0');
+           <font color = "green">            ==></font>
+205                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+206                    if (ctrl_ctr_ce = '1') then
+                       <font color = "green">-3-</font>  
+207                        ctrl_ctr_q <= ctrl_ctr_d;
+           <font color = "green">                ==></font>
+208                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+209                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+221            compl_ctr_d <= (others => '0') when (ctrl_ctr_pload = '1') else
+                                              <font color = "green">-1-</font>  
+                                              <font color = "green">==></font>  
+                                              <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+224            compl_ctr_ce <= '1' when (ctrl_ctr_pload = '1') else
+                                   <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+225                            '1' when (compl_ctr_ena = '1') else
+                                   <font color = "green">-2-</font>  
+                                   <font color = "green">==></font>  
+                                   <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+230                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+231                    compl_ctr_q <= (others => '0');
+           <font color = "green">            ==></font>
+232                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+233                    if (compl_ctr_ce = '1') then
+                       <font color = "green">-3-</font>  
+234                        compl_ctr_q <= compl_ctr_d;
+           <font color = "green">                ==></font>
+235                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+236                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+243            ctrl_counted_byte <= '1' when (compl_ctr_q(2 downto 0) = "111")
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+258                compl_ctr_div_32_plus_5 when (compl_ctr_div_32_plus_5 < 19) else
+                                           <font color = "green">-1-</font>  
+                                           <font color = "green">==></font>  
+                                           <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+278                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+279                    alc_alc_bit <= (others => '0');
+           <font color = "green">            ==></font>
+280                    alc_alc_id_field <= (others => '0');
+281                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+282                    if (arbitration_lost = '1') then
+                       <font color = "green">-3-</font>  
+283                        alc_alc_bit <= std_logic_vector(ctrl_ctr_q(4 downto 0));
+           <font color = "green">                ==></font>
+284                        alc_alc_id_field <= arbitration_part;
+285                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+286                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_929'>
+<a name="inst_tag_929_Line"></a>
+<b>Line Coverage for Instance : <a href="mod173.html#inst_tag_929" >TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>14</td><td>14</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>203</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>230</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>278</td><td>6</td><td>6</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+202                         begin
+203        1/1                  if (res_n = '0') then
+204        1/1                      ctrl_ctr_q &lt;= (others =&gt; '0');
+205                             elsif (rising_edge(clk_sys)) then
+206        1/1                      if (ctrl_ctr_ce = '1') then
+207        1/1                          ctrl_ctr_q &lt;= ctrl_ctr_d;
+208                                 end if;
+209                             end if;
+210                         end process;
+211                     
+212                         -----------------------------------------------------------------------------------------------
+213                         -- Complementary counter.
+214                         --
+215                         -- Counts bits during data field. This is done to calculate address of Data word in TXT Buffer,
+216                         -- byte index within memory word and indicate whole byte of data elapsed!
+217                         --
+218                         -- Counter is erased when control counter is preloaded (upon data field), and counts only
+219                         -- during data field.
+220                         -----------------------------------------------------------------------------------------------
+221                         compl_ctr_d &lt;= (others =&gt; '0') when (ctrl_ctr_pload = '1') else
+222                                        compl_ctr_q + 1;
+223                     
+224                         compl_ctr_ce &lt;= '1' when (ctrl_ctr_pload = '1') else
+225                                         '1' when (compl_ctr_ena = '1') else
+226                                         '0';
+227                     
+228                         compl_reg_proc : process(clk_sys, res_n)
+229                         begin
+230        1/1                  if (res_n = '0') then
+231        1/1                      compl_ctr_q &lt;= (others =&gt; '0');
+232                             elsif (rising_edge(clk_sys)) then
+233        1/1                      if (compl_ctr_ce = '1') then
+234        1/1                          compl_ctr_q &lt;= compl_ctr_d;
+235                                 end if;
+236                             end if;
+237                         end process;
+238                     
+239                         -----------------------------------------------------------------------------------------------
+240                         -- Status signals calculated from complementary counter
+241                         -----------------------------------------------------------------------------------------------
+242                         -- Control counter counted number of bits is on last bit within a byte!
+243                         ctrl_counted_byte &lt;= '1' when (compl_ctr_q(2 downto 0) = &quot;111&quot;)
+244                                                  else
+245                                              '0';
+246                     
+247                         -- Byte index within memory word!
+248                         ctrl_counted_byte_index &lt;= std_logic_vector(compl_ctr_q(4 downto 3));
+249                     
+250                         -- Complementary counter divided by 32
+251                         compl_ctr_div_32 &lt;= compl_ctr_q(G_CTRL_CTR_WIDTH - 1 downto 5);
+252                     
+253                         -- Complementary counter divided by 32, + 5
+254                         compl_ctr_div_32_plus_5 &lt;= to_integer(compl_ctr_div_32) + 5;
+255                     
+256                         -- Saturate to 19
+257                         compl_ctr_div_32_plus_5_sat &lt;=
+258                             compl_ctr_div_32_plus_5 when (compl_ctr_div_32_plus_5 &lt; 19) else
+259                             19;
+260                     
+261                         -----------------------------------------------------------------------------------------------
+262                         -- Index of word in TXT Buffer memory. Always Index one word further than we are transmitting
+263                         -- to allow loading data on TXT Buffer RAM output:
+264                         --  Data Bytes 1 - 4 (0 - 32) = Address word 5
+265                         --  Data Bytes 5 - 8 (33 - 64) = Address word 6
+266                         --  ...
+267                         --  Data Bytes 61 - 64 () = Address word 19
+268                         -----------------------------------------------------------------------------------------------
+269                         ctrl_ctr_mem_index &lt;=
+270                             std_logic_vector(to_unsigned(compl_ctr_div_32_plus_5_sat, 5));
+271                     
+272                     
+273                         -----------------------------------------------------------------------------------------------
+274                         -- Arbitration lost capture register
+275                         -----------------------------------------------------------------------------------------------
+276                         alc_capt_reg_proc : process(res_n, clk_sys)
+277                         begin
+278        1/1                  if (res_n = '0') then
+279        1/1                      alc_alc_bit &lt;= (others =&gt; '0');
+280        1/1                      alc_alc_id_field &lt;= (others =&gt; '0');
+281                             elsif (rising_edge(clk_sys)) then
+282        1/1                      if (arbitration_lost = '1') then
+283        1/1                          alc_alc_bit &lt;= std_logic_vector(ctrl_ctr_q(4 downto 0));
+284        1/1                          alc_alc_id_field &lt;= arbitration_part;
+</pre>
+<hr>
+<a name="inst_tag_929_Cond"></a>
+<b>Cond Coverage for Instance : <a href="mod173.html#inst_tag_929" >TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       181
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       182
+ EXPRESSION (RX_TRIGGER = '1')
+            ---------1--------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       186
+ EXPRESSION ((RX_TRIGGER = '1') AND (CTRL_CTR_ENA = '1'))
+            ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       186
+ SUB-EXPRESSION ((RX_TRIGGER = '1') AND (CTRL_CTR_ENA = '1'))
+                 ---------1--------     ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       187
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       190
+ EXPRESSION (CTRL_CTR_Q = 0)
+            --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       194
+ EXPRESSION (CTRL_CTR_Q = 1)
+            --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       221
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       224
+ EXPRESSION (CTRL_CTR_PLOAD = '1')
+            -----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       225
+ EXPRESSION (COMPL_CTR_ENA = '1')
+            ----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       243
+ EXPRESSION (COMPL_CTR_Q(2 DOWNTO 0) = &quot;111&quot;)
+            ----------------1----------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       258
+ EXPRESSION (COMPL_CTR_DIV_32_PLUS_5 &lt; 19)
+            ---------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="inst_tag_929_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod173.html#inst_tag_929" >TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">23</td>
+<td class="rt">23</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">158</td>
+<td class="rt">158</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">79</td>
+<td class="rt">79</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">79</td>
+<td class="rt">79</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">16</td>
+<td class="rt">16</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">74</td>
+<td class="rt">74</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">37</td>
+<td class="rt">37</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">37</td>
+<td class="rt">37</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">7</td>
+<td class="rt">7</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">84</td>
+<td class="rt">84</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">42</td>
+<td class="rt">42</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">42</td>
+<td class="rt">42</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RX_TRIGGER</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_PLOAD</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_PLOAD_VAL[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>COMPL_CTR_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ARBITRATION_LOST</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>ARBITRATION_PART[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CTRL_CTR_ZERO</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_CTR_ONE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_COUNTED_BYTE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_COUNTED_BYTE_INDEX[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>CTRL_CTR_MEM_INDEX[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ALC_ALC_BIT[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ALC_ALC_ID_FIELD[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>CTRL_CTR_D[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>CTRL_CTR_Q[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>CTRL_CTR_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_D[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_Q[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_DIV_32[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>COMPL_CTR_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="inst_tag_929_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod173.html#inst_tag_929" >TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.PROTOCOL_CONTROL_INST.CONTROL_COUNTER_INST</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">31</td>
+<td class="rt">31</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">181</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">186</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">190</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">194</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">203</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">221</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">224</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">230</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">243</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">258</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">278</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+181            ctrl_ctr_d <= unsigned(ctrl_ctr_pload_val) when (ctrl_ctr_pload = '1') else
+                                                          <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+182                                      (ctrl_ctr_q - 1) when (rx_trigger = '1') else
+                                                          <font color = "green">-2-</font>  
+                                                          <font color = "green">==></font>  
+                                                          <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+186            ctrl_ctr_ce <= '1' when (rx_trigger = '1' and ctrl_ctr_ena = '1') else
+                                  <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+187                           '1' when (ctrl_ctr_pload = '1') else
+                                  <font color = "green">-2-</font>  
+                                  <font color = "green">==></font>  
+                                  <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+190            ctrl_ctr_zero <= '1' when (ctrl_ctr_q = 0)
+                                    <font color = "green">-1-</font>  
+                                    <font color = "green">==></font>  
+                                    <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+194            ctrl_ctr_one <= '1' when (ctrl_ctr_q = 1)
+                                   <font color = "green">-1-</font>  
+                                   <font color = "green">==></font>  
+                                   <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+203                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+204                    ctrl_ctr_q <= (others => '0');
+           <font color = "green">            ==></font>
+205                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+206                    if (ctrl_ctr_ce = '1') then
+                       <font color = "green">-3-</font>  
+207                        ctrl_ctr_q <= ctrl_ctr_d;
+           <font color = "green">                ==></font>
+208                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+209                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+221            compl_ctr_d <= (others => '0') when (ctrl_ctr_pload = '1') else
+                                              <font color = "green">-1-</font>  
+                                              <font color = "green">==></font>  
+                                              <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+224            compl_ctr_ce <= '1' when (ctrl_ctr_pload = '1') else
+                                   <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+225                            '1' when (compl_ctr_ena = '1') else
+                                   <font color = "green">-2-</font>  
+                                   <font color = "green">==></font>  
+                                   <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+230                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+231                    compl_ctr_q <= (others => '0');
+           <font color = "green">            ==></font>
+232                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+233                    if (compl_ctr_ce = '1') then
+                       <font color = "green">-3-</font>  
+234                        compl_ctr_q <= compl_ctr_d;
+           <font color = "green">                ==></font>
+235                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+236                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+243            ctrl_counted_byte <= '1' when (compl_ctr_q(2 downto 0) = "111")
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+258                compl_ctr_div_32_plus_5 when (compl_ctr_div_32_plus_5 < 19) else
+                                           <font color = "green">-1-</font>  
+                                           <font color = "green">==></font>  
+                                           <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+278                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+279                    alc_alc_bit <= (others => '0');
+           <font color = "green">            ==></font>
+280                    alc_alc_id_field <= (others => '0');
+281                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+282                    if (arbitration_lost = '1') then
+                       <font color = "green">-3-</font>  
+283                        alc_alc_bit <= std_logic_vector(ctrl_ctr_q(4 downto 0));
+           <font color = "green">                ==></font>
+284                        alc_alc_id_field <= arbitration_part;
+285                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+286                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_929">
+    <li>
+      <a href="#inst_tag_929_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_929_Cond">Cond</a>    </li>
+    <li>
+      <a href="#inst_tag_929_Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_929_Branch">Branch</a>    </li>
+  </ul>
+  <ul name="inst_tag_930">
+    <li>
+      <a href="#inst_tag_930_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_930_Cond">Cond</a>    </li>
+    <li>
+      <a href="#inst_tag_930_Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_930_Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_CTU_CAN_FD_RTL.CONTROL_COUNTER RTL">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

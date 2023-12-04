@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_RTL.MEMORY_REG_OS RTL</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_RTL.MEMORY_REG_OS RTL'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_RTL.MEMORY_REG_OS RTL')">CTU_CAN_FD_RTL.MEMORY_REG_OS RTL</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35.html#Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35.html#Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/memory_registers/generated/memory_reg_os.vhd')">/home/oille/Downloads/ctucanfd_ip_core/src/memory_registers/generated/memory_reg_os.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_191"  onclick="showContent('inst_tag_191')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_SET_INT_ENA_SET_SLICE_1_REG_COMP</a></td>
+<td class="s4 cl rt"> 42.64</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_191_Cond" > 40.00</a></td>
+<td class="s3 cl rt"><a href="mod35_1.html#inst_tag_191_Toggle" > 37.93</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_191_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_193"  onclick="showContent('inst_tag_193')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_CLR_INT_ENA_CLR_SLICE_1_REG_COMP</a></td>
+<td class="s4 cl rt"> 42.64</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_193_Cond" > 40.00</a></td>
+<td class="s3 cl rt"><a href="mod35_1.html#inst_tag_193_Toggle" > 37.93</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_193_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_195"  onclick="showContent('inst_tag_195')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_SET_INT_MASK_SET_SLICE_1_REG_COMP</a></td>
+<td class="s4 cl rt"> 42.64</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_195_Cond" > 40.00</a></td>
+<td class="s3 cl rt"><a href="mod35_1.html#inst_tag_195_Toggle" > 37.93</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_195_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_197"  onclick="showContent('inst_tag_197')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_CLR_INT_MASK_CLR_SLICE_1_REG_COMP</a></td>
+<td class="s4 cl rt"> 42.64</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_197_Cond" > 40.00</a></td>
+<td class="s3 cl rt"><a href="mod35_1.html#inst_tag_197_Toggle" > 37.93</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_197_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_192"  onclick="showContent('inst_tag_192')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_SET_INT_ENA_SET_SLICE_2_REG_COMP</a></td>
+<td class="s4 cl rt"> 43.73</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_192_Cond" > 40.00</a></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_192_Toggle" > 41.18</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_192_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_194"  onclick="showContent('inst_tag_194')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_CLR_INT_ENA_CLR_SLICE_2_REG_COMP</a></td>
+<td class="s4 cl rt"> 43.73</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_194_Cond" > 40.00</a></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_194_Toggle" > 41.18</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_194_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_196"  onclick="showContent('inst_tag_196')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_SET_INT_MASK_SET_SLICE_2_REG_COMP</a></td>
+<td class="s4 cl rt"> 43.73</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_196_Cond" > 40.00</a></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_196_Toggle" > 41.18</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_196_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_198"  onclick="showContent('inst_tag_198')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_CLR_INT_MASK_CLR_SLICE_2_REG_COMP</a></td>
+<td class="s4 cl rt"> 43.73</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_198_Cond" > 40.00</a></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_198_Toggle" > 41.18</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_198_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_179"  onclick="showContent('inst_tag_179')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RXI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_179_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_179_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_179_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_180"  onclick="showContent('inst_tag_180')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_TXI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_180_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_180_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_180_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_181"  onclick="showContent('inst_tag_181')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_EWLI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_181_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_181_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_181_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_182"  onclick="showContent('inst_tag_182')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_DOI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_182_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_182_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_182_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_183"  onclick="showContent('inst_tag_183')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_FCSI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_183_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_183_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_183_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_184"  onclick="showContent('inst_tag_184')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_ALI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_184_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_184_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_184_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_185"  onclick="showContent('inst_tag_185')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_BEI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_185_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_185_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_185_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_186"  onclick="showContent('inst_tag_186')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_OFI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_186_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_186_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_186_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_187"  onclick="showContent('inst_tag_187')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RXFI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_187_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_187_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_187_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_188"  onclick="showContent('inst_tag_188')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_BSI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_188_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_188_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_188_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_189"  onclick="showContent('inst_tag_189')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RBNEI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_189_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_189_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_189_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_190"  onclick="showContent('inst_tag_190')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_TXBHCI_REG_COMP</a></td>
+<td class="s4 cl rt"> 46.67</td>
+<td class="wht cl rt"></td>
+<td class="s4 cl rt"><a href="mod35_1.html#inst_tag_190_Cond" > 40.00</a></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_190_Toggle" > 50.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s5 cl rt"><a href="mod35_1.html#inst_tag_190_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_169"  onclick="showContent('inst_tag_169')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RXRPMV_REG_COMP</a></td>
+<td class="s9 cl rt"> 91.67</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_169_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod35_0.html#inst_tag_169_Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_169_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_170"  onclick="showContent('inst_tag_170')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RRB_REG_COMP</a></td>
+<td class="s9 cl rt"> 91.67</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_170_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod35_0.html#inst_tag_170_Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_170_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_171"  onclick="showContent('inst_tag_171')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CDO_REG_COMP</a></td>
+<td class="s9 cl rt"> 91.67</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_171_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod35_0.html#inst_tag_171_Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_171_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_172"  onclick="showContent('inst_tag_172')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_ERCRST_REG_COMP</a></td>
+<td class="s9 cl rt"> 91.67</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_172_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod35_0.html#inst_tag_172_Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_172_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_175"  onclick="showContent('inst_tag_175')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CPEXS_REG_COMP</a></td>
+<td class="s9 cl rt"> 91.67</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_175_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod35_0.html#inst_tag_175_Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_175_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_176"  onclick="showContent('inst_tag_176')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CRXPE_REG_COMP</a></td>
+<td class="s9 cl rt"> 91.67</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_176_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod35_0.html#inst_tag_176_Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_176_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_177"  onclick="showContent('inst_tag_177')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CTXPE_REG_COMP</a></td>
+<td class="s9 cl rt"> 91.67</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_177_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod35_0.html#inst_tag_177_Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_177_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_178"  onclick="showContent('inst_tag_178')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CTXDPE_REG_COMP</a></td>
+<td class="s9 cl rt"> 91.67</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_1.html#inst_tag_178_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod35_1.html#inst_tag_178_Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_1.html#inst_tag_178_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_199"  onclick="showContent('inst_tag_199')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCE_REG_COMP</a></td>
+<td class="s9 cl rt"> 91.67</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_1.html#inst_tag_199_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod35_1.html#inst_tag_199_Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_1.html#inst_tag_199_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_201"  onclick="showContent('inst_tag_201')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCA_REG_COMP</a></td>
+<td class="s9 cl rt"> 91.67</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_1.html#inst_tag_201_Cond" >100.00</a></td>
+<td class="s7 cl rt"><a href="mod35_1.html#inst_tag_201_Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_1.html#inst_tag_201_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_134"  onclick="showContent('inst_tag_134')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.MODE_RST_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_134_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_134_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_134_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_135"  onclick="showContent('inst_tag_135')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RXRPMV_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_135_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_135_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_135_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_136"  onclick="showContent('inst_tag_136')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RRB_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_136_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_136_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_136_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_137"  onclick="showContent('inst_tag_137')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CDO_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_137_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_137_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_137_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_138"  onclick="showContent('inst_tag_138')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_ERCRST_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_138_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_138_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_138_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_139"  onclick="showContent('inst_tag_139')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RXFCRST_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_139_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_139_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_139_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_140"  onclick="showContent('inst_tag_140')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_TXFCRST_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_140_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_140_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_140_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_141"  onclick="showContent('inst_tag_141')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CPEXS_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_141_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_141_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_141_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_142"  onclick="showContent('inst_tag_142')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CRXPE_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_142_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_142_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_142_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_143"  onclick="showContent('inst_tag_143')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CTXPE_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_143_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_143_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_143_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_144"  onclick="showContent('inst_tag_144')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CTXDPE_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_144_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_144_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_144_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_145"  onclick="showContent('inst_tag_145')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RXI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_145_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_145_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_145_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_146"  onclick="showContent('inst_tag_146')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_TXI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_146_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_146_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_146_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_147"  onclick="showContent('inst_tag_147')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_EWLI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_147_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_147_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_147_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_148"  onclick="showContent('inst_tag_148')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_DOI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_148_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_148_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_148_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_149"  onclick="showContent('inst_tag_149')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_FCSI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_149_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_149_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_149_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_150"  onclick="showContent('inst_tag_150')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_ALI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_150_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_150_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_150_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_151"  onclick="showContent('inst_tag_151')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_BEI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_151_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_151_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_151_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_152"  onclick="showContent('inst_tag_152')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_OFI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_152_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_152_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_152_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_153"  onclick="showContent('inst_tag_153')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RXFI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_153_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_153_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_153_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_154"  onclick="showContent('inst_tag_154')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_BSI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_154_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_154_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_154_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_155"  onclick="showContent('inst_tag_155')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RBNEI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_155_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_155_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_155_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_156"  onclick="showContent('inst_tag_156')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_TXBHCI_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_156_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_156_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_156_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_157"  onclick="showContent('inst_tag_157')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_SET_INT_ENA_SET_SLICE_1_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_157_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_157_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_157_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_158"  onclick="showContent('inst_tag_158')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_SET_INT_ENA_SET_SLICE_2_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_158_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_158_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_158_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_159"  onclick="showContent('inst_tag_159')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_CLR_INT_ENA_CLR_SLICE_1_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_159_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_159_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_159_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_160"  onclick="showContent('inst_tag_160')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_CLR_INT_ENA_CLR_SLICE_2_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_160_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_160_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_160_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_161"  onclick="showContent('inst_tag_161')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_SET_INT_MASK_SET_SLICE_1_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_161_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_161_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_161_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_162"  onclick="showContent('inst_tag_162')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_SET_INT_MASK_SET_SLICE_2_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_162_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_162_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_162_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_163"  onclick="showContent('inst_tag_163')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_CLR_INT_MASK_CLR_SLICE_1_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_163_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_163_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_163_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_164"  onclick="showContent('inst_tag_164')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_CLR_INT_MASK_CLR_SLICE_2_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_164_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_164_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_164_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_165"  onclick="showContent('inst_tag_165')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCE_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_165_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_165_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_165_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_166"  onclick="showContent('inst_tag_166')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCR_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_166_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_166_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_166_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_167"  onclick="showContent('inst_tag_167')">TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCA_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_167_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_167_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_167_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_168"  onclick="showContent('inst_tag_168')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.MODE_RST_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_168_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_168_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_168_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_173"  onclick="showContent('inst_tag_173')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RXFCRST_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_173_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_173_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_173_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_0.html#inst_tag_174"  onclick="showContent('inst_tag_174')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_TXFCRST_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_174_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_174_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_0.html#inst_tag_174_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod35_1.html#inst_tag_200"  onclick="showContent('inst_tag_200')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCR_REG_COMP</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_1.html#inst_tag_200_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod35_1.html#inst_tag_200_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod35_1.html#inst_tag_200_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_RTL.MEMORY_REG_OS RTL'>
+<a name="Cond"></a>
+Cond Coverage for Module : <a name="542919580"></a>
+<a href="mod35.html" >CTU_CAN_FD_RTL.MEMORY_REG_OS RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       98
+ EXPRESSION (WRITE AND CS)
+             --1--     -2
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       105
+ EXPRESSION (WR_EN = '1')
+            ------1------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a name="715654805"></a>
+<a href="mod35.html" >CTU_CAN_FD_RTL.MEMORY_REG_OS RTL ( generic DATA_WIDTH = 1, RESET_VALUE = (0 => '0') ) </a><br clear=all>
+Toggle Coverage for Module self-instances : 
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_134_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.MODE_RST_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_135_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RXRPMV_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_136_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RRB_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_137_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CDO_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_138_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_ERCRST_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_139_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RXFCRST_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_140_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_TXFCRST_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_141_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CPEXS_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_142_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CRXPE_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_143_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CTXPE_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_144_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CTXDPE_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_145_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RXI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_146_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_TXI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_147_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_EWLI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_148_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_DOI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_149_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_FCSI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_150_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_ALI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_151_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_BEI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_152_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_OFI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_153_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RXFI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_154_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_BSI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_155_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RBNEI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_156_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_TXBHCI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_165_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCE_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_166_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCR_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_167_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCA_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_168_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.MODE_RST_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 91.67</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_169_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RXRPMV_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 91.67</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_170_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RRB_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 91.67</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_171_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CDO_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 91.67</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_172_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_ERCRST_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_173_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_RXFCRST_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_174_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_TXFCRST_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 91.67</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_175_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CPEXS_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 91.67</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_176_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CRXPE_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 91.67</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_177_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CTXPE_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 91.67</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_178_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.COMMAND_CTXDPE_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_179_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RXI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_180_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_TXI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_181_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_EWLI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_182_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_DOI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_183_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_FCSI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_184_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_ALI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_185_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_BEI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_186_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_OFI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_187_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RXFI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_188_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_BSI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_189_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_RBNEI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 46.67</td>
+<td class="s5 cl rt"> 50.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_190_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_STAT_TXBHCI_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 91.67</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_199_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCE_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_200_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCR_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s9 cl rt"> 91.67</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_201_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.TX_COMMAND_TXCA_REG_COMP</a></span></div>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">16</td>
+<td class="rt">16</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">12</td>
+<td class="rt">12</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>DATA_IN</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WRITE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>REG_VALUE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>REG_VALUE_R</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>WR_EN</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a name="1608665535"></a>
+<a href="mod35.html" >CTU_CAN_FD_RTL.MEMORY_REG_OS RTL ( generic DATA_WIDTH = 8, RESET_VALUE = ('0', '0', '0', '0', '0', '0', '0', '0') ) </a><br clear=all>
+Toggle Coverage for Module self-instances : 
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_157_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_SET_INT_ENA_SET_SLICE_1_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_159_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_CLR_INT_ENA_CLR_SLICE_1_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_161_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_SET_INT_MASK_SET_SLICE_1_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_163_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_CLR_INT_MASK_CLR_SLICE_1_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 42.64</td>
+<td class="s3 cl rt"> 37.93</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_191_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_SET_INT_ENA_SET_SLICE_1_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 42.64</td>
+<td class="s3 cl rt"> 37.93</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_193_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_CLR_INT_ENA_CLR_SLICE_1_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 42.64</td>
+<td class="s3 cl rt"> 37.93</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_195_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_SET_INT_MASK_SET_SLICE_1_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 42.64</td>
+<td class="s3 cl rt"> 37.93</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_197_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_CLR_INT_MASK_CLR_SLICE_1_REG_COMP</a></span></div>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">58</td>
+<td class="rt">58</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">29</td>
+<td class="rt">29</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">29</td>
+<td class="rt">29</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">40</td>
+<td class="rt">40</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">20</td>
+<td class="rt">20</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">20</td>
+<td class="rt">20</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>DATA_IN[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WRITE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>REG_VALUE[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>REG_VALUE_R[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>WR_EN</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a name="1472180677"></a>
+<a href="mod35.html" >CTU_CAN_FD_RTL.MEMORY_REG_OS RTL ( generic DATA_WIDTH = 4, RESET_VALUE = ('0', '0', '0', '0') ) </a><br clear=all>
+Toggle Coverage for Module self-instances : 
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_158_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_SET_INT_ENA_SET_SLICE_2_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_160_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_CLR_INT_ENA_CLR_SLICE_2_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_162_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_SET_INT_MASK_SET_SLICE_2_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table>
+<span class=inst><a href="mod35_0.html#inst_tag_164_Toggle" >TB_TOP_CTU_CAN_FD.DUT.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_CLR_INT_MASK_CLR_SLICE_2_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 43.73</td>
+<td class="s4 cl rt"> 41.18</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_192_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_SET_INT_ENA_SET_SLICE_2_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 43.73</td>
+<td class="s4 cl rt"> 41.18</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_194_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_ENA_CLR_INT_ENA_CLR_SLICE_2_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 43.73</td>
+<td class="s4 cl rt"> 41.18</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_196_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_SET_INT_MASK_SET_SLICE_2_REG_COMP</a></span></div>
+<br clear=all>
+<div>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>TOGGLE</td></tr><tr>
+<td class="s4 cl rt"> 43.73</td>
+<td class="s4 cl rt"> 41.18</td>
+</tr></table>
+<span class=inst><a href="mod35_1.html#inst_tag_198_Toggle" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.MEMORY_REGISTERS_INST.CONTROL_REGISTERS_REG_MAP_COMP.INT_MASK_CLR_INT_MASK_CLR_SLICE_2_REG_COMP</a></span></div>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">34</td>
+<td class="rt">34</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">17</td>
+<td class="rt">17</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">17</td>
+<td class="rt">17</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">24</td>
+<td class="rt">24</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">12</td>
+<td class="rt">12</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">12</td>
+<td class="rt">12</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">10</td>
+<td class="rt">10</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>DATA_IN[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WRITE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>REG_VALUE[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>REG_VALUE_R[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>WR_EN</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a name="542919580"></a>
+<a href="mod35.html" >CTU_CAN_FD_RTL.MEMORY_REG_OS RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">105</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+105                reg_value_r(i) <= data_in(i) when (wr_en = '1')
+                                                <font color = "green">-1-</font>  
+                                                <font color = "green">==></font>  
+                                                <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

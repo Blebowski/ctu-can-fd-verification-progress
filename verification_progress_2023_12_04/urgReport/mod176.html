@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_TB.SIGNAL_DELAYER_VEC TB</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_TB.SIGNAL_DELAYER_VEC TB'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_TB.SIGNAL_DELAYER_VEC TB')">CTU_CAN_FD_TB.SIGNAL_DELAYER_VEC TB</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 93.68</td>
+<td class="s9 cl rt"><a href="mod176.html#Line" > 96.43</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod176.html#Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod176.html#Branch" > 84.62</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/common/signal_delayer.vhd')">/home/oille/Downloads/ctucanfd_ip_core/test/main_tb/common/signal_delayer.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod176.html#inst_tag_941"  onclick="showContent('inst_tag_941')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.I_TX_DELAY_DUT.I_SDV</a></td>
+<td class="s9 cl rt"> 93.68</td>
+<td class="s9 cl rt"><a href="mod176.html#inst_tag_941_Line" > 96.43</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod176.html#inst_tag_941_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod176.html#inst_tag_941_Branch" > 84.62</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod176.html#inst_tag_942"  onclick="showContent('inst_tag_942')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.I_TX_DELAY_TEST_NODE.I_SDV</a></td>
+<td class="s9 cl rt"> 93.68</td>
+<td class="s9 cl rt"><a href="mod176.html#inst_tag_942_Line" > 96.43</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod176.html#inst_tag_942_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod176.html#inst_tag_942_Branch" > 84.62</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='inst_tag_941'>
+<hr>
+<a name="inst_tag_941"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_941" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.I_TX_DELAY_DUT.I_SDV</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 93.68</td>
+<td class="s9 cl rt"><a href="mod176.html#inst_tag_941_Line" > 96.43</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod176.html#inst_tag_941_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod176.html#inst_tag_941_Branch" > 84.62</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 93.68</td>
+<td class="s9 cl rt"> 96.43</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 84.62</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod204.html#inst_tag_1024" >I_TX_DELAY_DUT</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td colspan=8>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div name='inst_tag_942'>
+<hr>
+<a name="inst_tag_942"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_942" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.I_TX_DELAY_TEST_NODE.I_SDV</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 93.68</td>
+<td class="s9 cl rt"><a href="mod176.html#inst_tag_942_Line" > 96.43</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod176.html#inst_tag_942_Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod176.html#inst_tag_942_Branch" > 84.62</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 93.68</td>
+<td class="s9 cl rt"> 96.43</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"> 84.62</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod204.html#inst_tag_1025" >I_TX_DELAY_TEST_NODE</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td colspan=8>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_TB.SIGNAL_DELAYER_VEC TB'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod176.html" >CTU_CAN_FD_TB.SIGNAL_DELAYER_VEC TB</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>28</td><td>27</td><td>96.43</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>110</td><td>15</td><td>15</td><td>100.00</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCESS</td><td>134</td><td>13</td><td>12</td><td>92.31</td></tr>
+</table>
+<pre class="code"><br clear=all>
+109                         begin
+110        1/1                  if first then
+111        1/1                      first &lt;= false;
+112        1/1                      top_val &lt;= input;
+113                             end if;
+114        1/1                  wait until (input'event or pop'event);
+115        1/1                  if input'event then
+116        1/1                      assert (wridx - rdidx) &lt; NSAMPLES report &quot;FIFO full!&quot; severity failure;
+117        1/1                      data(wridx mod NSAMPLES) := now;
+118        1/1                      dataval(wridx mod NSAMPLES) := input;
+119        1/1                      wridx := wridx + 1;
+120                             elsif pop'event then
+121        1/1                      assert (wridx - rdidx) &gt; 0 report &quot;FIFO empty!&quot; severity failure;
+122        1/1                      top_val &lt;= dataval(rdidx mod NSAMPLES);
+123        1/1                      rdidx := rdidx + 1;
+124                             end if;
+125        1/1                  top &lt;= data(rdidx mod NSAMPLES);
+126        1/1                  nonempty &lt;= (wridx - rdidx) &gt; 0;
+127        1/1                  wait for 0 ns;
+128                         end process;
+129                     
+130                         p_delay: process
+131                             variable towait : time;
+132                             variable first : boolean := true;
+133                         begin
+134        1/1                  if delay &lt; 0 ns then
+135        <font color = "red">0/1     ==>              wait until delay &gt;= 0 ns;</font>
+136                             end if;
+137        1/1                  if first then
+138        1/1                      first := false;
+139        1/1                      delayed &lt;= input;
+140                             end if;
+141        1/1                  if not nonempty then
+142        1/1                      wait until nonempty;
+143                             end if;
+144        1/1                  towait := top + delay - now;
+145                             --report &quot;Waiting for &quot; &amp; time'image(towait);
+146        1/1                  wait for towait;
+147        1/1                  delayed &lt;= top_val;
+148        1/1                  if not nonempty then
+149        1/1                      wait until nonempty;
+150                             end if;
+151        1/1                  pop &lt;= not pop;
+</pre>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod176.html" >CTU_CAN_FD_TB.SIGNAL_DELAYER_VEC TB</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>INPUT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>DELAYED</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>TOP_VAL</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod176.html" >CTU_CAN_FD_TB.SIGNAL_DELAYER_VEC TB</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Branches</td>
+<td></td>
+<td class="rt">13</td>
+<td class="rt">11</td>
+<td class="rt">84.62 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">110</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">115</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">134</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">137</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">141</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">148</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+110                if first then
+                   <font color = "green">-1-</font>  
+111                    first <= false;
+           <font color = "green">            ==></font>
+112                    top_val <= input;
+113                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+115                if input'event then
+                   <font color = "green">-1-</font>  
+116                    assert (wridx - rdidx) < NSAMPLES report "FIFO full!" severity failure;
+           <font color = "green">            ==></font>
+117                    data(wridx mod NSAMPLES) := now;
+118                    dataval(wridx mod NSAMPLES) := input;
+119                    wridx := wridx + 1;
+120                elsif pop'event then
+                      <font color = "red">-2-</font>  
+121                    assert (wridx - rdidx) > 0 report "FIFO empty!" severity failure;
+           <font color = "green">            ==></font>
+122                    top_val <= dataval(rdidx mod NSAMPLES);
+123                    rdidx := rdidx + 1;
+124                end if;
+                   MISSING_ELSE
+           <font color = "red">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+134                if delay < 0 ns then
+                   <font color = "red">-1-</font>  
+135                    wait until delay >= 0 ns;
+           <font color = "red">            ==></font>
+136                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+137                if first then
+                   <font color = "green">-1-</font>  
+138                    first := false;
+           <font color = "green">            ==></font>
+139                    delayed <= input;
+140                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+141                if not nonempty then
+                   <font color = "green">-1-</font>  
+142                    wait until nonempty;
+           <font color = "green">            ==></font>
+143                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+148                if not nonempty then
+                   <font color = "green">-1-</font>  
+149                    wait until nonempty;
+           <font color = "green">            ==></font>
+150                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_941'>
+<a name="inst_tag_941_Line"></a>
+<b>Line Coverage for Instance : <a href="mod176.html#inst_tag_941" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.I_TX_DELAY_DUT.I_SDV</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>28</td><td>27</td><td>96.43</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>110</td><td>15</td><td>15</td><td>100.00</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCESS</td><td>134</td><td>13</td><td>12</td><td>92.31</td></tr>
+</table>
+<pre class="code"><br clear=all>
+109                         begin
+110        1/1                  if first then
+111        1/1                      first &lt;= false;
+112        1/1                      top_val &lt;= input;
+113                             end if;
+114        1/1                  wait until (input'event or pop'event);
+115        1/1                  if input'event then
+116        1/1                      assert (wridx - rdidx) &lt; NSAMPLES report &quot;FIFO full!&quot; severity failure;
+117        1/1                      data(wridx mod NSAMPLES) := now;
+118        1/1                      dataval(wridx mod NSAMPLES) := input;
+119        1/1                      wridx := wridx + 1;
+120                             elsif pop'event then
+121        1/1                      assert (wridx - rdidx) &gt; 0 report &quot;FIFO empty!&quot; severity failure;
+122        1/1                      top_val &lt;= dataval(rdidx mod NSAMPLES);
+123        1/1                      rdidx := rdidx + 1;
+124                             end if;
+125        1/1                  top &lt;= data(rdidx mod NSAMPLES);
+126        1/1                  nonempty &lt;= (wridx - rdidx) &gt; 0;
+127        1/1                  wait for 0 ns;
+128                         end process;
+129                     
+130                         p_delay: process
+131                             variable towait : time;
+132                             variable first : boolean := true;
+133                         begin
+134        1/1                  if delay &lt; 0 ns then
+135        <font color = "red">0/1     ==>              wait until delay &gt;= 0 ns;</font>
+136                             end if;
+137        1/1                  if first then
+138        1/1                      first := false;
+139        1/1                      delayed &lt;= input;
+140                             end if;
+141        1/1                  if not nonempty then
+142        1/1                      wait until nonempty;
+143                             end if;
+144        1/1                  towait := top + delay - now;
+145                             --report &quot;Waiting for &quot; &amp; time'image(towait);
+146        1/1                  wait for towait;
+147        1/1                  delayed &lt;= top_val;
+148        1/1                  if not nonempty then
+149        1/1                      wait until nonempty;
+150                             end if;
+151        1/1                  pop &lt;= not pop;
+</pre>
+<hr>
+<a name="inst_tag_941_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod176.html#inst_tag_941" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.I_TX_DELAY_DUT.I_SDV</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>INPUT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>DELAYED</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>TOP_VAL</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="inst_tag_941_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod176.html#inst_tag_941" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.I_TX_DELAY_DUT.I_SDV</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Branches</td>
+<td></td>
+<td class="rt">13</td>
+<td class="rt">11</td>
+<td class="rt">84.62 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">110</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">115</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">134</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">137</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">141</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">148</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+110                if first then
+                   <font color = "green">-1-</font>  
+111                    first <= false;
+           <font color = "green">            ==></font>
+112                    top_val <= input;
+113                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+115                if input'event then
+                   <font color = "green">-1-</font>  
+116                    assert (wridx - rdidx) < NSAMPLES report "FIFO full!" severity failure;
+           <font color = "green">            ==></font>
+117                    data(wridx mod NSAMPLES) := now;
+118                    dataval(wridx mod NSAMPLES) := input;
+119                    wridx := wridx + 1;
+120                elsif pop'event then
+                      <font color = "red">-2-</font>  
+121                    assert (wridx - rdidx) > 0 report "FIFO empty!" severity failure;
+           <font color = "green">            ==></font>
+122                    top_val <= dataval(rdidx mod NSAMPLES);
+123                    rdidx := rdidx + 1;
+124                end if;
+                   MISSING_ELSE
+           <font color = "red">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+134                if delay < 0 ns then
+                   <font color = "red">-1-</font>  
+135                    wait until delay >= 0 ns;
+           <font color = "red">            ==></font>
+136                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+137                if first then
+                   <font color = "green">-1-</font>  
+138                    first := false;
+           <font color = "green">            ==></font>
+139                    delayed <= input;
+140                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+141                if not nonempty then
+                   <font color = "green">-1-</font>  
+142                    wait until nonempty;
+           <font color = "green">            ==></font>
+143                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+148                if not nonempty then
+                   <font color = "green">-1-</font>  
+149                    wait until nonempty;
+           <font color = "green">            ==></font>
+150                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_942'>
+<a name="inst_tag_942_Line"></a>
+<b>Line Coverage for Instance : <a href="mod176.html#inst_tag_942" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.I_TX_DELAY_TEST_NODE.I_SDV</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>28</td><td>27</td><td>96.43</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>110</td><td>15</td><td>15</td><td>100.00</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCESS</td><td>134</td><td>13</td><td>12</td><td>92.31</td></tr>
+</table>
+<pre class="code"><br clear=all>
+109                         begin
+110        1/1                  if first then
+111        1/1                      first &lt;= false;
+112        1/1                      top_val &lt;= input;
+113                             end if;
+114        1/1                  wait until (input'event or pop'event);
+115        1/1                  if input'event then
+116        1/1                      assert (wridx - rdidx) &lt; NSAMPLES report &quot;FIFO full!&quot; severity failure;
+117        1/1                      data(wridx mod NSAMPLES) := now;
+118        1/1                      dataval(wridx mod NSAMPLES) := input;
+119        1/1                      wridx := wridx + 1;
+120                             elsif pop'event then
+121        1/1                      assert (wridx - rdidx) &gt; 0 report &quot;FIFO empty!&quot; severity failure;
+122        1/1                      top_val &lt;= dataval(rdidx mod NSAMPLES);
+123        1/1                      rdidx := rdidx + 1;
+124                             end if;
+125        1/1                  top &lt;= data(rdidx mod NSAMPLES);
+126        1/1                  nonempty &lt;= (wridx - rdidx) &gt; 0;
+127        1/1                  wait for 0 ns;
+128                         end process;
+129                     
+130                         p_delay: process
+131                             variable towait : time;
+132                             variable first : boolean := true;
+133                         begin
+134        1/1                  if delay &lt; 0 ns then
+135        <font color = "red">0/1     ==>              wait until delay &gt;= 0 ns;</font>
+136                             end if;
+137        1/1                  if first then
+138        1/1                      first := false;
+139        1/1                      delayed &lt;= input;
+140                             end if;
+141        1/1                  if not nonempty then
+142        1/1                      wait until nonempty;
+143                             end if;
+144        1/1                  towait := top + delay - now;
+145                             --report &quot;Waiting for &quot; &amp; time'image(towait);
+146        1/1                  wait for towait;
+147        1/1                  delayed &lt;= top_val;
+148        1/1                  if not nonempty then
+149        1/1                      wait until nonempty;
+150                             end if;
+151        1/1                  pop &lt;= not pop;
+</pre>
+<hr>
+<a name="inst_tag_942_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod176.html#inst_tag_942" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.I_TX_DELAY_TEST_NODE.I_SDV</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>INPUT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>DELAYED</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>TOP_VAL</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="inst_tag_942_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod176.html#inst_tag_942" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.I_TX_DELAY_TEST_NODE.I_SDV</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Branches</td>
+<td></td>
+<td class="rt">13</td>
+<td class="rt">11</td>
+<td class="rt">84.62 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">110</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s6">
+<td>IF</td>
+<td class="rt">115</td>
+<td class="rt">3</td>
+<td class="rt">2</td>
+<td class="rt">66.67 </td>
+</tr><tr class="s5">
+<td>IF</td>
+<td class="rt">134</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">137</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">141</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">148</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+110                if first then
+                   <font color = "green">-1-</font>  
+111                    first <= false;
+           <font color = "green">            ==></font>
+112                    top_val <= input;
+113                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+115                if input'event then
+                   <font color = "green">-1-</font>  
+116                    assert (wridx - rdidx) < NSAMPLES report "FIFO full!" severity failure;
+           <font color = "green">            ==></font>
+117                    data(wridx mod NSAMPLES) := now;
+118                    dataval(wridx mod NSAMPLES) := input;
+119                    wridx := wridx + 1;
+120                elsif pop'event then
+                      <font color = "red">-2-</font>  
+121                    assert (wridx - rdidx) > 0 report "FIFO empty!" severity failure;
+           <font color = "green">            ==></font>
+122                    top_val <= dataval(rdidx mod NSAMPLES);
+123                    rdidx := rdidx + 1;
+124                end if;
+                   MISSING_ELSE
+           <font color = "red">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Not Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+134                if delay < 0 ns then
+                   <font color = "red">-1-</font>  
+135                    wait until delay >= 0 ns;
+           <font color = "red">            ==></font>
+136                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uRed">
+<td align=center>1</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+137                if first then
+                   <font color = "green">-1-</font>  
+138                    first := false;
+           <font color = "green">            ==></font>
+139                    delayed <= input;
+140                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+141                if not nonempty then
+                   <font color = "green">-1-</font>  
+142                    wait until nonempty;
+           <font color = "green">            ==></font>
+143                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+148                if not nonempty then
+                   <font color = "green">-1-</font>  
+149                    wait until nonempty;
+           <font color = "green">            ==></font>
+150                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_941">
+    <li>
+      <a href="#inst_tag_941_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_941_Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_941_Branch">Branch</a>    </li>
+  </ul>
+  <ul name="inst_tag_942">
+    <li>
+      <a href="#inst_tag_942_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_942_Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_942_Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_CTU_CAN_FD_TB.SIGNAL_DELAYER_VEC TB">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
