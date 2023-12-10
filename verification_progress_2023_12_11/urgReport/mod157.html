@@ -1,0 +1,2841 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_RTL.BIT_STUFFING RTL</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_RTL.BIT_STUFFING RTL'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_RTL.BIT_STUFFING RTL')">CTU_CAN_FD_RTL.BIT_STUFFING RTL</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 98.50</td>
+<td class="s10 cl rt"><a href="mod157.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod157.html#Cond" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod157.html#Toggle" > 94.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod157.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/can_core/bit_stuffing.vhd')">/home/oille/Downloads/ctucanfd_ip_core/src/can_core/bit_stuffing.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod157.html#inst_tag_386"  onclick="showContent('inst_tag_386')">TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.BIT_STUFFING_INST<img src="ex.gif" class="icon"></a></td>
+<td class="s9 cl rt"> 99.48</td>
+<td class="s10 cl rt"><a href="mod157.html#inst_tag_386_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod157.html#inst_tag_386_Cond" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod157.html#inst_tag_386_Toggle" > 97.92</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod157.html#inst_tag_386_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='inst_tag_386'>
+<hr>
+<a name="inst_tag_386"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy1.html#tag_urg_inst_386" >TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.BIT_STUFFING_INST<img src="ex.gif" class="icon"></a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.48</td>
+<td class="s10 cl rt"><a href="mod157.html#inst_tag_386_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod157.html#inst_tag_386_Cond" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod157.html#inst_tag_386_Toggle" > 97.92</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod157.html#inst_tag_386_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.62</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 98.48</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 99.41</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 98.24</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod267.html#inst_tag_752" >CAN_CORE_INST<img src="ex.gif" class="icon"></a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod174.html#inst_tag_424" id="tag_urg_inst_424">DFF_DATA_OUT_REG</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod329.html#inst_tag_1226" id="tag_urg_inst_1226">DFF_ENA_REG</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod174.html#inst_tag_423" id="tag_urg_inst_423">DFF_FIXED_STUFF_REG</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod329.html#inst_tag_1227" id="tag_urg_inst_1227">DFF_HALT_REG</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_RTL.BIT_STUFFING RTL'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod157.html" >CTU_CAN_FD_RTL.BIT_STUFFING RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>285</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>359</td><td>5</td><td>5</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+284                         begin
+285        1/1                  if (res_n = '0') then
+286        1/1                      bst_ctr_q &lt;= (others =&gt; '0');
+287                             elsif rising_edge(clk_sys) then
+288        1/1                      if (stuff_enable = '1') then
+289        1/1                          bst_ctr_q &lt;= bst_ctr_d;
+290                                 end if;
+291                             end if;
+292                         end process;
+293                     
+294                         -----------------------------------------------------------------------------------------------
+295                         -- Reset counter of equal consecutive bits to 1 with bit processing when:
+296                         --  1. Processing first bit of fixed bit stuffing
+297                         --  2. Stuff level was reached -&gt; Stuff bit will be inserted
+298                         --  3. Processed bit differs from previous bit (data out register) and regular stuffing is used.
+299                         -----------------------------------------------------------------------------------------------
+300                         same_bits_rst_trig &lt;= '1' when (non_fix_to_fix_chng = '1') or
+301                                                        (stuff_lvl_reached = '1') or
+302                                                        (data_in /= data_out_i and fixed_stuff = '0')
+303                                                   else
+304                                               '0';
+305                     
+306                         -----------------------------------------------------------------------------------------------
+307                         -- Reset counter of equal consecutive bits:
+308                         --  1. Upon start of bit-stuffing
+309                         --  2. When processing bit and should be restarted by dedicated signal.
+310                         -----------------------------------------------------------------------------------------------
+311                         same_bits_rst &lt;= '1' when (enable_prev = '0') or
+312                                                   (bst_trigger = '1' and same_bits_rst_trig = '1')
+313                                              else
+314                                          '0';
+315                     
+316                         -----------------------------------------------------------------------------------------------
+317                         -- Combinationally incremented value of equal consecutive bits of equal value.
+318                         -----------------------------------------------------------------------------------------------
+319                         same_bits_add &lt;= (same_bits_q + 1) mod 8;
+320                     
+321                         -----------------------------------------------------------------------------------------------
+322                         -- Preset value in case of start of transmission without transmission of SOF (as result of
+323                         -- Sampling dominant and considering this as SOF!):
+324                         --  1. If we transmitt dominant, we put two, this accounts for SOF + first bit of ID.
+325                         --  2. If we transmitt recessive, we put one, this accounts only for first bit of ID.
+326                         -----------------------------------------------------------------------------------------------
+327                         tx_no_sof_val &lt;= &quot;010&quot; when (data_in = DOMINANT) else
+328                                          &quot;001&quot;;
+329                     
+330                         -----------------------------------------------------------------------------------------------
+331                         -- Next value for counter of equal consecutive bits:
+332                         --  1. Preset to special value when we don't transmit SOF!
+333                         --  2. Reset
+334                         --  3. Increment if not reset when processing bit.
+335                         --  4. Keep original value otherwise.
+336                         -----------------------------------------------------------------------------------------------
+337                         same_bits_d &lt;= tx_no_sof_val when (tx_frame_no_sof = '1') else
+338                                                &quot;001&quot; when (same_bits_rst = '1') else
+339                                        same_bits_add when (bst_trigger = '1') else
+340                                          same_bits_q;
+341                     
+342                         -----------------------------------------------------------------------------------------------
+343                         -- Number of stuff bits is reached when:
+344                         --  1. Normal bit stuffing, number of same bits is equal to stuff rule length. Stuff bit is
+345                         --     already included in counting next consecutive bits of equal value (recursive behavior).
+346                         --  2. Fixed bit stuffing, number of same bits is equal to one more than rule length, since
+347                         --     stuff bit is not included then!
+348                         -----------------------------------------------------------------------------------------------
+349                         stuff_lvl_reached &lt;= '1' when (same_bits_q = unsigned(stuff_length) and fixed_stuff = '0') or
+350                                                       (same_bits_q = unsigned(stuff_length) + 1 and fixed_stuff = '1')
+351                                                  else
+352                                              '0';
+353                     
+354                         -----------------------------------------------------------------------------------------------
+355                         -- Counter of equal consecutive bits on input
+356                         -----------------------------------------------------------------------------------------------
+357                         same_bits_ctr_proc : process(res_n, clk_sys)
+358                         begin
+359        1/1                  if (res_n = '0') then
+360        1/1                      same_bits_q &lt;= &quot;001&quot;;
+361                             elsif rising_edge(clk_sys) then
+362        1/1                      if (stuff_enable = '1') then
+363        1/1                          same_bits_q &lt;= same_bits_d;
+364                                 else
+365        1/1                          same_bits_q &lt;= &quot;001&quot;;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod157.html" >CTU_CAN_FD_RTL.BIT_STUFFING RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>88</td><td>88</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>88</td><td>88</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       233
+ EXPRESSION ((FIXED_STUFF = '1') AND (FIXED_REG_Q = '0'))
+            ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       233
+ SUB-EXPRESSION ((FIXED_STUFF = '1') AND (FIXED_REG_Q = '0'))
+                 ---------1---------     ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       242
+ EXPRESSION (ENABLE_PREV = '0')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       243
+ EXPRESSION (BST_TRIGGER = '1')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       275
+ EXPRESSION (ENABLE_PREV = '0')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       276
+ EXPRESSION ((BST_TRIGGER = '1') AND (STUFF_LVL_REACHED = '1') AND (FIXED_STUFF = '0'))
+            -------------------------------------1-------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       276
+ SUB-EXPRESSION ((BST_TRIGGER = '1') AND (STUFF_LVL_REACHED = '1') AND (FIXED_STUFF = '0'))
+                 ---------1---------     ------------2------------     ---------3---------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       300
+ EXPRESSION ((NON_FIX_TO_FIX_CHNG = '1') OR (STUFF_LVL_REACHED = '1') OR ((DATA_IN /= DATA_OUT_I) AND (FIXED_STUFF = '0')))
+            -------------------------------------------------------1-------------------------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       300
+ SUB-EXPRESSION ((NON_FIX_TO_FIX_CHNG = '1') OR (STUFF_LVL_REACHED = '1') OR ((DATA_IN /= DATA_OUT_I) AND (FIXED_STUFF = '0')))
+                 -------------1-------------    ------------2------------    ------------------------3------------------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       300
+ SUB-EXPRESSION ((DATA_IN /= DATA_OUT_I) AND (FIXED_STUFF = '0'))
+                 -----------1-----------     ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       311
+ EXPRESSION ((ENABLE_PREV = '0') OR ((BST_TRIGGER = '1') AND (SAME_BITS_RST_TRIG = '1')))
+            --------------------------------------1--------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       311
+ SUB-EXPRESSION ((ENABLE_PREV = '0') OR ((BST_TRIGGER = '1') AND (SAME_BITS_RST_TRIG = '1')))
+                 ---------1---------    --------------------------2-------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       311
+ SUB-EXPRESSION ((BST_TRIGGER = '1') AND (SAME_BITS_RST_TRIG = '1'))
+                 ---------1---------     -------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       327
+ EXPRESSION (DATA_IN = '0')
+            -------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       337
+ EXPRESSION (TX_FRAME_NO_SOF = '1')
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       338
+ EXPRESSION (SAME_BITS_RST = '1')
+            ----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       339
+ EXPRESSION (BST_TRIGGER = '1')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       349
+ EXPRESSION (((SAME_BITS_Q = UNSIGNED(STUFF_LENGTH)) AND (FIXED_STUFF = '0')) OR ((SAME_BITS_Q = (UNSIGNED(STUFF_LENGTH) + 1)) AND (FIXED_STUFF = '1')))
+            ----------------------------------------------------------------------1---------------------------------------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       349
+ SUB-EXPRESSION (((SAME_BITS_Q = UNSIGNED(STUFF_LENGTH)) AND (FIXED_STUFF = '0')) OR ((SAME_BITS_Q = (UNSIGNED(STUFF_LENGTH) + 1)) AND (FIXED_STUFF = '1')))
+                 --------------------------------1-------------------------------    -----------------------------------2----------------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       349
+ SUB-EXPRESSION ((SAME_BITS_Q = UNSIGNED(STUFF_LENGTH)) AND (FIXED_STUFF = '0'))
+                 -------------------1------------------     ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       349
+ SUB-EXPRESSION ((SAME_BITS_Q = (UNSIGNED(STUFF_LENGTH) + 1)) AND (FIXED_STUFF = '1'))
+                 ----------------------1---------------------     ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       375
+ EXPRESSION ((NON_FIX_TO_FIX_CHNG = '1') OR (STUFF_LVL_REACHED = '1'))
+            -----------------------------1----------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       375
+ SUB-EXPRESSION ((NON_FIX_TO_FIX_CHNG = '1') OR (STUFF_LVL_REACHED = '1'))
+                 -------------1-------------    ------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       386
+ EXPRESSION ((BST_TRIGGER = '1') AND (INSERT_STUFF_BIT = '1'))
+            -------------------------1------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       386
+ SUB-EXPRESSION ((BST_TRIGGER = '1') AND (INSERT_STUFF_BIT = '1'))
+                 ---------1---------     ------------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       387
+ EXPRESSION (BST_TRIGGER = '1')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       390
+ EXPRESSION (STUFF_ENABLE = '1')
+            ----------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       391
+ EXPRESSION (BST_TRIGGER = '1')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       394
+ EXPRESSION ((STUFF_ENABLE = '1') OR (BST_TRIGGER = '1'))
+            ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       394
+ SUB-EXPRESSION ((STUFF_ENABLE = '1') OR (BST_TRIGGER = '1'))
+                 ----------1---------    ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       425
+ EXPRESSION ((ENABLE_PREV = '0') OR (STUFF_ENABLE = '0'))
+            ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       425
+ SUB-EXPRESSION ((ENABLE_PREV = '0') OR (STUFF_ENABLE = '0'))
+                 ---------1---------    ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       426
+ EXPRESSION ((BST_TRIGGER = '1') AND (INSERT_STUFF_BIT = '1'))
+            -------------------------1------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       426
+ SUB-EXPRESSION ((BST_TRIGGER = '1') AND (INSERT_STUFF_BIT = '1'))
+                 ---------1---------     ------------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       427
+ EXPRESSION (BST_TRIGGER = '1')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       436
+ EXPRESSION (DATA_HALT_Q = DATA_HALT_D)
+            -------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod157.html" >CTU_CAN_FD_RTL.BIT_STUFFING RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s9">
+<td>Totals</td>
+<td class="rt">32</td>
+<td class="rt">30</td>
+<td class="rt">93.75 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">100</td>
+<td class="rt">94</td>
+<td class="rt">94.00 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">50</td>
+<td class="rt">47</td>
+<td class="rt">94.00 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">50</td>
+<td class="rt">47</td>
+<td class="rt">94.00 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s9">
+<td>Ports</td>
+<td class="rt">11</td>
+<td class="rt">10</td>
+<td class="rt">90.91 </td>
+</tr><tr class="s8">
+<td>Port Bits</td>
+<td class="rt">30</td>
+<td class="rt">26</td>
+<td class="rt">86.67 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">15</td>
+<td class="rt">13</td>
+<td class="rt">86.67 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">15</td>
+<td class="rt">13</td>
+<td class="rt">86.67 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s9">
+<td>Signals</td>
+<td class="rt">21</td>
+<td class="rt">20</td>
+<td class="rt">95.24 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">70</td>
+<td class="rt">68</td>
+<td class="rt">97.14 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">35</td>
+<td class="rt">34</td>
+<td class="rt">97.14 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">35</td>
+<td class="rt">34</td>
+<td class="rt">97.14 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>DATA_IN</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>DATA_OUT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>BST_TRIGGER</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STUFF_ENABLE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>FIXED_STUFF</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STUFF_LENGTH[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STUFF_LENGTH[2:1]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TX_FRAME_NO_SOF</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>BST_CTR[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>DATA_HALT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>DATA_OUT_I</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>SAME_BITS_Q[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>SAME_BITS_ADD[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>SAME_BITS_D[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>TX_NO_SOF_VAL[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>TX_NO_SOF_VAL[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>DATA_HALT_Q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>DATA_HALT_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>FIXED_REG_Q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>FIXED_REG_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>BST_CTR_Q[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>BST_CTR_ADD[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>BST_CTR_D[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ENABLE_PREV</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>NON_FIX_TO_FIX_CHNG</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>STUFF_LVL_REACHED</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>SAME_BITS_RST_TRIG</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>SAME_BITS_RST</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>INSERT_STUFF_BIT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>DATA_OUT_D_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>DATA_OUT_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>DATA_OUT_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod157.html" >CTU_CAN_FD_RTL.BIT_STUFFING RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">44</td>
+<td class="rt">44</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">233</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">242</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">275</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">285</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">300</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">311</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">327</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">337</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">349</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">359</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">375</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">386</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">390</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">394</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">425</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">436</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+233            non_fix_to_fix_chng <= '1' when (fixed_stuff = '1' and fixed_reg_q = '0')
+                                          <font color = "green">-1-</font>  
+                                          <font color = "green">==></font>  
+                                          <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+242            fixed_reg_d <= '0'         when (enable_prev = '0') else
+                                          <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+243                           fixed_stuff when (bst_trigger = '1') else
+                                          <font color = "green">-2-</font>  
+                                          <font color = "green">==></font>  
+                                          <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+275            bst_ctr_d <=        "000" when (enable_prev = '0') else
+                                         <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+276                          bst_ctr_add when (bst_trigger = '1' and stuff_lvl_reached = '1' and
+                                         <font color = "green">-2-</font>  
+                                         <font color = "green">==></font>  
+                                         <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+285                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+286                    bst_ctr_q <= (others => '0');
+           <font color = "green">            ==></font>
+287                elsif rising_edge(clk_sys) then
+                      <font color = "green">-2-</font>  
+288                    if (stuff_enable = '1') then
+                       <font color = "green">-3-</font>  
+289                        bst_ctr_q <= bst_ctr_d;
+           <font color = "green">                ==></font>
+290                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+291                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+300            same_bits_rst_trig <= '1' when (non_fix_to_fix_chng = '1') or
+                                         <font color = "green">-1-</font>  
+                                         <font color = "green">==></font>  
+                                         <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+311            same_bits_rst <= '1' when (enable_prev = '0') or
+                                    <font color = "green">-1-</font>  
+                                    <font color = "green">==></font>  
+                                    <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+327            tx_no_sof_val <= "010" when (data_in = DOMINANT) else
+                                      <font color = "green">-1-</font>  
+                                      <font color = "green">==></font>  
+                                      <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+337            same_bits_d <= tx_no_sof_val when (tx_frame_no_sof = '1') else
+                                            <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+338                                   "001" when (same_bits_rst = '1') else
+                                            <font color = "green">-2-</font>  
+           <font color = "green">                           ==></font>
+339                           same_bits_add when (bst_trigger = '1') else
+                                            <font color = "green">-3-</font>  
+                                            <font color = "green">==></font>  
+                                            <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+349            stuff_lvl_reached <= '1' when (same_bits_q = unsigned(stuff_length) and fixed_stuff = '0') or
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+359                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+360                    same_bits_q <= "001";
+           <font color = "green">            ==></font>
+361                elsif rising_edge(clk_sys) then
+                      <font color = "green">-2-</font>  
+362                    if (stuff_enable = '1') then
+                       <font color = "green">-3-</font>  
+363                        same_bits_q <= same_bits_d;
+           <font color = "green">                ==></font>
+364                    else
+365                        same_bits_q <= "001";
+           <font color = "green">                ==></font>
+366                    end if;
+367                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+375            insert_stuff_bit <= '1' when (non_fix_to_fix_chng = '1' or stuff_lvl_reached = '1')
+                                       <font color = "green">-1-</font>  
+                                       <font color = "green">==></font>  
+                                       <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+386            data_out_d_ena <= (not data_out_i) when (bst_trigger = '1' and insert_stuff_bit = '1') else
+                                                  <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+387                                      data_in  when (bst_trigger = '1') else
+                                                  <font color = "green">-2-</font>  
+                                                  <font color = "green">==></font>  
+                                                  <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+390            data_out_d <= data_out_d_ena when (stuff_enable = '1') else
+                                            <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+391                                 data_in when (bst_trigger = '1') else
+                                            <font color = "green">-2-</font>  
+                                            <font color = "green">==></font>  
+                                            <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+394            data_out_ce <= '1' when (stuff_enable = '1' or bst_trigger = '1') else
+                                  <font color = "green">-1-</font>  
+                                  <font color = "green">==></font>  
+                                  <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+425            data_halt_d <= '0' when (enable_prev = '0' or stuff_enable = '0') else
+                                  <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+426                           '1' when (bst_trigger = '1' and insert_stuff_bit = '1') else
+                                  <font color = "green">-2-</font>  
+           <font color = "green">                   ==></font>
+427                           '0' when (bst_trigger = '1') else
+                                  <font color = "green">-3-</font>  
+                                  <font color = "green">==></font>  
+                                  <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+436            data_halt <= data_halt_q when (data_halt_q = data_halt_d) else
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_386'>
+<a name="inst_tag_386_Line"></a>
+<b>Line Coverage for Instance : <a href="mod157.html#inst_tag_386" >TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.BIT_STUFFING_INST<img src="ex.gif" class="icon"></a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>285</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>359</td><td>5</td><td>5</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+284                         begin
+285        1/1                  if (res_n = '0') then
+286        1/1                      bst_ctr_q &lt;= (others =&gt; '0');
+287                             elsif rising_edge(clk_sys) then
+288        1/1                      if (stuff_enable = '1') then
+289        1/1                          bst_ctr_q &lt;= bst_ctr_d;
+290                                 end if;
+291                             end if;
+292                         end process;
+293                     
+294                         -----------------------------------------------------------------------------------------------
+295                         -- Reset counter of equal consecutive bits to 1 with bit processing when:
+296                         --  1. Processing first bit of fixed bit stuffing
+297                         --  2. Stuff level was reached -&gt; Stuff bit will be inserted
+298                         --  3. Processed bit differs from previous bit (data out register) and regular stuffing is used.
+299                         -----------------------------------------------------------------------------------------------
+300                         same_bits_rst_trig &lt;= '1' when (non_fix_to_fix_chng = '1') or
+301                                                        (stuff_lvl_reached = '1') or
+302                                                        (data_in /= data_out_i and fixed_stuff = '0')
+303                                                   else
+304                                               '0';
+305                     
+306                         -----------------------------------------------------------------------------------------------
+307                         -- Reset counter of equal consecutive bits:
+308                         --  1. Upon start of bit-stuffing
+309                         --  2. When processing bit and should be restarted by dedicated signal.
+310                         -----------------------------------------------------------------------------------------------
+311                         same_bits_rst &lt;= '1' when (enable_prev = '0') or
+312                                                   (bst_trigger = '1' and same_bits_rst_trig = '1')
+313                                              else
+314                                          '0';
+315                     
+316                         -----------------------------------------------------------------------------------------------
+317                         -- Combinationally incremented value of equal consecutive bits of equal value.
+318                         -----------------------------------------------------------------------------------------------
+319                         same_bits_add &lt;= (same_bits_q + 1) mod 8;
+320                     
+321                         -----------------------------------------------------------------------------------------------
+322                         -- Preset value in case of start of transmission without transmission of SOF (as result of
+323                         -- Sampling dominant and considering this as SOF!):
+324                         --  1. If we transmitt dominant, we put two, this accounts for SOF + first bit of ID.
+325                         --  2. If we transmitt recessive, we put one, this accounts only for first bit of ID.
+326                         -----------------------------------------------------------------------------------------------
+327                         tx_no_sof_val &lt;= &quot;010&quot; when (data_in = DOMINANT) else
+328                                          &quot;001&quot;;
+329                     
+330                         -----------------------------------------------------------------------------------------------
+331                         -- Next value for counter of equal consecutive bits:
+332                         --  1. Preset to special value when we don't transmit SOF!
+333                         --  2. Reset
+334                         --  3. Increment if not reset when processing bit.
+335                         --  4. Keep original value otherwise.
+336                         -----------------------------------------------------------------------------------------------
+337                         same_bits_d &lt;= tx_no_sof_val when (tx_frame_no_sof = '1') else
+338                                                &quot;001&quot; when (same_bits_rst = '1') else
+339                                        same_bits_add when (bst_trigger = '1') else
+340                                          same_bits_q;
+341                     
+342                         -----------------------------------------------------------------------------------------------
+343                         -- Number of stuff bits is reached when:
+344                         --  1. Normal bit stuffing, number of same bits is equal to stuff rule length. Stuff bit is
+345                         --     already included in counting next consecutive bits of equal value (recursive behavior).
+346                         --  2. Fixed bit stuffing, number of same bits is equal to one more than rule length, since
+347                         --     stuff bit is not included then!
+348                         -----------------------------------------------------------------------------------------------
+349                         stuff_lvl_reached &lt;= '1' when (same_bits_q = unsigned(stuff_length) and fixed_stuff = '0') or
+350                                                       (same_bits_q = unsigned(stuff_length) + 1 and fixed_stuff = '1')
+351                                                  else
+352                                              '0';
+353                     
+354                         -----------------------------------------------------------------------------------------------
+355                         -- Counter of equal consecutive bits on input
+356                         -----------------------------------------------------------------------------------------------
+357                         same_bits_ctr_proc : process(res_n, clk_sys)
+358                         begin
+359        1/1                  if (res_n = '0') then
+360        1/1                      same_bits_q &lt;= &quot;001&quot;;
+361                             elsif rising_edge(clk_sys) then
+362        1/1                      if (stuff_enable = '1') then
+363        1/1                          same_bits_q &lt;= same_bits_d;
+364                                 else
+365        1/1                          same_bits_q &lt;= &quot;001&quot;;
+</pre>
+<hr>
+<a name="inst_tag_386_Cond"></a>
+<b>Cond Coverage for Instance : <a href="mod157.html#inst_tag_386" >TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.BIT_STUFFING_INST<img src="ex.gif" class="icon"></a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>88</td><td>88</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>88</td><td>88</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       233
+ EXPRESSION ((FIXED_STUFF = '1') AND (FIXED_REG_Q = '0'))
+            ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       233
+ SUB-EXPRESSION ((FIXED_STUFF = '1') AND (FIXED_REG_Q = '0'))
+                 ---------1---------     ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       242
+ EXPRESSION (ENABLE_PREV = '0')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       243
+ EXPRESSION (BST_TRIGGER = '1')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       275
+ EXPRESSION (ENABLE_PREV = '0')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       276
+ EXPRESSION ((BST_TRIGGER = '1') AND (STUFF_LVL_REACHED = '1') AND (FIXED_STUFF = '0'))
+            -------------------------------------1-------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       276
+ SUB-EXPRESSION ((BST_TRIGGER = '1') AND (STUFF_LVL_REACHED = '1') AND (FIXED_STUFF = '0'))
+                 ---------1---------     ------------2------------     ---------3---------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       300
+ EXPRESSION ((NON_FIX_TO_FIX_CHNG = '1') OR (STUFF_LVL_REACHED = '1') OR ((DATA_IN /= DATA_OUT_I) AND (FIXED_STUFF = '0')))
+            -------------------------------------------------------1-------------------------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       300
+ SUB-EXPRESSION ((NON_FIX_TO_FIX_CHNG = '1') OR (STUFF_LVL_REACHED = '1') OR ((DATA_IN /= DATA_OUT_I) AND (FIXED_STUFF = '0')))
+                 -------------1-------------    ------------2------------    ------------------------3------------------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       300
+ SUB-EXPRESSION ((DATA_IN /= DATA_OUT_I) AND (FIXED_STUFF = '0'))
+                 -----------1-----------     ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       311
+ EXPRESSION ((ENABLE_PREV = '0') OR ((BST_TRIGGER = '1') AND (SAME_BITS_RST_TRIG = '1')))
+            --------------------------------------1--------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       311
+ SUB-EXPRESSION ((ENABLE_PREV = '0') OR ((BST_TRIGGER = '1') AND (SAME_BITS_RST_TRIG = '1')))
+                 ---------1---------    --------------------------2-------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       311
+ SUB-EXPRESSION ((BST_TRIGGER = '1') AND (SAME_BITS_RST_TRIG = '1'))
+                 ---------1---------     -------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       327
+ EXPRESSION (DATA_IN = '0')
+            -------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       337
+ EXPRESSION (TX_FRAME_NO_SOF = '1')
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       338
+ EXPRESSION (SAME_BITS_RST = '1')
+            ----------1----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       339
+ EXPRESSION (BST_TRIGGER = '1')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       349
+ EXPRESSION (((SAME_BITS_Q = UNSIGNED(STUFF_LENGTH)) AND (FIXED_STUFF = '0')) OR ((SAME_BITS_Q = (UNSIGNED(STUFF_LENGTH) + 1)) AND (FIXED_STUFF = '1')))
+            ----------------------------------------------------------------------1---------------------------------------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       349
+ SUB-EXPRESSION (((SAME_BITS_Q = UNSIGNED(STUFF_LENGTH)) AND (FIXED_STUFF = '0')) OR ((SAME_BITS_Q = (UNSIGNED(STUFF_LENGTH) + 1)) AND (FIXED_STUFF = '1')))
+                 --------------------------------1-------------------------------    -----------------------------------2----------------------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       349
+ SUB-EXPRESSION ((SAME_BITS_Q = UNSIGNED(STUFF_LENGTH)) AND (FIXED_STUFF = '0'))
+                 -------------------1------------------     ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       349
+ SUB-EXPRESSION ((SAME_BITS_Q = (UNSIGNED(STUFF_LENGTH) + 1)) AND (FIXED_STUFF = '1'))
+                 ----------------------1---------------------     ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       375
+ EXPRESSION ((NON_FIX_TO_FIX_CHNG = '1') OR (STUFF_LVL_REACHED = '1'))
+            -----------------------------1----------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       375
+ SUB-EXPRESSION ((NON_FIX_TO_FIX_CHNG = '1') OR (STUFF_LVL_REACHED = '1'))
+                 -------------1-------------    ------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       386
+ EXPRESSION ((BST_TRIGGER = '1') AND (INSERT_STUFF_BIT = '1'))
+            -------------------------1------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       386
+ SUB-EXPRESSION ((BST_TRIGGER = '1') AND (INSERT_STUFF_BIT = '1'))
+                 ---------1---------     ------------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       387
+ EXPRESSION (BST_TRIGGER = '1')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       390
+ EXPRESSION (STUFF_ENABLE = '1')
+            ----------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       391
+ EXPRESSION (BST_TRIGGER = '1')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       394
+ EXPRESSION ((STUFF_ENABLE = '1') OR (BST_TRIGGER = '1'))
+            ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       394
+ SUB-EXPRESSION ((STUFF_ENABLE = '1') OR (BST_TRIGGER = '1'))
+                 ----------1---------    ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       425
+ EXPRESSION ((ENABLE_PREV = '0') OR (STUFF_ENABLE = '0'))
+            ----------------------1----------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       425
+ SUB-EXPRESSION ((ENABLE_PREV = '0') OR (STUFF_ENABLE = '0'))
+                 ---------1---------    ----------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       426
+ EXPRESSION ((BST_TRIGGER = '1') AND (INSERT_STUFF_BIT = '1'))
+            -------------------------1------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       426
+ SUB-EXPRESSION ((BST_TRIGGER = '1') AND (INSERT_STUFF_BIT = '1'))
+                 ---------1---------     ------------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       427
+ EXPRESSION (BST_TRIGGER = '1')
+            ---------1---------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       436
+ EXPRESSION (DATA_HALT_Q = DATA_HALT_D)
+            -------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="inst_tag_386_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod157.html#inst_tag_386" >TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.BIT_STUFFING_INST<img src="ex.gif" class="icon"></a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s9">
+<td>Totals</td>
+<td class="rt">32</td>
+<td class="rt">31</td>
+<td class="rt">96.88 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">96</td>
+<td class="rt">94</td>
+<td class="rt">97.92 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">48</td>
+<td class="rt">47</td>
+<td class="rt">97.92 </td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">48</td>
+<td class="rt">47</td>
+<td class="rt">97.92 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">11</td>
+<td class="rt">11</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">26</td>
+<td class="rt">26</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">13</td>
+<td class="rt">13</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">13</td>
+<td class="rt">13</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s9">
+<td>Signals</td>
+<td class="rt">21</td>
+<td class="rt">20</td>
+<td class="rt">95.24 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">70</td>
+<td class="rt">68</td>
+<td class="rt">97.14 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">35</td>
+<td class="rt">34</td>
+<td class="rt">97.14 </td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">35</td>
+<td class="rt">34</td>
+<td class="rt">97.14 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>DATA_IN</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>DATA_OUT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>BST_TRIGGER</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STUFF_ENABLE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>FIXED_STUFF</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STUFF_LENGTH[0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STUFF_LENGTH[2:1]</td>
+<td class="wht cl">Excluded</td>
+<td class="wht cl">Excluded</td>
+<td class="wht cl">Excluded</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TX_FRAME_NO_SOF</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>BST_CTR[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>DATA_HALT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>DATA_OUT_I</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>SAME_BITS_Q[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>SAME_BITS_ADD[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>SAME_BITS_D[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>TX_NO_SOF_VAL[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>TX_NO_SOF_VAL[2]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+</tr><tr>
+<td>DATA_HALT_Q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>DATA_HALT_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>FIXED_REG_Q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>FIXED_REG_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>BST_CTR_Q[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>BST_CTR_ADD[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>BST_CTR_D[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ENABLE_PREV</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>NON_FIX_TO_FIX_CHNG</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>STUFF_LVL_REACHED</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>SAME_BITS_RST_TRIG</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>SAME_BITS_RST</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>INSERT_STUFF_BIT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>DATA_OUT_D_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>DATA_OUT_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>DATA_OUT_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="inst_tag_386_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod157.html#inst_tag_386" >TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.BIT_STUFFING_INST<img src="ex.gif" class="icon"></a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">44</td>
+<td class="rt">44</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">233</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">242</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">275</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">285</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">300</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">311</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">327</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">337</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">349</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">359</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">375</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">386</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">390</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">394</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">425</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">436</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+233            non_fix_to_fix_chng <= '1' when (fixed_stuff = '1' and fixed_reg_q = '0')
+                                          <font color = "green">-1-</font>  
+                                          <font color = "green">==></font>  
+                                          <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+242            fixed_reg_d <= '0'         when (enable_prev = '0') else
+                                          <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+243                           fixed_stuff when (bst_trigger = '1') else
+                                          <font color = "green">-2-</font>  
+                                          <font color = "green">==></font>  
+                                          <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+275            bst_ctr_d <=        "000" when (enable_prev = '0') else
+                                         <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+276                          bst_ctr_add when (bst_trigger = '1' and stuff_lvl_reached = '1' and
+                                         <font color = "green">-2-</font>  
+                                         <font color = "green">==></font>  
+                                         <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+285                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+286                    bst_ctr_q <= (others => '0');
+           <font color = "green">            ==></font>
+287                elsif rising_edge(clk_sys) then
+                      <font color = "green">-2-</font>  
+288                    if (stuff_enable = '1') then
+                       <font color = "green">-3-</font>  
+289                        bst_ctr_q <= bst_ctr_d;
+           <font color = "green">                ==></font>
+290                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+291                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+300            same_bits_rst_trig <= '1' when (non_fix_to_fix_chng = '1') or
+                                         <font color = "green">-1-</font>  
+                                         <font color = "green">==></font>  
+                                         <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+311            same_bits_rst <= '1' when (enable_prev = '0') or
+                                    <font color = "green">-1-</font>  
+                                    <font color = "green">==></font>  
+                                    <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+327            tx_no_sof_val <= "010" when (data_in = DOMINANT) else
+                                      <font color = "green">-1-</font>  
+                                      <font color = "green">==></font>  
+                                      <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+337            same_bits_d <= tx_no_sof_val when (tx_frame_no_sof = '1') else
+                                            <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+338                                   "001" when (same_bits_rst = '1') else
+                                            <font color = "green">-2-</font>  
+           <font color = "green">                           ==></font>
+339                           same_bits_add when (bst_trigger = '1') else
+                                            <font color = "green">-3-</font>  
+                                            <font color = "green">==></font>  
+                                            <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+349            stuff_lvl_reached <= '1' when (same_bits_q = unsigned(stuff_length) and fixed_stuff = '0') or
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+359                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+360                    same_bits_q <= "001";
+           <font color = "green">            ==></font>
+361                elsif rising_edge(clk_sys) then
+                      <font color = "green">-2-</font>  
+362                    if (stuff_enable = '1') then
+                       <font color = "green">-3-</font>  
+363                        same_bits_q <= same_bits_d;
+           <font color = "green">                ==></font>
+364                    else
+365                        same_bits_q <= "001";
+           <font color = "green">                ==></font>
+366                    end if;
+367                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+375            insert_stuff_bit <= '1' when (non_fix_to_fix_chng = '1' or stuff_lvl_reached = '1')
+                                       <font color = "green">-1-</font>  
+                                       <font color = "green">==></font>  
+                                       <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+386            data_out_d_ena <= (not data_out_i) when (bst_trigger = '1' and insert_stuff_bit = '1') else
+                                                  <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+387                                      data_in  when (bst_trigger = '1') else
+                                                  <font color = "green">-2-</font>  
+                                                  <font color = "green">==></font>  
+                                                  <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+390            data_out_d <= data_out_d_ena when (stuff_enable = '1') else
+                                            <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+391                                 data_in when (bst_trigger = '1') else
+                                            <font color = "green">-2-</font>  
+                                            <font color = "green">==></font>  
+                                            <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+394            data_out_ce <= '1' when (stuff_enable = '1' or bst_trigger = '1') else
+                                  <font color = "green">-1-</font>  
+                                  <font color = "green">==></font>  
+                                  <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+425            data_halt_d <= '0' when (enable_prev = '0' or stuff_enable = '0') else
+                                  <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+426                           '1' when (bst_trigger = '1' and insert_stuff_bit = '1') else
+                                  <font color = "green">-2-</font>  
+           <font color = "green">                   ==></font>
+427                           '0' when (bst_trigger = '1') else
+                                  <font color = "green">-3-</font>  
+                                  <font color = "green">==></font>  
+                                  <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+436            data_halt <= data_halt_q when (data_halt_q = data_halt_d) else
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_386">
+    <li>
+      <a href="#inst_tag_386_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_386_Cond">Cond</a>    </li>
+    <li>
+      <a href="#inst_tag_386_Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_386_Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_CTU_CAN_FD_RTL.BIT_STUFFING RTL">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
