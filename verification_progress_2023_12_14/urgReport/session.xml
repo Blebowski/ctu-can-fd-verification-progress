@@ -1,0 +1,46 @@
+<session version="1.1" release="T-2022.06-SP1-1" timestp="2023-12-14 00:19:04 GMT">
+  <info>
+    <attr name="datetime" value="Thu Dec 14 01:19:05 2023
+"/>
+    <attr name="command" value="urg -full64 -dir /tmp/urgForDVE.2841361/curcov.vdb -elfile /tmp/urgForDVE.2841361/cur.el"/>
+    <attr name="top_instance" value="TB_TOP_CTU_CAN_FD"/>
+  </info>
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Cond" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="FSM" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Branch" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Assert" type="ratio" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="3567/3742" />
+    <metric name="Cond" value="5082/5178" />
+    <metric name="Toggle" value="76218/81834" />
+    <metric name="FSM" value="367/385" />
+    <metric name="Branch" value="3679/3793" />
+    <metric name="Assert" value="80/80" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+  </scope>
+  <scope type="assert" name="Statistics">
+    <scorelist type="total" name="Design Hierarchy Assert">
+      <score name="Assert" value="80/80" />
+      <score name="Score" value="100.00" />
+    </scorelist>
+    <scorelist type="total" name="Module List Assert">
+      <score name="Assert" value="453/462" />
+      <score name="Score" value="98.05" />
+    </scorelist>
+    <scorelist type="total" name="Assertion">
+      <score name="Assert" value="400/1350" />
+      <score name="Score" value="29.63" />
+    </scorelist>
+  </scope>
+  </old_coverage>
+</session>

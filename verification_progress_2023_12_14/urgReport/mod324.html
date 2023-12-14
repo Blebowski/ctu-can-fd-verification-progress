@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_RTL.RX_BUFFER_FSM RTL</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_RTL.RX_BUFFER_FSM RTL'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_RTL.RX_BUFFER_FSM RTL')">CTU_CAN_FD_RTL.RX_BUFFER_FSM RTL</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 87.66</td>
+<td class="s9 cl rt"><a href="mod324.html#Line" > 97.73</a></td>
+<td class="s8 cl rt"><a href="mod324.html#Cond" > 80.00</a></td>
+<td class="s10 cl rt"><a href="mod324.html#Toggle" >100.00</a></td>
+<td class="s6 cl rt"><a href="mod324.html#FSM" > 64.29</a></td>
+<td class="s9 cl rt"><a href="mod324.html#Branch" > 96.30</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/rx_buffer/rx_buffer_fsm.vhd')">/home/oille/Downloads/ctucanfd_ip_core/src/rx_buffer/rx_buffer_fsm.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod324.html#inst_tag_1403"  onclick="showContent('inst_tag_1403')">TB_TOP_CTU_CAN_FD.DUT.RX_BUFFER_INST.RX_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></td>
+<td class="s9 cl rt"> 99.26</td>
+<td class="s10 cl rt"><a href="mod324.html#inst_tag_1403_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod324.html#inst_tag_1403_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod324.html#inst_tag_1403_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod324.html#inst_tag_1403_FSM" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod324.html#inst_tag_1403_Branch" > 96.30</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='inst_tag_1403'>
+<hr>
+<a name="inst_tag_1403"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy2.html#tag_urg_inst_1403" >TB_TOP_CTU_CAN_FD.DUT.RX_BUFFER_INST.RX_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.26</td>
+<td class="s10 cl rt"><a href="mod324.html#inst_tag_1403_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod324.html#inst_tag_1403_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod324.html#inst_tag_1403_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod324.html#inst_tag_1403_FSM" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod324.html#inst_tag_1403_Branch" > 96.30</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.26</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 96.30</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 98.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 97.83</td>
+<td class="s9 cl rt"> 95.57</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 98.59</td>
+<td class="wht cl rt"></td>
+<td><a href="mod90.html#inst_tag_222" >RX_BUFFER_INST<img src="ex.gif" class="icon"></a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td colspan=8>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_RTL.RX_BUFFER_FSM RTL'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod324.html" >CTU_CAN_FD_RTL.RX_BUFFER_FSM RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>44</td><td>43</td><td>97.73</td></tr>
+<tr class="s9"><td class="lf">VHDL_PROCESS</td><td>159</td><td>15</td><td>14</td><td>93.33</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>235</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>299</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">VHDL_PROCESS</td><td>338</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<pre class="code"><br clear=all>
+158                         begin
+159        1/1                  next_state &lt;= curr_state;
+160                     
+161        1/1                  case curr_state is
+162                     
+163                             -------------------------------------------------------------------------------------------
+164                             -- Idle, waiting for &quot;store_metada&quot; to start storing first 4 words.
+165                             -------------------------------------------------------------------------------------------
+166                             when s_rxb_idle =&gt;
+167        1/1                      if (store_metadata_f = '1' and rec_abort_f = '0') then
+168        1/1                          next_state &lt;= s_rxb_store_frame_format;
+169                                 end if;
+170                     
+171                             -------------------------------------------------------------------------------------------
+172                             -- Storing FRAME_FORM_W. Proceed execpt if error ocurrs.
+173                             -------------------------------------------------------------------------------------------
+174                             when s_rxb_store_frame_format =&gt;
+175        1/1                      if (rec_abort_f = '1') then
+176        <font color = "red">0/1     ==>                  next_state &lt;= s_rxb_idle;</font>
+177                                 else
+178        1/1                          next_state &lt;= s_rxb_store_identifier;
+179                                 end if;
+180                     
+181                             -------------------------------------------------------------------------------------------
+182                             -- Storing IDENTIFIER_W.
+183                             -- Move to storing timestamp words. Note that if SW configured timestamp from end of the
+184                             -- frame, we dont have it yet! We store invalid timestamp and later (if the frame is
+185                             -- received OK), we repeat the writes with timestamp captured at the end of frame!
+186                             -------------------------------------------------------------------------------------------
+187                             when s_rxb_store_identifier =&gt;
+188        1/1                      next_state &lt;= s_rxb_skip_ts_low;
+189                     
+190                             -------------------------------------------------------------------------------------------
+191                             -- Skip through TIMESTAMP_L_W, store only zeroes.
+192                             -------------------------------------------------------------------------------------------
+193                             when s_rxb_skip_ts_low =&gt;
+194        1/1                      next_state &lt;= s_rxb_skip_ts_high;
+195                     
+196                             -------------------------------------------------------------------------------------------
+197                             -- Skip through TIMESTAMP_U_W, store only zeroes.
+198                             -------------------------------------------------------------------------------------------
+199                             when s_rxb_skip_ts_high =&gt;
+200        1/1                      next_state &lt;= s_rxb_store_data;
+201                     
+202                             -------------------------------------------------------------------------------------------
+203                             -- Store DATA_W. If error ocurrs, abort the storing. If storing is finished, go to idle or
+204                             -- again timestamp storing depending on the timestamp option configuration. Note that now
+205                             -- timestamp storing is realized via different states!
+206                              -------------------------------------------------------------------------------------------
+207                             when s_rxb_store_data =&gt;
+208        1/1                      if (rec_abort_f = '1') then
+209        1/1                          next_state &lt;= s_rxb_idle;
+210                                 elsif (rec_valid_f = '1') then
+211        1/1                          next_state &lt;= s_rxb_store_end_ts_low;
+212                                 end if;
+213                     
+214                             -------------------------------------------------------------------------------------------
+215                             -- Store TIMESTAMP_L_W.
+216                             -------------------------------------------------------------------------------------------
+217                             when s_rxb_store_end_ts_low =&gt;
+218        1/1                      next_state &lt;= s_rxb_store_end_ts_high;
+219                     
+220                             -------------------------------------------------------------------------------------------
+221                             -- Store first TIMESTAMP_U_W.
+222                             -------------------------------------------------------------------------------------------
+223                             when s_rxb_store_end_ts_high =&gt;
+224        1/1                      next_state &lt;= s_rxb_idle;
+225                     
+226                             end case;
+227                         end process;
+228                     
+229                     
+230                         -----------------------------------------------------------------------------------------------
+231                         -- Current State process (outputs)
+232                         -----------------------------------------------------------------------------------------------
+233                         curr_state_proc : process(curr_state, store_data_f)
+234                         begin
+235        1/1                  write_raw_intent &lt;= '0';
+236        1/1                  write_ts &lt;= '0';
+237        1/1                  data_selector &lt;= (others =&gt; '0');
+238        1/1                  stored_ts &lt;= '0';
+239        1/1                  store_ts_wr_ptr &lt;= '0';
+240        1/1                  inc_ts_wr_ptr &lt;= '0';
+241        1/1                  reset_overrun_flag &lt;= '0';
+242                     
+243        1/1                  case curr_state is
+244                             when s_rxb_idle =&gt;
+245        1/1                      reset_overrun_flag &lt;= '1';
+246                     
+247                             when s_rxb_store_frame_format =&gt;
+248        1/1                      write_raw_intent &lt;= '1';
+249        1/1                      data_selector    &lt;= &quot;00001&quot;;
+250                     
+251                             when s_rxb_store_identifier =&gt;
+252        1/1                      write_raw_intent &lt;= '1';
+253        1/1                      data_selector    &lt;= &quot;00010&quot;;
+254                     
+255                             when s_rxb_skip_ts_low =&gt;
+256        1/1                      write_raw_intent &lt;= '1';
+257                     
+258                                 -- Here we capture value of Raw write pointer to Timestamp write pointer
+259                                 -- so that it can be later used for Timestamp storing.
+260        1/1                      store_ts_wr_ptr &lt;= '1';
+261                     
+262                             when s_rxb_skip_ts_high =&gt;
+263        1/1                      write_raw_intent &lt;= '1';
+264                     
+265                             when s_rxb_store_data =&gt;
+266        1/1                      data_selector    &lt;= &quot;00100&quot;;
+267                     
+268        1/1                      if (store_data_f = '1') then
+269        1/1                          write_raw_intent &lt;= '1';
+270                                 end if;
+271                     
+272                             when s_rxb_store_end_ts_low =&gt;
+273        1/1                      data_selector    &lt;= &quot;01000&quot;;
+274                     
+275                                 -- Timestamp write pointer is incremented once more when lower
+276                                 -- timestamp word was stored, to point to higher timestamp word.
+277        1/1                      inc_ts_wr_ptr &lt;= '1';
+278                     
+279                                 -- Signalling that timestamp is stored to memory.
+280        1/1                      write_ts   &lt;= '1';
+281                     
+282                             when s_rxb_store_end_ts_high =&gt;
+283        1/1                      data_selector    &lt;= &quot;10000&quot;;
+284                     
+285                                 -- Storing of timestamp is ending and frame can be committed.
+286        1/1                      stored_ts &lt;= '1';
+287                     
+288                                 -- Signalling that timestamp is stored to memory.
+289        1/1                      write_ts   &lt;= '1';
+290                             end case;
+291                         end process;
+292                     
+293                     
+294                         -----------------------------------------------------------------------------------------------
+295                         -- State register process
+296                         -----------------------------------------------------------------------------------------------
+297                         state_reg_proc : process(clk_sys, res_n)
+298                         begin
+299        1/1                  if (res_n = '0') then
+300        1/1                      curr_state &lt;= s_rxb_idle;
+301                             elsif (rising_edge(clk_sys)) then
+302        1/1                      if (rx_fsm_ce = '1') then
+303        1/1                          curr_state &lt;= next_state;
+304                                 end if;
+305                             end if;
+306                         end process;
+307                     
+308                         -- Clock enable for State reg
+309                         rx_fsm_ce &lt;= '1' when (next_state /= curr_state) else
+310                                      '0';
+311                     
+312                         -- &lt;RELEASE_OFF&gt;
+313                         -- pragma translate_off
+314                     
+315                         -----------------------------------------------------------------------------------------------
+316                         -- Assertions
+317                         -----------------------------------------------------------------------------------------------
+318                     
+319                         assertions_block : block
+320                             -- Joined commands
+321                             signal cmd_join     : std_logic_vector(3 downto 0);
+322                         begin
+323                             -- psl default clock is rising_edge(clk_sys);
+324                     
+325                             -- Joined commands, for assertions only
+326                             cmd_join &lt;= store_metadata_f &amp; store_data_f &amp; rec_valid_f &amp; rec_abort_f;
+327                     
+328                             -- psl store_metadata_in_idle_asrt : assert never
+329                             --  (store_metadata_f = '1' and (curr_state /= s_rxb_idle))
+330                             -- report &quot;RX Buffer: Store metadata command did NOT come when RX buffer is idle!&quot;;
+331                     
+332                             -- psl commit_or_store_data_asrt : assert never
+333                             --  ((rec_valid_f = '1' or store_data_f = '1') and curr_state /= s_rxb_store_data)
+334                             -- report &quot;RX Buffer: Store data or frame commit commands did not come when RX Buffer is receiving data!&quot;;
+335                     
+336                             process (cmd_join)
+337                             begin
+338        <font color = "grey">unreachable  </font>            if (now &gt; 0 ps) then
+339        <font color = "grey">unreachable  </font>                if (cmd_join /= &quot;0000&quot; and cmd_join /= &quot;0001&quot; and
+340                                         cmd_join /= &quot;0010&quot; and cmd_join /= &quot;0100&quot; and
+341                                         cmd_join /= &quot;1000&quot;)
+342                                     then
+343        <font color = "grey">unreachable  </font>                    report &quot;RX Buffer: RX Buffer commands should be one-hot encoded!&quot;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod324.html" >CTU_CAN_FD_RTL.RX_BUFFER_FSM RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s7"><td class="lf">Conditions</td><td>5</td><td>4</td><td>80.00</td></tr>
+<tr class="s7"><td class="lf">Logical</td><td>5</td><td>4</td><td>80.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       167
+ EXPRESSION ((STORE_METADATA_F = '1') AND (REC_ABORT_F = '0'))
+             ------------1-----------     ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       309
+ EXPRESSION (NEXT_STATE /= CURR_STATE)
+            -------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod324.html" >CTU_CAN_FD_RTL.RX_BUFFER_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">14</td>
+<td class="rt">14</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">36</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">13</td>
+<td class="rt">13</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">34</td>
+<td class="rt">34</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">17</td>
+<td class="rt">17</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">17</td>
+<td class="rt">17</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STORE_METADATA_F</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STORE_DATA_F</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>REC_VALID_F</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>REC_ABORT_F</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WRITE_RAW_INTENT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WRITE_TS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>STORED_TS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>DATA_SELECTOR[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>STORE_TS_WR_PTR</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>INC_TS_WR_PTR</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>RESET_OVERRUN_FLAG</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>RX_FSM_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="FSM"></a>
+FSM Coverage for Module : <a href="mod324.html" >CTU_CAN_FD_RTL.RX_BUFFER_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<caption><b>Summary for FSM :: CURR_STATE</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th><th nowrap width=200></th></tr><tr class="wht">
+<td>States</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+<td>(Not included in score)</td>
+</tr><tr class="s6">
+<td>Transitions</td>
+<td class="rt">14</td>
+<td class="rt">9</td>
+<td class="rt">64.29 </td>
+<td></td>
+</tr><tr class="wht">
+<td>Sequences</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<b>State, Transition and Sequence Details for FSM :: CURR_STATE</b><hr>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">states</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_SKIP_TS_HIGH</td>
+<td class="rt">194</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_SKIP_TS_LOW</td>
+<td class="rt">188</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_DATA</td>
+<td class="rt">200</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_END_TS_HIGH</td>
+<td class="rt">218</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_END_TS_LOW</td>
+<td class="rt">211</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_FRAME_FORMAT</td>
+<td class="rt">168</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_IDENTIFIER</td>
+<td class="rt">178</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">transitions</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_RXB_IDLE->S_RXB_STORE_FRAME_FORMAT</td>
+<td class="rt">168</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td nowrap>S_RXB_SKIP_TS_HIGH->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Not&nbsp;Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_SKIP_TS_HIGH->S_RXB_STORE_DATA</td>
+<td class="rt">200</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td nowrap>S_RXB_SKIP_TS_LOW->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Not&nbsp;Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_SKIP_TS_LOW->S_RXB_SKIP_TS_HIGH</td>
+<td class="rt">194</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_DATA->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_DATA->S_RXB_STORE_END_TS_LOW</td>
+<td class="rt">211</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_END_TS_HIGH->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td nowrap>S_RXB_STORE_END_TS_LOW->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Not&nbsp;Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_END_TS_LOW->S_RXB_STORE_END_TS_HIGH</td>
+<td class="rt">218</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td nowrap>S_RXB_STORE_FRAME_FORMAT->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Not&nbsp;Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_FRAME_FORMAT->S_RXB_STORE_IDENTIFIER</td>
+<td class="rt">178</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td nowrap>S_RXB_STORE_IDENTIFIER->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Not&nbsp;Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_IDENTIFIER->S_RXB_SKIP_TS_LOW</td>
+<td class="rt">188</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod324.html" >CTU_CAN_FD_RTL.RX_BUFFER_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s9">
+<td>Branches</td>
+<td></td>
+<td class="rt">27</td>
+<td class="rt">26</td>
+<td class="rt">96.30 </td>
+</tr><tr class="s9">
+<td>CASE</td>
+<td class="rt">161</td>
+<td class="rt">12</td>
+<td class="rt">11</td>
+<td class="rt">91.67 </td>
+</tr><tr class="s10">
+<td>CASE</td>
+<td class="rt">243</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">299</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">309</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+161                case curr_state is
+                   <font color = "green">-1-</font>  
+162        
+163                -------------------------------------------------------------------------------------------
+164                -- Idle, waiting for "store_metada" to start storing first 4 words.
+165                -------------------------------------------------------------------------------------------
+166                when s_rxb_idle =>
+167                    if (store_metadata_f = '1' and rec_abort_f = '0') then
+                       <font color = "green">-2-</font>  
+168                        next_state <= s_rxb_store_frame_format;
+           <font color = "green">                ==></font>
+169                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+170        
+171                -------------------------------------------------------------------------------------------
+172                -- Storing FRAME_FORM_W. Proceed execpt if error ocurrs.
+173                -------------------------------------------------------------------------------------------
+174                when s_rxb_store_frame_format =>
+175                    if (rec_abort_f = '1') then
+                       <font color = "red">-3-</font>  
+176                        next_state <= s_rxb_idle;
+           <font color = "red">                ==></font>
+177                    else
+178                        next_state <= s_rxb_store_identifier;
+           <font color = "green">                ==></font>
+179                    end if;
+180        
+181                -------------------------------------------------------------------------------------------
+182                -- Storing IDENTIFIER_W.
+183                -- Move to storing timestamp words. Note that if SW configured timestamp from end of the
+184                -- frame, we dont have it yet! We store invalid timestamp and later (if the frame is
+185                -- received OK), we repeat the writes with timestamp captured at the end of frame!
+186                -------------------------------------------------------------------------------------------
+187                when s_rxb_store_identifier =>
+188                    next_state <= s_rxb_skip_ts_low;
+           <font color = "green">            ==></font>
+189        
+190                -------------------------------------------------------------------------------------------
+191                -- Skip through TIMESTAMP_L_W, store only zeroes.
+192                -------------------------------------------------------------------------------------------
+193                when s_rxb_skip_ts_low =>
+194                    next_state <= s_rxb_skip_ts_high;
+           <font color = "green">            ==></font>
+195        
+196                -------------------------------------------------------------------------------------------
+197                -- Skip through TIMESTAMP_U_W, store only zeroes.
+198                -------------------------------------------------------------------------------------------
+199                when s_rxb_skip_ts_high =>
+200                    next_state <= s_rxb_store_data;
+           <font color = "green">            ==></font>
+201        
+202                -------------------------------------------------------------------------------------------
+203                -- Store DATA_W. If error ocurrs, abort the storing. If storing is finished, go to idle or
+204                -- again timestamp storing depending on the timestamp option configuration. Note that now
+205                -- timestamp storing is realized via different states!
+206                 -------------------------------------------------------------------------------------------
+207                when s_rxb_store_data =>
+208                    if (rec_abort_f = '1') then
+                       <font color = "green">-4-</font>  
+209                        next_state <= s_rxb_idle;
+           <font color = "green">                ==></font>
+210                    elsif (rec_valid_f = '1') then
+                          <font color = "green">-5-</font>  
+211                        next_state <= s_rxb_store_end_ts_low;
+           <font color = "green">                ==></font>
+212                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+213        
+214                -------------------------------------------------------------------------------------------
+215                -- Store TIMESTAMP_L_W.
+216                -------------------------------------------------------------------------------------------
+217                when s_rxb_store_end_ts_low =>
+218                    next_state <= s_rxb_store_end_ts_high;
+           <font color = "green">            ==></font>
+219        
+220                -------------------------------------------------------------------------------------------
+221                -- Store first TIMESTAMP_U_W.
+222                -------------------------------------------------------------------------------------------
+223                when s_rxb_store_end_ts_high =>
+224                    next_state <= s_rxb_idle;
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> S_RXB_IDLE</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_IDLE</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center> S_RXB_STORE_FRAME_FORMAT</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_FRAME_FORMAT</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_IDENTIFIER</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_SKIP_TS_LOW</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_SKIP_TS_HIGH</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_DATA</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_DATA</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_DATA</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_END_TS_LOW</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_END_TS_HIGH</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+243                case curr_state is
+                   <font color = "green">-1-</font>  
+244                when s_rxb_idle =>
+245                    reset_overrun_flag <= '1';
+           <font color = "green">            ==></font>
+246        
+247                when s_rxb_store_frame_format =>
+248                    write_raw_intent <= '1';
+           <font color = "green">            ==></font>
+249                    data_selector    <= "00001";
+250        
+251                when s_rxb_store_identifier =>
+252                    write_raw_intent <= '1';
+           <font color = "green">            ==></font>
+253                    data_selector    <= "00010";
+254        
+255                when s_rxb_skip_ts_low =>
+256                    write_raw_intent <= '1';
+           <font color = "green">            ==></font>
+257        
+258                    -- Here we capture value of Raw write pointer to Timestamp write pointer
+259                    -- so that it can be later used for Timestamp storing.
+260                    store_ts_wr_ptr <= '1';
+261        
+262                when s_rxb_skip_ts_high =>
+263                    write_raw_intent <= '1';
+           <font color = "green">            ==></font>
+264        
+265                when s_rxb_store_data =>
+266                    data_selector    <= "00100";
+267        
+268                    if (store_data_f = '1') then
+                       <font color = "green">-2-</font>  
+269                        write_raw_intent <= '1';
+           <font color = "green">                ==></font>
+270                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+271        
+272                when s_rxb_store_end_ts_low =>
+273                    data_selector    <= "01000";
+           <font color = "green">            ==></font>
+274        
+275                    -- Timestamp write pointer is incremented once more when lower
+276                    -- timestamp word was stored, to point to higher timestamp word.
+277                    inc_ts_wr_ptr <= '1';
+278        
+279                    -- Signalling that timestamp is stored to memory.
+280                    write_ts   <= '1';
+281        
+282                when s_rxb_store_end_ts_high =>
+283                    data_selector    <= "10000";
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> S_RXB_IDLE</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_FRAME_FORMAT</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_IDENTIFIER</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_SKIP_TS_LOW</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_SKIP_TS_HIGH</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_DATA</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_DATA</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_END_TS_LOW</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_END_TS_HIGH</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+299                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+300                    curr_state <= s_rxb_idle;
+           <font color = "green">            ==></font>
+301                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+302                    if (rx_fsm_ce = '1') then
+                       <font color = "green">-3-</font>  
+303                        curr_state <= next_state;
+           <font color = "green">                ==></font>
+304                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+305                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+309            rx_fsm_ce <= '1' when (next_state /= curr_state) else
+                                <font color = "green">-1-</font>  
+                                <font color = "green">==></font>  
+                                <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_1403'>
+<a name="inst_tag_1403_Line"></a>
+<b>Line Coverage for Instance : <a href="mod324.html#inst_tag_1403" >TB_TOP_CTU_CAN_FD.DUT.RX_BUFFER_INST.RX_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>43</td><td>43</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>159</td><td>14</td><td>14</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>235</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>299</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">VHDL_PROCESS</td><td>338</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<pre class="code"><br clear=all>
+158                         begin
+159        1/1                  next_state &lt;= curr_state;
+160                     
+161        1/1                  case curr_state is
+162                     
+163                             -------------------------------------------------------------------------------------------
+164                             -- Idle, waiting for &quot;store_metada&quot; to start storing first 4 words.
+165                             -------------------------------------------------------------------------------------------
+166                             when s_rxb_idle =&gt;
+167        1/1                      if (store_metadata_f = '1' and rec_abort_f = '0') then
+168        1/1                          next_state &lt;= s_rxb_store_frame_format;
+169                                 end if;
+170                     
+171                             -------------------------------------------------------------------------------------------
+172                             -- Storing FRAME_FORM_W. Proceed execpt if error ocurrs.
+173                             -------------------------------------------------------------------------------------------
+174                             when s_rxb_store_frame_format =&gt;
+175        1/1                      if (rec_abort_f = '1') then
+176        <font color = "grey">excluded     </font>                next_state &lt;= s_rxb_idle;
+Exclude Annotation: Verified by block level unit test.
+177                                 else
+178        1/1                          next_state &lt;= s_rxb_store_identifier;
+179                                 end if;
+180                     
+181                             -------------------------------------------------------------------------------------------
+182                             -- Storing IDENTIFIER_W.
+183                             -- Move to storing timestamp words. Note that if SW configured timestamp from end of the
+184                             -- frame, we dont have it yet! We store invalid timestamp and later (if the frame is
+185                             -- received OK), we repeat the writes with timestamp captured at the end of frame!
+186                             -------------------------------------------------------------------------------------------
+187                             when s_rxb_store_identifier =&gt;
+188        1/1                      next_state &lt;= s_rxb_skip_ts_low;
+189                     
+190                             -------------------------------------------------------------------------------------------
+191                             -- Skip through TIMESTAMP_L_W, store only zeroes.
+192                             -------------------------------------------------------------------------------------------
+193                             when s_rxb_skip_ts_low =&gt;
+194        1/1                      next_state &lt;= s_rxb_skip_ts_high;
+195                     
+196                             -------------------------------------------------------------------------------------------
+197                             -- Skip through TIMESTAMP_U_W, store only zeroes.
+198                             -------------------------------------------------------------------------------------------
+199                             when s_rxb_skip_ts_high =&gt;
+200        1/1                      next_state &lt;= s_rxb_store_data;
+201                     
+202                             -------------------------------------------------------------------------------------------
+203                             -- Store DATA_W. If error ocurrs, abort the storing. If storing is finished, go to idle or
+204                             -- again timestamp storing depending on the timestamp option configuration. Note that now
+205                             -- timestamp storing is realized via different states!
+206                              -------------------------------------------------------------------------------------------
+207                             when s_rxb_store_data =&gt;
+208        1/1                      if (rec_abort_f = '1') then
+209        1/1                          next_state &lt;= s_rxb_idle;
+210                                 elsif (rec_valid_f = '1') then
+211        1/1                          next_state &lt;= s_rxb_store_end_ts_low;
+212                                 end if;
+213                     
+214                             -------------------------------------------------------------------------------------------
+215                             -- Store TIMESTAMP_L_W.
+216                             -------------------------------------------------------------------------------------------
+217                             when s_rxb_store_end_ts_low =&gt;
+218        1/1                      next_state &lt;= s_rxb_store_end_ts_high;
+219                     
+220                             -------------------------------------------------------------------------------------------
+221                             -- Store first TIMESTAMP_U_W.
+222                             -------------------------------------------------------------------------------------------
+223                             when s_rxb_store_end_ts_high =&gt;
+224        1/1                      next_state &lt;= s_rxb_idle;
+225                     
+226                             end case;
+227                         end process;
+228                     
+229                     
+230                         -----------------------------------------------------------------------------------------------
+231                         -- Current State process (outputs)
+232                         -----------------------------------------------------------------------------------------------
+233                         curr_state_proc : process(curr_state, store_data_f)
+234                         begin
+235        1/1                  write_raw_intent &lt;= '0';
+236        1/1                  write_ts &lt;= '0';
+237        1/1                  data_selector &lt;= (others =&gt; '0');
+238        1/1                  stored_ts &lt;= '0';
+239        1/1                  store_ts_wr_ptr &lt;= '0';
+240        1/1                  inc_ts_wr_ptr &lt;= '0';
+241        1/1                  reset_overrun_flag &lt;= '0';
+242                     
+243        1/1                  case curr_state is
+244                             when s_rxb_idle =&gt;
+245        1/1                      reset_overrun_flag &lt;= '1';
+246                     
+247                             when s_rxb_store_frame_format =&gt;
+248        1/1                      write_raw_intent &lt;= '1';
+249        1/1                      data_selector    &lt;= &quot;00001&quot;;
+250                     
+251                             when s_rxb_store_identifier =&gt;
+252        1/1                      write_raw_intent &lt;= '1';
+253        1/1                      data_selector    &lt;= &quot;00010&quot;;
+254                     
+255                             when s_rxb_skip_ts_low =&gt;
+256        1/1                      write_raw_intent &lt;= '1';
+257                     
+258                                 -- Here we capture value of Raw write pointer to Timestamp write pointer
+259                                 -- so that it can be later used for Timestamp storing.
+260        1/1                      store_ts_wr_ptr &lt;= '1';
+261                     
+262                             when s_rxb_skip_ts_high =&gt;
+263        1/1                      write_raw_intent &lt;= '1';
+264                     
+265                             when s_rxb_store_data =&gt;
+266        1/1                      data_selector    &lt;= &quot;00100&quot;;
+267                     
+268        1/1                      if (store_data_f = '1') then
+269        1/1                          write_raw_intent &lt;= '1';
+270                                 end if;
+271                     
+272                             when s_rxb_store_end_ts_low =&gt;
+273        1/1                      data_selector    &lt;= &quot;01000&quot;;
+274                     
+275                                 -- Timestamp write pointer is incremented once more when lower
+276                                 -- timestamp word was stored, to point to higher timestamp word.
+277        1/1                      inc_ts_wr_ptr &lt;= '1';
+278                     
+279                                 -- Signalling that timestamp is stored to memory.
+280        1/1                      write_ts   &lt;= '1';
+281                     
+282                             when s_rxb_store_end_ts_high =&gt;
+283        1/1                      data_selector    &lt;= &quot;10000&quot;;
+284                     
+285                                 -- Storing of timestamp is ending and frame can be committed.
+286        1/1                      stored_ts &lt;= '1';
+287                     
+288                                 -- Signalling that timestamp is stored to memory.
+289        1/1                      write_ts   &lt;= '1';
+290                             end case;
+291                         end process;
+292                     
+293                     
+294                         -----------------------------------------------------------------------------------------------
+295                         -- State register process
+296                         -----------------------------------------------------------------------------------------------
+297                         state_reg_proc : process(clk_sys, res_n)
+298                         begin
+299        1/1                  if (res_n = '0') then
+300        1/1                      curr_state &lt;= s_rxb_idle;
+301                             elsif (rising_edge(clk_sys)) then
+302        1/1                      if (rx_fsm_ce = '1') then
+303        1/1                          curr_state &lt;= next_state;
+304                                 end if;
+305                             end if;
+306                         end process;
+307                     
+308                         -- Clock enable for State reg
+309                         rx_fsm_ce &lt;= '1' when (next_state /= curr_state) else
+310                                      '0';
+311                     
+312                         -- &lt;RELEASE_OFF&gt;
+313                         -- pragma translate_off
+314                     
+315                         -----------------------------------------------------------------------------------------------
+316                         -- Assertions
+317                         -----------------------------------------------------------------------------------------------
+318                     
+319                         assertions_block : block
+320                             -- Joined commands
+321                             signal cmd_join     : std_logic_vector(3 downto 0);
+322                         begin
+323                             -- psl default clock is rising_edge(clk_sys);
+324                     
+325                             -- Joined commands, for assertions only
+326                             cmd_join &lt;= store_metadata_f &amp; store_data_f &amp; rec_valid_f &amp; rec_abort_f;
+327                     
+328                             -- psl store_metadata_in_idle_asrt : assert never
+329                             --  (store_metadata_f = '1' and (curr_state /= s_rxb_idle))
+330                             -- report &quot;RX Buffer: Store metadata command did NOT come when RX buffer is idle!&quot;;
+331                     
+332                             -- psl commit_or_store_data_asrt : assert never
+333                             --  ((rec_valid_f = '1' or store_data_f = '1') and curr_state /= s_rxb_store_data)
+334                             -- report &quot;RX Buffer: Store data or frame commit commands did not come when RX Buffer is receiving data!&quot;;
+335                     
+336                             process (cmd_join)
+337                             begin
+338        <font color = "grey">unreachable  </font>            if (now &gt; 0 ps) then
+339        <font color = "grey">unreachable  </font>                if (cmd_join /= &quot;0000&quot; and cmd_join /= &quot;0001&quot; and
+340                                         cmd_join /= &quot;0010&quot; and cmd_join /= &quot;0100&quot; and
+341                                         cmd_join /= &quot;1000&quot;)
+342                                     then
+343        <font color = "grey">unreachable  </font>                    report &quot;RX Buffer: RX Buffer commands should be one-hot encoded!&quot;
+</pre>
+<hr>
+<a name="inst_tag_1403_Cond"></a>
+<b>Cond Coverage for Instance : <a href="mod324.html#inst_tag_1403" >TB_TOP_CTU_CAN_FD.DUT.RX_BUFFER_INST.RX_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       167
+ EXPRESSION ((STORE_METADATA_F = '1') AND (REC_ABORT_F = '0'))
+             ------------1-----------     ---------2---------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th><th>Exclude Annotation</tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="wht"><td>1</td><td>0</td><td class="lf">Excluded</td><td class="lf"> Unreachable. PC FSM never drives abort and store_metadata to this combination simultaneously. </td>
+</tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       309
+ EXPRESSION (NEXT_STATE /= CURR_STATE)
+            -------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="inst_tag_1403_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod324.html#inst_tag_1403" >TB_TOP_CTU_CAN_FD.DUT.RX_BUFFER_INST.RX_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">14</td>
+<td class="rt">14</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">36</td>
+<td class="rt">36</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">13</td>
+<td class="rt">13</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">34</td>
+<td class="rt">34</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">17</td>
+<td class="rt">17</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">17</td>
+<td class="rt">17</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STORE_METADATA_F</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>STORE_DATA_F</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>REC_VALID_F</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>REC_ABORT_F</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>WRITE_RAW_INTENT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>WRITE_TS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>STORED_TS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>DATA_SELECTOR[4:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>STORE_TS_WR_PTR</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>INC_TS_WR_PTR</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>RESET_OVERRUN_FLAG</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>RX_FSM_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="inst_tag_1403_FSM"></a>
+<b>FSM Coverage for Instance : <a href="mod324.html#inst_tag_1403" >TB_TOP_CTU_CAN_FD.DUT.RX_BUFFER_INST.RX_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></b><br clear=all>
+<table align=left class="noborder">
+<caption><b>Summary for FSM :: CURR_STATE</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th><th nowrap width=200></th></tr><tr class="wht">
+<td>States</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+<td>(Not included in score)</td>
+</tr><tr class="s10">
+<td>Transitions</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>Sequences</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<b>State, Transition and Sequence Details for FSM :: CURR_STATE</b><hr>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">states</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_SKIP_TS_HIGH</td>
+<td class="rt">194</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_SKIP_TS_LOW</td>
+<td class="rt">188</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_DATA</td>
+<td class="rt">200</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_END_TS_HIGH</td>
+<td class="rt">218</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_END_TS_LOW</td>
+<td class="rt">211</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_FRAME_FORMAT</td>
+<td class="rt">168</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_IDENTIFIER</td>
+<td class="rt">178</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">transitions</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_RXB_IDLE->S_RXB_STORE_FRAME_FORMAT</td>
+<td class="rt">168</td>
+<td>Covered</td>
+</tr><tr class="wht">
+<td nowrap>S_RXB_SKIP_TS_HIGH->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Excluded</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_SKIP_TS_HIGH->S_RXB_STORE_DATA</td>
+<td class="rt">200</td>
+<td>Covered</td>
+</tr><tr class="wht">
+<td nowrap>S_RXB_SKIP_TS_LOW->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Excluded</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_SKIP_TS_LOW->S_RXB_SKIP_TS_HIGH</td>
+<td class="rt">194</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_DATA->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_DATA->S_RXB_STORE_END_TS_LOW</td>
+<td class="rt">211</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_END_TS_HIGH->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Covered</td>
+</tr><tr class="wht">
+<td nowrap>S_RXB_STORE_END_TS_LOW->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Excluded</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_END_TS_LOW->S_RXB_STORE_END_TS_HIGH</td>
+<td class="rt">218</td>
+<td>Covered</td>
+</tr><tr class="wht">
+<td nowrap>S_RXB_STORE_FRAME_FORMAT->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Excluded</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_FRAME_FORMAT->S_RXB_STORE_IDENTIFIER</td>
+<td class="rt">178</td>
+<td>Covered</td>
+</tr><tr class="wht">
+<td nowrap>S_RXB_STORE_IDENTIFIER->S_RXB_IDLE</td>
+<td class="rt">300</td>
+<td>Excluded</td>
+</tr><tr class="uGreen">
+<td nowrap>S_RXB_STORE_IDENTIFIER->S_RXB_SKIP_TS_LOW</td>
+<td class="rt">188</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<a name="inst_tag_1403_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod324.html#inst_tag_1403" >TB_TOP_CTU_CAN_FD.DUT.RX_BUFFER_INST.RX_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s9">
+<td>Branches</td>
+<td></td>
+<td class="rt">27</td>
+<td class="rt">26</td>
+<td class="rt">96.30 </td>
+</tr><tr class="s9">
+<td>CASE</td>
+<td class="rt">161</td>
+<td class="rt">12</td>
+<td class="rt">11</td>
+<td class="rt">91.67 </td>
+</tr><tr class="s10">
+<td>CASE</td>
+<td class="rt">243</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">299</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">309</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+161                case curr_state is
+                   <font color = "green">-1-</font>  
+162        
+163                -------------------------------------------------------------------------------------------
+164                -- Idle, waiting for "store_metada" to start storing first 4 words.
+165                -------------------------------------------------------------------------------------------
+166                when s_rxb_idle =>
+167                    if (store_metadata_f = '1' and rec_abort_f = '0') then
+                       <font color = "green">-2-</font>  
+168                        next_state <= s_rxb_store_frame_format;
+           <font color = "green">                ==></font>
+169                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+170        
+171                -------------------------------------------------------------------------------------------
+172                -- Storing FRAME_FORM_W. Proceed execpt if error ocurrs.
+173                -------------------------------------------------------------------------------------------
+174                when s_rxb_store_frame_format =>
+175                    if (rec_abort_f = '1') then
+                       <font color = "red">-3-</font>  
+176                        next_state <= s_rxb_idle;
+           <font color = "red">                ==></font>
+177                    else
+178                        next_state <= s_rxb_store_identifier;
+           <font color = "green">                ==></font>
+179                    end if;
+180        
+181                -------------------------------------------------------------------------------------------
+182                -- Storing IDENTIFIER_W.
+183                -- Move to storing timestamp words. Note that if SW configured timestamp from end of the
+184                -- frame, we dont have it yet! We store invalid timestamp and later (if the frame is
+185                -- received OK), we repeat the writes with timestamp captured at the end of frame!
+186                -------------------------------------------------------------------------------------------
+187                when s_rxb_store_identifier =>
+188                    next_state <= s_rxb_skip_ts_low;
+           <font color = "green">            ==></font>
+189        
+190                -------------------------------------------------------------------------------------------
+191                -- Skip through TIMESTAMP_L_W, store only zeroes.
+192                -------------------------------------------------------------------------------------------
+193                when s_rxb_skip_ts_low =>
+194                    next_state <= s_rxb_skip_ts_high;
+           <font color = "green">            ==></font>
+195        
+196                -------------------------------------------------------------------------------------------
+197                -- Skip through TIMESTAMP_U_W, store only zeroes.
+198                -------------------------------------------------------------------------------------------
+199                when s_rxb_skip_ts_high =>
+200                    next_state <= s_rxb_store_data;
+           <font color = "green">            ==></font>
+201        
+202                -------------------------------------------------------------------------------------------
+203                -- Store DATA_W. If error ocurrs, abort the storing. If storing is finished, go to idle or
+204                -- again timestamp storing depending on the timestamp option configuration. Note that now
+205                -- timestamp storing is realized via different states!
+206                 -------------------------------------------------------------------------------------------
+207                when s_rxb_store_data =>
+208                    if (rec_abort_f = '1') then
+                       <font color = "green">-4-</font>  
+209                        next_state <= s_rxb_idle;
+           <font color = "green">                ==></font>
+210                    elsif (rec_valid_f = '1') then
+                          <font color = "green">-5-</font>  
+211                        next_state <= s_rxb_store_end_ts_low;
+           <font color = "green">                ==></font>
+212                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+213        
+214                -------------------------------------------------------------------------------------------
+215                -- Store TIMESTAMP_L_W.
+216                -------------------------------------------------------------------------------------------
+217                when s_rxb_store_end_ts_low =>
+218                    next_state <= s_rxb_store_end_ts_high;
+           <font color = "green">            ==></font>
+219        
+220                -------------------------------------------------------------------------------------------
+221                -- Store first TIMESTAMP_U_W.
+222                -------------------------------------------------------------------------------------------
+223                when s_rxb_store_end_ts_high =>
+224                    next_state <= s_rxb_idle;
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> S_RXB_IDLE</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_IDLE</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center> S_RXB_STORE_FRAME_FORMAT</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_FRAME_FORMAT</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_IDENTIFIER</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_SKIP_TS_LOW</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_SKIP_TS_HIGH</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_DATA</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_DATA</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_DATA</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_END_TS_LOW</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_END_TS_HIGH</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+243                case curr_state is
+                   <font color = "green">-1-</font>  
+244                when s_rxb_idle =>
+245                    reset_overrun_flag <= '1';
+           <font color = "green">            ==></font>
+246        
+247                when s_rxb_store_frame_format =>
+248                    write_raw_intent <= '1';
+           <font color = "green">            ==></font>
+249                    data_selector    <= "00001";
+250        
+251                when s_rxb_store_identifier =>
+252                    write_raw_intent <= '1';
+           <font color = "green">            ==></font>
+253                    data_selector    <= "00010";
+254        
+255                when s_rxb_skip_ts_low =>
+256                    write_raw_intent <= '1';
+           <font color = "green">            ==></font>
+257        
+258                    -- Here we capture value of Raw write pointer to Timestamp write pointer
+259                    -- so that it can be later used for Timestamp storing.
+260                    store_ts_wr_ptr <= '1';
+261        
+262                when s_rxb_skip_ts_high =>
+263                    write_raw_intent <= '1';
+           <font color = "green">            ==></font>
+264        
+265                when s_rxb_store_data =>
+266                    data_selector    <= "00100";
+267        
+268                    if (store_data_f = '1') then
+                       <font color = "green">-2-</font>  
+269                        write_raw_intent <= '1';
+           <font color = "green">                ==></font>
+270                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+271        
+272                when s_rxb_store_end_ts_low =>
+273                    data_selector    <= "01000";
+           <font color = "green">            ==></font>
+274        
+275                    -- Timestamp write pointer is incremented once more when lower
+276                    -- timestamp word was stored, to point to higher timestamp word.
+277                    inc_ts_wr_ptr <= '1';
+278        
+279                    -- Signalling that timestamp is stored to memory.
+280                    write_ts   <= '1';
+281        
+282                when s_rxb_store_end_ts_high =>
+283                    data_selector    <= "10000";
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> S_RXB_IDLE</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_FRAME_FORMAT</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_IDENTIFIER</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_SKIP_TS_LOW</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_SKIP_TS_HIGH</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_DATA</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_DATA</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_END_TS_LOW</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_RXB_STORE_END_TS_HIGH</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+299                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+300                    curr_state <= s_rxb_idle;
+           <font color = "green">            ==></font>
+301                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+302                    if (rx_fsm_ce = '1') then
+                       <font color = "green">-3-</font>  
+303                        curr_state <= next_state;
+           <font color = "green">                ==></font>
+304                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+305                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+309            rx_fsm_ce <= '1' when (next_state /= curr_state) else
+                                <font color = "green">-1-</font>  
+                                <font color = "green">==></font>  
+                                <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_1403">
+    <li>
+      <a href="#inst_tag_1403_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_1403_Cond">Cond</a>    </li>
+    <li>
+      <a href="#inst_tag_1403_Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_1403_FSM">FSM</a>    </li>
+    <li>
+      <a href="#inst_tag_1403_Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_CTU_CAN_FD_RTL.RX_BUFFER_FSM RTL">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#FSM">FSM</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

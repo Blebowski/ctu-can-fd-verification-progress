@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Assertions</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Assertions</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<b>Assertions by Category</b><table class="noborder">
+<col width="180">
+<col span="3" width="60"><tr class="sortablehead"><td> </td><td>ASSERT</td><td>PROPERTIES</td><td>SEQUENCES</td>
+<tr class="wht"><td class="lf">Total</td><td>190</td><td>1160</td><td>0</td></tr>
+<tr class="wht"><td class="lf">Category 0</td><td>190</td><td>1160</td><td>0</td></tr>
+</table>
+<hr>
+<br clear=all>
+<b>Assertions by Severity</b><table class="noborder">
+<col width="180">
+<col span="3" width="60"><tr class="sortablehead"><td> </td><td>ASSERT</td><td>PROPERTIES</td><td>SEQUENCES</td>
+<tr class="wht"><td class="lf">Total</td><td>190</td><td>1160</td><td>0</td></tr>
+<tr class="wht"><td class="lf">Severity 0</td><td>190</td><td>1160</td><td>0</td></tr>
+</table>
+<hr>
+<br clear=all>
+<b>Summary for Assertions</b><table class="noborder">
+<col width="180">
+<col span="2" width="60"><tr class="sortablehead"><td> </td><td>NUMBER</td><td>PERCENT</td>
+<tr class="wht"><td class="lf">Total Number</td><td>190</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf"><a href="asserts.html#tag_ast_no_covr">Uncovered</a></td><td>6</td><td>3.16</td></tr>
+<tr class="wht"><td class="lf"><a href="asserts.html#tag_ast_succ">Success</a></td><td>81</td><td>42.63</td></tr>
+<tr class="wht"><td class="lf">Failure</td><td>0</td><td>0.00</td></tr>
+<tr class="wht"><td class="lf"><a href="asserts.html#tag_ast_incp">Incomplete</a></td><td>6</td><td>3.16</td></tr>
+<tr class="wht"><td class="lf">Without Attempts</td><td>0</td><td>0.00</td></tr>
+<tr class="wht"><td class="lf"><a href="asserts.html#tag_ast_excl">Excluded</a></td><td>103</td><td>54.21</td></tr>
+</table>
+<hr>
+<br clear=all>
+<b>Summary for Cover Properties</b><table class="noborder">
+<col width="180">
+<col span="2" width="60"><tr class="sortablehead"><td> </td><td>NUMBER</td><td>PERCENT</td>
+<tr class="wht"><td class="lf">Total Number</td><td>1160</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf"><a href="asserts.html#tag_pro_no_covr">Uncovered</a></td><td>269</td><td>23.19</td></tr>
+<tr class="wht"><td class="lf"><a href="asserts_1.html#tag_pro_match">Matches</a></td><td>319</td><td>27.50</td></tr>
+<tr class="wht"><td class="lf"><a href="asserts_2.html#tag_pro_excl">Excluded</a></td><td>572</td><td>49.31</td></tr>
+</table>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+Go <a href="asserts_3.html">previous page</a>
+<br clear=all>
+<table class="sortable rt">
+<col width="180">
+<col span="4" width="60"><tr class="sortablehead">
+<td class="alfsrt">COVER PROPERTIES<td>CATEGORY</td><td>SEVERITY</td><td>ATTEMPTS</td><td>MATCHES</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_EMPTY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_EMPTY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_PARITY_ERR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_PARITY_ERR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_OK_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_OK_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_READY_HAZARD_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_READY_HAZARD_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_TX_PROG_HAZARD_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_TX_PROG_HAZARD_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_AB_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_AB_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_TX_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_TX_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_READY_TO_ABT_IN_PROGRESS_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_READY_TO_ABT_IN_PROGRESS_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_SKIP_BACKUP_BUFFERS<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_SKIP_BACKUP_BUFFERS"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_TX_IN_PROGRESS_TO_ABORTED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_TX_IN_PROGRESS_TO_ABORTED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_0_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_0_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_1_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_1_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_2_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_2_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_3_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_3_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_4_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_4_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_5_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_5_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_6_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_6_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_7_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[3].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_7_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_DOUBLE_PARITY_BUF_1_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_DOUBLE_PARITY_BUF_1_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ARBL<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ARBL"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ERR<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ERR"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_FAILED<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_FAILED"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_LOCK<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_LOCK"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_UNLOCK<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_UNLOCK"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_VALID<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_VALID"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_PARITY_BUF_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_PARITY_BUF_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_ABORT_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_ABORT_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_EMPTY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_EMPTY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_ABT_IN_PROGRESS_TO_PARITY_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_ABT_IN_PROGRESS_TO_PARITY_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ABORTED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ABORTED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_AB_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_AB_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_EMPTY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_EMPTY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_PARITY_ERR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_PARITY_ERR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_OK_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_OK_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_READY_HAZARD_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_READY_HAZARD_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_TX_PROG_HAZARD_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_TX_PROG_HAZARD_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_AB_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_AB_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_TX_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_TX_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_READY_TO_ABT_IN_PROGRESS_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_READY_TO_ABT_IN_PROGRESS_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_SKIP_BACKUP_BUFFERS<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_SKIP_BACKUP_BUFFERS"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_TX_IN_PROGRESS_TO_ABORTED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_TX_IN_PROGRESS_TO_ABORTED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_0_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_0_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_1_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_1_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_2_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_2_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_3_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_3_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_4_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_4_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_5_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_5_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_6_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_6_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_7_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[4].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_7_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_DOUBLE_PARITY_BUF_1_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_DOUBLE_PARITY_BUF_1_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ARBL<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ARBL"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ERR<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ERR"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_FAILED<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_FAILED"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_LOCK<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_LOCK"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_UNLOCK<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_UNLOCK"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_VALID<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_VALID"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_PARITY_BUF_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_PARITY_BUF_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_ABORT_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_ABORT_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_EMPTY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_EMPTY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_ABT_IN_PROGRESS_TO_PARITY_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_ABT_IN_PROGRESS_TO_PARITY_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ABORTED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ABORTED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_AB_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_AB_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_EMPTY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_EMPTY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_PARITY_ERR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_PARITY_ERR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_OK_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_OK_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_READY_HAZARD_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_READY_HAZARD_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_TX_PROG_HAZARD_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_TX_PROG_HAZARD_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_AB_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_AB_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_TX_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_TX_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_READY_TO_ABT_IN_PROGRESS_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_READY_TO_ABT_IN_PROGRESS_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_SKIP_BACKUP_BUFFERS<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_SKIP_BACKUP_BUFFERS"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_TX_IN_PROGRESS_TO_ABORTED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_TX_IN_PROGRESS_TO_ABORTED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_0_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_0_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_1_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_1_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_2_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_2_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_3_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_3_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_4_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_4_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_5_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_5_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_6_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_6_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_7_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[5].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_7_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_DOUBLE_PARITY_BUF_1_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_DOUBLE_PARITY_BUF_1_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ARBL<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ARBL"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ERR<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ERR"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_FAILED<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_FAILED"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_LOCK<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_LOCK"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_UNLOCK<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_UNLOCK"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_VALID<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_VALID"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_PARITY_BUF_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_PARITY_BUF_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_ABORT_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_ABORT_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_EMPTY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_EMPTY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_ABT_IN_PROGRESS_TO_PARITY_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_ABT_IN_PROGRESS_TO_PARITY_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ABORTED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ABORTED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_AB_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_AB_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_EMPTY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_EMPTY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_PARITY_ERR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_PARITY_ERR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_OK_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_OK_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_READY_HAZARD_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_READY_HAZARD_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_TX_PROG_HAZARD_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_TX_PROG_HAZARD_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_AB_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_AB_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_TX_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_TX_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_READY_TO_ABT_IN_PROGRESS_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_READY_TO_ABT_IN_PROGRESS_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_SKIP_BACKUP_BUFFERS<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_SKIP_BACKUP_BUFFERS"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_TX_IN_PROGRESS_TO_ABORTED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_TX_IN_PROGRESS_TO_ABORTED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_0_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_0_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_1_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_1_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_2_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_2_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_3_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_3_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_4_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_4_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_5_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_5_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_6_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_6_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_7_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[6].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_7_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_DOUBLE_PARITY_BUF_1_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_DOUBLE_PARITY_BUF_1_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ARBL<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ARBL"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ERR<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_ERR"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_FAILED<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_FAILED"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_LOCK<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_LOCK"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_UNLOCK<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_UNLOCK"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_VALID<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_HW_VALID"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_PARITY_BUF_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_PARITY_BUF_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_ABORT_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_ABORT_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_EMPTY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_EMPTY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.INLINED_PSL.TXTB_SET_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_ABT_IN_PROGRESS_TO_PARITY_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_ABT_IN_PROGRESS_TO_PARITY_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ABORTED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ABORTED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_AB_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_AB_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_EMPTY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_EMPTY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_PARITY_ERR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_PARITY_ERR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_OK_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_OK_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_FSM_TX_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_READY_HAZARD_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_READY_HAZARD_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_TX_PROG_HAZARD_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_HW_SW_CMD_TXT_TX_PROG_HAZARD_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_AB_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_AB_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_TX_PROG_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_PERR_TXT_TX_PROG_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_READY_TO_ABT_IN_PROGRESS_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_READY_TO_ABT_IN_PROGRESS_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_SKIP_BACKUP_BUFFERS<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_SKIP_BACKUP_BUFFERS"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_TX_IN_PROGRESS_TO_ABORTED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_FSM_INST.INLINED_PSL.TXTB_TX_IN_PROGRESS_TO_ABORTED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_0_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_0_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_1_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_1_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_2_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_2_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_3_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_3_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_4_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_4_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_5_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_5_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_6_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_6_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_7_TEST_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN[7].TXT_BUFFER_INST.TXT_BUFFER_RAM_INST.INLINED_PSL.TXT_RAM_7_TEST_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/txt_buffer/txt_buffer_ram.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.BUF_READY_TO_NOT_READY_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.BUF_READY_TO_NOT_READY_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXTB_TTM_DIS_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXTB_TTM_DIS_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXTB_TTM_ENA_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXTB_TTM_ENA_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXTB_TXBBM_DIS_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXTB_TXBBM_DIS_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXTB_TXBBM_ENA_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXTB_TXBBM_ENA_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_BUF_CHANGE_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_BUF_CHANGE_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_BUF_SIM_CHNG_AND_LOCK_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_BUF_SIM_CHNG_AND_LOCK_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_1_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_1_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_2_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_2_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_3_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_3_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_4_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_4_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_5_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_5_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_6_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_6_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_7_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_7_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_8_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_BUF_8_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_LOCK_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_PRIO_CHANGE_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_PRIO_CHANGE_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_1_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_1_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_2_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_2_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_3_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_3_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_4_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_4_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_5_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_5_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_6_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_6_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_7_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_7_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_8_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_BUF_8_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.INLINED_PSL.TXT_UNLOCK_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_SEL_FFW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_SEL_FFW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_SEL_FTW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_SEL_FTW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_SEL_IDW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_SEL_IDW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_SEL_LOW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_SEL_LOW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_SEL_UPP_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_SEL_UPP_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_VALIDATED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_CHANGED_ARB_VALIDATED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_FFW_PARITY_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_FFW_PARITY_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_IDW_PARITY_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_IDW_PARITY_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_FFW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_FFW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_FTW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_FTW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_HI_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_HI_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_IDW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_IDW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_LOW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_LOW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_VALIDATED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LOCK_ARB_SEL_VALIDATED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LTS_PARITY_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_LTS_PARITY_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_SEL_FFW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_SEL_FFW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_SEL_FTW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_SEL_FTW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_SEL_IDW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_SEL_IDW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_SEL_LOW_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_SEL_LOW_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_SEL_UPP_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_SEL_UPP_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_VALIDATED_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_NOT_AVAILABLE_ARB_VALIDATED_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_UTS_PARITY_ERROR_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXTB_UTS_PARITY_ERROR_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+<tr class="wht"><td class="lf">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXT_BUF_WAIT_TILL_TIMESTAMP_COV<a name="tag_hvp_ast_TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.TX_ARBITRATOR_FSM_INST.INLINED_PSL.TXT_BUF_WAIT_TILL_TIMESTAMP_COV"></a>
+</td><td>0</td><td>0</td><td>Excluded</td><td class="ct"><a title="/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd" href="javascript:void(0);" onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/tx_arbitrator_fsm.vhd')"><img class="sourcefile"></a>
+</td></tr>
+</table>
+<br clear=all>
+</div>

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_RTL.PRIORITY_DECODER RTL</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_RTL.PRIORITY_DECODER RTL'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_RTL.PRIORITY_DECODER RTL')">CTU_CAN_FD_RTL.PRIORITY_DECODER RTL</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod1.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod1.html#Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod1.html#Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod1.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/priority_decoder.vhd')">/home/oille/Downloads/ctucanfd_ip_core/src/tx_arbitrator/priority_decoder.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod1.html#inst_tag_3"  onclick="showContent('inst_tag_3')">TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.PRIORITY_DECODER_INST</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod1.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod1.html#Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod1.html#Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod1.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_CTU_CAN_FD_RTL.PRIORITY_DECODER RTL'>
+<hr>
+<a name="inst_tag_3"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy2.html#tag_urg_inst_3" >TB_TOP_CTU_CAN_FD.DUT.TX_ARBITRATOR_INST.PRIORITY_DECODER_INST</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod1.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod1.html#Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod1.html#Toggle" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod1.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 99.93</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 99.71</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod212.html#inst_tag_733" >TX_ARBITRATOR_INST<img src="ex.gif" class="icon"></a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td colspan=8>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_RTL.PRIORITY_DECODER RTL'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod1.html" >CTU_CAN_FD_RTL.PRIORITY_DECODER RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>53</td><td>53</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">VHDL_PROCESS</td><td>178</td><td>0</td><td>0</td><td></td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>202</td><td>19</td><td>19</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>242</td><td>19</td><td>19</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>310</td><td>15</td><td>15</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+177                             begin
+178        <font color = "grey">unreachable  </font>            if (prio_valid(i) /= '0' and prio_valid(i) /= '1' and now /= 0 fs) then
+179        <font color = "grey">unreachable  </font>                report &quot;Input values not exactly defined&quot; severity error;
+180                                 end if;
+181                             end process;
+182                             -- pragma translate_on
+183                     
+184                             l0_prio(i)  &lt;= prio(i);
+185                             l0_valid(i) &lt;= prio_valid(i);
+186                     
+187                         end generate;
+188                     
+189                     
+190                         fill_zeroes_gen : if (G_TXT_BUFFER_COUNT &lt; 8) generate
+191                             l0_prio(7 downto G_TXT_BUFFER_COUNT)  &lt;= (others =&gt; (others =&gt; '0'));
+192                             l0_valid(7 downto G_TXT_BUFFER_COUNT) &lt;= (others =&gt; '0');
+193                         end generate;
+194                     
+195                     
+196                         -----------------------------------------------------------------------------------------------
+197                         -- Level 1 comparators
+198                         -----------------------------------------------------------------------------------------------
+199                         l1_prio_dec_proc : process(l0_valid, l0_prio)
+200                             variable tmp : level1_comp_valid_type;
+201                         begin
+202        1/1                  tmp := (others =&gt; (others =&gt; '0'));
+203        1/1                  for i in 0 to 3 loop
+204        1/1                      tmp(i) := l0_valid(2 * i + 1 downto 2 * i);
+205        1/1                      case tmp(i) is
+206                                 when &quot;01&quot; =&gt;
+207        1/1                          l1_prio(i)      &lt;= l0_prio(2 * i);
+208        1/1                          l1_valid(i)     &lt;= '1';
+209        1/1                          l1_winner(i)    &lt;= LOWER_TREE;
+210                     
+211                                 when &quot;10&quot; =&gt;
+212        1/1                          l1_prio(i)      &lt;= l0_prio(2 * i + 1);
+213        1/1                          l1_valid(i)     &lt;= '1';
+214        1/1                          l1_winner(i)    &lt;= UPPER_TREE;
+215                     
+216                                 when &quot;11&quot; =&gt;
+217        1/1                          if (unsigned(l0_prio(2 * i + 1)) &gt; unsigned(l0_prio(2 * i))) then
+218        1/1                              l1_prio(i)    &lt;= l0_prio(2 * i + 1);
+219        1/1                              l1_winner(i)  &lt;= UPPER_TREE;
+220                                     else
+221        1/1                              l1_prio(i)    &lt;= l0_prio(2 * i);
+222        1/1                              l1_winner(i)  &lt;= LOWER_TREE;
+223                                     end if;
+224        1/1                          l1_valid(i)     &lt;= '1';
+225                     
+226                                 when others =&gt;
+227        1/1                          l1_valid(i)     &lt;= '0';
+228        1/1                          l1_prio(i)      &lt;= l0_prio(2 * i + 1);
+229        1/1                          l1_winner(i)    &lt;= UPPER_TREE;
+230                     
+231                                 end case;
+232                             end loop;
+233                         end process;
+234                     
+235                     
+236                         -----------------------------------------------------------------------------------------------
+237                         -- Level 2 comparators
+238                         -----------------------------------------------------------------------------------------------
+239                         l2_prio_dec_proc : process(l1_valid, l1_prio)
+240                             variable tmp : level2_comp_valid_type;
+241                         begin
+242        1/1                  tmp := (others =&gt; (others =&gt; '0'));
+243        1/1                  for i in 0 to 1 loop
+244        1/1                      tmp(i) := l1_valid(2 * i + 1 downto 2 * i);
+245                     
+246        1/1                      case tmp(i) is
+247                                 when &quot;01&quot; =&gt;
+248        1/1                          l2_prio(i)      &lt;= l1_prio(2 * i);
+249        1/1                          l2_valid(i)     &lt;= '1';
+250        1/1                          l2_winner(i)    &lt;= LOWER_TREE;
+251                     
+252                                 when &quot;10&quot; =&gt;
+253        1/1                          l2_prio(i)      &lt;= l1_prio(2 * i + 1);
+254        1/1                          l2_valid(i)     &lt;= '1';
+255        1/1                          l2_winner(i)    &lt;= UPPER_TREE;
+256                     
+257                                 when &quot;11&quot; =&gt;
+258        1/1                          if (unsigned(l1_prio(2 * i + 1)) &gt; unsigned(l1_prio(2 * i))) then
+259        1/1                              l2_prio(i)    &lt;= l1_prio(2 * i + 1);
+260        1/1                              l2_winner(i)  &lt;= UPPER_TREE;
+261                                     else
+262        1/1                              l2_prio(i)    &lt;= l1_prio(2 * i);
+263        1/1                              l2_winner(i)  &lt;= LOWER_TREE;
+264                                     end if;
+265        1/1                          l2_valid(i)     &lt;= '1';
+266                     
+267                                 when others =&gt;
+268        1/1                          l2_valid(i)     &lt;= '0';
+269        1/1                          l2_prio(i)      &lt;= l1_prio(2 * i + 1);
+270        1/1                          l2_winner(i)    &lt;= UPPER_TREE;
+271                     
+272                                 end case;
+273                             end loop;
+274                         end process;
+275                     
+276                     
+277                         -----------------------------------------------------------------------------------------------
+278                         -- Level 3 comparators
+279                         -----------------------------------------------------------------------------------------------
+280                     
+281                         -- Here we have only one comparator, plus we dont need
+282                         -- the priority on the output...
+283                     
+284                         -- Validity of level 3 is also the output validity
+285                         l3_valid  &lt;= '0' when l2_valid(1 downto 0) = &quot;00&quot;
+286                                          else
+287                                     '1';
+288                         output_valid &lt;= '1' when l3_valid = '1' else '0';
+289                     
+290                         -- Priority comparator of level 3
+291                         l3_winner  &lt;= LOWER_TREE when l2_valid(1 downto 0) = &quot;01&quot; else
+292                                       UPPER_TREE when l2_valid(1 downto 0) = &quot;10&quot; else
+293                                       UPPER_TREE when (l2_valid(1 downto 0) = &quot;11&quot; and
+294                                                      unsigned(l2_prio(1)) &gt; unsigned(l2_prio(0)))
+295                                                  else
+296                                       LOWER_TREE;
+297                     
+298                         -----------------------------------------------------------------------------------------------
+299                         -- Output index decoder
+300                         -----------------------------------------------------------------------------------------------
+301                         -- Just find out the winning buffer index from decisions in the tree
+302                     
+303                         -- Note that modulo is used only for purpose of getting rid of compiler warnings. If lower
+304                         -- amount of buffers is on input (TXT_BUFFER_COUNT), then higher indices of input priorities
+305                         -- and valid sinals are set to 0. This leads to the case that &quot;buf_index&quot; will NEVER be
+306                         -- assigned value higher than its available range.
+307                     
+308                         out_index_proc : process(l3_winner, l2_winner, l1_winner)
+309                         begin
+310        1/1                  if (l3_winner = LOWER_TREE) then
+311        1/1                      if (l2_winner(0) = LOWER_TREE) then
+312        1/1                          if (l1_winner(0) = LOWER_TREE) then
+313        1/1                              output_index &lt;= 0;
+314                                     else
+315        1/1                              output_index &lt;= 1;
+316                                     end if;
+317                                 else
+318        1/1                          if (l1_winner(1) = LOWER_TREE) then
+319        1/1                              output_index &lt;= 2 mod G_TXT_BUFFER_COUNT;
+320                                     else
+321        1/1                              output_index &lt;= 3 mod G_TXT_BUFFER_COUNT;
+322                                     end if;
+323                                 end if;
+324                             else
+325        1/1                      if (l2_winner(1) = LOWER_TREE) then
+326        1/1                          if (l1_winner(2) = LOWER_TREE) then
+327        1/1                              output_index &lt;= 4 mod G_TXT_BUFFER_COUNT;
+328                                     else
+329        1/1                              output_index &lt;= 5 mod G_TXT_BUFFER_COUNT;
+330                                     end if;
+331                                 else
+332        1/1                          if (l1_winner(3) = LOWER_TREE) then
+333        1/1                              output_index &lt;= 6 mod G_TXT_BUFFER_COUNT;
+334                                     else
+335        1/1                              output_index &lt;= 7 mod G_TXT_BUFFER_COUNT;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod1.html" >CTU_CAN_FD_RTL.PRIORITY_DECODER RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>13</td><td>13</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>13</td><td>13</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       285
+ EXPRESSION (L2_VALID(1 DOWNTO 0) = &quot;00&quot;)
+            --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       288
+ EXPRESSION (L3_VALID = '1')
+            --------1-------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       291
+ EXPRESSION (L2_VALID(1 DOWNTO 0) = &quot;01&quot;)
+            --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       292
+ EXPRESSION (L2_VALID(1 DOWNTO 0) = &quot;10&quot;)
+            --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       293
+ EXPRESSION ((L2_VALID(1 DOWNTO 0) = &quot;11&quot;) AND (UNSIGNED(L2_PRIO(1)) &gt; UNSIGNED(L2_PRIO(0))))
+            ----------------------------------------1----------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       293
+ SUB-EXPRESSION ((L2_VALID(1 DOWNTO 0) = &quot;11&quot;) AND (UNSIGNED(L2_PRIO(1)) &gt; UNSIGNED(L2_PRIO(0))))
+                 --------------1--------------     ----------------------2----------------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod1.html" >CTU_CAN_FD_RTL.PRIORITY_DECODER RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">31</td>
+<td class="rt">31</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">194</td>
+<td class="rt">194</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">97</td>
+<td class="rt">97</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">97</td>
+<td class="rt">97</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">10</td>
+<td class="rt">10</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">66</td>
+<td class="rt">66</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">33</td>
+<td class="rt">33</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">33</td>
+<td class="rt">33</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">21</td>
+<td class="rt">21</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">128</td>
+<td class="rt">128</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">64</td>
+<td class="rt">64</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">64</td>
+<td class="rt">64</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>PRIO(0)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRIO(1)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRIO(2)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRIO(3)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRIO(4)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRIO(5)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRIO(6)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRIO(7)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>PRIO_VALID[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>OUTPUT_VALID</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>L0_PRIO(0)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L0_PRIO(1)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L0_PRIO(2)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L0_PRIO(3)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L0_PRIO(4)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L0_PRIO(5)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L0_PRIO(6)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L0_PRIO(7)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L0_VALID[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L1_PRIO(0)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L1_PRIO(1)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L1_PRIO(2)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L1_PRIO(3)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L1_VALID[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L1_WINNER[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L2_PRIO(0)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L2_PRIO(1)[2:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L2_VALID[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L2_WINNER[1:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L3_VALID</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>L3_WINNER</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod1.html" >CTU_CAN_FD_RTL.PRIORITY_DECODER RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">26</td>
+<td class="rt">26</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>CASE</td>
+<td class="rt">205</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>CASE</td>
+<td class="rt">246</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">285</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">288</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">291</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">310</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+205                    case tmp(i) is
+                       <font color = "green">-1-</font>  
+206                    when "01" =>
+207                        l1_prio(i)      <= l0_prio(2 * i);
+           <font color = "green">                ==></font>
+208                        l1_valid(i)     <= '1';
+209                        l1_winner(i)    <= LOWER_TREE;
+210        
+211                    when "10" =>
+212                        l1_prio(i)      <= l0_prio(2 * i + 1);
+           <font color = "green">                ==></font>
+213                        l1_valid(i)     <= '1';
+214                        l1_winner(i)    <= UPPER_TREE;
+215        
+216                    when "11" =>
+217                        if (unsigned(l0_prio(2 * i + 1)) > unsigned(l0_prio(2 * i))) then
+                           <font color = "green">-2-</font>  
+218                            l1_prio(i)    <= l0_prio(2 * i + 1);
+           <font color = "green">                    ==></font>
+219                            l1_winner(i)  <= UPPER_TREE;
+220                        else
+221                            l1_prio(i)    <= l0_prio(2 * i);
+           <font color = "green">                    ==></font>
+222                            l1_winner(i)  <= LOWER_TREE;
+223                        end if;
+224                        l1_valid(i)     <= '1';
+225        
+226                    when others =>
+227                        l1_valid(i)     <= '0';
+           <font color = "green">                ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> "01"</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> "10"</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> "11"</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> "11"</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>OTHERS</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+246                    case tmp(i) is
+                       <font color = "green">-1-</font>  
+247                    when "01" =>
+248                        l2_prio(i)      <= l1_prio(2 * i);
+           <font color = "green">                ==></font>
+249                        l2_valid(i)     <= '1';
+250                        l2_winner(i)    <= LOWER_TREE;
+251        
+252                    when "10" =>
+253                        l2_prio(i)      <= l1_prio(2 * i + 1);
+           <font color = "green">                ==></font>
+254                        l2_valid(i)     <= '1';
+255                        l2_winner(i)    <= UPPER_TREE;
+256        
+257                    when "11" =>
+258                        if (unsigned(l1_prio(2 * i + 1)) > unsigned(l1_prio(2 * i))) then
+                           <font color = "green">-2-</font>  
+259                            l2_prio(i)    <= l1_prio(2 * i + 1);
+           <font color = "green">                    ==></font>
+260                            l2_winner(i)  <= UPPER_TREE;
+261                        else
+262                            l2_prio(i)    <= l1_prio(2 * i);
+           <font color = "green">                    ==></font>
+263                            l2_winner(i)  <= LOWER_TREE;
+264                        end if;
+265                        l2_valid(i)     <= '1';
+266        
+267                    when others =>
+268                        l2_valid(i)     <= '0';
+           <font color = "green">                ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> "01"</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> "10"</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> "11"</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> "11"</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>OTHERS</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+285            l3_valid  <= '0' when l2_valid(1 downto 0) = "00"
+                                <font color = "green">-1-</font>  
+                                <font color = "green">==></font>  
+                                <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+288            output_valid <= '1' when l3_valid = '1' else '0';
+                                   <font color = "green">-1-</font>  
+                                   <font color = "green">==></font>  
+                                   <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+291            l3_winner  <= LOWER_TREE when l2_valid(1 downto 0) = "01" else
+                                        <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+292                          UPPER_TREE when l2_valid(1 downto 0) = "10" else
+                                        <font color = "green">-2-</font>  
+           <font color = "green">                  ==></font>
+293                          UPPER_TREE when (l2_valid(1 downto 0) = "11" and
+                                        <font color = "green">-3-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+310                if (l3_winner = LOWER_TREE) then
+                   <font color = "green">-1-</font>  
+311                    if (l2_winner(0) = LOWER_TREE) then
+                       <font color = "green">-2-</font>  
+312                        if (l1_winner(0) = LOWER_TREE) then
+                           <font color = "green">-3-</font>  
+313                            output_index <= 0;
+           <font color = "green">                    ==></font>
+314                        else
+315                            output_index <= 1;
+           <font color = "green">                    ==></font>
+316                        end if;
+317                    else
+318                        if (l1_winner(1) = LOWER_TREE) then
+                           <font color = "green">-4-</font>  
+319                            output_index <= 2 mod G_TXT_BUFFER_COUNT;
+           <font color = "green">                    ==></font>
+320                        else
+321                            output_index <= 3 mod G_TXT_BUFFER_COUNT;
+           <font color = "green">                    ==></font>
+322                        end if;
+323                    end if;
+324                else
+325                    if (l2_winner(1) = LOWER_TREE) then
+                       <font color = "green">-5-</font>  
+326                        if (l1_winner(2) = LOWER_TREE) then
+                           <font color = "green">-6-</font>  
+327                            output_index <= 4 mod G_TXT_BUFFER_COUNT;
+           <font color = "green">                    ==></font>
+328                        else
+329                            output_index <= 5 mod G_TXT_BUFFER_COUNT;
+           <font color = "green">                    ==></font>
+330                        end if;
+331                    else
+332                        if (l1_winner(3) = LOWER_TREE) then
+                           <font color = "green">-7-</font>  
+333                            output_index <= 6 mod G_TXT_BUFFER_COUNT;
+           <font color = "green">                    ==></font>
+334                        else
+335                            output_index <= 7 mod G_TXT_BUFFER_COUNT;
+           <font color = "green">                    ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>-7-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_3">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_CTU_CAN_FD_RTL.PRIORITY_DECODER RTL">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: \CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_TX_SHIFT_REG_RTL_psl </title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_TX_SHIFT_REG_RTL_psl '>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_\\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_TX_SHIFT_REG_RTL_psl ')">\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_TX_SHIFT_REG_RTL_psl </a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 94.92</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s8 cl rt"><a href="mod355.html#Toggle" > 89.83</a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod355.html#Assert" >100.00</a></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/can_core/tx_shift_reg.vhd')">/home/oille/Downloads/ctucanfd_ip_core/src/can_core/tx_shift_reg.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod355.html#inst_tag_1560"  onclick="showContent('inst_tag_1560')">TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.PROTOCOL_CONTROL_INST.TX_SHIFT_REG_INST.INLINED_PSL<img src="fx.gif" class="icon"></a></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_TX_SHIFT_REG_RTL_psl '>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod355.html" >\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_TX_SHIFT_REG_RTL_psl </a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s7">
+<td>Totals</td>
+<td class="rt">28</td>
+<td class="rt">22</td>
+<td class="rt">78.57 </td>
+</tr><tr class="s8">
+<td>Total Bits</td>
+<td class="rt">118</td>
+<td class="rt">106</td>
+<td class="rt">89.83 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">59</td>
+<td class="rt">53</td>
+<td class="rt">89.83 </td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">59</td>
+<td class="rt">53</td>
+<td class="rt">89.83 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s7">
+<td>Ports</td>
+<td class="rt">28</td>
+<td class="rt">22</td>
+<td class="rt">78.57 </td>
+</tr><tr class="s8">
+<td>Port Bits</td>
+<td class="rt">118</td>
+<td class="rt">106</td>
+<td class="rt">89.83 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">59</td>
+<td class="rt">53</td>
+<td class="rt">89.83 </td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">59</td>
+<td class="rt">53</td>
+<td class="rt">89.83 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>TRAN_WORD_SWAPPED[31:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TX_LOAD_DATA_WORD</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TX_LOAD_BASE_ID</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TX_LOAD_EXT_ID</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TX_LOAD_DLC</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TX_LOAD_STUFF_COUNT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TX_LOAD_CRC</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_MODE_TSTM</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_0</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_1</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_2</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_3</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_4</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_5</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_6</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_7</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_8</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_9</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_10</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_11</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_12</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_13</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_14</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_15</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_16</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_17</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>VCS_PSL_MX_18</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Assert"></a>
+Assert Coverage for Module : <a href="mod355.html" >\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_TX_SHIFT_REG_RTL_psl </a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Attempted</th><th nowrap width=80>Percent</th><th nowrap width=80>Succeeded/Matched</th><th nowrap width=80>Percent</th></tr><tr>
+<td class="wht cl"><a href="#1294267174" >Assertions</a></td>
+<td class="wht cl rt">7</td>
+<td class="s10 cl rt">7</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">7</td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="#1150414683" >Cover properties</a></td>
+<td class="wht cl rt">12</td>
+<td class="s10 cl rt">12</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">12</td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl"><a href="#1243598816" >Cover sequences</a></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+<td class="wht cl rt">0</td>
+<td class="wht cl"></td>
+</tr><tr>
+<td class="wht cl"><b>Total</b></td>
+<td class="wht cl rt">19</td>
+<td class="s10 cl rt">19</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">19</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<br clear=all>
+<a name="1294267174"></a>
+<b>Assertion Details</b><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td>Attempts</td><td>Real Successes</td><td>Failures</td><td>Incomplete</td></tr><tr>
+<td class="wht cl"><a name="2055183289"></a>
+NO_SIM_TX_SHIFT_REG_LOAD_1_ASRT</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1301252392"></a>
+NO_SIM_TX_SHIFT_REG_LOAD_2_ASRT</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="362720777"></a>
+NO_SIM_TX_SHIFT_REG_LOAD_3_ASRT</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="575810838"></a>
+NO_SIM_TX_SHIFT_REG_LOAD_4_ASRT</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1514342453"></a>
+NO_SIM_TX_SHIFT_REG_LOAD_5_ASRT</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1842093228"></a>
+NO_SIM_TX_SHIFT_REG_LOAD_6_ASRT</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="179198920"></a>
+NO_TX_UNDEFINED_DATA_ASRT</td>
+<td class="s9 cl rt">98874</td>
+<td class="s9 cl rt">98874</td>
+<td class="s9 cl rt">0</td>
+<td class="wht cl rt">0</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="1150414683"></a>
+<b>Cover Directives for Properties: Details</b><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td>Attempts</td><td>Matches</td><td>Incomplete</td></tr><tr>
+<td class="wht cl"><a name="526034216"></a>
+TX_SHIFT_FLIP_FCRC_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">936529</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="264264193"></a>
+TX_SHIFT_FLIP_FCRC_DISABLE_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">35728</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1081888998"></a>
+TX_SHIFT_FLIP_FSTC_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">44932</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1872187407"></a>
+TX_SHIFT_FLIP_FSTC_DISABLE_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">35728</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="394888270"></a>
+TX_SHIFT_FLIP_SDLC_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">36163</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="395410139"></a>
+TX_SHIFT_FLIP_SDLC_DISABLE_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">35728</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="706528953"></a>
+TX_SHIFT_REG_LOAD_BASE_ID_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">29245</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1125508196"></a>
+TX_SHIFT_REG_LOAD_CRC_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">20825</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="128542481"></a>
+TX_SHIFT_REG_LOAD_DATA_WORD_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">98863</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="982878187"></a>
+TX_SHIFT_REG_LOAD_DLC_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">30914</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1907325935"></a>
+TX_SHIFT_REG_LOAD_EXTENDED_ID_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">9617</td>
+<td class="wht cl rt">0</td>
+</tr><tr>
+<td class="wht cl"><a name="1373593484"></a>
+TX_SHIFT_REG_LOAD_STUFF_COUNT_COV</td>
+<td class="s9 cl rt">801982502</td>
+<td class="s9 cl rt">10331</td>
+<td class="wht cl rt">0</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="tag_\CTU_CAN_FD_RTL.vcs_PSL_mx_CTU_CAN_FD_RTL_TX_SHIFT_REG_RTL_psl ">
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Assert">Assert</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

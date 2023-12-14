@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL')">CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 98.68</td>
+<td class="s10 cl rt"><a href="mod40.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod40.html#Cond" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod40.html#Toggle" > 93.40</a></td>
+<td class="s10 cl rt"><a href="mod40.html#FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod40.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_ip_core/src/can_core/fault_confinement_fsm.vhd')">/home/oille/Downloads/ctucanfd_ip_core/src/can_core/fault_confinement_fsm.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod40.html#inst_tag_133"  onclick="showContent('inst_tag_133')">TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.FAULT_CONFINEMENT_INST.FAULT_CONFINEMENT_FSM_INST</a></td>
+<td class="s9 cl rt"> 98.68</td>
+<td class="s10 cl rt"><a href="mod40.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod40.html#Cond" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod40.html#Toggle" > 93.40</a></td>
+<td class="s10 cl rt"><a href="mod40.html#FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod40.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL'>
+<hr>
+<a name="inst_tag_133"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy2.html#tag_urg_inst_133" >TB_TOP_CTU_CAN_FD.DUT.CAN_CORE_INST.FAULT_CONFINEMENT_INST.FAULT_CONFINEMENT_FSM_INST</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 98.68</td>
+<td class="s10 cl rt"><a href="mod40.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod40.html#Cond" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod40.html#Toggle" > 93.40</a></td>
+<td class="s10 cl rt"><a href="mod40.html#FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod40.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 98.77</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 93.86</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 97.18</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 97.18</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td><a href="mod203.html#inst_tag_717" >FAULT_CONFINEMENT_INST</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod329.html#inst_tag_1498" id="tag_urg_inst_1498">DFF_FC_RESET_INST</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod40.html" >CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>22</td><td>22</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>210</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>248</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>276</td><td>3</td><td>3</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>288</td><td>7</td><td>7</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+209                         begin
+210        1/1                  if (res_n = '0') then
+211        1/1                      err_warning_limit_q &lt;= '0';
+212                             elsif (rising_edge(clk_sys)) then
+213        1/1                      err_warning_limit_q &lt;= err_warning_limit_d;
+214                             end if;
+215                         end process;
+216                     
+217                         err_warning_limit_pulse &lt;= '1' when (err_warning_limit_d /= err_warning_limit_q)
+218                                                        else
+219                                                    '0';
+220                     
+221                         mr_status_ewl &lt;= err_warning_limit_d;
+222                     
+223                         -- Reset DFF, keep Bus-off when disabled!
+224                         fc_fsm_res_d &lt;= mr_settings_ena;
+225                     
+226                         dff_fc_reset_inst : entity ctu_can_fd_rtl.dff_arst
+227                         generic map(
+228                             G_RESET_POLARITY   =&gt; '0',
+229                     
+230                             -- Reset to the same value as is polarity of reset so that other DFFs
+231                             -- which are reset by output of this one will be reset too!
+232                             G_RST_VAL          =&gt; '0'
+233                         )
+234                         port map(
+235                             arst               =&gt; res_n,                -- IN
+236                             clk                =&gt; clk_sys,              -- IN
+237                             reg_d              =&gt; fc_fsm_res_d,         -- IN
+238                     
+239                             reg_q              =&gt; fc_fsm_res_q          -- OUT
+240                         );
+241                     
+242                         -----------------------------------------------------------------------------------------------
+243                         -- Next state process
+244                         -----------------------------------------------------------------------------------------------
+245                         fc_fsm_next_state_proc : process(curr_state, tx_err_ctr_mt_255,
+246                             tx_err_ctr_mt_erp, rx_err_ctr_mt_erp, set_err_active)
+247                         begin
+248        1/1                  next_state &lt;= curr_state;
+249                     
+250        1/1                  case curr_state is
+251                             when s_fc_err_active =&gt;
+252        1/1                      if (tx_err_ctr_mt_erp = '1' or rx_err_ctr_mt_erp = '1') then
+253        1/1                          next_state &lt;= s_fc_err_passive;
+254                                 end if;
+255                     
+256                             when s_fc_err_passive =&gt;
+257        1/1                      if (tx_err_ctr_mt_255 = '1') then
+258        1/1                          next_state &lt;= s_fc_bus_off;
+259                                 elsif (tx_err_ctr_mt_erp = '0' and rx_err_ctr_mt_erp = '0') then
+260        1/1                          next_state &lt;= s_fc_err_active;
+261                                 end if;
+262                     
+263                             when s_fc_bus_off =&gt;
+264        1/1                      if (set_err_active = '1') then
+265        1/1                          next_state &lt;= s_fc_err_active;
+266                                 end if;
+267                             end case;
+268                     
+269                         end process;
+270                     
+271                         -----------------------------------------------------------------------------------------------
+272                         -- State register
+273                         -----------------------------------------------------------------------------------------------
+274                         fault_conf_state_reg : process(clk_sys, fc_fsm_res_q)
+275                         begin
+276        1/1                  if (fc_fsm_res_q = '0') then
+277        1/1                      curr_state &lt;= s_fc_bus_off;
+278                             elsif (rising_edge(clk_sys)) then
+279        1/1                      curr_state &lt;= next_state;
+280                             end if;
+281                         end process;
+282                     
+283                         -----------------------------------------------------------------------------------------------
+284                         -- Current state
+285                         -----------------------------------------------------------------------------------------------
+286                         fc_fsm_curr_state_proc : process(curr_state)
+287                         begin
+288        1/1                  is_err_active     &lt;= '0';
+289        1/1                  is_err_passive    &lt;= '0';
+290        1/1                  is_bus_off        &lt;= '0';
+291                     
+292        1/1                  case curr_state is
+293                             when s_fc_err_active =&gt;
+294        1/1                      is_err_active &lt;= '1';
+295                     
+296                             when s_fc_err_passive =&gt;
+297        1/1                      is_err_passive &lt;= '1';
+298                     
+299                             when s_fc_bus_off =&gt;
+300        1/1                      is_bus_off &lt;= '1';
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod40.html" >CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>25</td><td>25</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       177
+ EXPRESSION (UNSIGNED(TX_ERR_CTR) &gt;= UNSIGNED(MR_ERP_ERP_LIMIT))
+            --------------------------1-------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       182
+ EXPRESSION (UNSIGNED(RX_ERR_CTR) &gt;= UNSIGNED(MR_ERP_ERP_LIMIT))
+            --------------------------1-------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       187
+ EXPRESSION (UNSIGNED(TX_ERR_CTR) &gt; 255)
+            --------------1-------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       192
+ EXPRESSION (UNSIGNED(TX_ERR_CTR) &gt;= ('0' &amp; UNSIGNED(MR_EWL_EW_LIMIT)))
+            -----------------------------1-----------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       197
+ EXPRESSION (UNSIGNED(RX_ERR_CTR) &gt;= ('0' &amp; UNSIGNED(MR_EWL_EW_LIMIT)))
+            -----------------------------1-----------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       201
+ EXPRESSION ((TX_ERR_CTR_MT_EWL = '1') OR (RX_ERR_CTR_MT_EWL = '1'))
+            ----------------------------1---------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       201
+ SUB-EXPRESSION ((TX_ERR_CTR_MT_EWL = '1') OR (RX_ERR_CTR_MT_EWL = '1'))
+                 ------------1------------    ------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       217
+ EXPRESSION (ERR_WARNING_LIMIT_D /= ERR_WARNING_LIMIT_Q)
+            ----------------------1---------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       252
+ EXPRESSION ((TX_ERR_CTR_MT_ERP = '1') OR (RX_ERR_CTR_MT_ERP = '1'))
+             ------------1------------    ------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       259
+ EXPRESSION ((TX_ERR_CTR_MT_ERP = '0') AND (RX_ERR_CTR_MT_ERP = '0'))
+             ------------1------------     ------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       305
+ EXPRESSION (CURR_STATE /= NEXT_STATE)
+            -------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod40.html" >CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s9">
+<td>Totals</td>
+<td class="rt">23</td>
+<td class="rt">22</td>
+<td class="rt">95.65 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">106</td>
+<td class="rt">99</td>
+<td class="rt">93.40 </td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">53</td>
+<td class="rt">53</td>
+<td class="rt">100.00</td>
+</tr><tr class="s8">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">53</td>
+<td class="rt">46</td>
+<td class="rt">86.79 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s9">
+<td>Ports</td>
+<td class="rt">14</td>
+<td class="rt">13</td>
+<td class="rt">92.86 </td>
+</tr><tr class="s9">
+<td>Port Bits</td>
+<td class="rt">88</td>
+<td class="rt">81</td>
+<td class="rt">92.05 </td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">44</td>
+<td class="rt">44</td>
+<td class="rt">100.00</td>
+</tr><tr class="s8">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">44</td>
+<td class="rt">37</td>
+<td class="rt">84.09 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>SET_ERR_ACTIVE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_EWL_EW_LIMIT[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_ERP_ERP_LIMIT[6:0]</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_ERP_ERP_LIMIT[7]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_SETTINGS_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_STATUS_EWL</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>TX_ERR_CTR[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RX_ERR_CTR[8:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>IS_ERR_ACTIVE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>IS_ERR_PASSIVE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>IS_BUS_OFF</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>FCS_CHANGED</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>ERR_WARNING_LIMIT_PULSE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>TX_ERR_CTR_MT_ERP</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>RX_ERR_CTR_MT_ERP</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>TX_ERR_CTR_MT_EWL</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>RX_ERR_CTR_MT_EWL</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>TX_ERR_CTR_MT_255</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ERR_WARNING_LIMIT_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>ERR_WARNING_LIMIT_Q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>FC_FSM_RES_D</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>FC_FSM_RES_Q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="FSM"></a>
+FSM Coverage for Module : <a href="mod40.html" >CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<caption><b>Summary for FSM :: CURR_STATE</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th><th nowrap width=200></th></tr><tr class="wht">
+<td>States</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+<td>(Not included in score)</td>
+</tr><tr class="s10">
+<td>Transitions</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>Sequences</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<b>State, Transition and Sequence Details for FSM :: CURR_STATE</b><hr>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">states</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_FC_BUS_OFF</td>
+<td class="rt">277</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_FC_ERR_ACTIVE</td>
+<td class="rt">260</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_FC_ERR_PASSIVE</td>
+<td class="rt">253</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">transitions</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_FC_BUS_OFF->S_FC_ERR_ACTIVE</td>
+<td class="rt">265</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_FC_ERR_ACTIVE->S_FC_BUS_OFF</td>
+<td class="rt">277</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_FC_ERR_ACTIVE->S_FC_ERR_PASSIVE</td>
+<td class="rt">253</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_FC_ERR_PASSIVE->S_FC_BUS_OFF</td>
+<td class="rt">277</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_FC_ERR_PASSIVE->S_FC_ERR_ACTIVE</td>
+<td class="rt">260</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod40.html" >CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">32</td>
+<td class="rt">32</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">177</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">182</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">187</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">192</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">197</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">201</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">210</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">217</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>CASE</td>
+<td class="rt">250</td>
+<td class="rt">7</td>
+<td class="rt">7</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">276</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>CASE</td>
+<td class="rt">292</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">305</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+177            tx_err_ctr_mt_erp <= '1' when (unsigned(tx_err_ctr) >= unsigned(mr_erp_erp_limit))
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+182            rx_err_ctr_mt_erp <= '1' when (unsigned(rx_err_ctr) >= unsigned(mr_erp_erp_limit))
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+187            tx_err_ctr_mt_255 <= '1' when (unsigned(tx_err_ctr) > 255)
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+192            tx_err_ctr_mt_ewl <= '1' when (unsigned(tx_err_ctr) >= ('0' & unsigned(mr_ewl_ew_limit)))
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+197            rx_err_ctr_mt_ewl <= '1' when (unsigned(rx_err_ctr) >= ('0' & unsigned(mr_ewl_ew_limit)))
+                                        <font color = "green">-1-</font>  
+                                        <font color = "green">==></font>  
+                                        <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+201            err_warning_limit_d <= '1' when (tx_err_ctr_mt_ewl = '1' or rx_err_ctr_mt_ewl = '1')
+                                          <font color = "green">-1-</font>  
+                                          <font color = "green">==></font>  
+                                          <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+210                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+211                    err_warning_limit_q <= '0';
+           <font color = "green">            ==></font>
+212                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+213                    err_warning_limit_q <= err_warning_limit_d;
+           <font color = "green">            ==></font>
+214                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+217            err_warning_limit_pulse <= '1' when (err_warning_limit_d /= err_warning_limit_q)
+                                              <font color = "green">-1-</font>  
+                                              <font color = "green">==></font>  
+                                              <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+250                case curr_state is
+                   <font color = "green">-1-</font>  
+251                when s_fc_err_active =>
+252                    if (tx_err_ctr_mt_erp = '1' or rx_err_ctr_mt_erp = '1') then
+                       <font color = "green">-2-</font>  
+253                        next_state <= s_fc_err_passive;
+           <font color = "green">                ==></font>
+254                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+255        
+256                when s_fc_err_passive =>
+257                    if (tx_err_ctr_mt_255 = '1') then
+                       <font color = "green">-3-</font>  
+258                        next_state <= s_fc_bus_off;
+           <font color = "green">                ==></font>
+259                    elsif (tx_err_ctr_mt_erp = '0' and rx_err_ctr_mt_erp = '0') then
+                          <font color = "green">-4-</font>  
+260                        next_state <= s_fc_err_active;
+           <font color = "green">                ==></font>
+261                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+262        
+263                when s_fc_bus_off =>
+264                    if (set_err_active = '1') then
+                       <font color = "green">-5-</font>  
+265                        next_state <= s_fc_err_active;
+           <font color = "green">                ==></font>
+266                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> S_FC_ERR_ACTIVE</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_FC_ERR_ACTIVE</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_FC_ERR_PASSIVE</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_FC_ERR_PASSIVE</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_FC_ERR_PASSIVE</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_FC_BUS_OFF</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_FC_BUS_OFF</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+276                if (fc_fsm_res_q = '0') then
+                   <font color = "green">-1-</font>  
+277                    curr_state <= s_fc_bus_off;
+           <font color = "green">            ==></font>
+278                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+279                    curr_state <= next_state;
+           <font color = "green">            ==></font>
+280                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+292                case curr_state is
+                   <font color = "green">-1-</font>  
+293                when s_fc_err_active =>
+294                    is_err_active <= '1';
+           <font color = "green">            ==></font>
+295        
+296                when s_fc_err_passive =>
+297                    is_err_passive <= '1';
+           <font color = "green">            ==></font>
+298        
+299                when s_fc_bus_off =>
+300                    is_bus_off <= '1';
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> S_FC_ERR_ACTIVE</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_FC_ERR_PASSIVE</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_FC_BUS_OFF</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+305            fcs_changed <= '1' when (curr_state /= next_state) else
+                                  <font color = "green">-1-</font>  
+                                  <font color = "green">==></font>  
+                                  <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_133">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#FSM">FSM</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_CTU_CAN_FD_RTL.FAULT_CONFINEMENT_FSM RTL">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#FSM">FSM</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
