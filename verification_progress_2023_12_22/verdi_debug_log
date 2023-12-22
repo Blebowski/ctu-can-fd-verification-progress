@@ -1,0 +1,2497 @@
+[95m********************************************************************************
+Compilation starting
+********************************************************************************[0m
+[95mCompiling files for library: 'ctu_can_fd_rtl'[0m
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/packages/can_fd_frame_format.vhd'
+	Design Unit: PACKAGE DECLARATION: CAN_FD_FRAME_FORMAT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_FD_FRAME_FORMAT.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/packages/can_constants_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: CAN_CONSTANTS_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_CONSTANTS_PKG.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/packages/can_fd_register_map.vhd'
+	Design Unit: PACKAGE DECLARATION: CAN_FD_REGISTER_MAP
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_FD_REGISTER_MAP.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/packages/can_config_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: CAN_CONFIG_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_CONFIG_PKG.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/packages/can_types_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: CAN_TYPES_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_TYPES_PKG.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/packages/id_transfer_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: ID_TRANSFER_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ID_TRANSFER_PKG.sim
+	Design Unit: PACKAGE BODY: ID_TRANSFER_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ID_TRANSFER_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/packages/unary_ops_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: UNARY_OPS_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/UNARY_OPS_PKG.sim
+	Design Unit: PACKAGE BODY: UNARY_OPS_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/UNARY_OPS_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/mux2.vhd'
+	Design Unit: ENTITY: MUX2
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MUX2.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: MUX2 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MUX2__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/dff_arst.vhd'
+	Design Unit: ENTITY: DFF_ARST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/DFF_ARST.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: DFF_ARST 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/DFF_ARST__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/rst_reg.vhd'
+	Design Unit: ENTITY: RST_REG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RST_REG.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: RST_REG 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RST_REG__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/clk_gate.vhd'
+	Design Unit: ENTITY: CLK_GATE
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CLK_GATE.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CLK_GATE 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CLK_GATE__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/inf_ram_wrapper.vhd'
+	Design Unit: ENTITY: INF_RAM_WRAPPER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/INF_RAM_WRAPPER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: INF_RAM_WRAPPER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/INF_RAM_WRAPPER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/shift_reg_byte.vhd'
+	Design Unit: ENTITY: SHIFT_REG_BYTE
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SHIFT_REG_BYTE.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: SHIFT_REG_BYTE 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SHIFT_REG_BYTE__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/majority_decoder_3.vhd'
+	Design Unit: ENTITY: MAJORITY_DECODER_3
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MAJORITY_DECODER_3.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: MAJORITY_DECODER_3 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MAJORITY_DECODER_3__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/shift_reg_preload.vhd'
+	Design Unit: ENTITY: SHIFT_REG_PRELOAD
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SHIFT_REG_PRELOAD.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: SHIFT_REG_PRELOAD 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SHIFT_REG_PRELOAD__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/sig_sync.vhd'
+	Design Unit: ENTITY: SIG_SYNC
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SIG_SYNC.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: SIG_SYNC 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SIG_SYNC__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/dlc_decoder.vhd'
+	Design Unit: ENTITY: DLC_DECODER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/DLC_DECODER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: DLC_DECODER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/DLC_DECODER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/endian_swapper.vhd'
+	Design Unit: ENTITY: ENDIAN_SWAPPER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ENDIAN_SWAPPER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: ENDIAN_SWAPPER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ENDIAN_SWAPPER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/dff_arst_ce.vhd'
+	Design Unit: ENTITY: DFF_ARST_CE
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/DFF_ARST_CE.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: DFF_ARST_CE 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/DFF_ARST_CE__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/parity_calculator.vhd'
+	Design Unit: ENTITY: PARITY_CALCULATOR
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/PARITY_CALCULATOR.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: PARITY_CALCULATOR 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/PARITY_CALCULATOR__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/rst_sync.vhd'
+	Design Unit: ENTITY: RST_SYNC
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RST_SYNC.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: RST_SYNC 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RST_SYNC__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/common_blocks/shift_reg.vhd'
+	Design Unit: ENTITY: SHIFT_REG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SHIFT_REG.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: SHIFT_REG 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SHIFT_REG__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/interrupt_manager/int_module.vhd'
+	Design Unit: ENTITY: INT_MODULE
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/INT_MODULE.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: INT_MODULE 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/INT_MODULE__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/interrupt_manager/int_manager.vhd'
+	Design Unit: ENTITY: INT_MANAGER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/INT_MANAGER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: INT_MANAGER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/INT_MANAGER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/interface/ahb_ifc.vhd'
+	Design Unit: ENTITY: AHB_IFC
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/AHB_IFC.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: AHB_IFC 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/AHB_IFC__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/interface/apb_ifc.vhd'
+	Design Unit: ENTITY: APB_IFC
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/APB_IFC.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: APB_IFC 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/APB_IFC__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/frame_filters/bit_filter.vhd'
+	Design Unit: ENTITY: BIT_FILTER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_FILTER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: BIT_FILTER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_FILTER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/frame_filters/range_filter.vhd'
+	Design Unit: ENTITY: RANGE_FILTER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RANGE_FILTER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: RANGE_FILTER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RANGE_FILTER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/frame_filters/frame_filters.vhd'
+	Design Unit: ENTITY: FRAME_FILTERS
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/FRAME_FILTERS.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: FRAME_FILTERS 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/FRAME_FILTERS__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/bus_sampling/data_edge_detector.vhd'
+	Design Unit: ENTITY: DATA_EDGE_DETECTOR
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/DATA_EDGE_DETECTOR.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: DATA_EDGE_DETECTOR 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/DATA_EDGE_DETECTOR__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/bus_sampling/ssp_generator.vhd'
+	Design Unit: ENTITY: SSP_GENERATOR
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SSP_GENERATOR.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: SSP_GENERATOR 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SSP_GENERATOR__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/bus_sampling/trv_delay_meas.vhd'
+	Design Unit: ENTITY: TRV_DELAY_MEASUREMENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TRV_DELAY_MEASUREMENT.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TRV_DELAY_MEASUREMENT 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TRV_DELAY_MEASUREMENT__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/bus_sampling/bit_err_detector.vhd'
+	Design Unit: ENTITY: BIT_ERR_DETECTOR
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_ERR_DETECTOR.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: BIT_ERR_DETECTOR 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_ERR_DETECTOR__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/bus_sampling/tx_data_cache.vhd'
+	Design Unit: ENTITY: TX_DATA_CACHE
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TX_DATA_CACHE.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TX_DATA_CACHE 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TX_DATA_CACHE__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/bus_sampling/sample_mux.vhd'
+	Design Unit: ENTITY: SAMPLE_MUX
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SAMPLE_MUX.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: SAMPLE_MUX 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SAMPLE_MUX__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/bus_sampling/bus_sampling.vhd'
+	Design Unit: ENTITY: BUS_SAMPLING
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BUS_SAMPLING.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: BUS_SAMPLING 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BUS_SAMPLING__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/prescaler/bit_time_fsm.vhd'
+	Design Unit: ENTITY: BIT_TIME_FSM
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_TIME_FSM.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: BIT_TIME_FSM 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_TIME_FSM__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/prescaler/segment_end_detector.vhd'
+	Design Unit: ENTITY: SEGMENT_END_DETECTOR
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SEGMENT_END_DETECTOR.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: SEGMENT_END_DETECTOR 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SEGMENT_END_DETECTOR__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/prescaler/trigger_generator.vhd'
+	Design Unit: ENTITY: TRIGGER_GENERATOR
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TRIGGER_GENERATOR.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TRIGGER_GENERATOR 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TRIGGER_GENERATOR__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/prescaler/bit_segment_meter.vhd'
+	Design Unit: ENTITY: BIT_SEGMENT_METER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_SEGMENT_METER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: BIT_SEGMENT_METER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_SEGMENT_METER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/prescaler/synchronisation_checker.vhd'
+	Design Unit: ENTITY: SYNCHRONISATION_CHECKER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SYNCHRONISATION_CHECKER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: SYNCHRONISATION_CHECKER 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/SYNCHRONISATION_CHECKER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/prescaler/bit_time_cfg_capture.vhd'
+	Design Unit: ENTITY: BIT_TIME_CFG_CAPTURE
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_TIME_CFG_CAPTURE.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: BIT_TIME_CFG_CAPTURE 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_TIME_CFG_CAPTURE__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/prescaler/bit_time_counters.vhd'
+	Design Unit: ENTITY: BIT_TIME_COUNTERS
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_TIME_COUNTERS.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: BIT_TIME_COUNTERS 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_TIME_COUNTERS__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/prescaler/prescaler.vhd'
+	Design Unit: ENTITY: PRESCALER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/PRESCALER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: PRESCALER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/PRESCALER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/bus_traffic_counters.vhd'
+	Design Unit: ENTITY: BUS_TRAFFIC_COUNTERS
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BUS_TRAFFIC_COUNTERS.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: BUS_TRAFFIC_COUNTERS 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BUS_TRAFFIC_COUNTERS__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/crc_calc.vhd'
+	Design Unit: ENTITY: CRC_CALC
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CRC_CALC.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CRC_CALC 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CRC_CALC__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/can_crc.vhd'
+	Design Unit: ENTITY: CAN_CRC
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_CRC.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CAN_CRC 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_CRC__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/err_counters.vhd'
+	Design Unit: ENTITY: ERR_COUNTERS
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ERR_COUNTERS.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: ERR_COUNTERS 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ERR_COUNTERS__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/fault_confinement_rules.vhd'
+	Design Unit: ENTITY: FAULT_CONFINEMENT_RULES
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/FAULT_CONFINEMENT_RULES.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: FAULT_CONFINEMENT_RULES 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/FAULT_CONFINEMENT_RULES__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/fault_confinement_fsm.vhd'
+	Design Unit: ENTITY: FAULT_CONFINEMENT_FSM
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/FAULT_CONFINEMENT_FSM.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: FAULT_CONFINEMENT_FSM 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/FAULT_CONFINEMENT_FSM__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/fault_confinement.vhd'
+	Design Unit: ENTITY: FAULT_CONFINEMENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/FAULT_CONFINEMENT.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: FAULT_CONFINEMENT 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/FAULT_CONFINEMENT__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/operation_control.vhd'
+	Design Unit: ENTITY: OPERATION_CONTROL
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/OPERATION_CONTROL.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: OPERATION_CONTROL 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/OPERATION_CONTROL__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/bit_destuffing.vhd'
+	Design Unit: ENTITY: BIT_DESTUFFING
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_DESTUFFING.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: BIT_DESTUFFING 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_DESTUFFING__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/bit_stuffing.vhd'
+	Design Unit: ENTITY: BIT_STUFFING
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_STUFFING.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: BIT_STUFFING 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/BIT_STUFFING__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/rx_shift_reg.vhd'
+	Design Unit: ENTITY: RX_SHIFT_REG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RX_SHIFT_REG.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: RX_SHIFT_REG 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RX_SHIFT_REG__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/err_detector.vhd'
+	Design Unit: ENTITY: ERR_DETECTOR
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ERR_DETECTOR.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: ERR_DETECTOR 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ERR_DETECTOR__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/reintegration_counter.vhd'
+	Design Unit: ENTITY: REINTEGRATION_COUNTER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/REINTEGRATION_COUNTER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: REINTEGRATION_COUNTER 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/REINTEGRATION_COUNTER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/tx_shift_reg.vhd'
+	Design Unit: ENTITY: TX_SHIFT_REG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TX_SHIFT_REG.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TX_SHIFT_REG 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TX_SHIFT_REG__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/retransmitt_counter.vhd'
+	Design Unit: ENTITY: RETRANSMITT_COUNTER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RETRANSMITT_COUNTER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: RETRANSMITT_COUNTER 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RETRANSMITT_COUNTER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/control_counter.vhd'
+	Design Unit: ENTITY: CONTROL_COUNTER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CONTROL_COUNTER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CONTROL_COUNTER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CONTROL_COUNTER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/trigger_mux.vhd'
+	Design Unit: ENTITY: TRIGGER_MUX
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TRIGGER_MUX.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TRIGGER_MUX 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TRIGGER_MUX__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/protocol_control_fsm.vhd'
+	Design Unit: ENTITY: PROTOCOL_CONTROL_FSM
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/PROTOCOL_CONTROL_FSM.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: PROTOCOL_CONTROL_FSM 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/PROTOCOL_CONTROL_FSM__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/protocol_control.vhd'
+	Design Unit: ENTITY: PROTOCOL_CONTROL
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/PROTOCOL_CONTROL.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: PROTOCOL_CONTROL 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/PROTOCOL_CONTROL__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_core/can_core.vhd'
+	Design Unit: ENTITY: CAN_CORE
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_CORE.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CAN_CORE 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_CORE__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/tx_arbitrator/tx_arbitrator_fsm.vhd'
+	Design Unit: ENTITY: TX_ARBITRATOR_FSM
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TX_ARBITRATOR_FSM.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TX_ARBITRATOR_FSM 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TX_ARBITRATOR_FSM__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/tx_arbitrator/priority_decoder.vhd'
+	Design Unit: ENTITY: PRIORITY_DECODER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/PRIORITY_DECODER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: PRIORITY_DECODER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/PRIORITY_DECODER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/tx_arbitrator/tx_arbitrator.vhd'
+	Design Unit: ENTITY: TX_ARBITRATOR
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TX_ARBITRATOR.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TX_ARBITRATOR 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TX_ARBITRATOR__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/data_mux.vhd'
+	Design Unit: ENTITY: DATA_MUX
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/DATA_MUX.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: DATA_MUX 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/DATA_MUX__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/memory_bus.vhd'
+	Design Unit: ENTITY: MEMORY_BUS_TEMPLATE
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MEMORY_BUS_TEMPLATE.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/address_decoder.vhd'
+	Design Unit: ENTITY: ADDRESS_DECODER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ADDRESS_DECODER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: ADDRESS_DECODER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ADDRESS_DECODER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/memory_reg_rw.vhd'
+	Design Unit: ENTITY: MEMORY_REG_RW
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MEMORY_REG_RW.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: MEMORY_REG_RW 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MEMORY_REG_RW__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/memory_reg_rw_lock.vhd'
+	Design Unit: ENTITY: MEMORY_REG_RW_LOCK
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MEMORY_REG_RW_LOCK.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: MEMORY_REG_RW_LOCK 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MEMORY_REG_RW_LOCK__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/memory_reg_os.vhd'
+	Design Unit: ENTITY: MEMORY_REG_OS
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MEMORY_REG_OS.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: MEMORY_REG_OS 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MEMORY_REG_OS__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/memory_reg_os_lock.vhd'
+	Design Unit: ENTITY: MEMORY_REG_OS_LOCK
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MEMORY_REG_OS_LOCK.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: MEMORY_REG_OS_LOCK 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MEMORY_REG_OS_LOCK__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/can_registers_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: CAN_REGISTERS_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_REGISTERS_PKG.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/access_signaler.vhd'
+	Design Unit: ENTITY: ACCESS_SIGNALLER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ACCESS_SIGNALLER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: ACCESS_SIGNALLER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/ACCESS_SIGNALLER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/cmn_reg_map_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: CMN_REG_MAP_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CMN_REG_MAP_PKG.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/control_registers_reg_map.vhd'
+	Design Unit: ENTITY: CONTROL_REGISTERS_REG_MAP
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CONTROL_REGISTERS_REG_MAP.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CONTROL_REGISTERS_REG_MAP 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CONTROL_REGISTERS_REG_MAP__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/generated/test_registers_reg_map.vhd'
+	Design Unit: ENTITY: TEST_REGISTERS_REG_MAP
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TEST_REGISTERS_REG_MAP.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TEST_REGISTERS_REG_MAP 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TEST_REGISTERS_REG_MAP__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/memory_registers/memory_registers.vhd'
+	Design Unit: ENTITY: MEMORY_REGISTERS
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MEMORY_REGISTERS.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: MEMORY_REGISTERS 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/MEMORY_REGISTERS__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/rx_buffer/rx_buffer_pointers.vhd'
+	Design Unit: ENTITY: RX_BUFFER_POINTERS
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RX_BUFFER_POINTERS.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: RX_BUFFER_POINTERS 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RX_BUFFER_POINTERS__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/rx_buffer/rx_buffer_fsm.vhd'
+	Design Unit: ENTITY: RX_BUFFER_FSM
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RX_BUFFER_FSM.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: RX_BUFFER_FSM 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RX_BUFFER_FSM__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/rx_buffer/rx_buffer_ram.vhd'
+	Design Unit: ENTITY: RX_BUFFER_RAM
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RX_BUFFER_RAM.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: RX_BUFFER_RAM 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RX_BUFFER_RAM__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/rx_buffer/rx_buffer.vhd'
+	Design Unit: ENTITY: RX_BUFFER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RX_BUFFER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: RX_BUFFER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/RX_BUFFER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/txt_buffer/txt_buffer_fsm.vhd'
+	Design Unit: ENTITY: TXT_BUFFER_FSM
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TXT_BUFFER_FSM.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TXT_BUFFER_FSM 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TXT_BUFFER_FSM__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/txt_buffer/txt_buffer_ram.vhd'
+	Design Unit: ENTITY: TXT_BUFFER_RAM
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TXT_BUFFER_RAM.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TXT_BUFFER_RAM 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TXT_BUFFER_RAM__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/txt_buffer/txt_buffer.vhd'
+	Design Unit: ENTITY: TXT_BUFFER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TXT_BUFFER.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TXT_BUFFER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/TXT_BUFFER__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_top_level.vhd'
+	Design Unit: ENTITY: CAN_TOP_LEVEL
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_TOP_LEVEL.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CAN_TOP_LEVEL 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_TOP_LEVEL__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_top_ahb.vhd'
+	Design Unit: ENTITY: CAN_TOP_AHB
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_TOP_AHB.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CAN_TOP_AHB 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_TOP_AHB__RTL.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/src/can_top_apb.vhd'
+	Design Unit: ENTITY: CAN_TOP_APB
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_TOP_APB.sim
+	Design Unit: ARCHITECTURE BODY: RTL
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CAN_TOP_APB 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_rtl/64/CAN_TOP_APB__RTL.sim
+[95mCompiling files for library: 'ctu_can_fd_tb'[0m
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/contexts/ieee_context.vhd'
+	Design Unit: CONTEXT DECLARATION: IEEE_CONTEXT
+	Semantic processing phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/IEEE_CONTEXT.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/contexts/rtl_context.vhd'
+	Design Unit: CONTEXT DECLARATION: RTL_CONTEXT
+	Semantic processing phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RTL_CONTEXT.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/contexts/tb_agents_context.vhd'
+	Design Unit: CONTEXT DECLARATION: TB_AGENTS_CONTEXT
+	Semantic processing phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_AGENTS_CONTEXT.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/contexts/tb_common_context.vhd'
+	Design Unit: CONTEXT DECLARATION: TB_COMMON_CONTEXT
+	Semantic processing phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_COMMON_CONTEXT.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/pkg/tb_prot_types_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: TB_PROT_TYPES_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_PROT_TYPES_PKG.sim
+	Design Unit: PACKAGE BODY: TB_PROT_TYPES_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_PROT_TYPES_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/pkg/tb_shared_vars_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: TB_SHARED_VARS_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_SHARED_VARS_PKG.sim
+	Design Unit: PACKAGE BODY: TB_SHARED_VARS_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_SHARED_VARS_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/pkg/tb_report_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: TB_REPORT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_REPORT_PKG.sim
+	Design Unit: PACKAGE BODY: TB_REPORT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_REPORT_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/pkg/tb_communication_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: TB_COMMUNICATION_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_COMMUNICATION_PKG.sim
+	Design Unit: PACKAGE BODY: TB_COMMUNICATION_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_COMMUNICATION_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/pkg/tb_reg_map_defs_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: TB_REG_MAP_DEFS_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_REG_MAP_DEFS_PKG.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/pkg/tb_random_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: TB_RANDOM_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_RANDOM_PKG.sim
+	Design Unit: PACKAGE BODY: TB_RANDOM_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_RANDOM_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/pkg/tb_pli_conversion_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: TB_PLI_CONVERSION_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_PLI_CONVERSION_PKG.sim
+	Design Unit: PACKAGE BODY: TB_PLI_CONVERSION_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_PLI_CONVERSION_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/pkg/can_fd_tb_register_map.vhd'
+	Design Unit: PACKAGE DECLARATION: CAN_FD_TB_REGISTER_MAP
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/CAN_FD_TB_REGISTER_MAP.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/common/signal_delayer.vhd'
+	Design Unit: ENTITY: SIGNAL_DELAYER_VEC
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SIGNAL_DELAYER_VEC.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: SIGNAL_DELAYER_VEC 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SIGNAL_DELAYER_VEC__TB.sim
+	Design Unit: ENTITY: SIGNAL_DELAYER
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SIGNAL_DELAYER.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: SIGNAL_DELAYER 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SIGNAL_DELAYER__TB.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/test_probe_agent/test_probe_agent_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: TEST_PROBE_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TEST_PROBE_AGENT_PKG.sim
+	Design Unit: PACKAGE BODY: TEST_PROBE_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TEST_PROBE_AGENT_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/clock_agent/clk_gen_agent_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: CLK_GEN_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/CLK_GEN_AGENT_PKG.sim
+	Design Unit: PACKAGE BODY: CLK_GEN_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/CLK_GEN_AGENT_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/interrupt_agent/interrupt_agent_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: INTERRUPT_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INTERRUPT_AGENT_PKG.sim
+	Design Unit: PACKAGE BODY: INTERRUPT_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INTERRUPT_AGENT_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/timestamp_agent/timestamp_agent_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: TIMESTAMP_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TIMESTAMP_AGENT_PKG.sim
+	Design Unit: PACKAGE BODY: TIMESTAMP_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TIMESTAMP_AGENT_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/memory_bus_agent/mem_bus_agent_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: MEM_BUS_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MEM_BUS_AGENT_PKG.sim
+	Design Unit: PACKAGE BODY: MEM_BUS_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MEM_BUS_AGENT_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/reset_agent/reset_agent_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: RESET_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RESET_AGENT_PKG.sim
+	Design Unit: PACKAGE BODY: RESET_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RESET_AGENT_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/can_agent/can_agent_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: CAN_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/CAN_AGENT_PKG.sim
+	Design Unit: PACKAGE BODY: CAN_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/CAN_AGENT_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/test_controller_agent/test_controller_agent_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: TEST_CONTROLLER_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TEST_CONTROLLER_AGENT_PKG.sim
+	Design Unit: PACKAGE BODY: TEST_CONTROLLER_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TEST_CONTROLLER_AGENT_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/feature_test_agent/feature_test_agent_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: FEATURE_TEST_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FEATURE_TEST_AGENT_PKG.sim
+	Design Unit: PACKAGE BODY: FEATURE_TEST_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FEATURE_TEST_AGENT_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/reference_test_agent/reference_test_agent_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: REFERENCE_TEST_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_TEST_AGENT_PKG.sim
+	Design Unit: PACKAGE BODY: REFERENCE_TEST_AGENT_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_TEST_AGENT_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/settings_tbfbo_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: SETTINGS_TBFBO_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SETTINGS_TBFBO_FTEST.sim
+	Design Unit: PACKAGE BODY: SETTINGS_TBFBO_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SETTINGS_TBFBO_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/settings_nisofd_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: SETTINGS_NISOFD_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SETTINGS_NISOFD_FTEST.sim
+	Design Unit: PACKAGE BODY: SETTINGS_NISOFD_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SETTINGS_NISOFD_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/status_eft_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: STATUS_EFT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_EFT_FTEST.sim
+	Design Unit: PACKAGE BODY: STATUS_EFT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_EFT_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/fault_state_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: FAULT_STATE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FAULT_STATE_FTEST.sim
+	Design Unit: PACKAGE BODY: FAULT_STATE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FAULT_STATE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/alc_srr_rtr_2_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ALC_SRR_RTR_2_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_SRR_RTR_2_FTEST.sim
+	Design Unit: PACKAGE BODY: ALC_SRR_RTR_2_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_SRR_RTR_2_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/invalid_frames_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INVALID_FRAMES_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INVALID_FRAMES_FTEST.sim
+	Design Unit: PACKAGE BODY: INVALID_FRAMES_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INVALID_FRAMES_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_rxbam_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_RXBAM_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_RXBAM_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_RXBAM_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_RXBAM_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_do_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_DO_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_DO_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_DO_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_DO_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_arb_bit_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_ARB_BIT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_ARB_BIT_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_ARB_BIT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_ARB_BIT_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_al_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_AL_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_AL_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_AL_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_AL_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_sof_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_SOF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_SOF_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_SOF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_SOF_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_bus_monitoring_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_BUS_MONITORING_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_BUS_MONITORING_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_BUS_MONITORING_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_BUS_MONITORING_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tx_arb_consistency_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TX_ARB_CONSISTENCY_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_ARB_CONSISTENCY_FTEST.sim
+	Design Unit: PACKAGE BODY: TX_ARB_CONSISTENCY_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_ARB_CONSISTENCY_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tx_arb_consistency_2_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TX_ARB_CONSISTENCY_2_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_ARB_CONSISTENCY_2_FTEST.sim
+	Design Unit: PACKAGE BODY: TX_ARB_CONSISTENCY_2_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_ARB_CONSISTENCY_2_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/status_rxs_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: STATUS_RXS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_RXS_FTEST.sim
+	Design Unit: PACKAGE BODY: STATUS_RXS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_RXS_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/single_bus_node_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: SINGLE_BUS_NODE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SINGLE_BUS_NODE_FTEST.sim
+	Design Unit: PACKAGE BODY: SINGLE_BUS_NODE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SINGLE_BUS_NODE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/ssp_cfg_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: SSP_CFG_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SSP_CFG_FTEST.sim
+	Design Unit: PACKAGE BODY: SSP_CFG_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SSP_CFG_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/alc_rtr_ext_id_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ALC_RTR_EXT_ID_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_RTR_EXT_ID_FTEST.sim
+	Design Unit: PACKAGE BODY: ALC_RTR_EXT_ID_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_RTR_EXT_ID_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/no_sof_tx_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: NO_SOF_TX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/NO_SOF_TX_FTEST.sim
+	Design Unit: PACKAGE BODY: NO_SOF_TX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/NO_SOF_TX_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/status_rxpe_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: STATUS_RXPE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_RXPE_FTEST.sim
+	Design Unit: PACKAGE BODY: STATUS_RXPE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_RXPE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tst_mem_acc_rx_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TST_MEM_ACC_RX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TST_MEM_ACC_RX_FTEST.sim
+	Design Unit: PACKAGE BODY: TST_MEM_ACC_RX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TST_MEM_ACC_RX_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_txbbm_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_TXBBM_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TXBBM_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_TXBBM_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TXBBM_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_norm_fd_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_NORM_FD_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_NORM_FD_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_NORM_FD_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_NORM_FD_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/btr_ssp_access_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: BTR_SSP_ACCESS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BTR_SSP_ACCESS_FTEST.sim
+	Design Unit: PACKAGE BODY: BTR_SSP_ACCESS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BTR_SSP_ACCESS_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/txt_buffer_hazard_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TXT_BUFFER_HAZARD_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_HAZARD_FTEST.sim
+	Design Unit: PACKAGE BODY: TXT_BUFFER_HAZARD_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_HAZARD_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/txt_buffer_transitions_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TXT_BUFFER_TRANSITIONS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_TRANSITIONS_FTEST.sim
+	Design Unit: PACKAGE BODY: TXT_BUFFER_TRANSITIONS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_TRANSITIONS_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/txt_buffer_transitions_2_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TXT_BUFFER_TRANSITIONS_2_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_TRANSITIONS_2_FTEST.sim
+	Design Unit: PACKAGE BODY: TXT_BUFFER_TRANSITIONS_2_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_TRANSITIONS_2_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/txt_buffer_transitions_3_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TXT_BUFFER_TRANSITIONS_3_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_TRANSITIONS_3_FTEST.sim
+	Design Unit: PACKAGE BODY: TXT_BUFFER_TRANSITIONS_3_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_TRANSITIONS_3_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/txt_buffer_transitions_4_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TXT_BUFFER_TRANSITIONS_4_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_TRANSITIONS_4_FTEST.sim
+	Design Unit: PACKAGE BODY: TXT_BUFFER_TRANSITIONS_4_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_TRANSITIONS_4_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_txbbm_3_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_TXBBM_3_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TXBBM_3_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_TXBBM_3_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TXBBM_3_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/ssp_4_bits_flying_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: SSP_4_BITS_FLYING_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SSP_4_BITS_FLYING_FTEST.sim
+	Design Unit: PACKAGE BODY: SSP_4_BITS_FLYING_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SSP_4_BITS_FLYING_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/glitch_filtering_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: GLITCH_FILTERING_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/GLITCH_FILTERING_FTEST.sim
+	Design Unit: PACKAGE BODY: GLITCH_FILTERING_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/GLITCH_FILTERING_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_arb_stuff_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_ARB_STUFF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_ARB_STUFF_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_ARB_STUFF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_ARB_STUFF_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tx_status_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TX_STATUS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_STATUS_FTEST.sim
+	Design Unit: PACKAGE BODY: TX_STATUS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_STATUS_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/btr_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: BTR_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BTR_FTEST.sim
+	Design Unit: PACKAGE BODY: BTR_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BTR_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/command_frcrst_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: COMMAND_FRCRST_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/COMMAND_FRCRST_FTEST.sim
+	Design Unit: PACKAGE BODY: COMMAND_FRCRST_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/COMMAND_FRCRST_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/status_idle_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: STATUS_IDLE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_IDLE_FTEST.sim
+	Design Unit: PACKAGE BODY: STATUS_IDLE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_IDLE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_ack_ack_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_ACK_ACK_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_ACK_ACK_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_ACK_ACK_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_ACK_ACK_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/message_filter_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MESSAGE_FILTER_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MESSAGE_FILTER_FTEST.sim
+	Design Unit: PACKAGE BODY: MESSAGE_FILTER_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MESSAGE_FILTER_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/bus_start_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: BUS_START_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BUS_START_FTEST.sim
+	Design Unit: PACKAGE BODY: BUS_START_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BUS_START_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_loopback_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_LOOPBACK_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_LOOPBACK_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_LOOPBACK_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_LOOPBACK_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_ewl_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_EWL_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_EWL_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_EWL_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_EWL_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/rec_saturation_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: REC_SATURATION_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REC_SATURATION_FTEST.sim
+	Design Unit: PACKAGE BODY: REC_SATURATION_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REC_SATURATION_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/status_rxne_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: STATUS_RXNE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_RXNE_FTEST.sim
+	Design Unit: PACKAGE BODY: STATUS_RXNE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_RXNE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/byte_enable_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: BYTE_ENABLE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BYTE_ENABLE_FTEST.sim
+	Design Unit: PACKAGE BODY: BYTE_ENABLE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BYTE_ENABLE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/rx_status_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: RX_STATUS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_STATUS_FTEST.sim
+	Design Unit: PACKAGE BODY: RX_STATUS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_STATUS_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/rx_status_rxfrc_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: RX_STATUS_RXFRC_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_STATUS_RXFRC_FTEST.sim
+	Design Unit: PACKAGE BODY: RX_STATUS_RXFRC_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_STATUS_RXFRC_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/rx_status_mof_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: RX_STATUS_MOF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_STATUS_MOF_FTEST.sim
+	Design Unit: PACKAGE BODY: RX_STATUS_MOF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_STATUS_MOF_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/txt_buffer_byte_access_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TXT_BUFFER_BYTE_ACCESS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_BYTE_ACCESS_FTEST.sim
+	Design Unit: PACKAGE BODY: TXT_BUFFER_BYTE_ACCESS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TXT_BUFFER_BYTE_ACCESS_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/frame_test_ignore_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: FRAME_TEST_IGNORE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FRAME_TEST_IGNORE_FTEST.sim
+	Design Unit: PACKAGE BODY: FRAME_TEST_IGNORE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FRAME_TEST_IGNORE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_ovr_frm_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_OVR_FRM_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_OVR_FRM_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_OVR_FRM_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_OVR_FRM_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/disable_in_tx_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: DISABLE_IN_TX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/DISABLE_IN_TX_FTEST.sim
+	Design Unit: PACKAGE BODY: DISABLE_IN_TX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/DISABLE_IN_TX_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_rx_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_RX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_RX_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_RX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_RX_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_rxf_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_RXF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_RXF_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_RXF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_RXF_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_bs_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_BS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_BS_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_BS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_BS_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_rxne_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_RXNE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_RXNE_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_RXNE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_RXNE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_txbhci_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_TXBHCI_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_TXBHCI_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_TXBHCI_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_TXBHCI_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/command_rrb_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: COMMAND_RRB_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/COMMAND_RRB_FTEST.sim
+	Design Unit: PACKAGE BODY: COMMAND_RRB_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/COMMAND_RRB_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/alc_base_id_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ALC_BASE_ID_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_BASE_ID_FTEST.sim
+	Design Unit: PACKAGE BODY: ALC_BASE_ID_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_BASE_ID_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/one_shot_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ONE_SHOT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ONE_SHOT_FTEST.sim
+	Design Unit: PACKAGE BODY: ONE_SHOT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ONE_SHOT_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/retr_limit_3_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: RETR_LIMIT_3_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RETR_LIMIT_3_FTEST.sim
+	Design Unit: PACKAGE BODY: RETR_LIMIT_3_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RETR_LIMIT_3_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/btr_minimal_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: BTR_MINIMAL_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BTR_MINIMAL_FTEST.sim
+	Design Unit: PACKAGE BODY: BTR_MINIMAL_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BTR_MINIMAL_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/alc_srr_rtr_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ALC_SRR_RTR_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_SRR_RTR_FTEST.sim
+	Design Unit: PACKAGE BODY: ALC_SRR_RTR_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_SRR_RTR_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_ctrl_bit_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_CTRL_BIT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_CTRL_BIT_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_CTRL_BIT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_CTRL_BIT_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/retr_limit_2_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: RETR_LIMIT_2_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RETR_LIMIT_2_FTEST.sim
+	Design Unit: PACKAGE BODY: RETR_LIMIT_2_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RETR_LIMIT_2_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_tx_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_TX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_TX_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_TX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_TX_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_txbbm_4_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_TXBBM_4_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TXBBM_4_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_TXBBM_4_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TXBBM_4_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_fd_enable_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_FD_ENABLE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_FD_ENABLE_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_FD_ENABLE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_FD_ENABLE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_fcs_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_FCS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_FCS_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_FCS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_FCS_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/timestamp_low_high_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TIMESTAMP_LOW_HIGH_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TIMESTAMP_LOW_HIGH_FTEST.sim
+	Design Unit: PACKAGE BODY: TIMESTAMP_LOW_HIGH_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TIMESTAMP_LOW_HIGH_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/rx_settings_rtsop_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: RX_SETTINGS_RTSOP_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_SETTINGS_RTSOP_FTEST.sim
+	Design Unit: PACKAGE BODY: RX_SETTINGS_RTSOP_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_SETTINGS_RTSOP_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tx_cmd_set_ready_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TX_CMD_SET_READY_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_CMD_SET_READY_FTEST.sim
+	Design Unit: PACKAGE BODY: TX_CMD_SET_READY_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_CMD_SET_READY_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tx_arb_time_tran_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TX_ARB_TIME_TRAN_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_ARB_TIME_TRAN_FTEST.sim
+	Design Unit: PACKAGE BODY: TX_ARB_TIME_TRAN_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_ARB_TIME_TRAN_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/alc_ide_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ALC_IDE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_IDE_FTEST.sim
+	Design Unit: PACKAGE BODY: ALC_IDE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_IDE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_data_bit_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_DATA_BIT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_DATA_BIT_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_DATA_BIT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_DATA_BIT_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/command_ercrst_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: COMMAND_ERCRST_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/COMMAND_ERCRST_FTEST.sim
+	Design Unit: PACKAGE BODY: COMMAND_ERCRST_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/COMMAND_ERCRST_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/btr_maximal_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: BTR_MAXIMAL_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BTR_MAXIMAL_FTEST.sim
+	Design Unit: PACKAGE BODY: BTR_MAXIMAL_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BTR_MAXIMAL_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/overload_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: OVERLOAD_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/OVERLOAD_FTEST.sim
+	Design Unit: PACKAGE BODY: OVERLOAD_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/OVERLOAD_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_fdrf_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_FDRF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_FDRF_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_FDRF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_FDRF_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tx_priority_change_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TX_PRIORITY_CHANGE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_PRIORITY_CHANGE_FTEST.sim
+	Design Unit: PACKAGE BODY: TX_PRIORITY_CHANGE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_PRIORITY_CHANGE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_frame_filters_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_FRAME_FILTERS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_FRAME_FILTERS_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_FRAME_FILTERS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_FRAME_FILTERS_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/frame_test_sdlc_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: FRAME_TEST_SDLC_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FRAME_TEST_SDLC_FTEST.sim
+	Design Unit: PACKAGE BODY: FRAME_TEST_SDLC_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FRAME_TEST_SDLC_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/btr_fd_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: BTR_FD_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BTR_FD_FTEST.sim
+	Design Unit: PACKAGE BODY: BTR_FD_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/BTR_FD_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/device_id_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: DEVICE_ID_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/DEVICE_ID_FTEST.sim
+	Design Unit: PACKAGE BODY: DEVICE_ID_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/DEVICE_ID_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/dlc_can20_8_64_bytes_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: DLC_CAN20_8_64_BYTES_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/DLC_CAN20_8_64_BYTES_FTEST.sim
+	Design Unit: PACKAGE BODY: DLC_CAN20_8_64_BYTES_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/DLC_CAN20_8_64_BYTES_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_self_test_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_SELF_TEST_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_SELF_TEST_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_SELF_TEST_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_SELF_TEST_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tx_cmd_set_abort_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TX_CMD_SET_ABORT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_CMD_SET_ABORT_FTEST.sim
+	Design Unit: PACKAGE BODY: TX_CMD_SET_ABORT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_CMD_SET_ABORT_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/command_cdo_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: COMMAND_CDO_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/COMMAND_CDO_FTEST.sim
+	Design Unit: PACKAGE BODY: COMMAND_CDO_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/COMMAND_CDO_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_rst_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_RST_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_RST_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_RST_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_RST_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_err_frm_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_ERR_FRM_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_ERR_FRM_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_ERR_FRM_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_ERR_FRM_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/rx_buf_empty_read_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: RX_BUF_EMPTY_READ_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_BUF_EMPTY_READ_FTEST.sim
+	Design Unit: PACKAGE BODY: RX_BUF_EMPTY_READ_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_BUF_EMPTY_READ_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/trv_delay_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TRV_DELAY_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TRV_DELAY_FTEST.sim
+	Design Unit: PACKAGE BODY: TRV_DELAY_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TRV_DELAY_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tx_cmd_set_empty_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TX_CMD_SET_EMPTY_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_CMD_SET_EMPTY_FTEST.sim
+	Design Unit: PACKAGE BODY: TX_CMD_SET_EMPTY_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_CMD_SET_EMPTY_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_be_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_BE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_BE_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_BE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_BE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/frame_test_fcrc_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: FRAME_TEST_FCRC_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FRAME_TEST_FCRC_FTEST.sim
+	Design Unit: PACKAGE BODY: FRAME_TEST_FCRC_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FRAME_TEST_FCRC_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tx_from_intermission_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TX_FROM_INTERMISSION_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_FROM_INTERMISSION_FTEST.sim
+	Design Unit: PACKAGE BODY: TX_FROM_INTERMISSION_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_FROM_INTERMISSION_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/alc_id_extension_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ALC_ID_EXTENSION_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_ID_EXTENSION_FTEST.sim
+	Design Unit: PACKAGE BODY: ALC_ID_EXTENSION_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_ID_EXTENSION_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_txbbm_5_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_TXBBM_5_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TXBBM_5_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_TXBBM_5_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TXBBM_5_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/status_ewl_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: STATUS_EWL_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_EWL_FTEST.sim
+	Design Unit: PACKAGE BODY: STATUS_EWL_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_EWL_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_ctrl_form_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_CTRL_FORM_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_CTRL_FORM_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_CTRL_FORM_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_CTRL_FORM_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tx_priority_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TX_PRIORITY_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_PRIORITY_FTEST.sim
+	Design Unit: PACKAGE BODY: TX_PRIORITY_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_PRIORITY_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tst_mem_acc_txt_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TST_MEM_ACC_TXT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TST_MEM_ACC_TXT_FTEST.sim
+	Design Unit: PACKAGE BODY: TST_MEM_ACC_TXT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TST_MEM_ACC_TXT_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_crc_bit_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_CRC_BIT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_CRC_BIT_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_CRC_BIT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_CRC_BIT_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_eof_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_EOF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_EOF_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_EOF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_EOF_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_pex_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_PEX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_PEX_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_PEX_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_PEX_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/alc_rtr_r0_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ALC_RTR_R0_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_RTR_R0_FTEST.sim
+	Design Unit: PACKAGE BODY: ALC_RTR_R0_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ALC_RTR_R0_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/retr_limit_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: RETR_LIMIT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RETR_LIMIT_FTEST.sim
+	Design Unit: PACKAGE BODY: RETR_LIMIT_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RETR_LIMIT_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/status_txs_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: STATUS_TXS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_TXS_FTEST.sim
+	Design Unit: PACKAGE BODY: STATUS_TXS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_TXS_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_test_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_TEST_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TEST_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_TEST_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TEST_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/stuff_in_data_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: STUFF_IN_DATA_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STUFF_IN_DATA_FTEST.sim
+	Design Unit: PACKAGE BODY: STUFF_IN_DATA_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STUFF_IN_DATA_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/scan_mode_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: SCAN_MODE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SCAN_MODE_FTEST.sim
+	Design Unit: PACKAGE BODY: SCAN_MODE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/SCAN_MODE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_txbbm_2_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_TXBBM_2_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TXBBM_2_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_TXBBM_2_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_TXBBM_2_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/tx_counter_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: TX_COUNTER_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_COUNTER_FTEST.sim
+	Design Unit: PACKAGE BODY: TX_COUNTER_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TX_COUNTER_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/mode_restr_op_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: MODE_RESTR_OP_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_RESTR_OP_FTEST.sim
+	Design Unit: PACKAGE BODY: MODE_RESTR_OP_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MODE_RESTR_OP_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/err_capt_crc_err_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: ERR_CAPT_CRC_ERR_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_CRC_ERR_FTEST.sim
+	Design Unit: PACKAGE BODY: ERR_CAPT_CRC_ERR_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/ERR_CAPT_CRC_ERR_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/rx_counter_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: RX_COUNTER_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_COUNTER_FTEST.sim
+	Design Unit: PACKAGE BODY: RX_COUNTER_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RX_COUNTER_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/int_of_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: INT_OF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_OF_FTEST.sim
+	Design Unit: PACKAGE BODY: INT_OF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INT_OF_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/status_txnf_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: STATUS_TXNF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_TXNF_FTEST.sim
+	Design Unit: PACKAGE BODY: STATUS_TXNF_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_TXNF_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/status_txpe_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: STATUS_TXPE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_TXPE_FTEST.sim
+	Design Unit: PACKAGE BODY: STATUS_TXPE_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/STATUS_TXPE_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/frame_test_fstc_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: FRAME_TEST_FSTC_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FRAME_TEST_FSTC_FTEST.sim
+	Design Unit: PACKAGE BODY: FRAME_TEST_FSTC_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FRAME_TEST_FSTC_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/frame_filters_mask_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: FRAME_FILTERS_MASK_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FRAME_FILTERS_MASK_FTEST.sim
+	Design Unit: PACKAGE BODY: FRAME_FILTERS_MASK_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FRAME_FILTERS_MASK_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/feature_tests/pc_fsm_transitions_ftest.vhd'
+	Design Unit: PACKAGE DECLARATION: PC_FSM_TRANSITIONS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/PC_FSM_TRANSITIONS_FTEST.sim
+	Design Unit: PACKAGE BODY: PC_FSM_TRANSITIONS_FTEST
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/PC_FSM_TRANSITIONS_FTEST__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/feature_test_agent/feature_test_list_pkg.vhd'
+	Design Unit: PACKAGE DECLARATION: FEATURE_TEST_LIST_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FEATURE_TEST_LIST_PKG.sim
+	Design Unit: PACKAGE BODY: FEATURE_TEST_LIST_PKG
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FEATURE_TEST_LIST_PKG__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/feature_test_agent/feature_test_agent.vhd'
+	Design Unit: ENTITY: FEATURE_TEST_AGENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FEATURE_TEST_AGENT.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: FEATURE_TEST_AGENT 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/FEATURE_TEST_AGENT__TB.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/reference_test_data_sets/reference_data_set_1.vhd'
+	Design Unit: PACKAGE DECLARATION: REFERENCE_DATA_SET_1
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_1.sim
+	Design Unit: PACKAGE BODY: REFERENCE_DATA_SET_1
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_1__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/reference_test_data_sets/reference_data_set_2.vhd'
+	Design Unit: PACKAGE DECLARATION: REFERENCE_DATA_SET_2
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_2.sim
+	Design Unit: PACKAGE BODY: REFERENCE_DATA_SET_2
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_2__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/reference_test_data_sets/reference_data_set_3.vhd'
+	Design Unit: PACKAGE DECLARATION: REFERENCE_DATA_SET_3
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_3.sim
+	Design Unit: PACKAGE BODY: REFERENCE_DATA_SET_3
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_3__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/reference_test_data_sets/reference_data_set_4.vhd'
+	Design Unit: PACKAGE DECLARATION: REFERENCE_DATA_SET_4
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_4.sim
+	Design Unit: PACKAGE BODY: REFERENCE_DATA_SET_4
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_4__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/reference_test_data_sets/reference_data_set_5.vhd'
+	Design Unit: PACKAGE DECLARATION: REFERENCE_DATA_SET_5
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_5.sim
+	Design Unit: PACKAGE BODY: REFERENCE_DATA_SET_5
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_5__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/reference_test_data_sets/reference_data_set_6.vhd'
+	Design Unit: PACKAGE DECLARATION: REFERENCE_DATA_SET_6
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_6.sim
+	Design Unit: PACKAGE BODY: REFERENCE_DATA_SET_6
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_6__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/reference_test_data_sets/reference_data_set_7.vhd'
+	Design Unit: PACKAGE DECLARATION: REFERENCE_DATA_SET_7
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_7.sim
+	Design Unit: PACKAGE BODY: REFERENCE_DATA_SET_7
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_7__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/reference_test_data_sets/reference_data_set_8.vhd'
+	Design Unit: PACKAGE DECLARATION: REFERENCE_DATA_SET_8
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_8.sim
+	Design Unit: PACKAGE BODY: REFERENCE_DATA_SET_8
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_8__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/reference_test_data_sets/reference_data_set_9.vhd'
+	Design Unit: PACKAGE DECLARATION: REFERENCE_DATA_SET_9
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_9.sim
+	Design Unit: PACKAGE BODY: REFERENCE_DATA_SET_9
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_9__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/reference_test_data_sets/reference_data_set_10.vhd'
+	Design Unit: PACKAGE DECLARATION: REFERENCE_DATA_SET_10
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_10.sim
+	Design Unit: PACKAGE BODY: REFERENCE_DATA_SET_10
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_DATA_SET_10__.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/test_probe_agent/test_probe_agent.vhd'
+	Design Unit: ENTITY: TEST_PROBE_AGENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TEST_PROBE_AGENT.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TEST_PROBE_AGENT 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TEST_PROBE_AGENT__TB.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/clock_agent/clk_gen_agent.vhd'
+	Design Unit: ENTITY: CLK_GEN_AGENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/CLK_GEN_AGENT.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CLK_GEN_AGENT 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/CLK_GEN_AGENT__TB.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/interrupt_agent/interrupt_agent.vhd'
+	Design Unit: ENTITY: INTERRUPT_AGENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INTERRUPT_AGENT.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: INTERRUPT_AGENT 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/INTERRUPT_AGENT__TB.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/timestamp_agent/timestamp_agent.vhd'
+	Design Unit: ENTITY: TIMESTAMP_AGENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TIMESTAMP_AGENT.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TIMESTAMP_AGENT 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TIMESTAMP_AGENT__TB.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/memory_bus_agent/mem_bus_agent.vhd'
+	Design Unit: ENTITY: MEM_BUS_AGENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MEM_BUS_AGENT.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: MEM_BUS_AGENT 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/MEM_BUS_AGENT__TB.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/reset_agent/reset_agent.vhd'
+	Design Unit: ENTITY: RESET_AGENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RESET_AGENT.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: RESET_AGENT 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/RESET_AGENT__TB.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/can_agent/can_agent.vhd'
+	Design Unit: ENTITY: CAN_AGENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/CAN_AGENT.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CAN_AGENT 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/CAN_AGENT__TB.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/test_controller_agent/test_controller_agent.vhd'
+	Design Unit: ENTITY: TEST_CONTROLLER_AGENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TEST_CONTROLLER_AGENT.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TEST_CONTROLLER_AGENT 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TEST_CONTROLLER_AGENT__TB.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/agents/reference_test_agent/reference_test_agent.vhd'
+	Design Unit: ENTITY: REFERENCE_TEST_AGENT
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_TEST_AGENT.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: REFERENCE_TEST_AGENT 
+	
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/REFERENCE_TEST_AGENT__TB.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/ctu_can_fd_vip.vhd'
+	Design Unit: ENTITY: CTU_CAN_FD_VIP
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/CTU_CAN_FD_VIP.sim
+	Design Unit: ARCHITECTURE BODY: BEHAV
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: CTU_CAN_FD_VIP 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/CTU_CAN_FD_VIP__BEHAV.sim
+Parsing design file '/home/oille/Downloads/ctucanfd_2v5/test/main_tb/tb_top_simple_ctu_can_fd.vhd'
+	Design Unit: ENTITY: TB_TOP_CTU_CAN_FD
+	Semantic processing phase
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_TOP_CTU_CAN_FD.sim
+	Design Unit: ARCHITECTURE BODY: TB
+	Semantic processing phase
+	Above ARCHITECTURE for ENTITY: TB_TOP_CTU_CAN_FD 
+	Code generation phase
+	Writing intermediate file /home/oille/Downloads/ctucanfd_2v5/sim/build/ctu_can_fd_tb/64/TB_TOP_CTU_CAN_FD__TB.sim
+[95m********************************************************************************
+Compilation successful
+********************************************************************************[0m
+[95mStarting test: iso_7_1_7[0m
+[95m********************************************************************************
+Running elaboration
+********************************************************************************[0m
+Doing common elaboration 
+assign "iso_7_1_7" /TB_TOP_CTU_CAN_FD/test_name ("command_line":0)
+assign 841470 /TB_TOP_CTU_CAN_FD/seed ("command_line":0)
+assign 0 /TB_TOP_CTU_CAN_FD/finish_on_error ("command_line":0)
+assign 1 /TB_TOP_CTU_CAN_FD/iterations ("command_line":0)
+assign "200 ms" /TB_TOP_CTU_CAN_FD/timeout ("command_line":0)
+assign "compliance" /TB_TOP_CTU_CAN_FD/test_type ("command_line":0)
+assign 64 /TB_TOP_CTU_CAN_FD/rx_buffer_size ("command_line":0)
+assign 8 /TB_TOP_CTU_CAN_FD/txt_buffer_count ("command_line":0)
+assign False /TB_TOP_CTU_CAN_FD/sup_filtA ("command_line":0)
+assign False /TB_TOP_CTU_CAN_FD/sup_filtB ("command_line":0)
+assign False /TB_TOP_CTU_CAN_FD/sup_filtC ("command_line":0)
+assign False /TB_TOP_CTU_CAN_FD/sup_range ("command_line":0)
+assign True /TB_TOP_CTU_CAN_FD/sup_traffic_ctrs ("command_line":0)
+assign False /TB_TOP_CTU_CAN_FD/sup_parity ("command_line":0)
+assign 0 /TB_TOP_CTU_CAN_FD/target_technology ("command_line":0)
+assign False /TB_TOP_CTU_CAN_FD/reset_buffer_rams ("command_line":0)
+assign 4 /TB_TOP_CTU_CAN_FD/cfg_brp ("command_line":0)
+assign 5 /TB_TOP_CTU_CAN_FD/cfg_prop ("command_line":0)
+assign 7 /TB_TOP_CTU_CAN_FD/cfg_ph_1 ("command_line":0)
+assign 7 /TB_TOP_CTU_CAN_FD/cfg_ph_2 ("command_line":0)
+assign 5 /TB_TOP_CTU_CAN_FD/cfg_sjw ("command_line":0)
+assign 1 /TB_TOP_CTU_CAN_FD/cfg_brp_fd ("command_line":0)
+assign 5 /TB_TOP_CTU_CAN_FD/cfg_prop_fd ("command_line":0)
+assign 7 /TB_TOP_CTU_CAN_FD/cfg_ph_1_fd ("command_line":0)
+assign 7 /TB_TOP_CTU_CAN_FD/cfg_ph_2_fd ("command_line":0)
+assign 5 /TB_TOP_CTU_CAN_FD/cfg_sjw_fd ("command_line":0)
+assign "25 ns" /TB_TOP_CTU_CAN_FD/cfg_sys_clk_period ("command_line":0)
+assign 64 /TB_TOP_CTU_CAN_FD/DUT/rx_buffer_size ("command_line":0)
+assign 841470 /TB_TOP_CTU_CAN_FD/CTU_CAN_FD_VIP_INST/seed ("command_line":0)
+assign 0 /TB_TOP_CTU_CAN_FD/CTU_CAN_FD_VIP_INST/finish_on_error ("command_line":0)
+assign 841470 /TB_TOP_CTU_CAN_FD/CTU_CAN_FD_VIP_INST/seed ("command_line":0)
+assign 0 /TB_TOP_CTU_CAN_FD/CTU_CAN_FD_VIP_INST/finish_on_error ("command_line":0)
+assign 841470 /TB_TOP_CTU_CAN_FD/CTU_CAN_FD_VIP_INST/TEST_CONTROLLER_AGENT_INST/seed ("command_line":0)
+assign 841470 /TB_TOP_CTU_CAN_FD/CTU_CAN_FD_VIP_INST/TEST_CONTROLLER_AGENT_INST/seed ("command_line":0)
+
+Note-[SIMU-RESOLUTION] Simulation time resolution
+  Simulation time resolution is 1 FS
+
+
+/tools/synopsys/vcs/S-2021.09-SP1/bin/vcs: line 33831: 3210018 Segmentation fault      (core dumped) ${TOOL_HOME}/bin/cfs_ident_exec -f ${XML_INPUT_EXE} -o "${fsearchDir}/idents_tapi.xml" -o_SrcFile "${dirSrcFiles}/src_files_c" ${all_dyn_libs} > tapi_xml_writer.log
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic -Wl,-E -Wl,-rpath='$ORIGIN'/simv.daidir/scsim.db.dir -Wl,-rpath=./simv.daidir/scsim.db.dir -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/tools/synopsys/vcs/S-2021.09-SP1/linux64/lib -L/tools/synopsys/vcs/S-2021.09-SP1/linux64/lib -Wl,-rpath-link=./ -Wl,--no-as-needed       libvhdlobjs.so vh/ScMain.o vh/scscomm.o vh/scsFilelist.o   /usr/lib64/libnuma.so.1  -lerrorinf -lsnpsmalloc -lvfs    -lvcsmx -lreader_vhdl /tools/synopsys/vcs/S-2021.09-SP1/linux64/lib/mx_stubs.o -lvirpli /tools/synopsys/vcs/S-2021.09-SP1/linux64/lib/libmxsaif-O.a -lsimprofile -luclinative /tools/synopsys/vcs/S-2021.09-SP1/linux64/lib/vcs_tls.o   -Wl,-whole-archive      -Wl,-no-whole-archive           /tools/synopsys/vcs/S-2021.09-SP1/linux64/lib/vcs_save_restore_new.o /tools/synopsys/verdi/S-2021.09-SP1/share/PLI/VCS/LINUX64/pli.a -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+[95m********************************************************************************
+Elaboration successful
+********************************************************************************[0m
+[95m********************************************************************************
+Launching simulation
+********************************************************************************[0m
+logDir = /home/oille/Downloads/ctucanfd_2v5/sim/build/sim_tb_rtl_test_compliance_full_typ_iso_7_1_7_841470/verdiLog
+
+
+                                   Verdi (R)
+
+               Version S-2021.09-SP1 for linux64 - Nov 29, 2021 
+
+                    Copyright (c) 1999 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+rcfile = /tools/synopsys/verdi/S-2021.09-SP1/etc/novas.rc
+*WARN* Cannot open /home/oille/Downloads/ctucanfd_2v5/sim/build/sim_tb_rtl_test_compliance_full_typ_iso_7_1_7_841470/novas.conf for read access. No such file or directory
+guiConfFile (read)= /home/oille/novas.conf ($HOME directory)
+guiConfFile (write)= /home/oille/Downloads/ctucanfd_2v5/sim/build/sim_tb_rtl_test_compliance_full_typ_iso_7_1_7_841470/novas.conf (working directory)
+[95m********************************************************************************
+Simulation Done
+********************************************************************************[0m
+[95m********************************************************************************
+Checking log files
+********************************************************************************[0m
+************************************************************************************************************************************************************************
+Test log file                                                                                  Run-time      Errors    Warnings    Ignored   Ignored     Result         
+                                                                                                                                   Errors    Warnings                   
+************************************************************************************************************************************************************************
+sim_tb_rtl_test_compliance_full_typ_iso_7_1_7_841470_2023_12_22_09_19_49_693757.log            97.9          0         0           0         0           [92mPASS[0m  
+[95mList of errors:[0m
+[95mList of warnings:[0m
+[95mList of ignored errors:[0m
+[95mList of ignored warnings:[0m
+elab_tb_rtl_test_compliance_full_typ_iso_7_1_7_2023_12_22_09_19_33_092078.log                  16.5          0         0           0         0           [92mPASS[0m  
+[95mList of errors:[0m
+[95mList of warnings:[0m
+[95mList of ignored errors:[0m
+[95mList of ignored warnings:[0m
+************************************************************************************************************************************************************************
+Summary                                                                                        114.5         0         0           0         0           PASS: 2/2      
+************************************************************************************************************************************************************************

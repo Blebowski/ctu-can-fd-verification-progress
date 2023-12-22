@@ -1,0 +1,1 @@
+ts_sim_run.py --recompile --clear tb_rtl_test_compliance_full_typ iso_7_1_7 --gui=verdi --dump-waves -vv | tee verdi_debug_log

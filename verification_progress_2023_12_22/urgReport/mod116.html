@@ -1,0 +1,3385 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_RTL.TXT_BUFFER_FSM RTL</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_RTL.TXT_BUFFER_FSM RTL'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_RTL.TXT_BUFFER_FSM RTL')">CTU_CAN_FD_RTL.TXT_BUFFER_FSM RTL</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 97.57</td>
+<td class="s10 cl rt"><a href="mod116.html#Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116.html#Cond" > 94.41</a></td>
+<td class="s10 cl rt"><a href="mod116.html#Toggle" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116.html#FSM" > 96.30</a></td>
+<td class="s9 cl rt"><a href="mod116.html#Branch" > 97.14</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_2v5/src/txt_buffer/txt_buffer_fsm.vhd')">/home/oille/Downloads/ctucanfd_2v5/src/txt_buffer/txt_buffer_fsm.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_1.html#inst_tag_424"  onclick="showContent('inst_tag_424')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.TXT_BUF_COMP_GEN(3).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST</a></td>
+<td class="s2 cl rt"> 23.34</td>
+<td class="s2 cl rt"><a href="mod116_1.html#inst_tag_424_Line" > 23.64</a></td>
+<td class="s3 cl rt"><a href="mod116_1.html#inst_tag_424_Cond" > 35.66</a></td>
+<td class="s3 cl rt"><a href="mod116_1.html#inst_tag_424_Toggle" > 30.26</a></td>
+<td class="s0 cl rt"><a href="mod116_1.html#inst_tag_424_FSM" >  0.00</a></td>
+<td class="s2 cl rt"><a href="mod116_1.html#inst_tag_424_Branch" > 27.14</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_1.html#inst_tag_423"  onclick="showContent('inst_tag_423')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.TXT_BUF_COMP_GEN(2).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST</a></td>
+<td class="s4 cl rt"> 47.88</td>
+<td class="s4 cl rt"><a href="mod116_1.html#inst_tag_423_Line" > 43.64</a></td>
+<td class="s6 cl rt"><a href="mod116_1.html#inst_tag_423_Cond" > 60.14</a></td>
+<td class="s6 cl rt"><a href="mod116_1.html#inst_tag_423_Toggle" > 67.11</a></td>
+<td class="s1 cl rt"><a href="mod116_1.html#inst_tag_423_FSM" > 18.52</a></td>
+<td class="s5 cl rt"><a href="mod116_1.html#inst_tag_423_Branch" > 50.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_1.html#inst_tag_422"  onclick="showContent('inst_tag_422')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.TXT_BUF_COMP_GEN(1).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST</a></td>
+<td class="s5 cl rt"> 50.99</td>
+<td class="s4 cl rt"><a href="mod116_1.html#inst_tag_422_Line" > 49.09</a></td>
+<td class="s6 cl rt"><a href="mod116_1.html#inst_tag_422_Cond" > 62.24</a></td>
+<td class="s6 cl rt"><a href="mod116_1.html#inst_tag_422_Toggle" > 67.11</a></td>
+<td class="s2 cl rt"><a href="mod116_1.html#inst_tag_422_FSM" > 22.22</a></td>
+<td class="s5 cl rt"><a href="mod116_1.html#inst_tag_422_Branch" > 54.29</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_1.html#inst_tag_421"  onclick="showContent('inst_tag_421')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.TXT_BUF_COMP_GEN(0).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST</a></td>
+<td class="s5 cl rt"> 56.35</td>
+<td class="s5 cl rt"><a href="mod116_1.html#inst_tag_421_Line" > 54.55</a></td>
+<td class="s6 cl rt"><a href="mod116_1.html#inst_tag_421_Cond" > 62.24</a></td>
+<td class="s6 cl rt"><a href="mod116_1.html#inst_tag_421_Toggle" > 67.11</a></td>
+<td class="s4 cl rt"><a href="mod116_1.html#inst_tag_421_FSM" > 40.74</a></td>
+<td class="s5 cl rt"><a href="mod116_1.html#inst_tag_421_Branch" > 57.14</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_0.html#inst_tag_420"  onclick="showContent('inst_tag_420')">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN(7).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></td>
+<td class="s9 cl rt"> 99.09</td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_420_Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_420_Cond" > 98.32</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_420_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_420_FSM" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_420_Branch" > 97.14</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_0.html#inst_tag_413"  onclick="showContent('inst_tag_413')">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN(0).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></td>
+<td class="s9 cl rt"> 99.23</td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_413_Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_413_Cond" > 97.62</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_413_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_413_FSM" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_413_Branch" > 98.51</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_0.html#inst_tag_416"  onclick="showContent('inst_tag_416')">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN(3).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></td>
+<td class="s9 cl rt"> 99.26</td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_416_Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_416_Cond" > 99.16</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_416_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_416_FSM" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_416_Branch" > 97.14</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_0.html#inst_tag_418"  onclick="showContent('inst_tag_418')">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN(5).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></td>
+<td class="s9 cl rt"> 99.26</td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_418_Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_418_Cond" > 99.16</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_418_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_418_FSM" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_418_Branch" > 97.14</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_0.html#inst_tag_415"  onclick="showContent('inst_tag_415')">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN(2).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></td>
+<td class="s9 cl rt"> 99.84</td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_415_Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_415_Cond" > 99.21</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_415_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_415_FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_415_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_0.html#inst_tag_417"  onclick="showContent('inst_tag_417')">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN(4).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></td>
+<td class="s9 cl rt"> 99.84</td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_417_Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_417_Cond" > 99.21</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_417_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_417_FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_417_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_0.html#inst_tag_419"  onclick="showContent('inst_tag_419')">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN(6).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></td>
+<td class="s9 cl rt"> 99.84</td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_419_Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_419_Cond" > 99.21</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_419_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_419_FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_419_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod116_0.html#inst_tag_414"  onclick="showContent('inst_tag_414')">TB_TOP_CTU_CAN_FD.DUT.TXT_BUF_COMP_GEN(1).TXT_BUFFER_INST.TXT_BUFFER_FSM_INST<img src="ex.gif" class="icon"></a></td>
+<td class="s9 cl rt"> 99.84</td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_414_Line" >100.00</a></td>
+<td class="s9 cl rt"><a href="mod116_0.html#inst_tag_414_Cond" > 99.21</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_414_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_414_FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod116_0.html#inst_tag_414_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_RTL.TXT_BUFFER_FSM RTL'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod116.html" >CTU_CAN_FD_RTL.TXT_BUFFER_FSM RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>55</td><td>55</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>196</td><td>7</td><td>7</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>244</td><td>44</td><td>44</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>424</td><td>4</td><td>4</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+195                         begin
+196        1/1                  if (res_n = '0') then
+197        1/1                      mr_tx_command_txce_q &lt;= '0';
+198        1/1                      mr_tx_command_txcr_q &lt;= '0';
+199        1/1                      mr_tx_command_txca_q &lt;= '0';
+200                             elsif (rising_edge(clk_sys)) then
+201        1/1                      mr_tx_command_txce_q &lt;= mr_tx_command_txce;
+202        1/1                      mr_tx_command_txcr_q &lt;= mr_tx_command_txcr;
+203        1/1                      mr_tx_command_txca_q &lt;= mr_tx_command_txca;
+204                             end if;
+205                         end process;
+206                     
+207                         tx_command_txce_valid &lt;= '1' when (mr_tx_command_txce_q = '1' and mr_tx_command_txbi = '1')
+208                                                      else
+209                                                  '0';
+210                         tx_command_txcr_valid &lt;= '1' when (mr_tx_command_txcr_q = '1' and mr_tx_command_txbi = '1')
+211                                                      else
+212                                                  '0';
+213                     
+214                         abort_applied &lt;= '1' when (mr_tx_command_txca_q = '1' and mr_tx_command_txbi = '1')
+215                                              else
+216                                          '0';
+217                     
+218                         buffer_skipped &lt;= '1' when (txtb_hw_cmd.unlock = '1' and
+219                                                    (txtb_hw_cmd.failed = '1' or txtb_hw_cmd.valid = '1') and
+220                                                    (txtb_is_bb = '1'))
+221                                               else
+222                                           '0';
+223                     
+224                         transient_state &lt;= '1' when ((curr_state = s_txt_ab_prog) or
+225                                                      (curr_state = s_txt_tx_prog) or
+226                                                      (curr_state = s_txt_ready))
+227                                               else
+228                                           '0';
+229                     
+230                         go_to_failed &lt;= '1' when ((is_bus_off = '1' and mr_settings_tbfbo = TXTBUF_FAILED_BUS_OFF_ENABLED) or
+231                                                   mr_mode_bmm = BMM_ENABLED or
+232                                                   mr_mode_rom = ROM_ENABLED)
+233                                             else
+234                                         '0';
+235                     
+236                         txtb_allow_bb &lt;= transient_state;
+237                     
+238                         -----------------------------------------------------------------------------------------------
+239                         -- Next state process
+240                         -----------------------------------------------------------------------------------------------
+241                         tx_buf_fsm_next_state_proc : process(curr_state, tx_command_txce_valid, tx_command_txcr_valid,
+242                             txtb_hw_cmd, hw_cbs, abort_applied, go_to_failed, txtb_parity_error_valid, buffer_skipped)
+243                         begin
+244        1/1                  next_state &lt;= curr_state;
+245                     
+246        1/1                  case curr_state is
+247                     
+248                             -------------------------------------------------------------------------------------------
+249                             -- Buffer is empty
+250                             -------------------------------------------------------------------------------------------
+251                             when s_txt_empty =&gt;
+252                     
+253                                 -- &quot;Set_ready&quot;
+254        1/1                      if (tx_command_txcr_valid = '1') then
+255        1/1                          next_state       &lt;= s_txt_ready;
+256                                 end if;
+257                     
+258                             -------------------------------------------------------------------------------------------
+259                             -- Buffer is ready for transmission
+260                             -------------------------------------------------------------------------------------------
+261                             when s_txt_ready =&gt;
+262                     
+263                                 -- Node became bus-off
+264        1/1                      if (go_to_failed = '1') then
+265        1/1                          next_state &lt;= s_txt_failed;
+266                     
+267                                 -- Parity Error occured
+268                                 elsif (txtb_parity_error_valid = '1') then
+269        1/1                          next_state &lt;= s_txt_parity_err;
+270                     
+271                                 -- Locking for transmission
+272                                 elsif (txtb_hw_cmd.lock = '1' and hw_cbs = '1') then
+273                     
+274                                     -- Simultaneous &quot;lock&quot; and abort -&gt; transmit, but with abort pending
+275        1/1                          if (abort_applied = '1') then
+276        1/1                              next_state     &lt;= s_txt_ab_prog;
+277                                     else
+278        1/1                              next_state     &lt;= s_txt_tx_prog;
+279                                     end if;
+280                     
+281                                 -- Abort the ready buffer or Skip the original TXT Buffer getting &quot;failed&quot; or &quot;OK&quot;.
+282                                 elsif (abort_applied = '1' or buffer_skipped = '1') then
+283        1/1                          next_state       &lt;= s_txt_aborted;
+284                                 end if;
+285                     
+286                             -------------------------------------------------------------------------------------------
+287                             -- Transmission from buffer is in progress
+288                             -------------------------------------------------------------------------------------------
+289                             when s_txt_tx_prog =&gt;
+290                     
+291                                 -- Node became bus-off
+292        1/1                      if (go_to_failed = '1') then
+293        1/1                          next_state &lt;= s_txt_failed;
+294                     
+295                                 -- Parity Error occured
+296                                 elsif (txtb_parity_error_valid = '1') then
+297        1/1                          next_state &lt;= s_txt_parity_err;
+298                     
+299                                 -- Unlock the buffer
+300                                 elsif (txtb_hw_cmd.unlock = '1' and hw_cbs = '1') then
+301                     
+302                                     -- Retransmitt reached, transmitt OK, or try again...
+303        1/1                          if (txtb_hw_cmd.failed         = '1') then
+304        1/1                              next_state     &lt;= s_txt_failed;
+305                                     elsif (txtb_hw_cmd.valid       = '1') then
+306        1/1                              next_state     &lt;= s_txt_ok;
+307                                     elsif (txtb_hw_cmd.err         = '1' or
+308                                            txtb_hw_cmd.arbl        = '1')
+309                                     then
+310        1/1                              if (abort_applied = '1') then
+311        1/1                                  next_state     &lt;= s_txt_aborted;
+312                                         else
+313        1/1                                  next_state     &lt;= s_txt_ready;
+314                                         end if;
+315                                     end if;
+316                     
+317                                 -- Request abort during transmission
+318                                 elsif (abort_applied = '1') then
+319        1/1                          next_state         &lt;= s_txt_ab_prog;
+320                                 end if;
+321                     
+322                             -------------------------------------------------------------------------------------------
+323                             -- Transmission is in progress -&gt; abort at nearest error!
+324                             -------------------------------------------------------------------------------------------
+325                             when s_txt_ab_prog =&gt;
+326                     
+327                                 -- Node became bus-off
+328        1/1                      if (go_to_failed = '1') then
+329        1/1                          next_state &lt;= s_txt_failed;
+330                     
+331                                 -- Parity Error occured
+332                                 elsif (txtb_parity_error_valid = '1') then
+333        1/1                          next_state &lt;= s_txt_parity_err;
+334                     
+335                                 -- Unlock the buffer
+336                                 elsif (txtb_hw_cmd.unlock = '1' and hw_cbs = '1') then
+337                     
+338                                     -- Retransmitt reached, transmitt OK, or try again...
+339        1/1                          if (txtb_hw_cmd.failed         = '1') then
+340        1/1                              next_state     &lt;= s_txt_failed;
+341                                     elsif (txtb_hw_cmd.valid       = '1') then
+342        1/1                              next_state     &lt;= s_txt_ok;
+343                                     elsif (txtb_hw_cmd.err         = '1' or
+344                                            txtb_hw_cmd.arbl        = '1') then
+345        1/1                              next_state     &lt;= s_txt_aborted;
+346                                     end if;
+347                                 end if;
+348                     
+349                             -------------------------------------------------------------------------------------------
+350                             -- Transmission from buffer failed. Retransmitt limit was reached.
+351                             -------------------------------------------------------------------------------------------
+352                             when s_txt_failed =&gt;
+353                     
+354                                 -- &quot;Set_ready&quot;
+355        1/1                      if (tx_command_txcr_valid = '1') then
+356        1/1                          next_state       &lt;= s_txt_ready;
+357                                 end if;
+358                     
+359                                 -- &quot;Set_empty&quot;
+360        1/1                      if (tx_command_txce_valid = '1') then
+361        1/1                          next_state       &lt;= s_txt_empty;
+362                                 end if;
+363                     
+364                             -------------------------------------------------------------------------------------------
+365                             -- Transmission was aborted by user command
+366                             -------------------------------------------------------------------------------------------
+367                             when s_txt_aborted =&gt;
+368                     
+369                                 -- &quot;Set_ready&quot;
+370        1/1                      if (tx_command_txcr_valid = '1') then
+371        1/1                          next_state       &lt;= s_txt_ready;
+372                                 end if;
+373                     
+374                                 -- &quot;Set_empty&quot;
+375        1/1                      if (tx_command_txce_valid = '1') then
+376        1/1                          next_state       &lt;= s_txt_empty;
+377                                 end if;
+378                     
+379                             -------------------------------------------------------------------------------------------
+380                             -- Transmission was succesfull
+381                             -------------------------------------------------------------------------------------------
+382                             when s_txt_ok =&gt;
+383                     
+384                                 -- &quot;Set_ready&quot;
+385        1/1                      if (tx_command_txcr_valid = '1') then
+386        1/1                          next_state       &lt;= s_txt_ready;
+387                                 end if;
+388                     
+389                                 -- &quot;Set_empty&quot;
+390        1/1                      if (tx_command_txce_valid = '1') then
+391        1/1                          next_state       &lt;= s_txt_empty;
+392                                 end if;
+393                     
+394                             -------------------------------------------------------------------------------------------
+395                             -- Parity Error
+396                             -------------------------------------------------------------------------------------------
+397                             when s_txt_parity_err =&gt;
+398                     
+399                                 -- &quot;Set_ready&quot;
+400        1/1                      if (tx_command_txcr_valid = '1') then
+401        1/1                          next_state       &lt;= s_txt_ready;
+402                                 end if;
+403                     
+404                                 -- &quot;Set_empty&quot;
+405        1/1                      if (tx_command_txce_valid = '1') then
+406        1/1                          next_state       &lt;= s_txt_empty;
+407                                 end if;
+408                     
+409                             end case;
+410                     
+411                         end process;
+412                     
+413                         -----------------------------------------------------------------------------------------------
+414                         -- State register clock enable
+415                         -----------------------------------------------------------------------------------------------
+416                         txt_fsm_ce &lt;= '1' when (next_state /= curr_state) else
+417                                       '0';
+418                     
+419                         -----------------------------------------------------------------------------------------------
+420                         -- State register
+421                         -----------------------------------------------------------------------------------------------
+422                         tx_buf_fsm_state_reg_proc : process(res_n, clk_sys)
+423                         begin
+424        1/1                  if (res_n = '0') then
+425        1/1                      curr_state &lt;= s_txt_empty;
+426                             elsif (rising_edge(clk_sys)) then
+427        1/1                      if (txt_fsm_ce = '1') then
+428        1/1                          curr_state &lt;= next_state;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod116.html" >CTU_CAN_FD_RTL.TXT_BUFFER_FSM RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">Conditions</td><td>143</td><td>135</td><td>94.41</td></tr>
+<tr class="s9"><td class="lf">Logical</td><td>143</td><td>135</td><td>94.41</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       207
+ EXPRESSION ((MR_TX_COMMAND_TXCE_Q = '1') AND (MR_TX_COMMAND_TXBI = '1'))
+            ------------------------------1------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       207
+ SUB-EXPRESSION ((MR_TX_COMMAND_TXCE_Q = '1') AND (MR_TX_COMMAND_TXBI = '1'))
+                 --------------1-------------     -------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       210
+ EXPRESSION ((MR_TX_COMMAND_TXCR_Q = '1') AND (MR_TX_COMMAND_TXBI = '1'))
+            ------------------------------1------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       210
+ SUB-EXPRESSION ((MR_TX_COMMAND_TXCR_Q = '1') AND (MR_TX_COMMAND_TXBI = '1'))
+                 --------------1-------------     -------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       214
+ EXPRESSION ((MR_TX_COMMAND_TXCA_Q = '1') AND (MR_TX_COMMAND_TXBI = '1'))
+            ------------------------------1------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       214
+ SUB-EXPRESSION ((MR_TX_COMMAND_TXCA_Q = '1') AND (MR_TX_COMMAND_TXBI = '1'))
+                 --------------1-------------     -------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       218
+ EXPRESSION ((TXTB_HW_CMD.UNLOCK = '1') AND ((TXTB_HW_CMD.FAILED = '1') OR (TXTB_HW_CMD.VALID = '1')) AND (TXTB_IS_BB = '1'))
+            --------------------------------------------------------1--------------------------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       218
+ SUB-EXPRESSION ((TXTB_HW_CMD.UNLOCK = '1') AND ((TXTB_HW_CMD.FAILED = '1') OR (TXTB_HW_CMD.VALID = '1')) AND (TXTB_IS_BB = '1'))
+                 -------------1------------     ----------------------------2----------------------------     ---------3--------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       218
+ SUB-EXPRESSION ((TXTB_HW_CMD.FAILED = '1') OR (TXTB_HW_CMD.VALID = '1'))
+                 -------------1------------    ------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       224
+ EXPRESSION ((CURR_STATE = S_TXT_AB_PROG) OR (CURR_STATE = S_TXT_TX_PROG) OR (CURR_STATE = S_TXT_READY))
+            ----------------------------------------------1---------------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       224
+ SUB-EXPRESSION ((CURR_STATE = S_TXT_AB_PROG) OR (CURR_STATE = S_TXT_TX_PROG) OR (CURR_STATE = S_TXT_READY))
+                 --------------1-------------    --------------2-------------    -------------3------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       230
+ EXPRESSION (((IS_BUS_OFF = '1') AND (MR_SETTINGS_TBFBO = '1')) OR (MR_MODE_BMM = '1') OR (MR_MODE_ROM = '1'))
+            -------------------------------------------------1------------------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       230
+ SUB-EXPRESSION (((IS_BUS_OFF = '1') AND (MR_SETTINGS_TBFBO = '1')) OR (MR_MODE_BMM = '1') OR (MR_MODE_ROM = '1'))
+                 -------------------------1------------------------    ---------2---------    ---------3---------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       230
+ SUB-EXPRESSION ((IS_BUS_OFF = '1') AND (MR_SETTINGS_TBFBO = '1'))
+                 ---------1--------     ------------2------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       272
+ EXPRESSION ((TXTB_HW_CMD.LOCK = '1') AND (HW_CBS = '1'))
+             ------------1-----------     -------2------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       282
+ EXPRESSION ((ABORT_APPLIED = '1') OR (BUFFER_SKIPPED = '1'))
+             ----------1----------    -----------2----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       300
+ EXPRESSION ((TXTB_HW_CMD.UNLOCK = '1') AND (HW_CBS = '1'))
+             -------------1------------     -------2------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       307
+ EXPRESSION ((TXTB_HW_CMD.ERR = '1') OR (TXTB_HW_CMD.ARBL = '1'))
+             -----------1-----------    ------------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uRed"><td>0</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       336
+ EXPRESSION ((TXTB_HW_CMD.UNLOCK = '1') AND (HW_CBS = '1'))
+             -------------1------------     -------2------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       343
+ EXPRESSION ((TXTB_HW_CMD.ERR = '1') OR (TXTB_HW_CMD.ARBL = '1'))
+             -----------1-----------    ------------2-----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uRed"><td>0</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uRed"><td>0</td><td>1</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       416
+ EXPRESSION (NEXT_STATE /= CURR_STATE)
+            -------------1------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       437
+ EXPRESSION ((CURR_STATE = S_TXT_READY) OR (CURR_STATE = S_TXT_TX_PROG) OR (CURR_STATE = S_TXT_AB_PROG))
+            ----------------------------------------------1---------------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       437
+ SUB-EXPRESSION ((CURR_STATE = S_TXT_READY) OR (CURR_STATE = S_TXT_TX_PROG) OR (CURR_STATE = S_TXT_AB_PROG))
+                 -------------1------------    --------------2-------------    --------------3-------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       444
+ EXPRESSION 
+ Number  Term
+      1  ((HW_CBS = '1') AND ((TXTB_HW_CMD.FAILED = '1') OR (TXTB_HW_CMD.VALID = '1') OR ((TXTB_HW_CMD.UNLOCK = '1') AND (CURR_STATE = S_TXT_AB_PROG)) OR ((MR_TX_COMMAND_TXCA_Q = '1') AND (MR_TX_COMMAND_TXBI = '1') AND (CURR_STATE = S_TXT_READY))))
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       444
+ SUB-EXPRESSION 
+ Number  Term
+      1  (HW_CBS = '1') AND 
+      2  ((TXTB_HW_CMD.FAILED = '1') OR (TXTB_HW_CMD.VALID = '1') OR ((TXTB_HW_CMD.UNLOCK = '1') AND (CURR_STATE = S_TXT_AB_PROG)) OR ((MR_TX_COMMAND_TXCA_Q = '1') AND (MR_TX_COMMAND_TXBI = '1') AND (CURR_STATE = S_TXT_READY))))
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       444
+ SUB-EXPRESSION 
+ Number  Term
+      1  (TXTB_HW_CMD.FAILED = '1') OR 
+      2  (TXTB_HW_CMD.VALID = '1') OR 
+      3  ((TXTB_HW_CMD.UNLOCK = '1') AND (CURR_STATE = S_TXT_AB_PROG)) OR 
+      4  ((MR_TX_COMMAND_TXCA_Q = '1') AND (MR_TX_COMMAND_TXBI = '1') AND (CURR_STATE = S_TXT_READY)))
+</pre>
+<table class="noborder">
+<col span="4" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       444
+ SUB-EXPRESSION ((TXTB_HW_CMD.UNLOCK = '1') AND (CURR_STATE = S_TXT_AB_PROG))
+                 -------------1------------     --------------2-------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       444
+ SUB-EXPRESSION ((MR_TX_COMMAND_TXCA_Q = '1') AND (MR_TX_COMMAND_TXBI = '1') AND (CURR_STATE = S_TXT_READY))
+                 --------------1-------------     -------------2------------     -------------3------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       452
+ EXPRESSION ((IS_BUS_OFF = '1') AND (NEXT_STATE = S_TXT_FAILED) AND (TRANSIENT_STATE = '1'))
+            ----------------------------------------1---------------------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       452
+ SUB-EXPRESSION ((IS_BUS_OFF = '1') AND (NEXT_STATE = S_TXT_FAILED) AND (TRANSIENT_STATE = '1'))
+                 ---------1--------     -------------2-------------     -----------3-----------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       459
+ EXPRESSION ((CURR_STATE = S_TXT_READY) AND (ABORT_APPLIED = '0'))
+            ---------------------------1--------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       459
+ SUB-EXPRESSION ((CURR_STATE = S_TXT_READY) AND (ABORT_APPLIED = '0'))
+                 -------------1------------     ----------2----------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       480
+ EXPRESSION (TRANSIENT_STATE = '1')
+            -----------1-----------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       505
+ EXPRESSION ((CURR_STATE = S_TXT_READY) AND (TXTB_PARITY_ERROR_VALID = '1'))
+             -------------1------------     ---------------2---------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       507
+ EXPRESSION ((CURR_STATE = S_TXT_TX_PROG) AND (TXTB_PARITY_ERROR_VALID = '1'))
+             --------------1-------------     ---------------2---------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       509
+ EXPRESSION ((CURR_STATE = S_TXT_AB_PROG) AND (TXTB_PARITY_ERROR_VALID = '1'))
+             --------------1-------------     ---------------2---------------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       514
+ EXPRESSION ((CURR_STATE = S_TXT_READY) AND (BUFFER_SKIPPED = '1') AND (ABORT_APPLIED = '0'))
+             -------------1------------     -----------2----------     ----------3----------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       519
+ EXPRESSION ((TXTB_HW_CMD.LOCK = '1') AND (HW_CBS = '1') AND (ABORT_APPLIED = '1') AND (CURR_STATE = S_TXT_READY))
+             ------------1-----------     -------2------     ----------3----------     -------------4------------
+</pre>
+<table class="noborder">
+<col span="4" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       523
+ EXPRESSION ((TXTB_HW_CMD.UNLOCK = '1') AND (HW_CBS = '1') AND (ABORT_APPLIED = '1') AND (CURR_STATE = S_TXT_TX_PROG))
+             -------------1------------     -------2------     ----------3----------     --------------4-------------
+</pre>
+<table class="noborder">
+<col span="4" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>-4-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       530
+ EXPRESSION ((CURR_STATE = S_TXT_READY) AND (NEXT_STATE = S_TXT_AB_PROG) AND (TXT_FSM_CE = '1'))
+             -------------1------------     --------------2-------------     ---------3--------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       533
+ EXPRESSION ((CURR_STATE = S_TXT_AB_PROG) AND (NEXT_STATE = S_TXT_PARITY_ERR) AND (TXT_FSM_CE = '1'))
+             --------------1-------------     ---------------2---------------     ---------3--------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       536
+ EXPRESSION ((CURR_STATE = S_TXT_TX_PROG) AND (NEXT_STATE = S_TXT_ABORTED) AND (TXT_FSM_CE = '1'))
+             --------------1-------------     --------------2-------------     ---------3--------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uRed"><td>1</td><td>1</td><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       545
+ EXPRESSION ((TXTB_HW_CMD.LOCK = '1') AND (HW_CBS = '1'))
+             ------------1-----------     -------2------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       552
+ EXPRESSION ((TXTB_HW_CMD.UNLOCK = '1') AND (HW_CBS = '1'))
+             -------------1------------     -------2------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       553
+ EXPRESSION ((CURR_STATE = S_TXT_TX_PROG) OR (CURR_STATE = S_TXT_AB_PROG) OR (CURR_STATE = S_TXT_PARITY_ERR))
+             --------------1-------------    --------------2-------------    ---------------3---------------
+</pre>
+<table class="noborder">
+<col span="3" width="40">
+<tr><th>-1-</th><th>-2-</th><th>-3-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>0</td><td>1</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>0</td><td>1</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>-</td><td>-</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       559
+ EXPRESSION ((TXTB_HW_CMD.LOCK = '1') AND (HW_CBS = '1'))
+             ------------1-----------     -------2------
+</pre>
+<table class="noborder">
+<col span="2" width="40">
+<tr><th>-1-</th><th>-2-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td>-</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod116.html" >CTU_CAN_FD_RTL.TXT_BUFFER_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">35</td>
+<td class="rt">35</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">76</td>
+<td class="rt">76</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">38</td>
+<td class="rt">38</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">38</td>
+<td class="rt">38</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">25</td>
+<td class="rt">25</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">56</td>
+<td class="rt">56</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">28</td>
+<td class="rt">28</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">28</td>
+<td class="rt">28</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">10</td>
+<td class="rt">10</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">20</td>
+<td class="rt">20</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">10</td>
+<td class="rt">10</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">10</td>
+<td class="rt">10</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_MODE_BMM</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_MODE_ROM</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_SETTINGS_TBFBO</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_TX_COMMAND_TXCE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_TX_COMMAND_TXCR</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_TX_COMMAND_TXCA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_TX_COMMAND_TXBI</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TXTB_IS_BB</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TXTB_HW_CMD.LOCK</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TXTB_HW_CMD.UNLOCK</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TXTB_HW_CMD.VALID</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TXTB_HW_CMD.ERR</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TXTB_HW_CMD.ARBL</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TXTB_HW_CMD.FAILED</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>HW_CBS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>IS_BUS_OFF</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TXTB_PARITY_ERROR_VALID</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>TXTB_USER_ACCESSIBLE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>TXTB_ALLOW_BB</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>TXTB_HW_CMD_INT</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>TXTB_STATE[3:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>TXTB_AVAILABLE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>TXTB_UNMASK_DATA_RAM</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>ABORT_APPLIED</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>BUFFER_SKIPPED</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>TXT_FSM_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>GO_TO_FAILED</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>TRANSIENT_STATE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>MR_TX_COMMAND_TXCE_Q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>MR_TX_COMMAND_TXCR_Q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>MR_TX_COMMAND_TXCA_Q</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>TX_COMMAND_TXCE_VALID</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>TX_COMMAND_TXCR_VALID</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="FSM"></a>
+FSM Coverage for Module : <a href="mod116.html" >CTU_CAN_FD_RTL.TXT_BUFFER_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<caption><b>Summary for FSM :: CURR_STATE</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th><th nowrap width=200></th></tr><tr class="wht">
+<td>States</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+<td>(Not included in score)</td>
+</tr><tr class="s9">
+<td>Transitions</td>
+<td class="rt">27</td>
+<td class="rt">26</td>
+<td class="rt">96.30 </td>
+<td></td>
+</tr><tr class="wht">
+<td>Sequences</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<b>State, Transition and Sequence Details for FSM :: CURR_STATE</b><hr>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">states</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_TXT_ABORTED</td>
+<td class="rt">283</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_AB_PROG</td>
+<td class="rt">276</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_EMPTY</td>
+<td class="rt">425</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_FAILED</td>
+<td class="rt">265</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_OK</td>
+<td class="rt">306</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_PARITY_ERR</td>
+<td class="rt">269</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_READY</td>
+<td class="rt">255</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_TX_PROG</td>
+<td class="rt">278</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">transitions</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_TXT_ABORTED->S_TXT_EMPTY</td>
+<td class="rt">425</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_ABORTED->S_TXT_READY</td>
+<td class="rt">371</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_AB_PROG->S_TXT_ABORTED</td>
+<td class="rt">345</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td nowrap>S_TXT_AB_PROG->S_TXT_EMPTY</td>
+<td class="rt">425</td>
+<td>Not&nbsp;Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_AB_PROG->S_TXT_FAILED</td>
+<td class="rt">329</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_AB_PROG->S_TXT_OK</td>
+<td class="rt">342</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_AB_PROG->S_TXT_PARITY_ERR</td>
+<td class="rt">333</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_EMPTY->S_TXT_READY</td>
+<td class="rt">255</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_FAILED->S_TXT_EMPTY</td>
+<td class="rt">425</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_FAILED->S_TXT_READY</td>
+<td class="rt">356</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_OK->S_TXT_EMPTY</td>
+<td class="rt">425</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_OK->S_TXT_READY</td>
+<td class="rt">386</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_PARITY_ERR->S_TXT_EMPTY</td>
+<td class="rt">425</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_PARITY_ERR->S_TXT_READY</td>
+<td class="rt">401</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_READY->S_TXT_ABORTED</td>
+<td class="rt">283</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_READY->S_TXT_AB_PROG</td>
+<td class="rt">276</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_READY->S_TXT_EMPTY</td>
+<td class="rt">425</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_READY->S_TXT_FAILED</td>
+<td class="rt">265</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_READY->S_TXT_PARITY_ERR</td>
+<td class="rt">269</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_READY->S_TXT_TX_PROG</td>
+<td class="rt">278</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_TX_PROG->S_TXT_ABORTED</td>
+<td class="rt">311</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_TX_PROG->S_TXT_AB_PROG</td>
+<td class="rt">319</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_TX_PROG->S_TXT_EMPTY</td>
+<td class="rt">425</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_TX_PROG->S_TXT_FAILED</td>
+<td class="rt">293</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_TX_PROG->S_TXT_OK</td>
+<td class="rt">306</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_TX_PROG->S_TXT_PARITY_ERR</td>
+<td class="rt">297</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_TXT_TX_PROG->S_TXT_READY</td>
+<td class="rt">313</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod116.html" >CTU_CAN_FD_RTL.TXT_BUFFER_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s9">
+<td>Branches</td>
+<td></td>
+<td class="rt">70</td>
+<td class="rt">68</td>
+<td class="rt">97.14 </td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">196</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">207</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">210</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">214</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">218</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">224</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">230</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s9">
+<td>CASE</td>
+<td class="rt">246</td>
+<td class="rt">40</td>
+<td class="rt">38</td>
+<td class="rt">95.00 </td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">416</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">424</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">437</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">444</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">459</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">480</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+196                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+197                    mr_tx_command_txce_q <= '0';
+           <font color = "green">            ==></font>
+198                    mr_tx_command_txcr_q <= '0';
+199                    mr_tx_command_txca_q <= '0';
+200                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+201                    mr_tx_command_txce_q <= mr_tx_command_txce;
+           <font color = "green">            ==></font>
+202                    mr_tx_command_txcr_q <= mr_tx_command_txcr;
+203                    mr_tx_command_txca_q <= mr_tx_command_txca;
+204                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+207            tx_command_txce_valid <= '1' when (mr_tx_command_txce_q = '1' and mr_tx_command_txbi = '1')
+                                            <font color = "green">-1-</font>  
+                                            <font color = "green">==></font>  
+                                            <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+210            tx_command_txcr_valid <= '1' when (mr_tx_command_txcr_q = '1' and mr_tx_command_txbi = '1')
+                                            <font color = "green">-1-</font>  
+                                            <font color = "green">==></font>  
+                                            <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+214            abort_applied <= '1' when (mr_tx_command_txca_q = '1' and mr_tx_command_txbi = '1')
+                                    <font color = "green">-1-</font>  
+                                    <font color = "green">==></font>  
+                                    <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+218            buffer_skipped <= '1' when (txtb_hw_cmd.unlock = '1' and
+                                     <font color = "green">-1-</font>  
+                                     <font color = "green">==></font>  
+                                     <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+224            transient_state <= '1' when ((curr_state = s_txt_ab_prog) or
+                                      <font color = "green">-1-</font>  
+                                      <font color = "green">==></font>  
+                                      <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+230            go_to_failed <= '1' when ((is_bus_off = '1' and mr_settings_tbfbo = TXTBUF_FAILED_BUS_OFF_ENABLED) or
+                                   <font color = "green">-1-</font>  
+                                   <font color = "green">==></font>  
+                                   <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+246                case curr_state is
+                   <font color = "green">-1-</font>  
+247        
+248                -------------------------------------------------------------------------------------------
+249                -- Buffer is empty
+250                -------------------------------------------------------------------------------------------
+251                when s_txt_empty =>
+252        
+253                    -- "Set_ready"
+254                    if (tx_command_txcr_valid = '1') then
+                       <font color = "green">-2-</font>  
+255                        next_state       <= s_txt_ready;
+           <font color = "green">                ==></font>
+256                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+257        
+258                -------------------------------------------------------------------------------------------
+259                -- Buffer is ready for transmission
+260                -------------------------------------------------------------------------------------------
+261                when s_txt_ready =>
+262        
+263                    -- Node became bus-off
+264                    if (go_to_failed = '1') then
+                       <font color = "green">-3-</font>  
+265                        next_state <= s_txt_failed;
+           <font color = "green">                ==></font>
+266        
+267                    -- Parity Error occured
+268                    elsif (txtb_parity_error_valid = '1') then
+                          <font color = "green">-4-</font>  
+269                        next_state <= s_txt_parity_err;
+           <font color = "green">                ==></font>
+270        
+271                    -- Locking for transmission
+272                    elsif (txtb_hw_cmd.lock = '1' and hw_cbs = '1') then
+                          <font color = "green">-5-</font>  
+273        
+274                        -- Simultaneous "lock" and abort -> transmit, but with abort pending
+275                        if (abort_applied = '1') then
+                           <font color = "green">-6-</font>  
+276                            next_state     <= s_txt_ab_prog;
+           <font color = "green">                    ==></font>
+277                        else
+278                            next_state     <= s_txt_tx_prog;
+           <font color = "green">                    ==></font>
+279                        end if;
+280        
+281                    -- Abort the ready buffer or Skip the original TXT Buffer getting "failed" or "OK".
+282                    elsif (abort_applied = '1' or buffer_skipped = '1') then
+                          <font color = "green">-7-</font>  
+283                        next_state       <= s_txt_aborted;
+           <font color = "green">                ==></font>
+284                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+285        
+286                -------------------------------------------------------------------------------------------
+287                -- Transmission from buffer is in progress
+288                -------------------------------------------------------------------------------------------
+289                when s_txt_tx_prog =>
+290        
+291                    -- Node became bus-off
+292                    if (go_to_failed = '1') then
+                       <font color = "green">-8-</font>  
+293                        next_state <= s_txt_failed;
+           <font color = "green">                ==></font>
+294        
+295                    -- Parity Error occured
+296                    elsif (txtb_parity_error_valid = '1') then
+                          <font color = "green">-9-</font>  
+297                        next_state <= s_txt_parity_err;
+           <font color = "green">                ==></font>
+298        
+299                    -- Unlock the buffer
+300                    elsif (txtb_hw_cmd.unlock = '1' and hw_cbs = '1') then
+                          <font color = "green">-10-</font>  
+301        
+302                        -- Retransmitt reached, transmitt OK, or try again...
+303                        if (txtb_hw_cmd.failed         = '1') then
+                           <font color = "green">-11-</font>  
+304                            next_state     <= s_txt_failed;
+           <font color = "green">                    ==></font>
+305                        elsif (txtb_hw_cmd.valid       = '1') then
+                              <font color = "green">-12-</font>  
+306                            next_state     <= s_txt_ok;
+           <font color = "green">                    ==></font>
+307                        elsif (txtb_hw_cmd.err         = '1' or
+                              <font color = "red">-13-</font>  
+308                               txtb_hw_cmd.arbl        = '1')
+309                        then
+310                            if (abort_applied = '1') then
+                               <font color = "green">-14-</font>  
+311                                next_state     <= s_txt_aborted;
+           <font color = "green">                        ==></font>
+312                            else
+313                                next_state     <= s_txt_ready;
+           <font color = "green">                        ==></font>
+314                            end if;
+315                        end if;
+                           MISSING_ELSE
+           <font color = "red">                ==></font>
+316        
+317                    -- Request abort during transmission
+318                    elsif (abort_applied = '1') then
+                          <font color = "green">-15-</font>  
+319                        next_state         <= s_txt_ab_prog;
+           <font color = "green">                ==></font>
+320                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+321        
+322                -------------------------------------------------------------------------------------------
+323                -- Transmission is in progress -> abort at nearest error!
+324                -------------------------------------------------------------------------------------------
+325                when s_txt_ab_prog =>
+326        
+327                    -- Node became bus-off
+328                    if (go_to_failed = '1') then
+                       <font color = "green">-16-</font>  
+329                        next_state <= s_txt_failed;
+           <font color = "green">                ==></font>
+330        
+331                    -- Parity Error occured
+332                    elsif (txtb_parity_error_valid = '1') then
+                          <font color = "green">-17-</font>  
+333                        next_state <= s_txt_parity_err;
+           <font color = "green">                ==></font>
+334        
+335                    -- Unlock the buffer
+336                    elsif (txtb_hw_cmd.unlock = '1' and hw_cbs = '1') then
+                          <font color = "green">-18-</font>  
+337        
+338                        -- Retransmitt reached, transmitt OK, or try again...
+339                        if (txtb_hw_cmd.failed         = '1') then
+                           <font color = "green">-19-</font>  
+340                            next_state     <= s_txt_failed;
+           <font color = "green">                    ==></font>
+341                        elsif (txtb_hw_cmd.valid       = '1') then
+                              <font color = "green">-20-</font>  
+342                            next_state     <= s_txt_ok;
+           <font color = "green">                    ==></font>
+343                        elsif (txtb_hw_cmd.err         = '1' or
+                              <font color = "red">-21-</font>  
+344                               txtb_hw_cmd.arbl        = '1') then
+345                            next_state     <= s_txt_aborted;
+           <font color = "green">                    ==></font>
+346                        end if;
+                           MISSING_ELSE
+           <font color = "red">                ==></font>
+347                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+348        
+349                -------------------------------------------------------------------------------------------
+350                -- Transmission from buffer failed. Retransmitt limit was reached.
+351                -------------------------------------------------------------------------------------------
+352                when s_txt_failed =>
+353        
+354                    -- "Set_ready"
+355                    if (tx_command_txcr_valid = '1') then
+                       <font color = "green">-22-</font>  
+356                        next_state       <= s_txt_ready;
+           <font color = "green">                ==></font>
+357                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+358        
+359                    -- "Set_empty"
+360                    if (tx_command_txce_valid = '1') then
+                       <font color = "green">-23-</font>  
+361                        next_state       <= s_txt_empty;
+           <font color = "green">                ==></font>
+362                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+363        
+364                -------------------------------------------------------------------------------------------
+365                -- Transmission was aborted by user command
+366                -------------------------------------------------------------------------------------------
+367                when s_txt_aborted =>
+368        
+369                    -- "Set_ready"
+370                    if (tx_command_txcr_valid = '1') then
+                       <font color = "green">-24-</font>  
+371                        next_state       <= s_txt_ready;
+           <font color = "green">                ==></font>
+372                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+373        
+374                    -- "Set_empty"
+375                    if (tx_command_txce_valid = '1') then
+                       <font color = "green">-25-</font>  
+376                        next_state       <= s_txt_empty;
+           <font color = "green">                ==></font>
+377                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+378        
+379                -------------------------------------------------------------------------------------------
+380                -- Transmission was succesfull
+381                -------------------------------------------------------------------------------------------
+382                when s_txt_ok =>
+383        
+384                    -- "Set_ready"
+385                    if (tx_command_txcr_valid = '1') then
+                       <font color = "green">-26-</font>  
+386                        next_state       <= s_txt_ready;
+           <font color = "green">                ==></font>
+387                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+388        
+389                    -- "Set_empty"
+390                    if (tx_command_txce_valid = '1') then
+                       <font color = "green">-27-</font>  
+391                        next_state       <= s_txt_empty;
+           <font color = "green">                ==></font>
+392                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+393        
+394                -------------------------------------------------------------------------------------------
+395                -- Parity Error
+396                -------------------------------------------------------------------------------------------
+397                when s_txt_parity_err =>
+398        
+399                    -- "Set_ready"
+400                    if (tx_command_txcr_valid = '1') then
+                       <font color = "green">-28-</font>  
+401                        next_state       <= s_txt_ready;
+           <font color = "green">                ==></font>
+402                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+403        
+404                    -- "Set_empty"
+405                    if (tx_command_txce_valid = '1') then
+                       <font color = "green">-29-</font>  
+406                        next_state       <= s_txt_empty;
+           <font color = "green">                ==></font>
+407                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>-5-</th><th nowrap width=80>-6-</th><th nowrap width=80>-7-</th><th nowrap width=80>-8-</th><th nowrap width=80>-9-</th><th nowrap width=80>-10-</th><th nowrap width=80>-11-</th><th nowrap width=80>-12-</th><th nowrap width=80>-13-</th><th nowrap width=80>-14-</th><th nowrap width=80>-15-</th><th nowrap width=80>-16-</th><th nowrap width=80>-17-</th><th nowrap width=80>-18-</th><th nowrap width=80>-19-</th><th nowrap width=80>-20-</th><th nowrap width=80>-21-</th><th nowrap width=80>-22-</th><th nowrap width=80>-23-</th><th nowrap width=80>-24-</th><th nowrap width=80>-25-</th><th nowrap width=80>-26-</th><th nowrap width=80>-27-</th><th nowrap width=80>-28-</th><th nowrap width=80>-29-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> S_TXT_EMPTY</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_EMPTY</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_READY</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_READY</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_READY</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_READY</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_READY</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_READY</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_TX_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_TX_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_TX_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_TX_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_TX_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_TX_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center> S_TXT_TX_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_TX_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_TX_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_AB_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_AB_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_AB_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_AB_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_AB_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uRed">
+<td align=center> S_TXT_AB_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Not Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_AB_PROG</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_FAILED</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_FAILED</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_FAILED</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_FAILED</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_ABORTED</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_ABORTED</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_ABORTED</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_ABORTED</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_OK</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_OK</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_OK</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_OK</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_PARITY_ERR</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_PARITY_ERR</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_PARITY_ERR</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_TXT_PARITY_ERR</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+416            txt_fsm_ce <= '1' when (next_state /= curr_state) else
+                                 <font color = "green">-1-</font>  
+                                 <font color = "green">==></font>  
+                                 <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+424                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+425                    curr_state <= s_txt_empty;
+           <font color = "green">            ==></font>
+426                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+427                    if (txt_fsm_ce = '1') then
+                       <font color = "green">-3-</font>  
+428                        curr_state <= next_state;
+           <font color = "green">                ==></font>
+429                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+430                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+437            txtb_user_accessible <= '0' when ((curr_state = s_txt_ready)   or
+                                           <font color = "green">-1-</font>  
+                                           <font color = "green">==></font>  
+                                           <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+444            txtb_hw_cmd_int <= '1' when (hw_cbs = '1') and ((txtb_hw_cmd.failed = '1') or
+                                      <font color = "green">-1-</font>  
+           <font color = "green">    ==></font>
+445                                                           (txtb_hw_cmd.valid = '1') or
+446                                                           ((txtb_hw_cmd.unlock = '1') and
+447                                                            (curr_state = s_txt_ab_prog)) or
+448                                                           ((mr_tx_command_txca_q = '1') and
+449                                                            (mr_tx_command_txbi = '1') and
+450                                                            (curr_state = s_txt_ready)))
+451                                   else
+452                               '1' when (is_bus_off = '1' and next_state = s_txt_failed and
+                                      <font color = "green">-2-</font>  
+                                      <font color = "green">==></font>  
+                                      <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+459            txtb_available   <= '1' when ((curr_state = s_txt_ready) and (abort_applied = '0'))
+                                       <font color = "green">-1-</font>  
+                                       <font color = "green">==></font>  
+                                       <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+480            txtb_unmask_data_ram <= '1' when (transient_state = '1')
+                                           <font color = "green">-1-</font>  
+                                           <font color = "green">==></font>  
+                                           <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul>
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#FSM">FSM</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

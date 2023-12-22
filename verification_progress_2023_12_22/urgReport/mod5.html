@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: CTU_CAN_FD_RTL.BIT_TIME_FSM RTL</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | groups | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_CTU_CAN_FD_RTL.BIT_TIME_FSM RTL'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_CTU_CAN_FD_RTL.BIT_TIME_FSM RTL')">CTU_CAN_FD_RTL.BIT_TIME_FSM RTL</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod5.html#Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/oille/Downloads/ctucanfd_2v5/src/prescaler/bit_time_fsm.vhd')">/home/oille/Downloads/ctucanfd_2v5/src/prescaler/bit_time_fsm.vhd</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod5.html#inst_tag_12"  onclick="showContent('inst_tag_12')">TB_TOP_CTU_CAN_FD.DUT.PRESCALER_INST.BIT_TIME_FSM_INST</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_12_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_12_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_12_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_12_FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_12_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod5.html#inst_tag_13"  onclick="showContent('inst_tag_13')">TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.PRESCALER_INST.BIT_TIME_FSM_INST</a></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_13_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_13_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_13_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_13_FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_13_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='inst_tag_12'>
+<hr>
+<a name="inst_tag_12"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy2.html#tag_urg_inst_12" >TB_TOP_CTU_CAN_FD.DUT.PRESCALER_INST.BIT_TIME_FSM_INST</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_12_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_12_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_12_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_12_FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_12_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s9 cl rt"> 99.19</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 97.73</td>
+<td class="s9 cl rt"> 99.05</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod11.html#inst_tag_20" >PRESCALER_INST<img src="ex.gif" class="icon"></a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td colspan=8>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div name='inst_tag_13'>
+<hr>
+<a name="inst_tag_13"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy3.html#tag_urg_inst_13" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.PRESCALER_INST.BIT_TIME_FSM_INST</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_13_Line" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_13_Cond" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_13_Toggle" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_13_FSM" >100.00</a></td>
+<td class="s10 cl rt"><a href="mod5.html#inst_tag_13_Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td><td class="alfsrt">NAME</td></tr><tr>
+<td class="s7 cl rt"> 76.50</td>
+<td class="s6 cl rt"> 66.67</td>
+<td class="s8 cl rt"> 81.82</td>
+<td class="s8 cl rt"> 82.53</td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 75.00</td>
+<td class="wht cl rt"></td>
+<td><a href="mod11.html#inst_tag_21" >PRESCALER_INST</a></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td colspan=8>no children</td>
+</tr></table><br clear=all>
+</div>
+</div>
+</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_CTU_CAN_FD_RTL.BIT_TIME_FSM RTL'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod5.html" >CTU_CAN_FD_RTL.BIT_TIME_FSM RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>26</td><td>26</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>146</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>172</td><td>13</td><td>13</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>203</td><td>4</td><td>4</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+145                         begin
+146        1/1                  next_state &lt;= current_state;
+147                     
+148        1/1                  if (mr_settings_ena = CTU_CAN_DISABLED) then
+149        1/1                      next_state &lt;= s_bt_reset;
+150                             else
+151        1/1                      case current_state is
+152                                 when s_bt_tseg1 =&gt;
+153        1/1                          if (segm_end = '1') then
+154        1/1                              next_state &lt;= s_bt_tseg2;
+155                                     end if;
+156                                 when s_bt_tseg2 =&gt;
+157        1/1                          if (segm_end = '1') then
+158        1/1                              next_state &lt;= s_bt_tseg1;
+159                                     end if;
+160                                 when s_bt_reset =&gt;
+161        1/1                          next_state &lt;= s_bt_tseg1;
+162                                 end case;
+163                             end if;
+164                         end process;
+165                     
+166                         -------------------------------------------------------------------------------------------
+167                         -- Current state process (combinational)
+168                         -------------------------------------------------------------------------------------------
+169                         curr_state_proc : process(current_state, segm_end, mr_settings_ena)
+170                         begin
+171                             -- Default values
+172        1/1                  is_tseg1       &lt;= '0';
+173        1/1                  is_tseg2       &lt;= '0';
+174        1/1                  rx_trig_req    &lt;= '0';
+175        1/1                  tx_trig_req    &lt;= '0';
+176                     
+177        1/1                  case current_state is
+178                             when s_bt_reset =&gt;
+179        1/1                      if (mr_settings_ena = CTU_CAN_ENABLED) then
+180        1/1                          tx_trig_req &lt;= '1';
+181                                 end if;
+182                     
+183                             when s_bt_tseg1 =&gt;
+184        1/1                      is_tseg1 &lt;= '1';
+185        1/1                      if (segm_end = '1') then
+186        1/1                          rx_trig_req &lt;= '1';
+187                                 end if;
+188                     
+189                             when s_bt_tseg2 =&gt;
+190        1/1                      is_tseg2 &lt;= '1';
+191        1/1                      if (segm_end = '1') then
+192        1/1                          tx_trig_req &lt;= '1';
+193                                 end if;
+194                     
+195                             end case;
+196                         end process;
+197                     
+198                         -------------------------------------------------------------------------------------------
+199                         -- State register assignment
+200                         -------------------------------------------------------------------------------------------
+201                         state_reg_proc : process(clk_sys, res_n)
+202                         begin
+203        1/1                  if (res_n = '0') then
+204        1/1                      current_state &lt;= s_bt_reset;
+205                             elsif (rising_edge(clk_sys)) then
+206        1/1                      if (bt_fsm_ce = '1') then
+207        1/1                          current_state &lt;= next_state;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod5.html" >CTU_CAN_FD_RTL.BIT_TIME_FSM RTL</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       212
+ EXPRESSION (NEXT_STATE /= CURRENT_STATE)
+            --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod5.html" >CTU_CAN_FD_RTL.BIT_TIME_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">16</td>
+<td class="rt">16</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_SETTINGS_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>SEGM_END</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>IS_TSEG1</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>IS_TSEG2</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>RX_TRIG_REQ</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>TX_TRIG_REQ</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>BT_FSM_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="FSM"></a>
+FSM Coverage for Module : <a href="mod5.html" >CTU_CAN_FD_RTL.BIT_TIME_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<caption><b>Summary for FSM :: CURRENT_STATE</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th><th nowrap width=200></th></tr><tr class="wht">
+<td>States</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+<td>(Not included in score)</td>
+</tr><tr class="s10">
+<td>Transitions</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>Sequences</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<b>State, Transition and Sequence Details for FSM :: CURRENT_STATE</b><hr>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">states</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_BT_RESET</td>
+<td class="rt">204</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG1</td>
+<td class="rt">158</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG2</td>
+<td class="rt">154</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">transitions</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_BT_RESET->S_BT_TSEG1</td>
+<td class="rt">161</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG1->S_BT_RESET</td>
+<td class="rt">204</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG1->S_BT_TSEG2</td>
+<td class="rt">154</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG2->S_BT_RESET</td>
+<td class="rt">204</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG2->S_BT_TSEG1</td>
+<td class="rt">158</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod5.html" >CTU_CAN_FD_RTL.BIT_TIME_FSM RTL</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">148</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>CASE</td>
+<td class="rt">177</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">203</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">212</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+148                if (mr_settings_ena = CTU_CAN_DISABLED) then
+                   <font color = "green">-1-</font>  
+149                    next_state <= s_bt_reset;
+           <font color = "green">            ==></font>
+150                else
+151                    case current_state is
+                       <font color = "green">-2-</font>  
+152                    when s_bt_tseg1 =>
+153                        if (segm_end = '1') then
+                           <font color = "green">-3-</font>  
+154                            next_state <= s_bt_tseg2;
+           <font color = "green">                    ==></font>
+155                        end if;
+                           MISSING_ELSE
+           <font color = "green">                ==></font>
+156                    when s_bt_tseg2 =>
+157                        if (segm_end = '1') then
+                           <font color = "green">-4-</font>  
+158                            next_state <= s_bt_tseg1;
+           <font color = "green">                    ==></font>
+159                        end if;
+                           MISSING_ELSE
+           <font color = "green">                ==></font>
+160                    when s_bt_reset =>
+161                        next_state <= s_bt_tseg1;
+           <font color = "green">                ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_RESET</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+177                case current_state is
+                   <font color = "green">-1-</font>  
+178                when s_bt_reset =>
+179                    if (mr_settings_ena = CTU_CAN_ENABLED) then
+                       <font color = "green">-2-</font>  
+180                        tx_trig_req <= '1';
+           <font color = "green">                ==></font>
+181                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+182        
+183                when s_bt_tseg1 =>
+184                    is_tseg1 <= '1';
+185                    if (segm_end = '1') then
+                       <font color = "green">-3-</font>  
+186                        rx_trig_req <= '1';
+           <font color = "green">                ==></font>
+187                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+188        
+189                when s_bt_tseg2 =>
+190                    is_tseg2 <= '1';
+191                    if (segm_end = '1') then
+                       <font color = "green">-4-</font>  
+192                        tx_trig_req <= '1';
+           <font color = "green">                ==></font>
+193                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> S_BT_RESET</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_RESET</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG1</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG1</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+203                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+204                    current_state <= s_bt_reset;
+           <font color = "green">            ==></font>
+205                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+206                    if (bt_fsm_ce = '1') then
+                       <font color = "green">-3-</font>  
+207                        current_state <= next_state;
+           <font color = "green">                ==></font>
+208                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+209                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+212            bt_fsm_ce <= '1' when (next_state /= current_state) else
+                                <font color = "green">-1-</font>  
+                                <font color = "green">==></font>  
+                                <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_12'>
+<a name="inst_tag_12_Line"></a>
+<b>Line Coverage for Instance : <a href="mod5.html#inst_tag_12" >TB_TOP_CTU_CAN_FD.DUT.PRESCALER_INST.BIT_TIME_FSM_INST</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>26</td><td>26</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>146</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>172</td><td>13</td><td>13</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>203</td><td>4</td><td>4</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+145                         begin
+146        1/1                  next_state &lt;= current_state;
+147                     
+148        1/1                  if (mr_settings_ena = CTU_CAN_DISABLED) then
+149        1/1                      next_state &lt;= s_bt_reset;
+150                             else
+151        1/1                      case current_state is
+152                                 when s_bt_tseg1 =&gt;
+153        1/1                          if (segm_end = '1') then
+154        1/1                              next_state &lt;= s_bt_tseg2;
+155                                     end if;
+156                                 when s_bt_tseg2 =&gt;
+157        1/1                          if (segm_end = '1') then
+158        1/1                              next_state &lt;= s_bt_tseg1;
+159                                     end if;
+160                                 when s_bt_reset =&gt;
+161        1/1                          next_state &lt;= s_bt_tseg1;
+162                                 end case;
+163                             end if;
+164                         end process;
+165                     
+166                         -------------------------------------------------------------------------------------------
+167                         -- Current state process (combinational)
+168                         -------------------------------------------------------------------------------------------
+169                         curr_state_proc : process(current_state, segm_end, mr_settings_ena)
+170                         begin
+171                             -- Default values
+172        1/1                  is_tseg1       &lt;= '0';
+173        1/1                  is_tseg2       &lt;= '0';
+174        1/1                  rx_trig_req    &lt;= '0';
+175        1/1                  tx_trig_req    &lt;= '0';
+176                     
+177        1/1                  case current_state is
+178                             when s_bt_reset =&gt;
+179        1/1                      if (mr_settings_ena = CTU_CAN_ENABLED) then
+180        1/1                          tx_trig_req &lt;= '1';
+181                                 end if;
+182                     
+183                             when s_bt_tseg1 =&gt;
+184        1/1                      is_tseg1 &lt;= '1';
+185        1/1                      if (segm_end = '1') then
+186        1/1                          rx_trig_req &lt;= '1';
+187                                 end if;
+188                     
+189                             when s_bt_tseg2 =&gt;
+190        1/1                      is_tseg2 &lt;= '1';
+191        1/1                      if (segm_end = '1') then
+192        1/1                          tx_trig_req &lt;= '1';
+193                                 end if;
+194                     
+195                             end case;
+196                         end process;
+197                     
+198                         -------------------------------------------------------------------------------------------
+199                         -- State register assignment
+200                         -------------------------------------------------------------------------------------------
+201                         state_reg_proc : process(clk_sys, res_n)
+202                         begin
+203        1/1                  if (res_n = '0') then
+204        1/1                      current_state &lt;= s_bt_reset;
+205                             elsif (rising_edge(clk_sys)) then
+206        1/1                      if (bt_fsm_ce = '1') then
+207        1/1                          current_state &lt;= next_state;
+</pre>
+<hr>
+<a name="inst_tag_12_Cond"></a>
+<b>Cond Coverage for Instance : <a href="mod5.html#inst_tag_12" >TB_TOP_CTU_CAN_FD.DUT.PRESCALER_INST.BIT_TIME_FSM_INST</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       212
+ EXPRESSION (NEXT_STATE /= CURRENT_STATE)
+            --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="inst_tag_12_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod5.html#inst_tag_12" >TB_TOP_CTU_CAN_FD.DUT.PRESCALER_INST.BIT_TIME_FSM_INST</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">16</td>
+<td class="rt">16</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_SETTINGS_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>SEGM_END</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>IS_TSEG1</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>IS_TSEG2</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>RX_TRIG_REQ</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>TX_TRIG_REQ</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>BT_FSM_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="inst_tag_12_FSM"></a>
+<b>FSM Coverage for Instance : <a href="mod5.html#inst_tag_12" >TB_TOP_CTU_CAN_FD.DUT.PRESCALER_INST.BIT_TIME_FSM_INST</a></b><br clear=all>
+<table align=left class="noborder">
+<caption><b>Summary for FSM :: CURRENT_STATE</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th><th nowrap width=200></th></tr><tr class="wht">
+<td>States</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+<td>(Not included in score)</td>
+</tr><tr class="s10">
+<td>Transitions</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>Sequences</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<b>State, Transition and Sequence Details for FSM :: CURRENT_STATE</b><hr>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">states</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_BT_RESET</td>
+<td class="rt">204</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG1</td>
+<td class="rt">158</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG2</td>
+<td class="rt">154</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">transitions</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_BT_RESET->S_BT_TSEG1</td>
+<td class="rt">161</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG1->S_BT_RESET</td>
+<td class="rt">204</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG1->S_BT_TSEG2</td>
+<td class="rt">154</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG2->S_BT_RESET</td>
+<td class="rt">204</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG2->S_BT_TSEG1</td>
+<td class="rt">158</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<a name="inst_tag_12_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod5.html#inst_tag_12" >TB_TOP_CTU_CAN_FD.DUT.PRESCALER_INST.BIT_TIME_FSM_INST</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">148</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>CASE</td>
+<td class="rt">177</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">203</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">212</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+148                if (mr_settings_ena = CTU_CAN_DISABLED) then
+                   <font color = "green">-1-</font>  
+149                    next_state <= s_bt_reset;
+           <font color = "green">            ==></font>
+150                else
+151                    case current_state is
+                       <font color = "green">-2-</font>  
+152                    when s_bt_tseg1 =>
+153                        if (segm_end = '1') then
+                           <font color = "green">-3-</font>  
+154                            next_state <= s_bt_tseg2;
+           <font color = "green">                    ==></font>
+155                        end if;
+                           MISSING_ELSE
+           <font color = "green">                ==></font>
+156                    when s_bt_tseg2 =>
+157                        if (segm_end = '1') then
+                           <font color = "green">-4-</font>  
+158                            next_state <= s_bt_tseg1;
+           <font color = "green">                    ==></font>
+159                        end if;
+                           MISSING_ELSE
+           <font color = "green">                ==></font>
+160                    when s_bt_reset =>
+161                        next_state <= s_bt_tseg1;
+           <font color = "green">                ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_RESET</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+177                case current_state is
+                   <font color = "green">-1-</font>  
+178                when s_bt_reset =>
+179                    if (mr_settings_ena = CTU_CAN_ENABLED) then
+                       <font color = "green">-2-</font>  
+180                        tx_trig_req <= '1';
+           <font color = "green">                ==></font>
+181                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+182        
+183                when s_bt_tseg1 =>
+184                    is_tseg1 <= '1';
+185                    if (segm_end = '1') then
+                       <font color = "green">-3-</font>  
+186                        rx_trig_req <= '1';
+           <font color = "green">                ==></font>
+187                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+188        
+189                when s_bt_tseg2 =>
+190                    is_tseg2 <= '1';
+191                    if (segm_end = '1') then
+                       <font color = "green">-4-</font>  
+192                        tx_trig_req <= '1';
+           <font color = "green">                ==></font>
+193                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> S_BT_RESET</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_RESET</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG1</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG1</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+203                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+204                    current_state <= s_bt_reset;
+           <font color = "green">            ==></font>
+205                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+206                    if (bt_fsm_ce = '1') then
+                       <font color = "green">-3-</font>  
+207                        current_state <= next_state;
+           <font color = "green">                ==></font>
+208                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+209                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+212            bt_fsm_ce <= '1' when (next_state /= current_state) else
+                                <font color = "green">-1-</font>  
+                                <font color = "green">==></font>  
+                                <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+<div name='inst_tag_13'>
+<a name="inst_tag_13_Line"></a>
+<b>Line Coverage for Instance : <a href="mod5.html#inst_tag_13" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.PRESCALER_INST.BIT_TIME_FSM_INST</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>26</td><td>26</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>146</td><td>9</td><td>9</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>172</td><td>13</td><td>13</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">VHDL_PROCESS</td><td>203</td><td>4</td><td>4</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+145                         begin
+146        1/1                  next_state &lt;= current_state;
+147                     
+148        1/1                  if (mr_settings_ena = CTU_CAN_DISABLED) then
+149        1/1                      next_state &lt;= s_bt_reset;
+150                             else
+151        1/1                      case current_state is
+152                                 when s_bt_tseg1 =&gt;
+153        1/1                          if (segm_end = '1') then
+154        1/1                              next_state &lt;= s_bt_tseg2;
+155                                     end if;
+156                                 when s_bt_tseg2 =&gt;
+157        1/1                          if (segm_end = '1') then
+158        1/1                              next_state &lt;= s_bt_tseg1;
+159                                     end if;
+160                                 when s_bt_reset =&gt;
+161        1/1                          next_state &lt;= s_bt_tseg1;
+162                                 end case;
+163                             end if;
+164                         end process;
+165                     
+166                         -------------------------------------------------------------------------------------------
+167                         -- Current state process (combinational)
+168                         -------------------------------------------------------------------------------------------
+169                         curr_state_proc : process(current_state, segm_end, mr_settings_ena)
+170                         begin
+171                             -- Default values
+172        1/1                  is_tseg1       &lt;= '0';
+173        1/1                  is_tseg2       &lt;= '0';
+174        1/1                  rx_trig_req    &lt;= '0';
+175        1/1                  tx_trig_req    &lt;= '0';
+176                     
+177        1/1                  case current_state is
+178                             when s_bt_reset =&gt;
+179        1/1                      if (mr_settings_ena = CTU_CAN_ENABLED) then
+180        1/1                          tx_trig_req &lt;= '1';
+181                                 end if;
+182                     
+183                             when s_bt_tseg1 =&gt;
+184        1/1                      is_tseg1 &lt;= '1';
+185        1/1                      if (segm_end = '1') then
+186        1/1                          rx_trig_req &lt;= '1';
+187                                 end if;
+188                     
+189                             when s_bt_tseg2 =&gt;
+190        1/1                      is_tseg2 &lt;= '1';
+191        1/1                      if (segm_end = '1') then
+192        1/1                          tx_trig_req &lt;= '1';
+193                                 end if;
+194                     
+195                             end case;
+196                         end process;
+197                     
+198                         -------------------------------------------------------------------------------------------
+199                         -- State register assignment
+200                         -------------------------------------------------------------------------------------------
+201                         state_reg_proc : process(clk_sys, res_n)
+202                         begin
+203        1/1                  if (res_n = '0') then
+204        1/1                      current_state &lt;= s_bt_reset;
+205                             elsif (rising_edge(clk_sys)) then
+206        1/1                      if (bt_fsm_ce = '1') then
+207        1/1                          current_state &lt;= next_state;
+</pre>
+<hr>
+<a name="inst_tag_13_Cond"></a>
+<b>Cond Coverage for Instance : <a href="mod5.html#inst_tag_13" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.PRESCALER_INST.BIT_TIME_FSM_INST</a></b><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">Conditions</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">Logical</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       212
+ EXPRESSION (NEXT_STATE /= CURRENT_STATE)
+            --------------1--------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th>                      </tr>
+<tr class="uGreen"><td>0</td><td class="lf">Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="inst_tag_13_Toggle"></a>
+<b>Toggle Coverage for Instance : <a href="mod5.html#inst_tag_13" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.PRESCALER_INST.BIT_TIME_FSM_INST</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Totals</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Total Bits</td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">9</td>
+<td class="rt">9</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Ports</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Port Bits</td>
+<td class="rt">16</td>
+<td class="rt">16</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 0->1</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Port Bits 1->0</td>
+<td class="rt">8</td>
+<td class="rt">8</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s10">
+<td>Signals</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>Signal Bits</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Port Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td><td class="alfsrt">Direction</td></tr><tr>
+<td>CLK_SYS</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>RES_N</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>MR_SETTINGS_ENA</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>SEGM_END</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>INPUT</td>
+</tr><tr>
+<td>IS_TSEG1</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>IS_TSEG2</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>RX_TRIG_REQ</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr><tr>
+<td>TX_TRIG_REQ</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td>OUTPUT</td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>BT_FSM_CE</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="inst_tag_13_FSM"></a>
+<b>FSM Coverage for Instance : <a href="mod5.html#inst_tag_13" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.PRESCALER_INST.BIT_TIME_FSM_INST</a></b><br clear=all>
+<table align=left class="noborder">
+<caption><b>Summary for FSM :: CURRENT_STATE</b></caption>
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th><th nowrap width=200></th></tr><tr class="wht">
+<td>States</td>
+<td class="rt">3</td>
+<td class="rt">3</td>
+<td class="rt">100.00</td>
+<td>(Not included in score)</td>
+</tr><tr class="s10">
+<td>Transitions</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr><tr class="wht">
+<td>Sequences</td>
+<td class="rt">0</td>
+<td class="rt">0</td>
+<td></td>
+<td></td>
+</tr></table><br clear=all>
+<b>State, Transition and Sequence Details for FSM :: CURRENT_STATE</b><hr>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">states</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_BT_RESET</td>
+<td class="rt">204</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG1</td>
+<td class="rt">158</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG2</td>
+<td class="rt">154</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<table align=left class="sortable noborder">
+<tr class="sortablehead">
+<td class="alfsrt">transitions</td><td>Line No.</td><td class="alfsrt">Covered</td></tr><tr class="uGreen">
+<td nowrap>S_BT_RESET->S_BT_TSEG1</td>
+<td class="rt">161</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG1->S_BT_RESET</td>
+<td class="rt">204</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG1->S_BT_TSEG2</td>
+<td class="rt">154</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG2->S_BT_RESET</td>
+<td class="rt">204</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td nowrap>S_BT_TSEG2->S_BT_TSEG1</td>
+<td class="rt">158</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<br clear=all>
+<hr>
+<a name="inst_tag_13_Branch"></a>
+<b>Branch Coverage for Instance : <a href="mod5.html#inst_tag_13" >TB_TOP_CTU_CAN_FD.CTU_CAN_FD_VIP_INST.FEATURE_TEST_AGENT_GEN.FEATURE_TEST_AGENT_INST.TEST_NODE_INST.PRESCALER_INST.BIT_TIME_FSM_INST</a></b><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">18</td>
+<td class="rt">18</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">148</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>CASE</td>
+<td class="rt">177</td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">203</td>
+<td class="rt">4</td>
+<td class="rt">4</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">212</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+148                if (mr_settings_ena = CTU_CAN_DISABLED) then
+                   <font color = "green">-1-</font>  
+149                    next_state <= s_bt_reset;
+           <font color = "green">            ==></font>
+150                else
+151                    case current_state is
+                       <font color = "green">-2-</font>  
+152                    when s_bt_tseg1 =>
+153                        if (segm_end = '1') then
+                           <font color = "green">-3-</font>  
+154                            next_state <= s_bt_tseg2;
+           <font color = "green">                    ==></font>
+155                        end if;
+                           MISSING_ELSE
+           <font color = "green">                ==></font>
+156                    when s_bt_tseg2 =>
+157                        if (segm_end = '1') then
+                           <font color = "green">-4-</font>  
+158                            next_state <= s_bt_tseg1;
+           <font color = "green">                    ==></font>
+159                        end if;
+                           MISSING_ELSE
+           <font color = "green">                ==></font>
+160                    when s_bt_reset =>
+161                        next_state <= s_bt_tseg1;
+           <font color = "green">                ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG1</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG1</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center> S_BT_RESET</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+177                case current_state is
+                   <font color = "green">-1-</font>  
+178                when s_bt_reset =>
+179                    if (mr_settings_ena = CTU_CAN_ENABLED) then
+                       <font color = "green">-2-</font>  
+180                        tx_trig_req <= '1';
+           <font color = "green">                ==></font>
+181                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+182        
+183                when s_bt_tseg1 =>
+184                    is_tseg1 <= '1';
+185                    if (segm_end = '1') then
+                       <font color = "green">-3-</font>  
+186                        rx_trig_req <= '1';
+           <font color = "green">                ==></font>
+187                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+188        
+189                when s_bt_tseg2 =>
+190                    is_tseg2 <= '1';
+191                    if (segm_end = '1') then
+                       <font color = "green">-4-</font>  
+192                        tx_trig_req <= '1';
+           <font color = "green">                ==></font>
+193                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>-4-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center> S_BT_RESET</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_RESET</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG1</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG1</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center> S_BT_TSEG2</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+203                if (res_n = '0') then
+                   <font color = "green">-1-</font>  
+204                    current_state <= s_bt_reset;
+           <font color = "green">            ==></font>
+205                elsif (rising_edge(clk_sys)) then
+                      <font color = "green">-2-</font>  
+206                    if (bt_fsm_ce = '1') then
+                       <font color = "green">-3-</font>  
+207                        current_state <= next_state;
+           <font color = "green">                ==></font>
+208                    end if;
+                       MISSING_ELSE
+           <font color = "green">            ==></font>
+209                end if;
+                   MISSING_ELSE
+           <font color = "green">        ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+212            bt_fsm_ce <= '1' when (next_state /= current_state) else
+                                <font color = "green">-1-</font>  
+                                <font color = "green">==></font>  
+                                <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_12">
+    <li>
+      <a href="#inst_tag_12_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_12_Cond">Cond</a>    </li>
+    <li>
+      <a href="#inst_tag_12_Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_12_FSM">FSM</a>    </li>
+    <li>
+      <a href="#inst_tag_12_Branch">Branch</a>    </li>
+  </ul>
+  <ul name="inst_tag_13">
+    <li>
+      <a href="#inst_tag_13_Line">Line</a>    </li>
+    <li>
+      <a href="#inst_tag_13_Cond">Cond</a>    </li>
+    <li>
+      <a href="#inst_tag_13_Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#inst_tag_13_FSM">FSM</a>    </li>
+    <li>
+      <a href="#inst_tag_13_Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_CTU_CAN_FD_RTL.BIT_TIME_FSM RTL">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#FSM">FSM</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
